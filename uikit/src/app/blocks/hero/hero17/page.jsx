@@ -1,0 +1,49 @@
+// @mui
+import CardMedia from '@mui/material/CardMedia';
+import Chip from '@mui/material/Chip';
+import Typography from '@mui/material/Typography';
+
+// @project
+import { Hero17 } from '@/blocks/hero';
+
+/***************************  HERO 17 - DATA  ***************************/
+
+const data = {
+  chip: {
+    label: (
+      <>
+        <Typography variant="caption" sx={{ color: 'text.secondary' }}>
+          Get 50% off on Current Version
+        </Typography>
+        <Chip
+          label={
+            <Typography variant="caption" sx={{ color: 'primary.main' }}>
+              50% off
+            </Typography>
+          }
+          sx={{ height: 24, bgcolor: 'primary.lighter', mr: -1, ml: 0.75, '& .MuiChip-label': { px: 1.25 } }}
+          icon={
+            <CardMedia component="img" image="/assets/images/shared/celebration.svg" sx={{ width: 16, height: 16 }} alt="celebration" />
+          }
+        />
+      </>
+    )
+  },
+  headLine: 'Real-time Performance Monitoring',
+  captionLine: 'Identify and resolve issues proactively for uninterrupted operations.',
+  primaryBtn: { children: 'Try Predictive Cost Analytics' },
+  videoSrc: '/assets/videos/main-landing.mp4',
+  listData: [
+    { image: '/assets/images/shared/typescript.svg', title: 'Typescript' },
+    { image: '/assets/images/shared/next-js.svg', title: 'Next.js' },
+    { image: '/assets/images/shared/jwt.svg', title: 'JWT' },
+    { image: '/assets/images/shared/react.svg', title: 'Code Splitting' },
+    { image: '/assets/images/shared/figma.svg', title: 'Figma' }
+  ]
+};
+
+/***************************  BLOCK - HERO 17  ***************************/
+
+export default function BlockHero17() {
+  return <Hero17 {...data} />;
+}

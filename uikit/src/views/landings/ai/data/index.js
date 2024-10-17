@@ -1,0 +1,11 @@
+export { about } from './about';
+export { blog } from './blog';
+export { cliental } from './cliental';
+export { cta } from './cta';
+export { faq } from './faq';
+export { feature6 } from './feature';
+export { feature11 } from './feature';
+export { hero } from './hero';
+export { integration } from './integration';
+export { navItems } from './nav-items';
+export { testimonial } from './testimonial';

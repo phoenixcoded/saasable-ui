@@ -1,0 +1,21 @@
+{
+  "brandName": "SaasAble",
+  "company": {
+    "name": "Phoenixcoded",
+    "url": "https://phoenixcoded.authordesk.app/",
+    "socialLink": {
+      "linkedin": "https://in.linkedin.com/company/phoenixcoded",
+      "instagram": "#",
+      "facebook": "https://www.facebook.com/Phoenixcoded/",
+      "youtube": "https://www.youtube.com/@Phoenixcoded",
+      "github": "https://github.com/phoenixcoded",
+      "dribble": "https://dribbble.com/Phoenixcoded"
+    }
+  },
+  "logo": {
+    "main": "",
+    "logoIcon": "",
+    "logoFab": "",
+    "logoWatermark": ""
+  }
+}
