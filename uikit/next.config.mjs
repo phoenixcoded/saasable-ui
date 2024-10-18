@@ -1,5 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  basePath: '/free',
   modularizeImports: {
     '@mui/material': {
       transform: '@mui/material/{{member}}'

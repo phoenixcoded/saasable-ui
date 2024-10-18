@@ -166,8 +166,11 @@ export const navbar = {
             itemsList: [
               { title: 'Blog', link: { href: 'https://blog.saasable.io/', target: '_blank' } },
               { title: 'Documentation', link: { href: 'https://phoenixcoded.gitbook.io/saasable', target: '_blank' } },
-              { title: 'Support', link: { href: 'https://phoenixcoded.authordesk.app/', target: '_blank' } },
-              { title: 'Discord' },
+              { title: 'Support', link: { href: 'https://support.phoenixcoded.net/', target: '_blank' } },
+              {
+                title: 'Discord',
+                link: { href: 'https://discord.com/channels/1285946473258815509/1293082410002546688', target: '_blank' }
+              },
               { title: 'Terms & Conditions', link: { href: 'https://mui.com/store/terms/', target: '_blank' } }
             ]
           }

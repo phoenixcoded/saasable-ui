@@ -30,7 +30,7 @@ const sectionsData = [
         'Use this default example with an announcement badge, heading, CTA buttons, and customer logos to showcase what your website offers.',
       figmaLink: FIGMA_LINK.process.variant.process2
     },
-    src: PRIVIEW_PATH.process.process2
+    src: PRIVIEW_PATH.proPage
   },
   {
     typeset: {
