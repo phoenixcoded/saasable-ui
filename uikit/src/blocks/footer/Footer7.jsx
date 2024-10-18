@@ -61,11 +61,11 @@ const data = [
       },
       {
         label: 'Support',
-        link: { href: 'https://phoenixcoded.authordesk.app/', target: '_blank' }
+        link: { href: 'https://support.phoenixcoded.net/', target: '_blank' }
       },
       {
         label: 'License Terms',
-        link: { href: '#' }
+        link: { href: 'https://mui.com/store/license/', target: '_blank' }
       }
     ]
   },
@@ -76,7 +76,7 @@ const data = [
     menu: [
       {
         label: 'Freebies',
-        link: { href: '#' }
+        link: { href: 'https://github.com/phoenixcoded/saasable-ui', target: '_blank' }
       },
       {
         label: 'Documentation',
@@ -92,7 +92,7 @@ const data = [
       },
       {
         label: 'Refund Policy',
-        link: { href: '#' }
+        link: { href: 'https://mui.com/store/customer-refund-policy/', target: '_blank' }
       }
     ]
   }
@@ -106,10 +106,14 @@ export default function Footer7() {
   const contactDetails = {
     address: {
       icon: <SvgIcon name="tabler-map-pin" {...iconProps} />,
-      title: 'Figma Version'
+      title: 'Figma Version 1.0.0'
     },
-    email: { icon: <SvgIcon name="tabler-route" {...iconProps} />, title: 'React Material UI Version' },
-    mobile: { icon: <SvgIcon name="tabler-sparkles" {...iconProps} />, title: 'Documentation' }
+    email: { icon: <SvgIcon name="tabler-route" {...iconProps} />, title: 'React Material UI Version 6.1.4' },
+    mobile: {
+      icon: <SvgIcon name="tabler-sparkles" {...iconProps} />,
+      title: 'Documentation',
+      href: 'https://phoenixcoded.gitbook.io/saasable'
+    }
   };
 
   const logoFollowContent = (
@@ -155,7 +159,7 @@ export default function Footer7() {
                   </Stack>
                   <Stack direction="row" sx={{ gap: 1, alignItems: 'center' }}>
                     {contactDetails.mobile.icon}
-                    <Link component={NextLink} variant="body2" color="text.secondary" href={`tel:${contactDetails.mobile.title}`}>
+                    <Link component={NextLink} variant="body2" color="text.secondary" href={contactDetails.mobile.href} target="_blank">
                       {contactDetails.mobile.title}
                     </Link>
                   </Stack>
