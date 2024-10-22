@@ -9,20 +9,16 @@ import Typography from '@mui/material/Typography';
 import GraphicsCard from '@/components/cards/GraphicsCard';
 import GraphicsImage from '@/components/GraphicsImage';
 import SvgIcon from '@/components/SvgIcon';
-import useConfig from '@/hooks/useConfig';
-
-//@type
 
 /***************************  PREVIEW CARD  ***************************/
 
-export default function PreviewCard({ title, theme, image, status }) {
-  const { currentTheme } = useConfig();
+export default function PreviewCard({ title, image, status }) {
 
   const cardStyle = {
-    bgcolor: theme === currentTheme ? 'grey.100' : 'transparent',
+    bgcolor: 'transparent',
     borderRadius: 3,
     padding: 1,
-    '&:hover': { bgcolor: theme === currentTheme ? 'grey.200' : 'grey.50', cursor: 'pointer' }
+    '&:hover': { bgcolor: 'grey.50', cursor: 'pointer' }
   };
 
   return (
@@ -57,4 +53,4 @@ export default function PreviewCard({ title, theme, image, status }) {
   );
 }
 
-PreviewCard.propTypes = { title: PropTypes.any, theme: PropTypes.any, image: PropTypes.any, status: PropTypes.any };
+PreviewCard.propTypes = { title: PropTypes.any, image: PropTypes.any, status: PropTypes.any };
