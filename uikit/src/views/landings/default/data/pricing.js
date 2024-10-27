@@ -1,3 +1,6 @@
+// @project
+import { BUY_NOW_URL } from '@/path';
+
 export const pricing = {
   heading: 'The Affordable Unfair Advantage.',
   caption: 'Choose the plan that aligns with your SaaS product requirements.',
@@ -19,8 +22,8 @@ export const pricing = {
       active: false,
       featureTitle: 'Includes',
       content: 'Learn more about the standard',
-      contentLink: { children: 'license', href: '#' },
-      exploreLink: { children: 'Get Started' },
+      contentLink: { children: 'license', href: 'https://mui.com/store/license/', target: '_blank' },
+      exploreLink: { children: 'Get Started', href: BUY_NOW_URL, target: '_blank' },
       featuresID: [1, 2, 3, 4, 5, 6]
     },
     {
@@ -29,8 +32,8 @@ export const pricing = {
       price: 129,
       featureTitle: 'Recommended',
       content: 'Learn more about the standard',
-      contentLink: { children: 'license', href: '#' },
-      exploreLink: { children: 'Get Started' },
+      contentLink: { children: 'license', href: 'https://mui.com/store/license/', target: '_blank' },
+      exploreLink: { children: 'Get Started', href: BUY_NOW_URL, target: '_blank' },
       featuresID: [1, 2, 3, 4, 5, 6, 7, 8]
     },
     {
@@ -39,9 +42,9 @@ export const pricing = {
       active: false,
       featureTitle: 'Includes',
       content: 'Learn more about the standard',
-      contentLink: { children: 'license', href: '#' },
-      link: { children: 'Contact Us', href: '#' },
-      exploreLink: { children: 'Get Started' },
+      contentLink: { children: 'license', href: 'https://mui.com/store/license/', target: '_blank' },
+      link: { children: 'Contact Us', href: '/contact' },
+      exploreLink: { children: 'Get Started', href: BUY_NOW_URL, target: '_blank' },
       featuresID: [1, 2, 3, 4, 5, 6, 7, 8, 9]
     }
   ]

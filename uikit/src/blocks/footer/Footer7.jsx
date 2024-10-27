@@ -20,6 +20,7 @@ import LogoSection from '@/components/logo';
 import SvgIcon from '@/components/SvgIcon';
 
 import { CopyrightType } from '@/enum';
+import { DOCS_URL, FREEBIES_URL } from '@/path';
 import { SECTION_COMMON_PY } from '@/utils/constant';
 
 // @types
@@ -33,8 +34,11 @@ const data = [
     title: 'Company',
     menu: [
       {
-        label: 'Home',
-        link: { href: '#' }
+        label: 'Why Phoenixcoded?',
+        link: {
+          href: 'https://blog.saasable.io/a-decade-of-expertise-the-phoenixcoded-story-and-why-you-should-trust-us',
+          target: '_blank'
+        }
       },
       {
         label: 'About',
@@ -76,11 +80,11 @@ const data = [
     menu: [
       {
         label: 'Freebies',
-        link: { href: 'https://github.com/phoenixcoded/saasable-ui', target: '_blank' }
+        link: { href: FREEBIES_URL, target: '_blank' }
       },
       {
         label: 'Documentation',
-        link: { href: 'https://phoenixcoded.gitbook.io/saasable', target: '_blank' }
+        link: { href: DOCS_URL, target: '_blank' }
       },
       {
         label: 'Blog',
@@ -106,13 +110,18 @@ export default function Footer7() {
   const contactDetails = {
     address: {
       icon: <SvgIcon name="tabler-map-pin" {...iconProps} />,
-      title: 'Figma Version 1.0.0'
+      title: 'Figma Version 1.0.0',
+      href: 'https://www.figma.com/community/file/1425095061180549847'
     },
-    email: { icon: <SvgIcon name="tabler-route" {...iconProps} />, title: 'React Material UI Version 6.1.4' },
+    email: {
+      icon: <SvgIcon name="tabler-route" {...iconProps} />,
+      title: 'React Material UI v6.1.4',
+      href: 'https://mui.com/material-ui/getting-started'
+    },
     mobile: {
       icon: <SvgIcon name="tabler-sparkles" {...iconProps} />,
       title: 'Documentation',
-      href: 'https://phoenixcoded.gitbook.io/saasable'
+      href: DOCS_URL
     }
   };
 
@@ -147,13 +156,13 @@ export default function Footer7() {
                 <Stack sx={{ gap: { xs: 2, sm: 2.5, md: 3 } }}>
                   <Stack direction="row" sx={{ gap: 1, alignItems: 'center' }}>
                     {contactDetails.address.icon}
-                    <Typography variant="body2" sx={{ color: 'text.secondary', width: '50%' }}>
+                    <Link component={NextLink} variant="body2" color="text.secondary" href={contactDetails.address.href} target="_blank">
                       {contactDetails.address.title}
-                    </Typography>
+                    </Link>
                   </Stack>
                   <Stack direction="row" sx={{ gap: 1, alignItems: 'center' }}>
                     {contactDetails.email.icon}
-                    <Link component={NextLink} variant="body2" color="text.secondary" href={`tel:${contactDetails.email.title}`}>
+                    <Link component={NextLink} variant="body2" color="text.secondary" href={contactDetails.email.href} target="_blank">
                       {contactDetails.email.title}
                     </Link>
                   </Stack>

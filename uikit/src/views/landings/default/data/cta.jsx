@@ -7,7 +7,11 @@ import Typography from '@mui/material/Typography';
 
 export const cta4 = {
   headLine: 'Why Trust Phoenixcoded for Your Dashboard Template Needs?',
-  primaryBtn: { children: 'Get Started Today' },
+  primaryBtn: {
+    children: 'Read Our story',
+    href: 'https://blog.saasable.io/a-decade-of-expertise-the-phoenixcoded-story-and-why-you-should-trust-us',
+    target: '_blank'
+  },
   profileGroups: {
     avatarGroups: [
       { avatar: '/assets/images/user/avatar1.png' },
@@ -16,7 +20,7 @@ export const cta4 = {
       { avatar: '/assets/images/user/avatar4.png' },
       { avatar: '/assets/images/user/avatar5.png' }
     ],
-    review: '250+ Reviews (4.62 out of 5)'
+    review: '250+ Author Reviews (4.62 out of 5)'
   },
   list: [
     { primary: '10+ Years Expertise' },
@@ -33,7 +37,7 @@ function DescriptionLine() {
   return (
     <Typography variant="body2" sx={{ color: 'text.secondary' }}>
       Have questions? Our community is here to help. Learn more{' '}
-      <Link component={NextLink} variant="caption2" color="primary" href="" underline="hover">
+      <Link component={NextLink} variant="caption2" color="primary" href="https://discord.com/invite/2WpeGsQH98" underline="hover">
         here
       </Link>{' '}
     </Typography>
@@ -42,9 +46,13 @@ function DescriptionLine() {
 
 export const cta5 = {
   label: 'Join the Community',
-  heading: 'Connect with SaaS Developers on Discord',
+  heading: 'Connect with us on Discord',
   caption: 'Get support, share insights, and grow together.',
-  primaryBtn: { children: 'Join Discord Community' },
+  primaryBtn: {
+    children: 'Join Discord Community',
+    href: 'https://discord.com/invite/2WpeGsQH98',
+    target: '_blank'
+  },
   description: <DescriptionLine />,
   saleData: { count: 8, defaultUnit: 'k+', caption: 'Trusted by professionals worldwide' },
   profileGroups: {
@@ -62,8 +70,8 @@ export const cta5 = {
 export const cta10 = {
   heading: "Couldn't find the perfect role for you?",
   caption: 'No worries – we encourage you to apply anyway! Your unique skills and talents might be just what we need.',
-  primaryBtn: { children: 'Send Your Resume' },
-  secondaryBtn: { children: 'Contact Us' },
+  primaryBtn: { children: 'Send Your Resume', href: '#' },
+  secondaryBtn: { children: 'Contact Us', href: '#' },
   image: '/assets/images/graphics/ai/graphics15-light.svg',
   profileGroups: {
     avatarGroups: [

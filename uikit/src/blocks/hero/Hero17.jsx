@@ -140,7 +140,7 @@ export default function Hero17({ chip, headLine, captionLine, primaryBtn, videoS
                   ease: [0.215, 0.61, 0.355, 1]
                 }}
               >
-                <Typography variant="h1" align="center" sx={{ maxWidth: 600 }}>
+                <Typography variant="h1" align="center" sx={{ maxWidth: 800 }}>
                   {headLine}
                 </Typography>
               </motion.div>
@@ -168,7 +168,7 @@ export default function Hero17({ chip, headLine, captionLine, primaryBtn, videoS
                   ease: [0.215, 0.61, 0.355, 1]
                 }}
               >
-                <Typography variant="h6" align="center" sx={{ color: 'text.secondary', maxWidth: 500 }}>
+                <Typography variant="h6" align="center" sx={{ color: 'text.secondary', maxWidth: 650 }}>
                   {captionLine}
                 </Typography>
               </motion.div>

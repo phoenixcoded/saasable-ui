@@ -1,6 +1,7 @@
 // @project
 import branding from '@/branding.json';
 import { IconType } from '@/enum';
+import { SECTION_PATH, BUY_NOW_URL, ADMIN_PATH, DOCS_URL } from '@/path';
 
 export const feature2 = {
   heading: 'Culture of Innovation',
@@ -65,7 +66,7 @@ export const feature5 = {
     review: '10k+ Reviews (4.5 out of 5)'
   },
   content: 'Explore diverse career paths within the company through our internal mobility programs.',
-  actionBtn: { children: 'Explore all Features' }
+  actionBtn: { children: 'Explore all Features', href: '#' }
 };
 
 export const feature9 = {
@@ -158,10 +159,10 @@ export const feature10 = {
 };
 
 export const feature20 = {
-  heading: 'Comprehensive UI Kit for SaaS Success',
+  heading: 'Comprehensive UI Kit Tailored to your Need',
   caption: 'Ready to transform your SaaS designs with one powerful UI Kit?',
-  actionBtn: { children: 'Buy Now' },
-  secondaryBtn: { children: 'Explore Components' },
+  actionBtn: { children: 'Buy Now', href: BUY_NOW_URL, target: '_blank' },
+  secondaryBtn: { children: 'Explore Blocks', href: SECTION_PATH },
   features: [
     {
       icon: 'tabler-accessible',
@@ -169,27 +170,27 @@ export const feature20 = {
       content: 'Ensure accessibility with WCAG compliant design for browsing.'
     },
     {
-      icon: 'tabler-typography',
+      icon: 'tabler-brand-google',
       title: 'SEO Friendly',
       content: 'Tailor typography for optimal readability across all screen sizes.'
     },
     {
-      icon: 'tabler-components',
+      icon: 'tabler-stack-2',
       title: 'MUI Components',
       content: 'Customize Material 3 design MUI components for enhanced aesthetics.'
     },
     {
-      icon: 'tabler-devices-code',
+      icon: 'tabler-rocket',
       title: 'High Performance UI',
       content: 'Adjust content layout for visual coherence on various screen sizes.'
     },
     {
-      icon: 'tabler-search',
+      icon: 'tabler-help',
       title: 'Detailed Documentation',
       content: 'Boost visibility with SEO-friendly features for better search rankings.'
     },
     {
-      icon: 'tabler-clipboard-text',
+      icon: 'tabler-refresh',
       title: 'Regular Updates',
       content: 'Access comprehensive documentation for easy guidance on platform usage.'
     }
@@ -200,47 +201,51 @@ export const feature21 = {
   heading: `Design Faster, Smarter with ${branding.brandName} Figma`,
   caption: 'Unlock Figma’s advanced tools for streamlined, scalable, and responsive SaaS UI design.',
   image: '/assets/images/graphics/ai/desktop1-light.svg',
-  primaryBtn: { children: 'Try Figma Now' },
-  secondaryBtn: { children: 'Explore Figma UI Kit' },
+  primaryBtn: { children: 'Free Figma', href: 'https://www.figma.com/community/file/1425095061180549847', target: '_blank' },
+  secondaryBtn: {
+    children: 'Preview Pro Figma',
+    href: 'https://www.figma.com/design/mlkXfeqxUKqIo0GQhPBqPb/SaasAble---UI-Kit---Preview-only?node-id=11-1833&t=JBHOIIEuYZpmN6v8-1',
+    target: '_blank'
+  },
   features: [
     {
       animationDelay: 0.1,
-      icon: 'tabler-app-window',
+      icon: 'tabler-components',
       title: 'Component Architecture'
     },
     {
       animationDelay: 0.2,
-      icon: 'tabler-box-model',
+      icon: 'tabler-moon',
       title: 'Dark Mode'
     },
     {
       animationDelay: 0.3,
-      icon: 'tabler-folder-check',
+      icon: 'tabler-brightness-auto',
       title: 'Auto Layout'
     },
     {
       animationDelay: 0.4,
-      icon: 'tabler-code',
+      icon: 'tabler-accessible',
       title: 'WCAG Compliant'
     },
     {
       animationDelay: 0.1,
-      icon: 'tabler-lock',
+      icon: 'tabler-icons',
       title: 'Custom Icons'
     },
     {
       animationDelay: 0.2,
-      icon: 'tabler-git-branch',
-      title: 'Multi Page Demos'
+      icon: 'tabler-file-stack',
+      title: 'Page Demos'
     },
     {
       animationDelay: 0.3,
-      icon: 'tabler-toggle-right',
+      icon: 'tabler-brand-matrix',
       title: 'Material 3 Guideline'
     },
     {
       animationDelay: 0.4,
-      icon: 'tabler-components',
+      icon: 'tabler-click',
       title: 'Quick Customization'
     }
   ]
@@ -277,7 +282,7 @@ export const feature = {
     {
       title: 'Check Out Our Pricing Plan',
       content: 'Choose the plan that aligns with your SaaS product requirements.',
-      actionBtn: { children: 'Pricing Plan' }
+      actionBtn: { children: 'Pricing Plan', href: BUY_NOW_URL, target: '_blank' }
     }
   ]
 };
@@ -330,7 +335,7 @@ export const feature23 = {
   heading2: 'Growth',
   caption2: 'Our culture prioritizes continuous learning, encouraging personal and professional development. ',
   image: '/assets/images/graphics/default/feature23-light.png',
-  primaryBtn: { children: 'Join  Our Team' },
+  primaryBtn: { children: 'Join  Our Team', href: '#' },
 
   features: [
     {
@@ -362,11 +367,11 @@ export const feature18 = {
         { primary: 'Rich Form and Table Components' },
         { primary: 'Responsive Grid System' }
       ],
-      actionBtn: { children: 'Explore Dashboard' },
-      actionBtn2: { children: 'Documentation' }
+      actionBtn: { children: 'Explore Dashboard', href: ADMIN_PATH, target: '_blank' },
+      actionBtn2: { children: 'Documentation', href: DOCS_URL, target: '_blank' }
     },
     {
-      icon: 'tabler-chart-histogram',
+      icon: 'tabler-palette',
       title: 'Customizable Themes',
       title2: 'Flexible Theming Options',
       description: 'Tailor themes effortlessly with Material UI’s robust theming system.',
@@ -377,11 +382,11 @@ export const feature18 = {
         { primary: 'Color Presets tailored to your Web Apps' },
         { primary: 'Consistency in Design' }
       ],
-      actionBtn: { children: 'Watch Video' },
-      actionBtn2: { children: 'Documentation' }
+      actionBtn: { children: 'Explore Dashboard', href: ADMIN_PATH, target: '_blank' },
+      actionBtn2: { children: 'Documentation', href: DOCS_URL, target: '_blank' }
     },
     {
-      icon: 'tabler-users',
+      icon: 'tabler-rocket',
       title: 'Faster Development',
       title2: 'Rapid Development',
       description: 'Launch projects quicker with pre-built layouts and components.',
@@ -392,11 +397,11 @@ export const feature18 = {
         { primary: 'Customization Ready' },
         { primary: 'Enhanced User Experience' }
       ],
-      actionBtn: { children: '1 Min to Setup' },
-      actionBtn2: { children: 'Documentation' }
+      actionBtn: { children: 'Explore Dashboard', href: ADMIN_PATH, target: '_blank' },
+      actionBtn2: { children: 'Documentation', href: DOCS_URL, target: '_blank' }
     },
     {
-      icon: 'tabler-settings-up',
+      icon: 'tabler-scale',
       title: 'Scalability',
       title2: 'Build to Scale',
       description: 'Easily scale your app with flexible, modular, and extensible templates.',
@@ -407,8 +412,8 @@ export const feature18 = {
         { primary: 'Extensible Codebase' },
         { primary: 'Future Proof Design' }
       ],
-      actionBtn: { children: 'Dashboard' },
-      actionBtn2: { children: 'Documentation' }
+      actionBtn: { children: 'Explore Dashboard', href: ADMIN_PATH, target: '_blank' },
+      actionBtn2: { children: 'Documentation', href: DOCS_URL, target: '_blank' }
     }
   ]
 };

@@ -1,5 +1,5 @@
 // @project
-import { PAGE_PATH, SECTION_PATH } from '@/routes/Path';
+import { PAGE_PATH, SECTION_PATH } from '@/path';
 
 // @asssets
 const imagePrefix = '/assets/images/presentation';
@@ -10,7 +10,7 @@ import branding from '@/branding.json';
 export const other = {
   heading: `${branding.brandName} Blocks `,
   description: 'Explore a wide range of ready-made blocks—from Hero to CTA, Features, and more to speed up your design process.',
-  primaryBtn: { children: 'Explore All Components', href: SECTION_PATH },
+  primaryBtn: { children: 'Explore all Blocks', href: SECTION_PATH },
   sections: [
     {
       animationDelay: 0.2,
@@ -74,7 +74,7 @@ export const other3 = {
           name: 'Full-Time'
         }
       ],
-      btn: { children: 'View Job' }
+      btn: { children: 'View Job', href: '#' }
     },
     {
       title: 'Front-End Developer',
@@ -89,7 +89,7 @@ export const other3 = {
           name: 'Full-Time'
         }
       ],
-      btn: { children: 'View Job' }
+      btn: { children: 'View Job', href: '#' }
     },
     {
       title: 'Back-End Developer',
@@ -104,7 +104,7 @@ export const other3 = {
           name: 'Full-Time'
         }
       ],
-      btn: { children: 'View Job' }
+      btn: { children: 'View Job', href: '#' }
     },
     {
       title: 'Scrum Master',
@@ -119,7 +119,7 @@ export const other3 = {
           name: 'Full-Time'
         }
       ],
-      btn: { children: 'View Job' }
+      btn: { children: 'View Job', href: '#' }
     }
   ]
 };

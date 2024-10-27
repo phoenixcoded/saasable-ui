@@ -54,7 +54,7 @@ export const faq = {
   getInTouch: {
     title: 'Still Have a Question?',
     description: `If you have any further questions or need assistance, our team is ready to help.`,
-    link: { children: 'Get in Touch' }
+    link: { children: 'Get in Touch', href: '/contact' }
   },
   bgImage: '/assets/images/graphics/ai/background1.svg'
 };

@@ -1,6 +1,6 @@
 // @project
 import { MegaMenuType } from '@/enum';
-import { SECTION_PATH } from '@/routes/Path';
+import { SECTION_PATH } from '@/path';
 
 const menuItems = [
   {

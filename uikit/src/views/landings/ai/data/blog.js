@@ -1,4 +1,4 @@
-const link = { href: '', target: '_blank' };
+const link = { href: '#' };
 
 export const blog = {
   heading: 'Resource Center',

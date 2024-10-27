@@ -76,6 +76,6 @@ const marquees = [
 export const integration = {
   headLine: 'Integrate smoothly with the tools you adore.',
   captionLine: 'The central hub where all the different parts of softwares are managed together.',
-  primaryBtn: { children: 'See All Integration' },
+  primaryBtn: { children: 'See All Integration', href: '#' },
   marquees
 };

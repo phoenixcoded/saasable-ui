@@ -6,7 +6,7 @@ export const contactUS = {
       icon: 'tabler-phone',
       title: 'Contact Sale',
       content: 'Speak to someone from our sales team.',
-      link: { children: 'Contact Sales' }
+      link: { children: 'Contact Sales', href: 'https://support.phoenixcoded.net/', target: '_blank' }
     },
     {
       icon: 'tabler-help-circle',

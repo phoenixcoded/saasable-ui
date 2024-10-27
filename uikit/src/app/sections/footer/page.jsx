@@ -1,7 +1,7 @@
 import dynamic from 'next/dynamic';
 
 // @project
-import { PAGE_PATH } from '@/routes/Path';
+import { PAGE_PATH } from '@/path';
 import { SEO_CONTENT } from '@/metadata';
 
 const Footer = dynamic(() => import('@/views/sections/Footer'));

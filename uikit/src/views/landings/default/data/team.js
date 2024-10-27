@@ -4,7 +4,7 @@ export const team = {
     'Learn about the empowered individuals who make up our team. Discover how their unique strengths contribute to our collective success',
   image: '/assets/images/team/team-member-1.png',
   description: 'Linear co-founders Jori Lallo, Karri Saarinen, and Tuomas Artman.',
-  actionBtn: { children: 'We’re Hiring ' },
+  actionBtn: { children: 'We’re Hiring', href: '#' },
   members: [
     {
       name: 'Tricia Yundt',

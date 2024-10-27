@@ -7,8 +7,9 @@ import Typography from '@mui/material/Typography';
 
 // @project
 import { Themes } from '@/config';
+import SvgIcon from '@/components/SvgIcon';
 import { MegaMenuType } from '@/enum';
-import { SECTION_PATH } from '@/routes/Path';
+import { SECTION_PATH, ADMIN_PATH, BUY_NOW_URL, DOCS_URL, FREEBIES_URL } from '@/path';
 
 /***************************  MEGAMENU 4 - FOOTER  ***************************/
 
@@ -17,7 +18,7 @@ function footerData() {
     <Stack direction={{ sm: 'row' }} sx={{ gap: 1.5, justifyContent: 'space-between', alignItems: { xs: 'flex-start', sm: 'center' } }}>
       <Stack sx={{ gap: 1 }}>
         <Stack direction="row" sx={{ alignItems: 'center', gap: 1 }}>
-          <Typography variant="h5">We are coming with many more Landing</Typography>
+          <Typography variant="h5">New landing demos are coming soon!</Typography>
           <Chip
             label={<Typography variant="caption">Coming Soon</Typography>}
             size="small"
@@ -32,10 +33,16 @@ function footerData() {
           />
         </Stack>
         <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-          Quia delectus dolorum temporibus est quasi nisi. Temporibus molestiae quae.
+          SaasAble offers 200+ customizable blocks, empowering you to effortlessly design and build landing pages tailored to your product
+          or service needs.
         </Typography>
       </Stack>
-      <Button variant="contained" sx={{ display: { xs: 'none', sm: 'inline-flex' }, minWidth: 92, px: { xs: 2 }, py: 1.25 }}>
+      <Button
+        variant="contained"
+        sx={{ display: { xs: 'none', sm: 'inline-flex' }, minWidth: 92, px: { xs: 2 }, py: 1.25 }}
+        href={BUY_NOW_URL}
+        target="_blank"
+      >
         Buy Now
       </Button>
     </Stack>
@@ -50,7 +57,7 @@ function bannerData() {
       <Stack sx={{ gap: 1 }}>
         <Stack sx={{ alignItems: 'flex-start', gap: 1.5 }}>
           <Chip
-            label={<Typography variant="subtitle2">New Features Ahead</Typography>}
+            label={<Typography variant="subtitle2">SaasAble Admin Template</Typography>}
             icon={
               <CardMedia component="img" image="/assets/images/shared/celebration.svg" sx={{ width: 16, height: 16 }} alt="celebration" />
             }
@@ -60,11 +67,11 @@ function bannerData() {
           <Typography variant="h5">Exciting Dashboard on the Way!</Typography>
         </Stack>
         <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-          Experience enhanced functionality with our upcoming admin template designed to elevate your next project.
+          Effortlessly manage your app’s backend with customizable admin dashboards that enhance productivity.
         </Typography>
       </Stack>
-      <Button href={SECTION_PATH} variant="contained" sx={{ minWidth: 92, px: { xs: 2 }, py: 1.25 }}>
-        Discover More
+      <Button href={ADMIN_PATH} target="_blank" variant="contained" sx={{ minWidth: 92, px: { xs: 2 }, py: 1.25 }}>
+        View Dashboard
       </Button>
     </Stack>
   );
@@ -74,8 +81,13 @@ function bannerData() {
 
 export const navbar = {
   settingBtn: true,
-  secondaryBtn: { children: 'Try Pro Version' },
-  primaryBtn: { children: 'Buy Now' },
+  secondaryBtn: {
+    children: <SvgIcon name="tabler-brand-github" color="primary.main" size={18} />,
+    href: FREEBIES_URL,
+    target: '_blank',
+    sx: { minWidth: 40, width: 40, height: 40, p: 0 }
+  },
+  primaryBtn: { children: 'Buy Now', href: BUY_NOW_URL, target: '_blank' },
   navItems: [
     { id: 'home', title: 'Home', link: '/' },
     {
@@ -132,7 +144,8 @@ export const navbar = {
         footerData: footerData()
       }
     },
-    { id: 'components', title: 'Components', link: SECTION_PATH },
+    { id: 'components', title: 'Blocks', link: SECTION_PATH },
+    { id: 'dashboard', title: 'Dashboard', link: ADMIN_PATH, target: '_blank' },
     {
       id: 'pages',
       title: 'Pages',
@@ -165,11 +178,11 @@ export const navbar = {
             title: 'External',
             itemsList: [
               { title: 'Blog', link: { href: 'https://blog.saasable.io/', target: '_blank' } },
-              { title: 'Documentation', link: { href: 'https://phoenixcoded.gitbook.io/saasable', target: '_blank' } },
+              { title: 'Documentation', link: { href: DOCS_URL, target: '_blank' } },
               { title: 'Support', link: { href: 'https://support.phoenixcoded.net/', target: '_blank' } },
               {
                 title: 'Discord',
-                link: { href: 'https://discord.com/channels/1285946473258815509/1293082410002546688', target: '_blank' }
+                link: { href: 'https://discord.com/invite/2WpeGsQH98', target: '_blank' }
               },
               { title: 'Terms & Conditions', link: { href: 'https://mui.com/store/terms/', target: '_blank' } }
             ]
@@ -178,6 +191,6 @@ export const navbar = {
         bannerData: bannerData()
       }
     },
-    { id: 'docus', title: 'Docs', link: 'https://phoenixcoded.gitbook.io/saasable', target: '_blank', icon: 'tabler-pin-invoke' }
+    { id: 'docus', title: 'Docs', link: DOCS_URL, target: '_blank', icon: 'tabler-pin-invoke' }
   ]
 };

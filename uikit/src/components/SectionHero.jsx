@@ -23,7 +23,7 @@ import ContainerWrapper from './ContainerWrapper';
 import SvgIcon from './SvgIcon';
 
 import { getBackgroundDots } from '@/utils/getBackgroundDots';
-import { PAGE_PATH } from '@/routes/Path';
+import { PAGE_PATH } from '@/path';
 
 // @assets
 import Wave from '@/images/graphics/Wave';

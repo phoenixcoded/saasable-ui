@@ -7,5 +7,5 @@ export { feature6 } from './feature';
 export { feature11 } from './feature';
 export { hero } from './hero';
 export { integration } from './integration';
-export { navItems } from './nav-items';
+export { navbar } from './navbar';
 export { testimonial } from './testimonial';

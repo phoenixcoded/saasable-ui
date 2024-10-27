@@ -3,19 +3,17 @@ import PropTypes from 'prop-types';
 
 // @mui
 import { useTheme, alpha } from '@mui/material/styles';
+import Chip from '@mui/material/Chip';
 import Grid from '@mui/material/Grid2';
 import List from '@mui/material/List';
 import ListSubheader from '@mui/material/ListSubheader';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
+import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 
 // @project
 import SvgIcon from '@/components/SvgIcon';
-
-// @types
-import Chip from '@mui/material/Chip';
-import Typography from '@mui/material/Typography';
 
 /***************************  MEGA MENU - 5  ***************************/
 

@@ -5,5 +5,5 @@ export const about = {
   title: 'Empower your business with our CRM platform, streamlining sales',
   description:
     'Empower your business with our CRM platform, streamlining sales, marketing, and service processes to drive growth and build stronger customer relationships.',
-  primaryBtn: { children: 'Subscribe' }
+  primaryBtn: { children: 'Subscribe', href: '#' }
 };

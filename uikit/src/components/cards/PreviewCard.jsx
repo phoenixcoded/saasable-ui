@@ -13,7 +13,6 @@ import SvgIcon from '@/components/SvgIcon';
 /***************************  PREVIEW CARD  ***************************/
 
 export default function PreviewCard({ title, image, status }) {
-
   const cardStyle = {
     bgcolor: 'transparent',
     borderRadius: 3,

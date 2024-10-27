@@ -1,6 +1,6 @@
 // @project
 import Other1 from '@/blocks/other/Other1';
-import { PAGE_PATH, SECTION_PATH } from '@/routes/Path';
+import { PAGE_PATH, SECTION_PATH } from '@/path';
 
 // @asssets
 const imagePrefix = '/assets/images/presentation';

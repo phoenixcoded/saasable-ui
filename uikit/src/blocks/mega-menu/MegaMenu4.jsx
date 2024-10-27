@@ -20,6 +20,7 @@ export default function MegaMenu4({ menuItems, footerData, popperWidth = 936, fo
           <Grid key={index} size={{ xs: 6, sm: 4, md: 3 }}>
             <Link
               {...(item.link && { component: NextLink, ...item.link, sx: { ...item.link?.sx, WebkitTapHighlightColor: 'transparent' } })}
+              aria-label={item.title}
             >
               <PreviewCard {...item} />
             </Link>

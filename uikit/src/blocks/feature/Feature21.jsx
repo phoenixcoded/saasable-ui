@@ -16,6 +16,7 @@ import { GraphicsCard, IconCard } from '@/components/cards';
 import ContainerWrapper from '@/components/ContainerWrapper';
 import GraphicsImage from '@/components/GraphicsImage';
 import Typeset from '@/components/Typeset';
+import SvgIcon from '@/components/SvgIcon';
 import { SECTION_COMMON_PY } from '@/utils/constant';
 
 /***************************  FEATURE - 21  ***************************/
@@ -105,12 +106,16 @@ export default function Feature21({ heading, caption, image, features, primaryBt
             <Stack direction="row" sx={{ alignItems: 'center', justifyContent: 'center', gap: 1.5 }}>
               {secondaryBtn && (
                 <ButtonAnimationWrapper>
-                  <Button variant="outlined" {...secondaryBtn} />
+                  <Button variant="outlined" startIcon={<SvgIcon name="tabler-eye" size={16} stroke={3} />} {...secondaryBtn} />
                 </ButtonAnimationWrapper>
               )}
               {primaryBtn && (
                 <ButtonAnimationWrapper>
-                  <Button variant="contained" {...primaryBtn} />
+                  <Button
+                    variant="contained"
+                    startIcon={<SvgIcon name="tabler-download" size={16} stroke={3} color="background.default" />}
+                    {...primaryBtn}
+                  />
                 </ButtonAnimationWrapper>
               )}
             </Stack>

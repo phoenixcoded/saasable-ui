@@ -7,7 +7,7 @@ import { ProPage } from '@/blocks/pro-page';
 import ContainerWrapper from '@/components/ContainerWrapper';
 import SectionHero from '@/components/SectionHero';
 import SimulatorTypeset from '@/components/SimulatorTypeset';
-import { SECTION_PATH } from '@/routes/Path';
+import { SECTION_PATH } from '@/path';
 import { FIGMA_LINK } from '@/utils/constant';
 
 // @types

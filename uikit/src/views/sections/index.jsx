@@ -25,7 +25,7 @@ import SectionHero from '@/components/SectionHero';
 import SvgIcon from '@/components/SvgIcon';
 
 import useFocusWithin from '@/hooks/useFocusWithin';
-import { PAGE_PATH } from '@/routes/Path';
+import { PAGE_PATH } from '@/path';
 import { generateFocusVisibleStyles } from '@/utils/CommonFocusStyle';
 import GetImagePath from '@/utils/GetImagePath';
 

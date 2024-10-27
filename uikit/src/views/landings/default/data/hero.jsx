@@ -2,6 +2,7 @@
 import CardMedia from '@mui/material/CardMedia';
 import Chip from '@mui/material/Chip';
 import Typography from '@mui/material/Typography';
+import { SECTION_PATH } from '@/path';
 
 export const hero = {
   chip: {
@@ -24,15 +25,17 @@ export const hero = {
       </>
     )
   },
-  headLine: 'Build Beautiful SaaS Applications Faster with SaasAble',
-  captionLine: 'Design front-end marketing pages and powerful admin dashboards with ease using our UI Kit',
-  primaryBtn: { children: 'Explore Components' },
-  videoSrc: '/assets/videos/main-landing.mp4',
+  headLine: 'Multipurpose UI Kit and Dashboard Template',
+  captionLine: 'Design marketing pages and powerful admin dashboards with ease using our UI Kit, built following Material 3 guidelines.',
+  primaryBtn: { children: 'Explore Blocks', href: SECTION_PATH },
+  videoSrc: '/assets/videos/saasable-intro.mp4',
   listData: [
-    { image: '/assets/images/shared/typescript.svg', title: 'Typescript' },
+    { image: '/assets/images/shared/react.svg', title: 'React 18' },
     { image: '/assets/images/shared/next-js.svg', title: 'Next.js' },
-    { image: '/assets/images/shared/jwt.svg', title: 'JWT' },
-    { image: '/assets/images/shared/react.svg', title: 'Code Splitting' },
+    { image: '/assets/images/shared/material-ui.svg', title: 'Material UI v6' },
+    { image: '/assets/images/shared/typescript.svg', title: 'TypeScript' },
+    { image: '/assets/images/shared/javascript.svg', title: 'JavaScript' },
+    { image: '/assets/images/shared/m3.svg', title: 'Material 3' },
     { image: '/assets/images/shared/figma.svg', title: 'Figma' }
   ]
 };

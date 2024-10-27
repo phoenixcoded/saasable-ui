@@ -7,6 +7,11 @@ export const faq = {
   defaultExpanded: 'Fees & Charges',
   faqList: [
     {
+      question: `Is ${branding.brandName} only for SaaS web apps?`,
+      answer: `While ${branding.brandName} is designed with SaaS applications in mind, it’s not limited to SaaS products. ${branding.brandName} is multipurpose and can be used for a variety of websites and applications, whether it’s for an agency, digital product, CRM, blog, AI platform, or any other system. ${branding.brandName} is versatile and adaptable to fit any use case, SaaS or not. It’s built for all types of projects!`,
+      category: 'General'
+    },
+    {
       question: `What makes ${branding.brandName} different from other UI Kits?`,
       answer: `${branding.brandName} offers industry-specific templates, a React Material UI Kit, Figma UI Kit, and flexible customization options that cater to both front-end marketing and admin interfaces.`,
       category: 'General'
@@ -90,7 +95,7 @@ export const faq = {
       category: 'Support & Updates'
     }
   ],
-  getInTouch: { link: { children: 'Get in Touch' } },
+  getInTouch: { link: { children: 'Get in Touch', href: '#' } },
   categories: ['General', 'Pricing & Licenses', 'Support & Updates'],
   activeCategory: 'General'
 };

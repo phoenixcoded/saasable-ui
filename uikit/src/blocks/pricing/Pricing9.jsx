@@ -92,25 +92,29 @@ export default function Pricing9({ heading, caption, features, plans }) {
                             />
                           </Divider>
                           <Stack sx={{ gap: { xs: 0.75, md: 1 } }}>
-                            {features.map((item, index) => (
-                              <Stack
-                                key={index}
-                                direction="row"
-                                sx={{ gap: 1.25, alignItems: 'center', opacity: !plan.featuresID.includes(item.id) ? 0.5 : 1 }}
-                              >
-                                <Avatar sx={{ bgcolor: 'grey.100', width: 24, height: 24 }}>
-                                  <SvgIcon
-                                    name={!plan.featuresID.includes(item.id) ? 'tabler-x' : 'tabler-check'}
-                                    type={IconType.STROKE}
-                                    size={16}
-                                    twoToneColor={theme.palette.grey[100]}
-                                    color="text.secondary"
-                                    stroke={2}
-                                  />
-                                </Avatar>
-                                <Typography sx={{ color: 'text.secondary' }}>{item.label}</Typography>
-                              </Stack>
-                            ))}
+                            {features.map((item, index) => {
+                              const active = plan.featuresID.includes(item.id);
+                              return (
+                                <Stack key={index} direction="row" sx={{ gap: 1.25, alignItems: 'center' }}>
+                                  <Avatar sx={{ bgcolor: 'grey.100', width: 24, height: 24 }}>
+                                    <SvgIcon
+                                      name={active ? 'tabler-check' : 'tabler-x'}
+                                      type={IconType.STROKE}
+                                      size={16}
+                                      twoToneColor={theme.palette.grey[100]}
+                                      color={active ? 'secondary.darker' : 'text.secondary'}
+                                      stroke={2}
+                                    />
+                                  </Avatar>
+                                  <Typography
+                                    variant={active ? 'subtitle1' : 'body1'}
+                                    sx={{ color: active ? 'secondary.darker' : 'text.secondary' }}
+                                  >
+                                    {item.label}
+                                  </Typography>
+                                </Stack>
+                              );
+                            })}
                           </Stack>
                         </Stack>
                         <Stack sx={{ gap: 0.75 }}>

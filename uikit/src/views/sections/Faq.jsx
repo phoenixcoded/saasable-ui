@@ -7,7 +7,7 @@ import ContainerWrapper from '@/components/ContainerWrapper';
 import SectionHero from '@/components/SectionHero';
 import Simulator from '@/components/Simulator';
 import SimulatorTypeset from '@/components/SimulatorTypeset';
-import { PRIVIEW_PATH, SECTION_PATH } from '@/routes/Path';
+import { PRIVIEW_PATH, SECTION_PATH } from '@/path';
 import { FIGMA_LINK } from '@/utils/constant';
 
 // @types
