@@ -1,5 +1,3 @@
-![image](https://github.com/user-attachments/assets/53b303ef-80f7-4d06-8649-06d1ed84172b)# SaasAble Free React Material UI, UI Kit with Dashboard Template
-
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Price](https://img.shields.io/badge/price-FREE-0098f7.svg)](https://github.com/phoenixcoded/saasable-ui/blob/main/LICENSE)
 
