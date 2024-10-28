@@ -375,7 +375,7 @@ export const feature18 = {
       title: 'Customizable Themes',
       title2: 'Flexible Theming Options',
       description: 'Tailor themes effortlessly with Material UI’s robust theming system.',
-      image: '/assets/images/graphics/ai/graphics7-light.svg',
+      image: '/assets/images/graphics/default/admin-dashboard-2.png',
       list: [
         { primary: 'Easy options for Theming' },
         { primary: 'Layout Options' },
@@ -390,7 +390,7 @@ export const feature18 = {
       title: 'Faster Development',
       title2: 'Rapid Development',
       description: 'Launch projects quicker with pre-built layouts and components.',
-      image: '/assets/images/graphics/ai/graphics4-light.svg',
+      image: '/assets/images/graphics/default/admin-dashboard-3.png',
       list: [
         { primary: 'Time Saving' },
         { primary: 'Tested and Reliable' },
@@ -405,7 +405,7 @@ export const feature18 = {
       title: 'Scalability',
       title2: 'Build to Scale',
       description: 'Easily scale your app with flexible, modular, and extensible templates.',
-      image: '/assets/images/graphics/ai/graphics9-light.svg',
+      image: '/assets/images/graphics/default/admin-dashboard.png',
       list: [
         { primary: 'Modular Architecture' },
         { primary: 'Performance Optimized' },

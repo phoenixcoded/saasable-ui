@@ -65,11 +65,11 @@ export default function ProPage({ image }) {
                     variant="contained"
                     color="primary"
                     component={NextLink}
-                    href={'https://www.saasable.io/'}
+                    href={'https://www.saasable.io/sections'}
                     target="_blank"
                     startIcon={<SvgIcon name="tabler-sparkles" size={16} stroke={3} color="background.default" />}
                   >
-                    Explore saasAble.io
+                    View Pro Component
                   </Button>
                 </ButtonAnimationWrapper>
               </Grid>
