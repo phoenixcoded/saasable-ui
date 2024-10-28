@@ -1,336 +1,338 @@
+import { BUY_NOW_URL } from '@/path';
+
 export const SECTION_COMMON_PY = { xs: 4, sm: 5, md: 6 };
 
 export const FIGMA_LINK = {
   about: {
-    link: 'https://mui.com/store/',
+    link: BUY_NOW_URL,
     variant: {
-      about1: 'https://mui.com/store/',
-      about2: 'https://mui.com/store/',
-      about3: 'https://mui.com/store/'
+      about1: BUY_NOW_URL,
+      about2: BUY_NOW_URL,
+      about3: BUY_NOW_URL
     }
   },
   auth: {
     login: {
-      link: 'https://mui.com/store/',
+      link: BUY_NOW_URL,
       variant: {
-        login1: 'https://mui.com/store/',
-        login2: 'https://mui.com/store/',
-        login3: 'https://mui.com/store/',
-        login4: 'https://mui.com/store/',
-        login5: 'https://mui.com/store/'
+        login1: BUY_NOW_URL,
+        login2: BUY_NOW_URL,
+        login3: BUY_NOW_URL,
+        login4: BUY_NOW_URL,
+        login5: BUY_NOW_URL
       }
     },
     register: {
-      link: 'https://mui.com/store/'
+      link: BUY_NOW_URL
     },
     forgotPassword: {
-      link: 'https://mui.com/store/'
+      link: BUY_NOW_URL
     },
     newPassword: {
-      link: 'https://mui.com/store/'
+      link: BUY_NOW_URL
     },
     otpVerification: {
-      link: 'https://mui.com/store/'
+      link: BUY_NOW_URL
     }
   },
   benefit: {
-    link: 'https://mui.com/store/',
+    link: BUY_NOW_URL,
     variant: {
-      benefit1: 'https://mui.com/store/',
-      benefit2: 'https://mui.com/store/',
-      benefit3: 'https://mui.com/store/',
-      benefit4: 'https://mui.com/store/',
-      benefit5: 'https://mui.com/store/',
-      benefit6: 'https://mui.com/store/',
-      benefit7: 'https://mui.com/store/',
-      benefit8: 'https://mui.com/store/',
-      benefit9: 'https://mui.com/store/'
+      benefit1: BUY_NOW_URL,
+      benefit2: BUY_NOW_URL,
+      benefit3: BUY_NOW_URL,
+      benefit4: BUY_NOW_URL,
+      benefit5: BUY_NOW_URL,
+      benefit6: BUY_NOW_URL,
+      benefit7: BUY_NOW_URL,
+      benefit8: BUY_NOW_URL,
+      benefit9: BUY_NOW_URL
     }
   },
   blog: {
-    link: 'https://mui.com/store/',
+    link: BUY_NOW_URL,
     variant: {
-      blog1: 'https://mui.com/store/',
-      blog2: 'https://mui.com/store/',
-      blog3: 'https://mui.com/store/',
-      blog4: 'https://mui.com/store/',
-      blog5: 'https://mui.com/store/',
-      blog6: 'https://mui.com/store/'
+      blog1: BUY_NOW_URL,
+      blog2: BUY_NOW_URL,
+      blog3: BUY_NOW_URL,
+      blog4: BUY_NOW_URL,
+      blog5: BUY_NOW_URL,
+      blog6: BUY_NOW_URL
     }
   },
   cliental: {
-    link: 'https://mui.com/store/',
+    link: BUY_NOW_URL,
     variant: {
-      cliental1: 'https://mui.com/store/',
-      cliental2: 'https://mui.com/store/',
-      cliental3: 'https://mui.com/store/',
-      cliental4: 'https://mui.com/store/',
-      cliental5: 'https://mui.com/store/',
-      cliental6: 'https://mui.com/store/',
-      cliental7: 'https://mui.com/store/'
+      cliental1: BUY_NOW_URL,
+      cliental2: BUY_NOW_URL,
+      cliental3: BUY_NOW_URL,
+      cliental4: BUY_NOW_URL,
+      cliental5: BUY_NOW_URL,
+      cliental6: BUY_NOW_URL,
+      cliental7: BUY_NOW_URL
     }
   },
   color: {
-    link: 'https://mui.com/store/'
+    link: BUY_NOW_URL
   },
   cta: {
-    link: 'https://mui.com/store/',
+    link: BUY_NOW_URL,
     variant: {
-      cta1: 'https://mui.com/store/',
-      cta2: 'https://mui.com/store/',
-      cta3: 'https://mui.com/store/',
-      cta4: 'https://mui.com/store/',
-      cta5: 'https://mui.com/store/',
-      cta6: 'https://mui.com/store/',
-      cta7: 'https://mui.com/store/',
-      cta8: 'https://mui.com/store/',
-      cta9: 'https://mui.com/store/',
-      cta10: 'https://mui.com/store/',
-      cta11: 'https://mui.com/store/'
+      cta1: BUY_NOW_URL,
+      cta2: BUY_NOW_URL,
+      cta3: BUY_NOW_URL,
+      cta4: BUY_NOW_URL,
+      cta5: BUY_NOW_URL,
+      cta6: BUY_NOW_URL,
+      cta7: BUY_NOW_URL,
+      cta8: BUY_NOW_URL,
+      cta9: BUY_NOW_URL,
+      cta10: BUY_NOW_URL,
+      cta11: BUY_NOW_URL
     }
   },
   cookie: {
-    link: 'https://mui.com/store/',
+    link: BUY_NOW_URL,
     variant: {
-      cookie1: 'https://mui.com/store/',
-      cookie2: 'https://mui.com/store/',
-      cookie3: 'https://mui.com/store/'
+      cookie1: BUY_NOW_URL,
+      cookie2: BUY_NOW_URL,
+      cookie3: BUY_NOW_URL
     }
   },
-  comingSoon: { link: 'https://mui.com/store/' },
+  comingSoon: { link: BUY_NOW_URL },
   contactUs: {
-    link: 'https://mui.com/store/',
+    link: BUY_NOW_URL,
     variant: {
-      contactUs1: 'https://mui.com/store/',
-      contactUs2: 'https://mui.com/store/',
-      contactUs3: 'https://mui.com/store/',
-      contactUs4: 'https://mui.com/store/',
-      contactUs5: 'https://mui.com/store/',
-      contactUs6: 'https://mui.com/store/'
+      contactUs1: BUY_NOW_URL,
+      contactUs2: BUY_NOW_URL,
+      contactUs3: BUY_NOW_URL,
+      contactUs4: BUY_NOW_URL,
+      contactUs5: BUY_NOW_URL,
+      contactUs6: BUY_NOW_URL
     }
   },
   error404: {
-    link: 'https://mui.com/store/'
+    link: BUY_NOW_URL
   },
   error500: {
-    link: 'https://mui.com/store/'
+    link: BUY_NOW_URL
   },
-  earlyAccess: { link: 'https://mui.com/store/' },
+  earlyAccess: { link: BUY_NOW_URL },
   faq: {
-    link: 'https://mui.com/store/',
+    link: BUY_NOW_URL,
     variant: {
-      faq1: 'https://mui.com/store/',
-      faq2: 'https://mui.com/store/',
-      faq3: 'https://mui.com/store/',
-      faq4: 'https://mui.com/store/',
-      faq5: 'https://mui.com/store/',
-      faq6: 'https://mui.com/store/',
-      faq7: 'https://mui.com/store/'
+      faq1: BUY_NOW_URL,
+      faq2: BUY_NOW_URL,
+      faq3: BUY_NOW_URL,
+      faq4: BUY_NOW_URL,
+      faq5: BUY_NOW_URL,
+      faq6: BUY_NOW_URL,
+      faq7: BUY_NOW_URL
     }
   },
   feature: {
-    link: 'https://mui.com/store/',
+    link: BUY_NOW_URL,
     variant: {
-      feature1: 'https://mui.com/store/',
-      feature2: 'https://mui.com/store/',
-      feature3: 'https://mui.com/store/',
-      feature4: 'https://mui.com/store/',
-      feature5: 'https://mui.com/store/',
-      feature6: 'https://mui.com/store/',
-      feature7: 'https://mui.com/store/',
-      feature8: 'https://mui.com/store/',
-      feature9: 'https://mui.com/store/',
-      feature10: 'https://mui.com/store/',
-      feature11: 'https://mui.com/store/',
-      feature12: 'https://mui.com/store/',
-      feature13: 'https://mui.com/store/',
-      feature14: 'https://mui.com/store/',
-      feature15: 'https://mui.com/store/',
-      feature16: 'https://mui.com/store/',
-      feature17: 'https://mui.com/store/',
-      feature18: 'https://mui.com/store/',
-      feature19: 'https://mui.com/store/',
-      feature20: 'https://mui.com/store/',
-      feature21: 'https://mui.com/store/',
-      feature22: 'https://mui.com/store/',
-      feature23: 'https://mui.com/store/'
+      feature1: BUY_NOW_URL,
+      feature2: BUY_NOW_URL,
+      feature3: BUY_NOW_URL,
+      feature4: BUY_NOW_URL,
+      feature5: BUY_NOW_URL,
+      feature6: BUY_NOW_URL,
+      feature7: BUY_NOW_URL,
+      feature8: BUY_NOW_URL,
+      feature9: BUY_NOW_URL,
+      feature10: BUY_NOW_URL,
+      feature11: BUY_NOW_URL,
+      feature12: BUY_NOW_URL,
+      feature13: BUY_NOW_URL,
+      feature14: BUY_NOW_URL,
+      feature15: BUY_NOW_URL,
+      feature16: BUY_NOW_URL,
+      feature17: BUY_NOW_URL,
+      feature18: BUY_NOW_URL,
+      feature19: BUY_NOW_URL,
+      feature20: BUY_NOW_URL,
+      feature21: BUY_NOW_URL,
+      feature22: BUY_NOW_URL,
+      feature23: BUY_NOW_URL
     }
   },
   footer: {
-    link: 'https://mui.com/store/',
+    link: BUY_NOW_URL,
     variant: {
-      footer1: 'https://mui.com/store/',
-      footer2: 'https://mui.com/store/',
-      footer3: 'https://mui.com/store/',
-      footer4: 'https://mui.com/store/',
-      footer5: 'https://mui.com/store/',
-      footer6: 'https://mui.com/store/',
-      footer7: 'https://mui.com/store/'
+      footer1: BUY_NOW_URL,
+      footer2: BUY_NOW_URL,
+      footer3: BUY_NOW_URL,
+      footer4: BUY_NOW_URL,
+      footer5: BUY_NOW_URL,
+      footer6: BUY_NOW_URL,
+      footer7: BUY_NOW_URL
     }
   },
   gallery: {
-    link: 'https://mui.com/store/',
+    link: BUY_NOW_URL,
     variant: {
-      gallery1: 'https://mui.com/store/',
-      gallery2: 'https://mui.com/store/',
-      gallery3: 'https://mui.com/store/',
-      gallery4: 'https://mui.com/store/'
+      gallery1: BUY_NOW_URL,
+      gallery2: BUY_NOW_URL,
+      gallery3: BUY_NOW_URL,
+      gallery4: BUY_NOW_URL
     }
   },
   hero: {
-    link: 'https://mui.com/store/',
+    link: BUY_NOW_URL,
     variant: {
-      hero1: 'https://mui.com/store/',
-      hero2: 'https://mui.com/store/',
-      hero3: 'https://mui.com/store/',
-      hero4: 'https://mui.com/store/',
-      hero5: 'https://mui.com/store/',
-      hero6: 'https://mui.com/store/',
-      hero7: 'https://mui.com/store/',
-      hero8: 'https://mui.com/store/',
-      hero9: 'https://mui.com/store/',
-      hero10: 'https://mui.com/store/',
-      hero11: 'https://mui.com/store/',
-      hero12: 'https://mui.com/store/',
-      hero13: 'https://mui.com/store/',
-      hero14: 'https://mui.com/store/',
-      hero15: 'https://mui.com/store/',
-      hero16: 'https://mui.com/store/',
-      hero17: 'https://mui.com/store/'
+      hero1: BUY_NOW_URL,
+      hero2: BUY_NOW_URL,
+      hero3: BUY_NOW_URL,
+      hero4: BUY_NOW_URL,
+      hero5: BUY_NOW_URL,
+      hero6: BUY_NOW_URL,
+      hero7: BUY_NOW_URL,
+      hero8: BUY_NOW_URL,
+      hero9: BUY_NOW_URL,
+      hero10: BUY_NOW_URL,
+      hero11: BUY_NOW_URL,
+      hero12: BUY_NOW_URL,
+      hero13: BUY_NOW_URL,
+      hero14: BUY_NOW_URL,
+      hero15: BUY_NOW_URL,
+      hero16: BUY_NOW_URL,
+      hero17: BUY_NOW_URL
     }
   },
   icon: {
-    link: 'https://mui.com/store/'
+    link: BUY_NOW_URL
   },
   integration: {
-    link: 'https://mui.com/store/',
+    link: BUY_NOW_URL,
     variant: {
-      integration1: 'https://mui.com/store/',
-      integration2: 'https://mui.com/store/',
-      integration3: 'https://mui.com/store/',
-      integration4: 'https://mui.com/store/',
-      integration5: 'https://mui.com/store/',
-      integration6: 'https://mui.com/store/',
-      integration7: 'https://mui.com/store/',
-      integration8: 'https://mui.com/store/'
+      integration1: BUY_NOW_URL,
+      integration2: BUY_NOW_URL,
+      integration3: BUY_NOW_URL,
+      integration4: BUY_NOW_URL,
+      integration5: BUY_NOW_URL,
+      integration6: BUY_NOW_URL,
+      integration7: BUY_NOW_URL,
+      integration8: BUY_NOW_URL
     }
   },
   megamenu: {
-    link: 'https://mui.com/store/',
+    link: BUY_NOW_URL,
     variant: {
-      megamenu1: 'https://mui.com/store/',
-      megamenu2: 'https://mui.com/store/',
-      megamenu3: 'https://mui.com/store/',
-      megamenu4: 'https://mui.com/store/',
-      megamenu5: 'https://mui.com/store/'
+      megamenu1: BUY_NOW_URL,
+      megamenu2: BUY_NOW_URL,
+      megamenu3: BUY_NOW_URL,
+      megamenu4: BUY_NOW_URL,
+      megamenu5: BUY_NOW_URL
     }
   },
   navbar: {
-    link: 'https://mui.com/store/',
+    link: BUY_NOW_URL,
     variant: {
-      navbar1: 'https://mui.com/store/',
-      navbar2: 'https://mui.com/store/',
-      navbar3: 'https://mui.com/store/',
-      navbar4: 'https://mui.com/store/',
-      navbar5: 'https://mui.com/store/',
-      navbar6: 'https://mui.com/store/',
-      navbar7: 'https://mui.com/store/',
-      navbar8: 'https://mui.com/store/',
-      navbar9: 'https://mui.com/store/',
-      navbar10: 'https://mui.com/store/'
+      navbar1: BUY_NOW_URL,
+      navbar2: BUY_NOW_URL,
+      navbar3: BUY_NOW_URL,
+      navbar4: BUY_NOW_URL,
+      navbar5: BUY_NOW_URL,
+      navbar6: BUY_NOW_URL,
+      navbar7: BUY_NOW_URL,
+      navbar8: BUY_NOW_URL,
+      navbar9: BUY_NOW_URL,
+      navbar10: BUY_NOW_URL
     }
   },
-  onboard: { link: 'https://mui.com/store/' },
+  onboard: { link: BUY_NOW_URL },
   other: {
-    link: 'https://mui.com/store/',
+    link: BUY_NOW_URL,
     variant: {
-      other1: 'https://mui.com/store/',
-      other2: 'https://mui.com/store/',
-      other3: 'https://mui.com/store/'
+      other1: BUY_NOW_URL,
+      other2: BUY_NOW_URL,
+      other3: BUY_NOW_URL
     }
   },
   pricing: {
-    link: 'https://mui.com/store/',
+    link: BUY_NOW_URL,
     variant: {
-      pricing1: 'https://mui.com/store/',
-      pricing2: 'https://mui.com/store/',
-      pricing3: 'https://mui.com/store/',
-      pricing4: 'https://mui.com/store/',
-      pricing5: 'https://mui.com/store/',
-      pricing6: 'https://mui.com/store/',
-      pricing7: 'https://mui.com/store/',
-      pricing8: 'https://mui.com/store/',
-      pricing9: 'https://mui.com/store/'
+      pricing1: BUY_NOW_URL,
+      pricing2: BUY_NOW_URL,
+      pricing3: BUY_NOW_URL,
+      pricing4: BUY_NOW_URL,
+      pricing5: BUY_NOW_URL,
+      pricing6: BUY_NOW_URL,
+      pricing7: BUY_NOW_URL,
+      pricing8: BUY_NOW_URL,
+      pricing9: BUY_NOW_URL
     }
   },
   process: {
-    link: 'https://mui.com/store/',
+    link: BUY_NOW_URL,
     variant: {
-      process1: 'https://mui.com/store/',
-      process2: 'https://mui.com/store/',
-      process3: 'https://mui.com/store/',
-      process4: 'https://mui.com/store/',
-      process5: 'https://mui.com/store/',
-      process6: 'https://mui.com/store/',
-      process7: 'https://mui.com/store/'
+      process1: BUY_NOW_URL,
+      process2: BUY_NOW_URL,
+      process3: BUY_NOW_URL,
+      process4: BUY_NOW_URL,
+      process5: BUY_NOW_URL,
+      process6: BUY_NOW_URL,
+      process7: BUY_NOW_URL
     }
   },
-  privacyPolicy: { link: 'https://mui.com/store/' },
+  privacyPolicy: { link: BUY_NOW_URL },
   smallHero: {
-    link: 'https://mui.com/store/',
+    link: BUY_NOW_URL,
     variant: {
-      smallHero1: 'https://mui.com/store/',
-      smallHero2: 'https://mui.com/store/',
-      smallHero3: 'https://mui.com/store/',
-      smallHero4: 'https://mui.com/store/',
-      smallHero5: 'https://mui.com/store/',
-      smallHero6: 'https://mui.com/store/',
-      smallHero7: 'https://mui.com/store/'
+      smallHero1: BUY_NOW_URL,
+      smallHero2: BUY_NOW_URL,
+      smallHero3: BUY_NOW_URL,
+      smallHero4: BUY_NOW_URL,
+      smallHero5: BUY_NOW_URL,
+      smallHero6: BUY_NOW_URL,
+      smallHero7: BUY_NOW_URL
     }
   },
   team: {
-    link: 'https://mui.com/store/',
+    link: BUY_NOW_URL,
     variant: {
-      team1: 'https://mui.com/store/',
-      team2: 'https://mui.com/store/',
-      team3: 'https://mui.com/store/',
-      team4: 'https://mui.com/store/',
-      team5: 'https://mui.com/store/',
-      team6: 'https://mui.com/store/',
-      team7: 'https://mui.com/store/',
-      team8: 'https://mui.com/store/'
+      team1: BUY_NOW_URL,
+      team2: BUY_NOW_URL,
+      team3: BUY_NOW_URL,
+      team4: BUY_NOW_URL,
+      team5: BUY_NOW_URL,
+      team6: BUY_NOW_URL,
+      team7: BUY_NOW_URL,
+      team8: BUY_NOW_URL
     }
   },
   testimonial: {
-    link: 'https://mui.com/store/',
+    link: BUY_NOW_URL,
     variant: {
-      testimonial1: 'https://mui.com/store/',
-      testimonial2: 'https://mui.com/store/',
-      testimonial3: 'https://mui.com/store/',
-      testimonial4: 'https://mui.com/store/',
-      testimonial5: 'https://mui.com/store/',
-      testimonial6: 'https://mui.com/store/',
-      testimonial7: 'https://mui.com/store/',
-      testimonial8: 'https://mui.com/store/',
-      testimonial9: 'https://mui.com/store/',
-      testimonial10: 'https://mui.com/store/',
-      testimonial11: 'https://mui.com/store/'
+      testimonial1: BUY_NOW_URL,
+      testimonial2: BUY_NOW_URL,
+      testimonial3: BUY_NOW_URL,
+      testimonial4: BUY_NOW_URL,
+      testimonial5: BUY_NOW_URL,
+      testimonial6: BUY_NOW_URL,
+      testimonial7: BUY_NOW_URL,
+      testimonial8: BUY_NOW_URL,
+      testimonial9: BUY_NOW_URL,
+      testimonial10: BUY_NOW_URL,
+      testimonial11: BUY_NOW_URL
     }
   },
   topOffer: {
-    link: 'https://mui.com/store/',
+    link: BUY_NOW_URL,
     variant: {
-      topOffer1: 'https://mui.com/store/',
-      topOffer2: 'https://mui.com/store/',
-      topOffer3: 'https://mui.com/store/',
-      topOffer4: 'https://mui.com/store/',
-      topOffer5: 'https://mui.com/store/'
+      topOffer1: BUY_NOW_URL,
+      topOffer2: BUY_NOW_URL,
+      topOffer3: BUY_NOW_URL,
+      topOffer4: BUY_NOW_URL,
+      topOffer5: BUY_NOW_URL
     }
   },
   typography: {
-    link: 'https://mui.com/store/'
+    link: BUY_NOW_URL
   },
   underMaintenance: {
-    link: 'https://mui.com/store/'
+    link: BUY_NOW_URL
   }
 };

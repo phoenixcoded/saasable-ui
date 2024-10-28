@@ -6,7 +6,7 @@ import Button from '@mui/material/Button';
 
 export default function Signin({ sx, children, ...rest }) {
   return (
-    <Button variant="outlined" size="small" sx={sx} {...rest} href="https://www.saasable.io/" target="_blank">
+    <Button variant="outlined" size="small" sx={sx} {...rest}>
       {children}
     </Button>
   );

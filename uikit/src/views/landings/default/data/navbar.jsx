@@ -80,7 +80,6 @@ function bannerData() {
 /***************************  DEFAULT - NAVBAR  ***************************/
 
 export const navbar = {
-  settingBtn: true,
   secondaryBtn: {
     children: <SvgIcon name="tabler-brand-github" color="primary.main" size={18} />,
     href: FREEBIES_URL,

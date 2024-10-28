@@ -36,7 +36,7 @@ export default function Pricing9({ heading, caption, features, plans }) {
 
   return (
     <ContainerWrapper sx={{ py: SECTION_COMMON_PY }}>
-      <Stack sx={{ gap: { xs: 3, sm: 4 } }}>
+      <Stack sx={{ gap: { xs: 6 } }}>
         {heading && (
           <motion.div
             initial={{ opacity: 0, y: 10 }}
@@ -52,7 +52,7 @@ export default function Pricing9({ heading, caption, features, plans }) {
         )}
         <Grid container spacing={1.5} sx={{ height: 1 }}>
           {plans.map((plan, index) => (
-            <Grid key={index} size={{ xs: 12, sm: 4 }}>
+            <Grid key={index} size={{ xs: 6 }}>
               <motion.div
                 initial={{ y: 25, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
@@ -92,23 +92,31 @@ export default function Pricing9({ heading, caption, features, plans }) {
                             />
                           </Divider>
                           <Stack sx={{ gap: { xs: 0.75, md: 1 } }}>
-                            {features.map((item, index) => {
-                              const active = plan.featuresID.includes(item.id);
+                            {features.map((item) => {
+                              const isFreePlanExclusive = item.label === '1 Demo Landing' || item.label === '25 Components Blocks';
+                              const isProPlanExclusive = item.label === '7 Demo Landing' || item.label === '193+ Component Blocks';
+                              const shouldShow =
+                                (plan.title === 'Free' && isFreePlanExclusive) ||
+                                (plan.title === 'Pro' && isProPlanExclusive) ||
+                                (!isFreePlanExclusive && !isProPlanExclusive);
+
+                              if (!shouldShow) return null;
+
                               return (
-                                <Stack key={index} direction="row" sx={{ gap: 1.25, alignItems: 'center' }}>
+                                <Stack key={item.id} direction="row" sx={{ gap: 1.25, alignItems: 'center' }}>
                                   <Avatar sx={{ bgcolor: 'grey.100', width: 24, height: 24 }}>
                                     <SvgIcon
-                                      name={active ? 'tabler-check' : 'tabler-x'}
+                                      name={plan.featuresID.includes(item.id) ? 'tabler-check' : 'tabler-x'}
                                       type={IconType.STROKE}
                                       size={16}
                                       twoToneColor={theme.palette.grey[100]}
-                                      color={active ? 'secondary.darker' : 'text.secondary'}
+                                      color={plan.featuresID.includes(item.id) ? 'secondary.darker' : 'text.secondary'}
                                       stroke={2}
                                     />
                                   </Avatar>
                                   <Typography
-                                    variant={active ? 'subtitle1' : 'body1'}
-                                    sx={{ color: active ? 'secondary.darker' : 'text.secondary' }}
+                                    variant={plan.featuresID.includes(item.id) ? 'subtitle1' : 'body1'}
+                                    sx={{ color: plan.featuresID.includes(item.id) ? 'secondary.darker' : 'text.secondary' }}
                                   >
                                     {item.label}
                                   </Typography>

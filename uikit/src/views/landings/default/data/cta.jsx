@@ -24,7 +24,7 @@ export const cta4 = {
   },
   list: [
     { primary: '10+ Years Expertise' },
-    { primary: '8+ Satisfied Customers' },
+    { primary: '8k+ Satisfied Customers' },
     { primary: 'Elite Envato Author' },
     { primary: 'Timely Support, Guaranteed' },
     { primary: 'Regular Updates Provided' },

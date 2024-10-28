@@ -360,7 +360,7 @@ export const feature18 = {
       title: 'Material UI Powered',
       title2: 'Leverage Power of Material UI Components',
       description: 'The power and flexibility of Material UI components in admin template',
-      image: '/assets/images/graphics/ai/graphics12-light.svg',
+      image: '/assets/images/graphics/default/admin-dashboard.png',
       list: [
         { primary: 'Nextjs JavaScript/TypeScript' },
         { primary: 'Customizable Themes' },

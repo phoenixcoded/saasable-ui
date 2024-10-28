@@ -51,12 +51,12 @@ export default function ProPage({ image }) {
                 <Button
                   variant="outlined"
                   component={NextLink}
-                  href={'#!'}
+                  href="https://www.figma.com/design/mlkXfeqxUKqIo0GQhPBqPb/SaasAble---UI-Kit---Preview-only?node-id=11-1833&t=JBHOIIEuYZpmN6v8-1"
                   target="_blank"
                   sx={{ minWidth: 215 }}
                   startIcon={<CardMedia component="img" src="/assets/images/shared/figma.svg" sx={{ width: 16, height: 16 }} alt="figma" />}
                 >
-                  Preview Pro ( Coming Soon)
+                  Preview Pro
                 </Button>
               </Grid>
               <Grid>
