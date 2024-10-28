@@ -50,9 +50,9 @@ export default function Pricing9({ heading, caption, features, plans }) {
             <Typeset {...{ heading, caption, stackProps: { sx: { textAlign: 'center' } } }} />
           </motion.div>
         )}
-        <Grid container spacing={1.5} sx={{ height: 1 }}>
+        <Grid container spacing={1.5} sx={{ height: 1, justifyContent: 'center' }}>
           {plans.map((plan, index) => (
-            <Grid key={index} size={{ xs: 6 }}>
+            <Grid key={index} size={{ xs: 12, sm: 6, md: 4 }}>
               <motion.div
                 initial={{ y: 25, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
