@@ -79,7 +79,7 @@ export default function Navbar() {
           {sectionsData.map((item, index) => (
             <Stack key={index} sx={{ gap: { xs: 1.5, md: 2.5 } }}>
               <SimulatorTypeset {...item.typeset} />
-              <Simulator src={item.src} />
+              <Simulator src={item.src} defaultHeight={320} />
             </Stack>
           ))}
         </Stack>

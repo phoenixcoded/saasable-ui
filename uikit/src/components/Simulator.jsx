@@ -1,7 +1,6 @@
 'use client';
 import PropTypes from 'prop-types';
-
-import { useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 
 // @next
 // import NextLink from 'next/link';
@@ -49,7 +48,10 @@ function ScreenButton({ icon, screen, screenSize, onScreenChange }) {
         bgcolor: activeEffect,
         border: '1px solid',
         borderColor: screenSize === screen ? 'grey.600' : 'grey.300',
-        '&.MuiIconButton-root:hover': { borderColor: 'grey.600', bgcolor: activeEffect }
+        '&.MuiIconButton-root:hover': {
+          borderColor: 'grey.600',
+          bgcolor: activeEffect
+        }
       }}
       onClick={() => onScreenChange(screen)}
       aria-label={screen}
@@ -59,17 +61,16 @@ function ScreenButton({ icon, screen, screenSize, onScreenChange }) {
   );
 }
 
-ScreenButton.propTypes = { icon: PropTypes.any, screen: PropTypes.string, screenSize: PropTypes.string, onScreenChange: PropTypes.func };
-
 /***************************  COMMON - SIMULATOR  ***************************/
 
 export default function Simulator({ src, defaultHeight }) {
   const theme = useTheme();
   const iframeEl = useRef(null);
+  const minimumHeight = 450;
 
   const [screenSize, setScreenSize] = useState('desktop');
   // const [mode, setMode] = useState(ThemeMode.LIGHT);
-  const [viewportHeight, setViewportHeight] = useState(600);
+  const [viewportHeight, setViewportHeight] = useState(minimumHeight);
   const [randomId, setRandomId] = useState('');
 
   const boxRadius = 3;
@@ -92,29 +93,58 @@ export default function Simulator({ src, defaultHeight }) {
     setRandomId(generateRandomId(10));
   }, []);
 
-  const handleLoad = () => {
-    // wait for the iframe to its ready state
-    setTimeout(() => setIframeHeight(), 500);
-  };
-
   // Set iframe height based on its content
-  const setIframeHeight = () => {
-    const ran = document.getElementById(randomId);
-    if (ran) {
-      const iframeWindow = ran.contentWindow;
-
-      // make sure iframeWindow and iframeWindow.document are not null or undefined
-      if (iframeWindow && iframeWindow.document) {
-        const htmlElement = iframeWindow.document.documentElement;
-        // ensure htmlElement is valid and contains the actual HTML content
-        if (htmlElement) {
-          // measure the height of the entire HTML content inside the iframe
-          const height = htmlElement.offsetHeight;
-          setViewportHeight(height);
-        }
-      }
+  const setIframeHeight = (type) => {
+    const iframe = iframeEl.current;
+    if (iframe && iframe.contentWindow?.document) {
+      const contentHeight = iframe.contentWindow.document.documentElement.scrollHeight;
+      const contentOffsetHeight = iframe.contentWindow.document.documentElement.offsetHeight;
+      setViewportHeight(
+        type === 'screenChange'
+          ? contentOffsetHeight
+          : type === 'load'
+            ? contentHeight > contentOffsetHeight
+              ? contentOffsetHeight > minimumHeight
+                ? contentOffsetHeight
+                : minimumHeight
+              : contentHeight
+            : contentHeight
+      );
     }
   };
+
+  const startListener = useCallback(() => {
+    const iframeDocument = iframeEl.current?.contentWindow?.document;
+    if (iframeDocument) {
+      // Create a ResizeObserver to observe the height of the iframe's document element
+      const resizeObserver = new ResizeObserver(() => setIframeHeight());
+      resizeObserver.observe(iframeDocument.documentElement);
+
+      return () => resizeObserver.disconnect(); // Cleanup observer on unmount
+    }
+  }, []);
+
+  const handleLoad = useCallback(() => {
+    setTimeout(() => {
+      setIframeHeight('load');
+      setTimeout(() => {
+        startListener();
+      }, 500);
+    }, 500);
+  }, [startListener]);
+
+  useEffect(() => {
+    if (!defaultHeight) {
+      const iframe = iframeEl.current;
+      if (iframe) {
+        iframe.addEventListener('load', handleLoad);
+
+        return () => {
+          iframe.removeEventListener('load', handleLoad);
+        };
+      }
+    }
+  }, [handleLoad, randomId, defaultHeight]);
 
   // Handle screen size change
   const onScreenChange = (screen) => {
@@ -130,7 +160,7 @@ export default function Simulator({ src, defaultHeight }) {
     setScreenSize(screen);
 
     // wait for the iframe to resized
-    setTimeout(() => setIframeHeight(), 100);
+    setTimeout(() => setIframeHeight('screenChange'), 100);
   };
 
   // const onSelectionChange = (item: { title: string; value: string }) => {
@@ -215,13 +245,15 @@ export default function Simulator({ src, defaultHeight }) {
               srcDoc={Loader()}
               onLoad={(event) => {
                 event.currentTarget.removeAttribute('srcdoc');
-                setTimeout(() => handleLoad(), 500);
               }}
               style={{
                 width: '100%',
                 height: defaultHeight || viewportHeight || '100%',
                 border: 'none',
-                ...(screenSize === 'desktop' && { borderBottomLeftRadius: boxRadius * 4, borderBottomRightRadius: boxRadius * 4 })
+                ...(screenSize === 'desktop' && {
+                  borderBottomLeftRadius: boxRadius * 4,
+                  borderBottomRightRadius: boxRadius * 4
+                })
               }}
               src={src}
               title="section-simulator"
@@ -232,5 +264,7 @@ export default function Simulator({ src, defaultHeight }) {
     </Box>
   );
 }
+
+ScreenButton.propTypes = { icon: PropTypes.any, screen: PropTypes.string, screenSize: PropTypes.string, onScreenChange: PropTypes.func };
 
 Simulator.propTypes = { src: PropTypes.string, defaultHeight: PropTypes.number };
