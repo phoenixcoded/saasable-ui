@@ -42,7 +42,7 @@ const data = [
       },
       {
         label: 'About',
-        link: { href: '#' }
+        link: { href: 'https://stage.saasable.io/about', target: '_blank' }
       },
       {
         label: 'Contact Us',

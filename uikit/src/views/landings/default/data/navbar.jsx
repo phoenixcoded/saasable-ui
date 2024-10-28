@@ -156,7 +156,7 @@ export const navbar = {
           {
             title: 'General',
             itemsList: [
-              { title: 'About', status: 'Pro' },
+              { title: 'About', link: { href: 'https://stage.saasable.io/about', target: '_blank' } },
               { title: 'Career', status: 'Pro' },
               { title: 'Privacy Policy', link: { href: '/privacy-policy', target: '_blank' } },
               { title: 'Contact Us', link: { href: '/contact', target: '_blank' } },
