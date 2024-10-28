@@ -95,7 +95,7 @@ export const faq = {
       category: 'Support & Updates'
     }
   ],
-  getInTouch: { link: { children: 'Get in Touch', href: '#' } },
+  getInTouch: { link: { children: 'Get in Touch', href: 'https://support.phoenixcoded.net/', target: '_blank' } },
   categories: ['General', 'Pricing & Licenses', 'Support & Updates'],
   activeCategory: 'General'
 };
