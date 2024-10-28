@@ -13,12 +13,12 @@ const data = {
     label: (
       <>
         <Typography variant="caption" sx={{ color: 'text.secondary' }}>
-          Get 50% off on Current Version
+          Over 200+
         </Typography>
         <Chip
           label={
             <Typography variant="caption" sx={{ color: 'primary.main' }}>
-              50% off
+              Design Blocks
             </Typography>
           }
           sx={{ height: 24, bgcolor: 'primary.lighter', mr: -1, ml: 0.75, '& .MuiChip-label': { px: 1.25 } }}
@@ -32,12 +32,14 @@ const data = {
   headLine: 'Real-time Performance Monitoring',
   captionLine: 'Identify and resolve issues proactively for uninterrupted operations.',
   primaryBtn: { children: 'Try Predictive Cost Analytics' },
-  videoSrc: '/assets/videos/main-landing.mp4',
+  videoSrc: '/assets/videos/saasable-intro.mp4',
   listData: [
-    { image: '/assets/images/shared/typescript.svg', title: 'Typescript' },
+    { image: '/assets/images/shared/react.svg', title: 'React 18' },
     { image: '/assets/images/shared/next-js.svg', title: 'Next.js' },
-    { image: '/assets/images/shared/jwt.svg', title: 'JWT' },
-    { image: '/assets/images/shared/react.svg', title: 'Code Splitting' },
+    { image: '/assets/images/shared/material-ui.svg', title: 'Material UI v6' },
+    { image: '/assets/images/shared/typescript.svg', title: 'TypeScript' },
+    { image: '/assets/images/shared/javascript.svg', title: 'JavaScript' },
+    { image: '/assets/images/shared/m3.svg', title: 'Material 3' },
     { image: '/assets/images/shared/figma.svg', title: 'Figma' }
   ]
 };

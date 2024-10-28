@@ -10,6 +10,7 @@ import Box from '@mui/material/Box';
 import { MegaMenu4 } from '@/blocks/mega-menu';
 import { MenuPopper } from '@/components/navbar';
 import { Themes } from '@/config';
+import { BUY_NOW_URL } from '@/path';
 
 /***************************  MEGAMENU 4 - FOOTER  ***************************/
 
@@ -18,7 +19,7 @@ function footerData() {
     <Stack direction={{ sm: 'row' }} sx={{ gap: 1.5, justifyContent: 'space-between', alignItems: { xs: 'flex-start', sm: 'center' } }}>
       <Stack sx={{ gap: 1 }}>
         <Stack direction="row" sx={{ alignItems: 'center', gap: 1 }}>
-          <Typography variant="h5">We are coming with many more Landing</Typography>
+          <Typography variant="h5">New landing demos are coming soon!</Typography>
           <Chip
             label={<Typography variant="caption">Coming Soon</Typography>}
             size="small"
@@ -33,10 +34,16 @@ function footerData() {
           />
         </Stack>
         <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-          Quia delectus dolorum temporibus est quasi nisi. Temporibus molestiae quae.
+          SaasAble offers 200+ customizable blocks, empowering you to effortlessly design and build landing pages tailored to your product
+          or service needs.
         </Typography>
       </Stack>
-      <Button variant="contained" sx={{ minWidth: 92, px: { xs: 2 }, py: 1.25 }}>
+      <Button
+        variant="contained"
+        sx={{ display: { xs: 'none', sm: 'inline-flex' }, minWidth: 92, px: { xs: 2 }, py: 1.25 }}
+        href={BUY_NOW_URL}
+        target="_blank"
+      >
         Buy Now
       </Button>
     </Stack>
@@ -57,7 +64,7 @@ const data = {
       title: 'AI',
       theme: Themes.THEME_AI,
       image: '/assets/images/mega-menu/ai-light.svg',
-      link: { href: '/ai', target: '_blank' }
+      status: 'Pro'
     },
     {
       title: 'Crypto',

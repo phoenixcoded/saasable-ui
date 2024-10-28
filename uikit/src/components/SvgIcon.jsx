@@ -11,7 +11,7 @@ import { IconType } from '@/enum';
 // @types
 
 const spritePaths = {
-  [IconType.STROKE]: '/assets/svg/tabler-sprite.svg',
+  [IconType.STROKE]: '/assets/svg/tabler-sprite-outline.svg',
   [IconType.FILL]: '/assets/svg/tabler-sprite-fill.svg',
   [IconType.CUSTOM]: '/assets/svg/sprite-custom.svg'
 };

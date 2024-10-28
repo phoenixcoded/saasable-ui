@@ -1,10 +1,44 @@
+//@mui
+import Button from '@mui/material/Button';
+import CardMedia from '@mui/material/CardMedia';
+import Chip from '@mui/material/Chip';
+import Stack from '@mui/material/Stack';
+import Typography from '@mui/material/Typography';
+
 // @project
 import { Other2 } from '@/blocks/other';
 import { Navbar10 } from '@/blocks/navbar';
 import { NavbarContent10 } from '@/blocks/navbar/navbar-content';
 import { MegaMenuType } from '@/enum';
+import { ADMIN_PATH, DOCS_URL } from '@/path';
 
-// @types
+/***************************  MEGAMENU 5 - BANNER  ***************************/
+
+function bannerData() {
+  return (
+    <Stack sx={{ alignItems: 'flex-start', gap: 3, height: 1, justifyContent: 'center' }}>
+      <Stack sx={{ gap: 1 }}>
+        <Stack sx={{ alignItems: 'flex-start', gap: 1.5 }}>
+          <Chip
+            label={<Typography variant="subtitle2">SaasAble Admin Template</Typography>}
+            icon={
+              <CardMedia component="img" image="/assets/images/shared/celebration.svg" sx={{ width: 16, height: 16 }} alt="celebration" />
+            }
+            size="small"
+            sx={{ bgcolor: 'background.default', '& .MuiChip-label': { px: 1.5, py: 0.5 }, '& .MuiChip-icon': { ml: 1.25 } }}
+          />
+          <Typography variant="h5">Exciting Dashboard on the Way!</Typography>
+        </Stack>
+        <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+          Effortlessly manage your app’s backend with customizable admin dashboards that enhance productivity.
+        </Typography>
+      </Stack>
+      <Button href={ADMIN_PATH} target="_blank" variant="contained" sx={{ minWidth: 92, px: { xs: 2 }, py: 1.25 }}>
+        View Dashboard
+      </Button>
+    </Stack>
+  );
+}
 
 /***************************  NAVBAR 10 - DATA  ***************************/
 
@@ -13,38 +47,48 @@ const navItems = [
   { id: 'products', title: 'Products' },
   { id: 'pricing', title: 'Pricing' },
   {
-    id: 'resource',
-    title: 'Resource',
+    id: 'pages',
+    title: 'Pages',
     megaMenu: {
-      type: MegaMenuType.MEGAMENU2,
-      toggleBtn: { children: 'Resource', size: 'small', sx: { color: 'text.primary', py: 1.5 } },
+      type: MegaMenuType.MEGAMENU5,
+      toggleBtn: { children: 'Pages' },
+      popperWidth: 860,
       menuItems: [
         {
-          title: 'Blog',
-          content: 'Explore our latest articles and insights.'
+          title: 'General',
+          itemsList: [
+            { title: 'About', status: 'Pro' },
+            { title: 'Career', status: 'Pro' },
+            { title: 'Privacy Policy', link: { href: '/privacy-policy', target: '_blank' } },
+            { title: 'Contact Us', link: { href: '/contact', target: '_blank' } },
+            { title: 'FAQs', status: 'Pro' },
+            { title: 'Pricing', status: 'Pro' }
+          ]
         },
         {
-          title: 'Help Center',
-          content: 'Find answers to common questions and support topics.',
-          selected: true
+          title: 'Maintenance',
+          itemsList: [
+            { title: 'Coming Soon', status: 'Pro' },
+            { title: 'Error 404', link: { href: '/blocks/error404', target: '_blank' } },
+            { title: 'Error 500', link: { href: '/blocks/error500', target: '_blank' } },
+            { title: 'Under Maintenance', status: 'Pro' }
+          ]
         },
         {
-          title: 'Guides',
-          content: 'Follow our comprehensive guides to get started.'
-        },
-        {
-          title: 'Events',
-          content: 'Stay informed about upcoming events and webinars.'
-        },
-        {
-          title: 'Security',
-          content: 'Learn about our security measures to protect your data.'
-        },
-        {
-          title: 'Payments',
-          content: 'Get help with billing and payment options.'
+          title: 'External',
+          itemsList: [
+            { title: 'Blog', link: { href: 'https://blog.saasable.io/', target: '_blank' } },
+            { title: 'Documentation', link: { href: DOCS_URL, target: '_blank' } },
+            { title: 'Support', link: { href: 'https://support.phoenixcoded.net/', target: '_blank' } },
+            {
+              title: 'Discord',
+              link: { href: 'https://discord.com/invite/2WpeGsQH98', target: '_blank' }
+            },
+            { title: 'Terms & Conditions', link: { href: 'https://mui.com/store/terms/', target: '_blank' } }
+          ]
         }
-      ]
+      ],
+      bannerData: bannerData()
     }
   },
   { id: 'help', title: 'Help', icon: 'tabler-help' }

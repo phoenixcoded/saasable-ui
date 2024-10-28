@@ -81,7 +81,7 @@ export default function MegaMenu() {
           {sectionsData.map((item, index) => (
             <Stack key={index} sx={{ gap: { xs: 1.5, md: 2.5 } }}>
               <SimulatorTypeset {...item.typeset} />
-              <Simulator src={item.src} />
+              <Simulator src={item.src} defaultHeight={760} />
             </Stack>
           ))}
         </Stack>

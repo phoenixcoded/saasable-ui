@@ -7,7 +7,7 @@ import Button from '@mui/material/Button';
 export default function Signin({ sx, children, ...rest }) {
   return (
     <Button variant="outlined" size="small" sx={sx} {...rest}>
-      {children}
+      {children || 'Sign In'}
     </Button>
   );
 }
