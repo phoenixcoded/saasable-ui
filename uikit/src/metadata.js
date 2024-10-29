@@ -29,7 +29,7 @@ export const mainMetadata = {
   openGraph: {
     title,
     description,
-    images: '/assets/images/metadata/dashboard.png', // recommended dimensions of 1200x630
+    images: '/assets/images/metadata/og.png', // recommended dimensions of 1200x630
     url: '/'
   }
 };

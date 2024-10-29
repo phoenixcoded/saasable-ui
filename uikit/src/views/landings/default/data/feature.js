@@ -172,7 +172,7 @@ export const feature20 = {
     {
       icon: 'tabler-brand-google',
       title: 'SEO Friendly',
-      content: 'Tailor typography for optimal readability across all screen sizes.'
+      content: 'Boost visibility with SEO-friendly features for better search rankings.'
     },
     {
       icon: 'tabler-stack-2',
@@ -187,12 +187,12 @@ export const feature20 = {
     {
       icon: 'tabler-help',
       title: 'Detailed Documentation',
-      content: 'Boost visibility with SEO-friendly features for better search rankings.'
+      content: 'Access comprehensive documentation for easy guidance on platform usage.'
     },
     {
       icon: 'tabler-refresh',
       title: 'Regular Updates',
-      content: 'Access comprehensive documentation for easy guidance on platform usage.'
+      content: 'Receive consistent updates to keep the platform secure and up-to-date with the latest features.'
     }
   ]
 };
