@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import { useState } from 'react';
 
 // @next
-import dynamic from 'next/dynamic';
 import NextLink from 'next/link';
 import { usePathname } from 'next/navigation';
 
@@ -20,13 +19,13 @@ import Box from '@mui/material/Box';
 
 // @project
 import MenuPopper from './MenuPopper';
+
+import { MegaMenu4, MegaMenu5 } from '@/blocks/mega-menu';
+
 import SvgIcon from '@/components/SvgIcon';
 import { MegaMenuType } from '@/enum';
 
 // @types
-
-const MegaMenu4 = dynamic(() => import('@/blocks/mega-menu/MegaMenu4'));
-const MegaMenu5 = dynamic(() => import('@/blocks/mega-menu/MegaMenu5'));
 
 const navItemSX = { py: 1.5, borderRadius: { xs: 0, sm: 4 } };
 

@@ -26,10 +26,10 @@ import { getBackgroundDots } from '@/utils/getBackgroundDots';
 // @assets
 import Wave from '@/images/graphics/Wave';
 
-/***************************  HERO - 17  ***************************/
-
 // threshold - adjust threshold as needed
 const options = { root: null, rootMargin: '0px', threshold: 0.6 };
+
+/***************************  HERO - 17  ***************************/
 
 export default function Hero17({ chip, headLine, captionLine, primaryBtn, videoSrc, listData }) {
   const theme = useTheme();
@@ -228,6 +228,7 @@ export default function Hero17({ chip, headLine, captionLine, primaryBtn, videoS
           >
             <GraphicsCard sx={{ border: '5px solid', borderColor: 'grey.300' }}>
               <video
+                playsInline
                 ref={videoRef}
                 width="100%"
                 height="100%"

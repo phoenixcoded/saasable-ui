@@ -39,7 +39,7 @@ const typographyData = [
         lineHeight: { desktop: '36px', tablet: '32px', mobile: '28px' },
         letterSpacing: { desktop: '0px', tablet: '0px', mobile: '0px' },
         variant: 'h3',
-        label: 'h3 - Disaply Medium',
+        label: 'h3 - Display Medium',
         fontWeight: 'Regular (400)'
       },
       {
@@ -48,7 +48,7 @@ const typographyData = [
         lineHeight: { desktop: '32px', tablet: '28px', mobile: '24px' },
         letterSpacing: { desktop: '0px', tablet: '0px', mobile: '0px' },
         variant: 'h4',
-        label: 'h4 - Disaply Small',
+        label: 'h4 - Display Small',
         fontWeight: 'Regular (400)'
       },
       {

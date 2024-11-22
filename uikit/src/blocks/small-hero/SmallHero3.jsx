@@ -17,19 +17,7 @@ import { SECTION_COMMON_PY } from '@/utils/constant';
 
 /***************************  SMALL HERO - 3  ***************************/
 
-/*************  ✨ Codeium Command ⭐  *************/
-/**
- * Renders a small hero section with customizable elements such as a chip, headline, caption, and an explore button.
- *
- * @param {object} props - The properties for the SmallHero3 component.
- * @param {object} props.chip - The chip object containing label and link properties.
- * @param {string|ReactNode} props.headLine - The headline content, either a string or a React node.
- * @param {string} props.captionLine - The caption line to display under the headline.
- * @param {object} props.exploreBtn - The properties for the explore button.
- *
- * @returns {JSX.Element} A JSX element representing the small hero section.
- */
-/******  af7e4af0-61e7-418c-8f39-3eea3c79b049  *******/ export default function SmallHero3({ chip, headLine, captionLine, exploreBtn }) {
+export default function SmallHero3({ chip, headLine, captionLine, exploreBtn }) {
   return (
     <ContainerWrapper sx={{ py: SECTION_COMMON_PY }}>
       <Stack sx={{ alignItems: 'start', gap: { xs: 1.5, md: 4 } }}>

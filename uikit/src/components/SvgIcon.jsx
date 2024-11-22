@@ -28,6 +28,7 @@ export default function SvgIcon({ name, size = 24, type = IconType.STROKE, color
 
   return (
     <Box
+      role="none"
       sx={{
         '& svg': {
           verticalAlign: 'middle',

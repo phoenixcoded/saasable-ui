@@ -2,6 +2,7 @@
 import NextLink from 'next/link';
 
 // @mui
+import branding from '@/branding.json';
 import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
 
@@ -10,7 +11,8 @@ export const cta4 = {
   primaryBtn: {
     children: 'Read Our story',
     href: 'https://blog.saasable.io/a-decade-of-expertise-the-phoenixcoded-story-and-why-you-should-trust-us',
-    target: '_blank'
+    target: '_blank',
+    rel: 'noopener noreferrer'
   },
   profileGroups: {
     avatarGroups: [
@@ -20,7 +22,7 @@ export const cta4 = {
       { avatar: '/assets/images/user/avatar4.png' },
       { avatar: '/assets/images/user/avatar5.png' }
     ],
-    review: '250+ Author Reviews (4.62 out of 5)'
+    review: '250+ Author Reviews (4.65 out of 5)'
   },
   list: [
     { primary: '10+ Years Expertise' },
@@ -30,16 +32,16 @@ export const cta4 = {
     { primary: 'Regular Updates Provided' },
     { primary: 'Proven Industry Leader' }
   ],
-  clientContent: 'Learn More Here'
+  clientContent: 'Learn More'
 };
 
 function DescriptionLine() {
   return (
     <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-      Have questions? Our community is here to help. Learn more{' '}
-      <Link component={NextLink} variant="caption2" color="primary" href="https://discord.com/invite/2WpeGsQH98" underline="hover">
-        here
-      </Link>{' '}
+      Have questions? Our community is here to help. Learn more about{' '}
+      <Link component={NextLink} variant="caption2" color="primary" href={branding.company.socialLink.discord} underline="hover">
+        our community
+      </Link>
     </Typography>
   );
 }
@@ -50,8 +52,9 @@ export const cta5 = {
   caption: 'Get support, share insights, and grow together.',
   primaryBtn: {
     children: 'Join Discord Community',
-    href: 'https://discord.com/invite/2WpeGsQH98',
-    target: '_blank'
+    href: branding.company.socialLink.discord,
+    target: '_blank',
+    rel: 'noopener noreferrer'
   },
   description: <DescriptionLine />,
   saleData: { count: 8, defaultUnit: 'k+', caption: 'Trusted by professionals worldwide' },

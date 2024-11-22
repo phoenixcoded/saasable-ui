@@ -8,9 +8,10 @@ import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 
 // @project
+import ButtonAnimationWrapper from '@/components/ButtonAnimationWrapper';
 import ContainerWrapper from '@/components/ContainerWrapper';
 import Logo from '@/components/logo';
-import { GetStarted, MenuPopper, Signin, NavMenu, NavMenuDrawer } from '@/components/navbar';
+import { MenuPopper, NavMenu, NavMenuDrawer, NavPrimaryButton, NavSecondaryButton } from '@/components/navbar';
 import SvgIcon from '@/components/SvgIcon';
 
 /***************************  NAVBAR - CONTENT 10  ***************************/
@@ -32,8 +33,10 @@ export default function NavbarContent10({ navItems, primaryBtn, secondaryBtn }) 
       <Stack direction="row" sx={{ gap: { xs: 1, md: 1.5 } }}>
         {!downSM && (
           <>
-            <Signin {...secondaryBtn} />
-            <GetStarted {...primaryBtn} />
+            <NavSecondaryButton {...secondaryBtn} />
+            <ButtonAnimationWrapper>
+              <NavPrimaryButton {...primaryBtn} />
+            </ButtonAnimationWrapper>
           </>
         )}
         {downMD && (
@@ -54,8 +57,10 @@ export default function NavbarContent10({ navItems, primaryBtn, secondaryBtn }) 
                 )}
                 {downSM && (
                   <Stack direction="row" sx={{ justifyContent: 'space-between', gap: 1, px: 5, py: 2.5, mx: -5, bgcolor: 'grey.100' }}>
-                    <Signin {...secondaryBtn} />
-                    <GetStarted {...primaryBtn} />
+                    <NavSecondaryButton {...secondaryBtn} />
+                    <ButtonAnimationWrapper>
+                      <NavPrimaryButton {...primaryBtn} />
+                    </ButtonAnimationWrapper>
                   </Stack>
                 )}
               </ContainerWrapper>
@@ -67,4 +72,9 @@ export default function NavbarContent10({ navItems, primaryBtn, secondaryBtn }) 
   );
 }
 
-NavbarContent10.propTypes = { navItems: PropTypes.array, primaryBtn: PropTypes.any, secondaryBtn: PropTypes.any };
+NavbarContent10.propTypes = {
+  navItems: PropTypes.any,
+  primaryBtn: PropTypes.any,
+  secondaryBtn: PropTypes.any,
+  customization: PropTypes.any
+};

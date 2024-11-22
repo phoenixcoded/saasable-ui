@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 
 // @mui
 import { useTheme } from '@mui/material/styles';
-import Avatar from '@mui/material/Avatar';
-import AvatarGroup from '@mui/material/AvatarGroup';
 import Button from '@mui/material/Button';
 import Chip from '@mui/material/Chip';
 import Divider from '@mui/material/Divider';
@@ -21,11 +19,11 @@ import { motion } from 'framer-motion';
 import ButtonAnimationWrapper from '@/components/ButtonAnimationWrapper';
 import ContainerWrapper from '@/components/ContainerWrapper';
 import { GraphicsCard } from '@/components/cards';
+import { ProfileGroup } from '@/components/cards/profile-card';
 import LogoWatermark from '@/components/logo/LogoWatermark';
 import Typeset from '@/components/Typeset';
 
 import { SECTION_COMMON_PY } from '@/utils/constant';
-import GetImagePath from '@/utils/GetImagePath';
 
 // @assets
 import Wave from '@/images/graphics/Wave';
@@ -79,6 +77,7 @@ export default function Cta5({ heading, caption, label, input = false, primaryBt
                           {...input.adornmentBtn}
                         />
                       }
+                      slotProps={{ input: { 'aria-label': 'Email address' } }}
                       sx={{
                         ...theme.typography.caption2,
                         color: 'secondary.main',
@@ -89,7 +88,7 @@ export default function Cta5({ heading, caption, label, input = false, primaryBt
                       }}
                     />
                     {input.helpertext && (
-                      <Typography variant="body2" sx={{ color: 'grey.700' }}>
+                      <Typography variant="body2" sx={{ color: 'text.secondary' }}>
                         {input.helpertext}
                       </Typography>
                     )}
@@ -131,7 +130,7 @@ export default function Cta5({ heading, caption, label, input = false, primaryBt
               <Grid size={{ xs: 6, sm: 12 }} sx={{ minHeight: { sm: '50%' } }}>
                 <GraphicsCard sx={{ height: 1 }}>
                   <Stack sx={{ alignItems: 'center', gap: 1, py: { xs: 2, sm: 6, md: 7.5 }, px: { xs: 2, sm: 3.5 }, textAlign: 'center' }}>
-                    <Typography variant="h1">
+                    <Typography component="div" variant="h1">
                       {saleData.count}
                       <Typography variant="h2" component="span" sx={{ color: 'text.secondary' }}>
                         {saleData.defaultUnit}
@@ -154,34 +153,20 @@ export default function Cta5({ heading, caption, label, input = false, primaryBt
               </Box>
               <Grid size={{ xs: 6, sm: 12 }} sx={{ minHeight: { sm: '50%' } }}>
                 <GraphicsCard sx={{ height: 1 }}>
-                  <Stack
+                  <ProfileGroup
+                    {...profileGroups}
                     sx={{
+                      py: { xs: 2, sm: 4, md: 6.75 },
+                      px: { xs: 2, sm: 1.5 },
                       height: 1,
                       alignItems: 'center',
                       justifyContent: 'center',
                       textAlign: 'center',
-                      gap: 1,
-                      py: { xs: 2, sm: 4, md: 6.75 },
-                      px: { xs: 2, sm: 1.5 }
+                      '& .MuiAvatarGroup-root': { mb: 0.5 },
+                      '& .MuiAvatar-root': { width: { xs: 40, sm: 58 }, height: { xs: 40, sm: 58 } },
+                      '& .wave': { display: 'none' }
                     }}
-                  >
-                    <AvatarGroup
-                      max={5}
-                      sx={{ justifyContent: 'flex-end', '& .MuiAvatar-root': { borderWidth: 1, ml: { xs: -2, sm: -3 } } }}
-                    >
-                      {profileGroups.avatarGroups.map((item, index) => (
-                        <Avatar
-                          key={index}
-                          src={GetImagePath(item.avatar)}
-                          sx={{ width: { xs: 40, sm: 58 }, height: { xs: 40, sm: 58 } }}
-                          alt="Avatar"
-                        />
-                      ))}
-                    </AvatarGroup>
-                    <Typography variant="subtitle1" sx={{ color: 'text.secondary' }}>
-                      {profileGroups.review}
-                    </Typography>
-                  </Stack>
+                  />
                 </GraphicsCard>
               </Grid>
             </Grid>

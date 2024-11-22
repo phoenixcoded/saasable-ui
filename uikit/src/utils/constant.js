@@ -60,16 +60,16 @@ export const FIGMA_LINK = {
       blog6: BUY_NOW_URL
     }
   },
-  cliental: {
+  clientele: {
     link: BUY_NOW_URL,
     variant: {
-      cliental1: BUY_NOW_URL,
-      cliental2: BUY_NOW_URL,
-      cliental3: BUY_NOW_URL,
-      cliental4: BUY_NOW_URL,
-      cliental5: BUY_NOW_URL,
-      cliental6: BUY_NOW_URL,
-      cliental7: BUY_NOW_URL
+      clientele1: BUY_NOW_URL,
+      clientele2: BUY_NOW_URL,
+      clientele3: BUY_NOW_URL,
+      clientele4: BUY_NOW_URL,
+      clientele5: BUY_NOW_URL,
+      clientele6: BUY_NOW_URL,
+      clientele7: BUY_NOW_URL
     }
   },
   color: {
@@ -88,7 +88,8 @@ export const FIGMA_LINK = {
       cta8: BUY_NOW_URL,
       cta9: BUY_NOW_URL,
       cta10: BUY_NOW_URL,
-      cta11: BUY_NOW_URL
+      cta11: BUY_NOW_URL,
+      cta12: BUY_NOW_URL
     }
   },
   cookie: {
@@ -319,6 +320,7 @@ export const FIGMA_LINK = {
       testimonial11: BUY_NOW_URL
     }
   },
+  termsCondition: { link: BUY_NOW_URL },
   topOffer: {
     link: BUY_NOW_URL,
     variant: {

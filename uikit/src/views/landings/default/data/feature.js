@@ -3,6 +3,8 @@ import branding from '@/branding.json';
 import { IconType } from '@/enum';
 import { SECTION_PATH, BUY_NOW_URL, ADMIN_PATH, DOCS_URL } from '@/path';
 
+const linkProps = { target: '_blank', rel: 'noopener noreferrer' };
+
 export const feature2 = {
   heading: 'Culture of Innovation',
   caption:
@@ -71,7 +73,7 @@ export const feature5 = {
 
 export const feature9 = {
   heading: 'Streamline Your Business with Our CRM Solution',
-  caption: 'Discover the Features That Will Transform Your Customer Relationships',
+  caption: 'Discover the features that will transform your customer relationships',
   features: [
     {
       icon: 'custom-brain',
@@ -161,7 +163,7 @@ export const feature10 = {
 export const feature20 = {
   heading: 'Comprehensive UI Kit Tailored to your Need',
   caption: 'Ready to transform your SaaS designs with one powerful UI Kit?',
-  actionBtn: { children: 'Buy Now', href: BUY_NOW_URL, target: '_blank' },
+  actionBtn: { children: 'Buy Now', href: BUY_NOW_URL, ...linkProps },
   secondaryBtn: { children: 'Explore Blocks', href: SECTION_PATH },
   features: [
     {
@@ -201,11 +203,11 @@ export const feature21 = {
   heading: `Design Faster, Smarter with ${branding.brandName} Figma`,
   caption: 'Unlock Figma’s advanced tools for streamlined, scalable, and responsive SaaS UI design.',
   image: '/assets/images/graphics/ai/desktop1-light.svg',
-  primaryBtn: { children: 'Free Figma', href: 'https://www.figma.com/community/file/1425095061180549847', target: '_blank' },
+  primaryBtn: { children: 'Free Figma', href: 'https://www.figma.com/community/file/1425095061180549847', ...linkProps },
   secondaryBtn: {
     children: 'Preview Pro Figma',
     href: 'https://www.figma.com/design/mlkXfeqxUKqIo0GQhPBqPb/SaasAble---UI-Kit---Preview-only?node-id=11-1833&t=JBHOIIEuYZpmN6v8-1',
-    target: '_blank'
+    ...linkProps
   },
   features: [
     {
@@ -282,7 +284,7 @@ export const feature = {
     {
       title: 'Check Out Our Pricing Plan',
       content: 'Choose the plan that aligns with your SaaS product requirements.',
-      actionBtn: { children: 'Pricing Plan', href: BUY_NOW_URL, target: '_blank' }
+      actionBtn: { children: 'Pricing Plan', href: BUY_NOW_URL, ...linkProps }
     }
   ]
 };
@@ -293,18 +295,16 @@ export const feature7 = {
   testimonials: [
     {
       image: '/assets/images/graphics/ai/graphics6-light.svg',
-      progress: 30,
       features: [
         {
           icon: 'tabler-star',
           title: 'Core Value',
-          content: 'Enhances flexibility and resilience in a multi-cloud environment.'
+          content: 'Unlock growth potential through continuous monitoring, enabling proactive strategies in a competitive landscape.'
         }
       ]
     },
     {
       image: '/assets/images/graphics/ai/graphics8-light.svg',
-      progress: 60,
       features: [
         {
           icon: 'tabler-route',
@@ -315,12 +315,11 @@ export const feature7 = {
     },
     {
       image: '/assets/images/graphics/ai/graphics3-light.svg',
-      progress: 50,
       features: [
         {
-          icon: 'tabler-star',
-          title: 'Core Value',
-          content: 'Enhances flexibility and resilience in a multi-cloud environment.'
+          icon: 'tabler-history',
+          title: 'Story',
+          content: 'Real-time performance insights empower teams to respond swiftly, optimizing operations and driving growth.'
         }
       ]
     }
@@ -367,14 +366,14 @@ export const feature18 = {
         { primary: 'Rich Form and Table Components' },
         { primary: 'Responsive Grid System' }
       ],
-      actionBtn: { children: 'Explore Dashboard', href: ADMIN_PATH, target: '_blank' },
-      actionBtn2: { children: 'Documentation', href: DOCS_URL, target: '_blank' }
+      actionBtn: { children: 'View Dashboard', href: ADMIN_PATH, ...linkProps },
+      actionBtn2: { children: 'Docs', href: DOCS_URL, ...linkProps }
     },
     {
       icon: 'tabler-palette',
       title: 'Customizable Themes',
       title2: 'Flexible Theming Options',
-      description: 'Tailor themes effortlessly with Material UI’s robust theming system.',
+      description: 'Tailor themes effortlessly with MUI v6 robust theming system.',
       image: '/assets/images/graphics/default/admin-dashboard-2.png',
       list: [
         { primary: 'Easy options for Theming' },
@@ -382,8 +381,8 @@ export const feature18 = {
         { primary: 'Color Presets tailored to your Web Apps' },
         { primary: 'Consistency in Design' }
       ],
-      actionBtn: { children: 'Explore Dashboard', href: ADMIN_PATH, target: '_blank' },
-      actionBtn2: { children: 'Documentation', href: DOCS_URL, target: '_blank' }
+      actionBtn: { children: 'View Dashboard', href: ADMIN_PATH, ...linkProps },
+      actionBtn2: { children: 'Docs', href: DOCS_URL, ...linkProps }
     },
     {
       icon: 'tabler-rocket',
@@ -397,8 +396,8 @@ export const feature18 = {
         { primary: 'Customization Ready' },
         { primary: 'Enhanced User Experience' }
       ],
-      actionBtn: { children: 'Explore Dashboard', href: ADMIN_PATH, target: '_blank' },
-      actionBtn2: { children: 'Documentation', href: DOCS_URL, target: '_blank' }
+      actionBtn: { children: 'View Dashboard', href: ADMIN_PATH, ...linkProps },
+      actionBtn2: { children: 'Docs', href: DOCS_URL, ...linkProps }
     },
     {
       icon: 'tabler-scale',
@@ -412,8 +411,8 @@ export const feature18 = {
         { primary: 'Extensible Codebase' },
         { primary: 'Future Proof Design' }
       ],
-      actionBtn: { children: 'Explore Dashboard', href: ADMIN_PATH, target: '_blank' },
-      actionBtn2: { children: 'Documentation', href: DOCS_URL, target: '_blank' }
+      actionBtn: { children: 'View Dashboard', href: ADMIN_PATH, ...linkProps },
+      actionBtn2: { children: 'Docs', href: DOCS_URL, ...linkProps }
     }
   ]
 };

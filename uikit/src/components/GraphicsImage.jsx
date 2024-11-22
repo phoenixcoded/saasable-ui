@@ -14,6 +14,10 @@ import GetImagePath from '@/utils/GetImagePath';
 
 /***************************  IMAGE - TYPE IDENTIFY ***************************/
 
+function isImageComponentProps(value) {
+  return value.light !== undefined && value.dark !== undefined;
+}
+
 function isDynamicImageProps(value) {
   return value.component !== undefined && value.type !== undefined;
 }
@@ -43,10 +47,12 @@ export default function GraphicsImage({ children, image, sx, cardMediaProps }) {
     return <DynamicComponent component={image.component} type={image.type} />;
   }
 
-  if (typeof image === 'string') {
+  if (isImageComponentProps(image) || typeof image === 'string') {
     return (
       <CardMedia
-        {...(cardMediaProps?.component == 'img' ? { src: GetImagePath(image) } : { image: GetImagePath(image) })}
+        {...(cardMediaProps?.component == 'img'
+          ? { src: GetImagePath(image), alt: 'Graphics', loading: 'lazy' }
+          : { image: GetImagePath(image), title: 'Graphics', loading: 'lazy' })}
         sx={{ width: 'auto', ...sx }}
         {...cardMediaProps}
       >

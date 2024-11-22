@@ -15,30 +15,27 @@ import { IconType } from '@/enum';
 
 /***************************  FOLLOW US - DATA  ***************************/
 
+const linkProps = { target: '_blank', rel: 'noopener noreferrer' };
 const socialIcons = [
   {
     icon: 'tabler-filled-linkedin',
-    link: { href: `${branding.company.socialLink.linkedin}`, target: '_blank' }
-  },
-  {
-    icon: 'tabler-filled-instagram',
-    link: { href: `${branding.company.socialLink.instagram}` }
+    link: { href: `${branding.company.socialLink.linkedin}`, ...linkProps }
   },
   {
     icon: 'tabler-filled-facebook',
-    link: { href: `${branding.company.socialLink.facebook}`, target: '_blank' }
+    link: { href: `${branding.company.socialLink.facebook}`, ...linkProps }
   },
   {
     icon: 'tabler-filled-youtube',
-    link: { href: `${branding.company.socialLink.youtube}`, target: '_blank' }
+    link: { href: `${branding.company.socialLink.youtube}`, ...linkProps }
   },
   {
     icon: 'tabler-filled-brand-github',
-    link: { href: `${branding.company.socialLink.github}`, target: '_blank' }
+    link: { href: `${branding.company.socialLink.github}`, ...linkProps }
   },
   {
     icon: 'tabler-filled-dribble',
-    link: { href: `${branding.company.socialLink.dribble}`, target: '_blank' }
+    link: { href: `${branding.company.socialLink.dribble}`, ...linkProps }
   }
 ];
 
@@ -50,7 +47,14 @@ export default function FollowUS({ heading = true, color }) {
       {heading && <Typeset {...{ heading: typeof heading === 'string' ? heading : 'Follow Us on', headingProps: { variant: 'h4' } }} />}
       <Stack direction="row" sx={{ gap: { xs: 0.5, sm: 1.5 } }}>
         {socialIcons.map((item, index) => (
-          <Link component={NextLink} key={index} {...item.link} sx={{ ...item.link?.sx, WebkitTapHighlightColor: 'transparent' }}>
+          <Link
+            component={NextLink}
+            key={index}
+            {...item.link}
+            sx={{ ...item.link?.sx, WebkitTapHighlightColor: 'transparent' }}
+            rel="noopener noreferrer"
+            aria-label="follow us on social media"
+          >
             <Avatar
               variant="rounded"
               sx={{

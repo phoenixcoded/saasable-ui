@@ -25,8 +25,11 @@ export default function SimulatorTypeset({ heading, caption, figmaLink }) {
           component={NextLink}
           href={figmaLink}
           target="_blank"
+          rel="noopener noreferrer"
           sx={{ minWidth: 215 }}
-          startIcon={<CardMedia component="img" src="/assets/images/shared/figma.svg" sx={{ width: 16, height: 16 }} alt="figma" />}
+          startIcon={
+            <CardMedia component="img" src="/assets/images/shared/figma.svg" sx={{ width: 16, height: 16 }} alt="figma" loading="lazy" />
+          }
           endIcon={<SvgIcon name="tabler-arrow-narrow-right" />}
         >
           Get Figma File

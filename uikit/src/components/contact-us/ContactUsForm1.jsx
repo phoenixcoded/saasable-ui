@@ -94,6 +94,7 @@ export default function ContactUsForm1() {
             <OutlinedInput
               {...register('firstName', firstNameSchema)}
               placeholder="First Name"
+              slotProps={{ input: { 'aria-label': 'First name' } }}
               fullWidth
               error={errors.firstName && Boolean(errors.firstName)}
             />
@@ -106,6 +107,7 @@ export default function ContactUsForm1() {
             <OutlinedInput
               {...register('lastName', lastNameSchema)}
               placeholder="Last Name"
+              slotProps={{ input: { 'aria-label': 'Last name' } }}
               fullWidth
               error={errors.lastName && Boolean(errors.lastName)}
             />
@@ -118,6 +120,7 @@ export default function ContactUsForm1() {
             <OutlinedInput
               {...register('email', emailSchema)}
               placeholder="example@gmail.com"
+              slotProps={{ input: { 'aria-label': 'Email Address' } }}
               fullWidth
               error={errors.email && Boolean(errors.email)}
             />
@@ -134,6 +137,7 @@ export default function ContactUsForm1() {
               render={({ field: { onChange } }) => (
                 <OutlinedInput
                   placeholder="Phone number"
+                  slotProps={{ input: { 'aria-label': 'Phone number' } }}
                   fullWidth
                   error={errors.phone && Boolean(errors.phone)}
                   onChange={onChange}
@@ -198,6 +202,7 @@ export default function ContactUsForm1() {
                                               image={`https://flagcdn.com/w20/${country.countyCode.toLowerCase()}.png`}
                                               component="img"
                                               sx={{ height: 'fit-content', width: 21 }}
+                                              loading="lazy"
                                             />
                                           </ListItemAvatar>
                                           <ListItemText primary={`${country.name} (${country.dialCode})`} />
@@ -230,6 +235,7 @@ export default function ContactUsForm1() {
               placeholder="Please type your message here.."
               fullWidth
               error={errors.message && Boolean(errors.message)}
+              slotProps={{ input: { 'aria-label': 'Message' } }}
             />
             {errors.message?.message && <ErrorMessage message={errors.message?.message} />}
           </Stack>

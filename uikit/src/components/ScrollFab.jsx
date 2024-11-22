@@ -36,6 +36,7 @@ export default function ScrollFab() {
           <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: 0.4 }}>
             <Fab
               color="primary"
+              rel="noopener noreferrer"
               aria-label="scroll to top"
               onClick={scrollToTop}
               sx={{ width: { xs: 40, lg: 52 }, height: { xs: 40, lg: 52 } }}

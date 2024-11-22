@@ -17,7 +17,7 @@ export default function LogoFab({ size = 24 }) {
   const logoFabPath = branding.logo.logoFab;
 
   return logoFabPath ? (
-    <CardMedia src={logoFabPath} component="img" alt="logo" sx={{ height: 1 }} />
+    <CardMedia src={logoFabPath} component="img" alt="logo" sx={{ height: 1 }} loading="lazy" />
   ) : (
     <svg width={size} height={size} viewBox="0 0 98 98" fill="none" xmlns="http://www.w3.org/2000/svg">
       <g clipPath="url(#clip0_10380_3978)">

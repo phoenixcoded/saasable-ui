@@ -26,7 +26,9 @@ export default function Copyright({ type = CopyrightType.TYPE1, isDivider = true
     variant: 'caption',
     color: 'text.secondary',
     target: '_blank',
+    rel: 'noopener noreferrer',
     underline: 'hover',
+    'aria-label': 'Opens in a new tab',
     sx: { '&:hover': { color: 'primary.main' } }
   };
 
@@ -48,13 +50,13 @@ export default function Copyright({ type = CopyrightType.TYPE1, isDivider = true
             direction={downSM && type !== CopyrightType.TYPE2 ? 'column' : 'row'}
             sx={{ gap: { xs: downSM && type === CopyrightType.TYPE2 ? 3 : 1.5, sm: isDivider ? 1.5 : 3 }, alignItems: 'center' }}
           >
-            <Link {...linkProps} href="#">
+            <Link {...linkProps} href="/privacy-policy">
               Privacy Policy
             </Link>
             {isDivider && (
               <Divider {...dividerProps} {...(downSM && type === CopyrightType.TYPE2 && { orientation: 'vertical', sx: { my: 0 } })} />
             )}
-            <Link {...linkProps} href="#">
+            <Link {...linkProps} href="/privacy-policy">
               Terms & Conditions
             </Link>
           </Stack>

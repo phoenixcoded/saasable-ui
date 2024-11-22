@@ -28,7 +28,9 @@ export default function ProviderWrapper({ children }) {
 
   return (
     <ConfigProvider>
-      <ThemeProvider>{loader ? <Loader /> : children}</ThemeProvider>
+      <ThemeProvider>
+        <main>{loader ? <Loader /> : children}</main>
+      </ThemeProvider>
     </ConfigProvider>
   );
 }

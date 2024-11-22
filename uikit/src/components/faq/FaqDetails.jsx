@@ -5,11 +5,11 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import ListItemText from '@mui/material/ListItemText';
-import SvgIcon from '../SvgIcon';
+import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
 // @project
-import { IconType } from '@/enum';
+import SvgIcon from '../SvgIcon';
 
 // @types
 
@@ -34,12 +34,18 @@ export default function FaqDetails({ answer }) {
               {answer.data.map((item, index) => (
                 <ListItem key={'123' + index} sx={{ px: 0, py: { xs: 0.75, md: 1 } }}>
                   <ListItemAvatar sx={{ minWidth: 34, height: 24 }}>
-                    <SvgIcon
-                      name="custom-check"
-                      type={IconType.CUSTOM}
-                      twoToneColor={answer.color ? colorData[answer.color] : 'transparent'}
-                      color="primary.main"
-                    />
+                    <Stack
+                      sx={{
+                        justifyContent: 'center',
+                        alignItems: 'center',
+                        width: 24,
+                        height: 24,
+                        borderRadius: '50%',
+                        bgcolor: answer.color ? colorData[answer.color] : 'transparent'
+                      }}
+                    >
+                      <SvgIcon name="tabler-check" color="primary.main" size={16} />
+                    </Stack>
                   </ListItemAvatar>
                   <ListItemText primary={item.primary} primaryTypographyProps={{ color: 'text.secondary' }} sx={{ m: 0 }} />
                 </ListItem>

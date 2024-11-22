@@ -36,12 +36,12 @@ export const faq = {
       category: 'General'
     },
     {
-      question: 'How can i download the template after purchase?',
+      question: 'How can I download the template after purchase?',
       answer: 'You will receive the template in a .zip format immediately after successfully purchasing the template.',
       category: 'General'
     },
     {
-      question: `Whats included in the ${branding.brandName} license?`,
+      question: `What's included in the ${branding.brandName} license?`,
       answer: {
         content: 'It includes the Figma UI kit, React Material UI codebase, regular updates, and customer support.',
         type: 'list',
@@ -95,7 +95,9 @@ export const faq = {
       category: 'Support & Updates'
     }
   ],
-  getInTouch: { link: { children: 'Get in Touch', href: 'https://support.phoenixcoded.net/', target: '_blank' } },
+  getInTouch: {
+    link: { children: 'Get in Touch', href: branding.company.socialLink.support, target: '_blank', rel: 'noopener noreferrer' }
+  },
   categories: ['General', 'Pricing & Licenses', 'Support & Updates'],
   activeCategory: 'General'
 };

@@ -92,7 +92,8 @@ export default function Other1({ heading, description, primaryBtn, sections }) {
                           pb: { xs: 2, md: 1 },
                           objectFit: 'contain'
                         }}
-                        alt="section image"
+                        alt="other sections"
+                        loading="lazy"
                       />
                       <Box sx={{ '& div': { alignItems: 'center', pt: 0.875 } }}>
                         <Wave />

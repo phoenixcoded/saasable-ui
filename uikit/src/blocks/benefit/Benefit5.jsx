@@ -58,8 +58,10 @@ export default function Benefit5({ heading, caption, blockDetail }) {
                 <GraphicsCard sx={{ p: { xs: 2, sm: 2.25, md: 3 }, height: 1 }}>
                   <Stack sx={{ gap: 0.5, alignItems: 'center' }}>
                     <Stack direction="row" sx={{ alignItems: 'flex-end' }}>
-                      <Typography variant="h1">{item.counter}</Typography>
-                      <Typography variant="h3" sx={{ color: 'text.secondary', mb: { xs: 0.25, md: 0.625 } }}>
+                      <Typography component="div" variant="h1">
+                        {item.counter}
+                      </Typography>
+                      <Typography component="div" variant="h3" sx={{ color: 'text.secondary', mb: { xs: 0.25, md: 0.625 } }}>
                         {item.defaultUnit}
                       </Typography>
                     </Stack>

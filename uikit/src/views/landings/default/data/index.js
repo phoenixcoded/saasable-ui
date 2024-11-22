@@ -1,5 +1,5 @@
 export { benefit } from './benefit';
-export { cliental, cliental2 } from './cliental';
+export { clientele, clientele2 } from './clientele';
 export { contactUS } from './contact-us';
 export { cta4, cta5, cta10 } from './cta';
 export { faq } from './faq';
@@ -9,6 +9,6 @@ export { integration } from './integration';
 export { navbar } from './navbar';
 export { other, other3 } from './other';
 export { pricing } from './pricing';
-export { smallHero, smallHero4 } from './small-hero';
+export { smallHero, smallHero1, smallHero4 } from './small-hero';
 export { team } from './team';
 export { testimonial } from './testimonial';

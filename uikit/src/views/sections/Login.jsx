@@ -82,7 +82,7 @@ export default function Login() {
           {sectionsData.map((item, index) => (
             <Stack key={index} sx={{ gap: { xs: 1.5, md: 2.5 } }}>
               <SimulatorTypeset {...item.typeset} />
-              <Simulator src={item.src} defaultHeight={800} />
+              <Simulator src={item.src} />
             </Stack>
           ))}
         </Stack>

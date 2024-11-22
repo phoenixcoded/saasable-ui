@@ -66,7 +66,7 @@ export default function Cta4({ headLine, primaryBtn, profileGroups, list, client
                 <Box
                   sx={{
                     position: 'absolute',
-                    top: { xs: -12, sm: -98, md: -68 },
+                    top: { xs: -36, sm: -98, md: -68 },
                     right: { xs: -70, sm: 40, md: 100 },
                     transform: transformValues
                   }}
@@ -79,7 +79,7 @@ export default function Cta4({ headLine, primaryBtn, profileGroups, list, client
                     color: 'primary.main',
                     width: 94,
                     position: 'absolute',
-                    top: { xs: 30, sm: -160, md: -82 },
+                    top: { xs: 6, sm: -160, md: -82 },
                     right: { xs: -160, sm: 0 }
                   }}
                 >

@@ -15,7 +15,7 @@ export default function LogoMain() {
   const logoMainPath = branding.logo.main;
 
   return logoMainPath ? (
-    <CardMedia src={logoMainPath} component="img" alt="logo" sx={{ width: { xs: 112, lg: 140 } }} />
+    <CardMedia src={logoMainPath} component="img" alt="logo" sx={{ width: { xs: 112, lg: 140 } }} loading="lazy" />
   ) : (
     <Box sx={{ width: { xs: 112, lg: 140 }, height: { xs: 22, lg: 26 } }}>
       <svg viewBox="0 0 140 27" fill="none" xmlns="http://www.w3.org/2000/svg">

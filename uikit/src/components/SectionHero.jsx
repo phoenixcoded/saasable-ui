@@ -35,7 +35,7 @@ const options = [
   { label: 'Benefit', path: PAGE_PATH.benefit },
   { label: 'Blog', path: PAGE_PATH.blog },
   { label: 'CTA', path: PAGE_PATH.cta },
-  { label: 'Cliental', path: PAGE_PATH.cliental },
+  { label: 'Clientele', path: PAGE_PATH.clientele },
   { label: 'Color', path: PAGE_PATH.color },
   { label: 'Coming Soon', path: PAGE_PATH.comingSoon },
   { label: 'Contact Us', path: PAGE_PATH.contactUs },
@@ -61,6 +61,7 @@ const options = [
   { label: 'Small Hero', path: PAGE_PATH.smallHero },
   { label: 'Team', path: PAGE_PATH.team },
   { label: 'Testimonial', path: PAGE_PATH.testimonial },
+  { label: 'Terms & Conditions', path: PAGE_PATH.termsCondition },
   { label: 'Top Offer', path: PAGE_PATH.topOffer },
   { label: 'Typography', path: PAGE_PATH.typography },
   { label: 'Onboard', path: PAGE_PATH.onboard },
@@ -101,6 +102,7 @@ export default function SectionHero({ heading, search = true, offer = false, bre
               label={
                 <Breadcrumbs
                   separator={<SvgIcon name={'tabler-chevron-right'} size={16} color="text.primary" />}
+                  rel="noopener noreferrer"
                   aria-label="main-breadcrumb"
                   sx={{ '& .MuiBreadcrumbs-separator': { mx: 0.5 } }}
                 >
@@ -126,7 +128,7 @@ export default function SectionHero({ heading, search = true, offer = false, bre
               label={
                 <>
                   <Typography variant="caption" sx={{ color: 'text.secondary' }}>
-                    Get 50% off on Current Version
+                    Over 200+
                   </Typography>
                   <Chip
                     label={
@@ -136,7 +138,7 @@ export default function SectionHero({ heading, search = true, offer = false, bre
                           color: 'primary.main'
                         }}
                       >
-                        50% off
+                        Design Blocks
                       </Typography>
                     }
                     sx={{ bgcolor: 'primary.lighter', mr: -1, ml: 0.75, '& .MuiChip-label': { px: 1 } }}
@@ -146,6 +148,7 @@ export default function SectionHero({ heading, search = true, offer = false, bre
                         image="/assets/images/shared/celebration.svg"
                         sx={{ width: 20, height: 20 }}
                         alt="celebration"
+                        loading="lazy"
                       />
                     }
                   />
@@ -171,13 +174,14 @@ export default function SectionHero({ heading, search = true, offer = false, bre
               renderInput={(params) => (
                 <TextField
                   {...params}
-                  placeholder="Search Section here. eg. hero section"
+                  placeholder="Search for blocks... (e.g., Hero, Testimonial, Pricing)"
                   variant="outlined"
                   slotProps={{
                     input: {
                       ...params.InputProps,
                       sx: { '&.MuiOutlinedInput-root': { pl: 1.75, '& .MuiAutocomplete-input': { pl: 1.25 } } },
-                      startAdornment: <SvgIcon name="tabler-search" size={22} color="grey.700" />
+                      startAdornment: <SvgIcon name="tabler-search" size={22} color="grey.700" />,
+                      'aria-label': 'Search blocks'
                     }
                   }}
                 />

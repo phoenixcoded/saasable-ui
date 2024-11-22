@@ -12,7 +12,10 @@ export default function Financely({ imageSize }) {
 
   return (
     <Box
-      sx={{ '& svg': { width: imageSize?.width || { xs: 89, sm: 105, md: 147 }, height: imageSize?.height || { xs: 16, sm: 18, md: 26 } } }}
+      sx={{
+        lineHeight: 0,
+        '& svg': { width: imageSize?.width || { xs: 89, sm: 105, md: 147 }, height: imageSize?.height || { xs: 16, sm: 18, md: 26 } }
+      }}
     >
       <svg viewBox="0 0 146 26" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path

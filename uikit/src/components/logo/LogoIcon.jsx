@@ -16,8 +16,9 @@ export default function LogoIcon() {
 
   return (
     <Box
+      className="icon-logo"
       sx={{
-        width: { xs: 25, sm: 33, md: 40 },
+        width: { xs: 19.5, sm: 22, md: 24 },
         height: 1,
         position: 'relative',
         cursor: 'pointer',
@@ -29,7 +30,7 @@ export default function LogoIcon() {
       }}
     >
       {logoIconPath ? (
-        <CardMedia src={logoIconPath} component="img" alt="logo" sx={{ height: 1 }} />
+        <CardMedia src={logoIconPath} component="img" alt="logo" sx={{ height: 1 }} loading="lazy" />
       ) : (
         <svg viewBox="0 0 37 40" fill="none" xmlns="http://www.w3.org/2000/svg">
           <path

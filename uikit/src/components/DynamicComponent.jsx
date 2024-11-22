@@ -27,7 +27,7 @@ function loadComponent(component, type) {
 
 // eslint-disable-next-line
 function DynamicComponent({ component, type, props }) {
-  const ImportedComponent = dynamic(() => loadComponent(component, type));
+  const ImportedComponent = dynamic(() => loadComponent(component, type), { ssr: false });
 
   return <ImportedComponent {...props} />;
 }

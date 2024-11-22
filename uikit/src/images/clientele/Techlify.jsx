@@ -12,7 +12,10 @@ export default function Techlify({ imageSize }) {
 
   return (
     <Box
-      sx={{ '& svg': { width: imageSize?.width || { xs: 84, sm: 100, md: 136 }, height: imageSize?.height || { xs: 22, sm: 25, md: 38 } } }}
+      sx={{
+        lineHeight: 0,
+        '& svg': { width: imageSize?.width || { xs: 84, sm: 100, md: 136 }, height: imageSize?.height || { xs: 22, sm: 25, md: 38 } }
+      }}
     >
       <svg viewBox="0 0 136 38" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path

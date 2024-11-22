@@ -22,7 +22,7 @@ export default function ProfileGroup({ review, avatarGroups, sx }) {
       <Stack sx={{ gap: 0.5 }}>
         <AvatarGroup max={5} sx={{ justifyContent: 'flex-end', '& .MuiAvatar-root': { borderWidth: 1, ml: -1.75 } }}>
           {avatarGroups.map((item, index) => (
-            <Avatar key={index} src={GetImagePath(item.avatar)} alt="Avatar" />
+            <Avatar key={index} src={GetImagePath(item.avatar)} alt="Avatar" imgProps={{ loading: 'lazy' }} />
           ))}
         </AvatarGroup>
         <Typography variant="subtitle2" sx={{ color: 'text.secondary' }}>

@@ -69,7 +69,9 @@ export default function Pricing9({ heading, caption, features, plans }) {
                             {plan.title}
                           </Typography>
                           <Stack>
-                            <Typography variant="h1">${plan.offerPrice && plan.offerPrice > 0 ? plan.offerPrice : plan.price}</Typography>
+                            <Typography component="div" variant="h1">
+                              ${plan.offerPrice && plan.offerPrice > 0 ? plan.offerPrice : plan.price}
+                            </Typography>
                             {!!(plan.offerPrice && plan.offerPrice > 0) && (
                               <Typography variant="h3" sx={{ color: 'grey.700', textDecoration: 'line-through' }}>
                                 ${plan.price}
@@ -142,7 +144,7 @@ export default function Pricing9({ heading, caption, features, plans }) {
                           </ButtonAnimationWrapper>
                           {plan.link && (
                             <Typography variant="subtitle1" sx={{ textAlign: 'center', color: 'text.secondary' }}>
-                              OR
+                              or
                               <Link
                                 component={NextLink}
                                 variant="subtitle1"

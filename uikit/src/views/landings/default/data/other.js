@@ -15,21 +15,21 @@ export const other = {
     {
       animationDelay: 0.2,
       title: 'Hero',
-      subTitle: '16 Different Variants',
+      subTitle: '17 Different Variants',
       image: `${imagePrefix}/hero-light.svg`,
       link: PAGE_PATH.hero
     },
     {
       animationDelay: 0.3,
       title: 'Call to Action',
-      subTitle: '11 Different Variants',
+      subTitle: '12 Different Variants',
       image: `${imagePrefix}/cta-light.svg`,
       link: PAGE_PATH.cta
     },
     {
       animationDelay: 0.4,
       title: 'Feature',
-      subTitle: '7 Different Variants',
+      subTitle: '23 Different Variants',
       image: `${imagePrefix}/feature-light.svg`,
       link: PAGE_PATH.feature
     },

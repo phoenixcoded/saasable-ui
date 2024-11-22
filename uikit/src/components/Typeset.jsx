@@ -14,7 +14,12 @@ export default function Typeset({ heading, caption, stackProps, headingProps, ca
         {heading}
       </Typography>
       {caption && (
-        <Typography variant="h6" {...captionProps} sx={{ color: 'text.secondary', ...(captionProps?.sx && { ...captionProps.sx }) }}>
+        <Typography
+          component="p"
+          variant="h6"
+          {...captionProps}
+          sx={{ color: 'text.secondary', ...(captionProps?.sx && { ...captionProps.sx }) }}
+        >
           {caption}
         </Typography>
       )}

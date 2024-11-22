@@ -16,6 +16,9 @@ export default function GraphicsCard({ sx, children, overLay = false, bgImage, .
 
   return (
     <Card
+      role="img"
+      rel="noopener noreferrer"
+      aria-label="graphics card"
       elevation={0}
       sx={{
         bgcolor: 'grey.100',

@@ -1,4 +1,6 @@
+'use client';
 import PropTypes from 'prop-types';
+
 // @mui
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
@@ -6,7 +8,11 @@ import Grid from '@mui/material/Grid2';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 
+// @third-party
+import { motion } from 'framer-motion';
+
 // @project
+import ButtonAnimationWrapper from '@/components/ButtonAnimationWrapper';
 import { GraphicsCard } from '@/components/cards';
 import { ContactUsForm2 } from '@/components/contact-us';
 import ContainerWrapper from '@/components/ContainerWrapper';
@@ -35,7 +41,11 @@ function ContactCard({ icon, title, content, link }) {
               captionProps: { variant: 'body1' }
             }}
           />
-          {link && <Button color="primary" variant="outlined" {...link} />}
+          {link && (
+            <ButtonAnimationWrapper>
+              <Button color="primary" variant="outlined" {...link} />
+            </ButtonAnimationWrapper>
+          )}
         </Stack>
       </Stack>
     </GraphicsCard>
@@ -54,31 +64,53 @@ export default function ContactUs4({ heading, caption, list, showForm = true }) 
         <Grid container spacing={1.5}>
           {showForm && (
             <Grid size={12}>
-              <GraphicsCard sx={{ height: 1, borderRadius: cardRadius }}>
-                <GraphicsCard sx={{ bgcolor: 'grey.200', borderRadius: cardRadius }}>
-                  <Box sx={{ p: { xs: 2, sm: 4, md: 5 } }}>
-                    {heading && (
-                      <Typeset
-                        {...{
-                          heading,
-                          caption,
-                          stackProps: { sx: { alignItems: 'center', textAlign: 'center' } },
-                          headingProps: { sx: { maxWidth: { xs: '85%', sm: '80%' } } },
-                          captionProps: { sx: { maxWidth: { sm: '60%' } } }
-                        }}
-                      />
-                    )}
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.4,
+                  delay: 0.4
+                }}
+                style={{ height: '100%' }}
+              >
+                <GraphicsCard sx={{ height: 1, borderRadius: cardRadius }}>
+                  <GraphicsCard sx={{ bgcolor: 'grey.200', borderRadius: cardRadius }}>
+                    <Box sx={{ p: { xs: 2, sm: 4, md: 5 } }}>
+                      {heading && (
+                        <Typeset
+                          {...{
+                            heading,
+                            caption,
+                            stackProps: { sx: { alignItems: 'center', textAlign: 'center' } },
+                            headingProps: { sx: { maxWidth: { xs: '85%', sm: '80%' } } },
+                            captionProps: { sx: { maxWidth: { sm: '60%' } } }
+                          }}
+                        />
+                      )}
+                    </Box>
+                  </GraphicsCard>
+                  <Box sx={{ p: sectionPadding, px: { md: 24 } }}>
+                    <ContactUsForm2 />
                   </Box>
                 </GraphicsCard>
-                <Box sx={{ p: sectionPadding, px: { md: 24 } }}>
-                  <ContactUsForm2 />
-                </Box>
-              </GraphicsCard>
+              </motion.div>
             </Grid>
           )}
           {list?.map((item, index) => (
             <Grid key={index} size={{ xs: 12, sm: 4 }}>
-              <ContactCard {...{ ...item }} />
+              <motion.div
+                initial={{ opacity: 0, y: 10 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{
+                  duration: 0.4,
+                  delay: item.animationDelay
+                }}
+                style={{ height: '100%' }}
+              >
+                <ContactCard {...{ ...item }} />
+              </motion.div>
             </Grid>
           ))}
         </Grid>

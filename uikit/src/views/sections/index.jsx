@@ -61,10 +61,10 @@ const sections = [
     category: SectionCategory.MARKETING
   },
   {
-    title: 'Cliental',
+    title: 'Clientele',
     subTitle: '7 Different Variants',
-    image: `${imagePrefix}/cliental-light.svg`,
-    link: PAGE_PATH.cliental,
+    image: `${imagePrefix}/clientele-light.svg`,
+    link: PAGE_PATH.clientele,
     category: SectionCategory.MARKETING
   },
   {
@@ -76,7 +76,7 @@ const sections = [
   },
   {
     title: 'Feature',
-    subTitle: '21 Different Variants',
+    subTitle: '23 Different Variants',
     image: `${imagePrefix}/feature-light.svg`,
     link: PAGE_PATH.feature,
     category: SectionCategory.FEATURE
@@ -104,7 +104,7 @@ const sections = [
   },
   {
     title: 'Call-To-Action',
-    subTitle: '11 Different Variants',
+    subTitle: '12 Different Variants',
     image: `${imagePrefix}/cta-light.svg`,
     link: PAGE_PATH.cta,
     category: SectionCategory.MARKETING
@@ -230,7 +230,7 @@ const sections = [
   },
   {
     title: '404 Error',
-    subTitle: '1 Different Variants',
+    subTitle: '1 Variant',
     image: `${imagePrefix}/404-light.svg`,
     link: PAGE_PATH.error404,
     category: SectionCategory.ESSENTIAL
@@ -238,7 +238,7 @@ const sections = [
 
   {
     title: '500 Error',
-    subTitle: '1 Different Variants',
+    subTitle: '1 Variant',
     image: `${imagePrefix}/500-light.svg`,
     link: PAGE_PATH.error500,
     category: SectionCategory.ESSENTIAL
@@ -246,28 +246,28 @@ const sections = [
 
   {
     title: 'Under Maintenance',
-    subTitle: '1 Different Variants',
+    subTitle: '1 Variant',
     image: `${imagePrefix}/maintenance-light.svg`,
     link: PAGE_PATH.underMaintenance,
     category: SectionCategory.ESSENTIAL
   },
   {
     title: 'Coming Soon',
-    subTitle: '1 Different Variants',
+    subTitle: '1 Variant',
     image: `${imagePrefix}/coming-soon-light.svg`,
     link: PAGE_PATH.comingSoon,
     category: SectionCategory.MARKETING
   },
   {
     title: 'Early Access',
-    subTitle: '1 Different Variants',
+    subTitle: '1 Variant',
     image: `${imagePrefix}/early-access-light.svg`,
     link: PAGE_PATH.earlyAccess,
     category: SectionCategory.MARKETING
   },
   {
     title: 'Onboard',
-    subTitle: '1 Different Variants',
+    subTitle: '1 Variant',
     image: `${imagePrefix}/onboard-light.svg`,
     link: PAGE_PATH.onboard,
     category: SectionCategory.ESSENTIAL
@@ -281,28 +281,35 @@ const sections = [
   },
   {
     title: 'Privacy Policy',
-    subTitle: '1 Different Variants',
+    subTitle: '1 Variant',
     image: `${imagePrefix}/privacy-policy-light.svg`,
     link: PAGE_PATH.privacyPolicy,
     category: SectionCategory.ESSENTIAL
   },
   {
+    title: 'Terms Conditions',
+    subTitle: '1 Variant',
+    image: `${imagePrefix}/privacy-policy-light.svg`,
+    link: PAGE_PATH.termsCondition,
+    category: SectionCategory.ESSENTIAL
+  },
+  {
     title: 'Typography',
-    subTitle: '1 Different Variants',
+    subTitle: '1 Variant',
     image: `${imagePrefix}/typography-light.svg`,
     link: PAGE_PATH.typography,
     category: SectionCategory.ESSENTIAL
   },
   {
     title: 'Color',
-    subTitle: '1 Different Variants',
+    subTitle: '1 Variant',
     image: `${imagePrefix}/color-light.svg`,
     link: PAGE_PATH.color,
     category: SectionCategory.ESSENTIAL
   },
   {
     title: 'Icons',
-    subTitle: '1 Different Variants',
+    subTitle: '1 Variant',
     image: `${imagePrefix}/icon-light.svg`,
     link: PAGE_PATH.icon,
     category: SectionCategory.ESSENTIAL
@@ -345,7 +352,7 @@ export default function Sections() {
 
   return (
     <>
-      <SectionHero heading="Craft Stunning Interfaces with Our Components" search={false} offer />
+      <SectionHero heading="Craft Stunning Design with SaasAble Blocks" search={false} offer />
       <ContainerWrapper>
         <Stack sx={{ py: 6, gap: { xs: 3, sm: 4, md: 5 } }}>
           <Stack
@@ -353,7 +360,8 @@ export default function Sections() {
             sx={{ alignItems: 'center', justifyContent: 'space-between', gap: { xs: 2.5, md: 1.5 } }}
           >
             <OutlinedInput
-              placeholder="Search Section here. eg. hero section"
+              placeholder="Search for blocks... (e.g., Hero, Testimonial, Pricing)"
+              slotProps={{ input: { 'aria-label': 'Search blocks' } }}
               sx={{ '.MuiOutlinedInput-input': { pl: 1.5 }, width: { sm: 456, xs: 1 } }}
               startAdornment={<SvgIcon name="tabler-search" color="grey.700" />}
               onChange={handleSearchValue}
@@ -403,6 +411,7 @@ export default function Sections() {
                       <Link
                         href={item.link}
                         component={NextLink}
+                        aria-label={item.title}
                         sx={{ position: 'absolute', top: 0, height: 1, width: 1, borderRadius: { xs: 6, sm: 8, md: 10 }, zIndex: 1 }}
                       />
                       <Background />
@@ -411,7 +420,8 @@ export default function Sections() {
                           component="img"
                           image={GetImagePath(item.image)}
                           sx={{ px: '14.5%', pt: '16%', pb: { xs: 2, md: 1 }, objectFit: 'contain' }}
-                          alt="section image"
+                          alt="other sections"
+                          loading="lazy"
                         />
                         <Box sx={{ '& div': { alignItems: 'center', pt: 0.875 } }}>
                           <Wave />

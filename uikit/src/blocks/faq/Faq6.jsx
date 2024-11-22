@@ -166,7 +166,7 @@ export default function Faq6({ heading, caption, defaultExpanded, faqList, getIn
                       '& .MuiAccordionSummary-expandIconWrapper': { color: 'text.primary' },
                       '& .MuiAccordionSummary-content': { my: 0 },
                       '&.Mui-focusVisible': { bgcolor: 'transparent' },
-                      '&:hover , &:hover svg': { color: 'primary.dark' }
+                      '&:hover, &:hover svg': { color: 'primary.dark' }
                     }}
                   >
                     <Typography variant="h4">{item.question}</Typography>

@@ -18,9 +18,9 @@ import GraphicsImage from '@/components/GraphicsImage';
 
 import { SECTION_COMMON_PY } from '@/utils/constant';
 
-/***************************  CLIENTAL - 3  ***************************/
+/***************************  CLIENTELE - 3  ***************************/
 
-export default function Cliental3({ title, clientalList }) {
+export default function Clientele3({ title, clienteleList }) {
   const theme = useTheme();
 
   const settings = {
@@ -84,12 +84,12 @@ export default function Cliental3({ title, clientalList }) {
             }}
           >
             <Slider {...settings}>
-              {clientalList.map((item, index) => (
+              {clienteleList.map((item, index) => (
                 <Box
                   key={index}
                   sx={{
                     px: { xs: 0.25, sm: 0.5, md: 0.75 },
-                    '& svg': { opacity: 0.3, transition: ' all 0.5s ease-in-out' },
+                    '& svg': { opacity: 0.4, transition: ' all 0.5s ease-in-out' },
                     '&:hover svg': { opacity: 1, transition: ' all 0.5s ease-in-out' }
                   }}
                 >
@@ -107,4 +107,4 @@ export default function Cliental3({ title, clientalList }) {
   );
 }
 
-Cliental3.propTypes = { title: PropTypes.string, clientalList: PropTypes.array };
+Clientele3.propTypes = { title: PropTypes.string, clienteleList: PropTypes.array };

@@ -12,7 +12,10 @@ export default function Realtor({ imageSize }) {
 
   return (
     <Box
-      sx={{ '& svg': { width: imageSize?.width || { xs: 74, sm: 88, md: 116 }, height: imageSize?.height || { xs: 18, sm: 21, md: 28 } } }}
+      sx={{
+        lineHeight: 0,
+        '& svg': { width: imageSize?.width || { xs: 74, sm: 88, md: 116 }, height: imageSize?.height || { xs: 18, sm: 21, md: 28 } }
+      }}
     >
       <svg viewBox="0 0 115 27" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path

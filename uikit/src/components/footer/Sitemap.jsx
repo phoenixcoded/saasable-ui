@@ -13,10 +13,12 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
 // @project
+import branding from '@/branding.json';
 import { generateFocusVisibleStyles } from '@/utils/CommonFocusStyle';
 
 /***************************  SITEMAP - DATA  ***************************/
 
+const linkProps = { target: '_blank', rel: 'noopener noreferrer' };
 const menuItems = [
   {
     id: 'use-case',
@@ -42,33 +44,25 @@ const menuItems = [
     ]
   },
   {
-    id: 'product',
+    id: 'support',
     grid: { size: { xs: 6, sm: 'auto' } },
-    title: 'Product',
+    title: 'Support',
     menu: [
       {
-        label: 'Home',
-        link: { href: '#' }
-      },
-      {
-        label: 'About',
-        link: { href: '#' }
-      },
-      {
         label: 'Pricing',
-        link: { href: '#' }
+        link: { href: '/pricing', ...linkProps }
       },
       {
-        label: 'Blog',
-        link: { href: '#' }
+        label: 'FAQ',
+        link: { href: '/faq', ...linkProps }
       },
       {
-        label: 'Intigration',
-        link: { href: '#' }
+        label: 'Support',
+        link: { href: branding.company.socialLink.support, ...linkProps }
       },
       {
-        label: 'Feature',
-        link: { href: '#' }
+        label: 'License Terms',
+        link: { href: 'https://mui.com/store/license/', ...linkProps }
       }
     ]
   },
@@ -78,20 +72,19 @@ const menuItems = [
     title: 'Company',
     menu: [
       {
+        label: 'Why Phoenixcoded?',
+        link: {
+          href: 'https://blog.saasable.io/a-decade-of-expertise-the-phoenixcoded-story-and-why-you-should-trust-us',
+          ...linkProps
+        }
+      },
+      {
         label: 'About',
-        link: { href: '#' }
+        link: { href: '/about', ...linkProps }
       },
       {
-        label: 'Career',
-        link: { href: '#' }
-      },
-      {
-        label: 'Use case',
-        link: { href: '#' }
-      },
-      {
-        label: 'Integration',
-        link: { href: '#' }
+        label: 'Contact Us',
+        link: { href: '/contact', ...linkProps }
       }
     ]
   }
@@ -126,6 +119,7 @@ export default function Sitemap({ list, isMenuDesign }) {
                     sx={{ ...menuItemStyle, ...(isMenuDesign && { ...theme.typography.caption2, fontWeight: 400, my: 0.25 }) }}
                     {...(menu.link && { component: NextLink, ...menu.link })}
                     tabIndex={0}
+                    aria-label={menu.label}
                   >
                     {menu.label}
                   </MenuItem>

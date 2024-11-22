@@ -19,7 +19,13 @@ export const hero = {
           }
           sx={{ height: 24, bgcolor: 'primary.lighter', mr: -1, ml: 0.75, '& .MuiChip-label': { px: 1.25 } }}
           icon={
-            <CardMedia component="img" image="/assets/images/shared/celebration.svg" sx={{ width: 16, height: 16 }} alt="celebration" />
+            <CardMedia
+              component="img"
+              image="/assets/images/shared/celebration.svg"
+              sx={{ width: 16, height: 16 }}
+              alt="celebration"
+              loading="lazy"
+            />
           }
         />
       </>

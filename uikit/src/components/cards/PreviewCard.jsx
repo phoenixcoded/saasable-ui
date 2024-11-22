@@ -1,6 +1,9 @@
 'use client';
 import PropTypes from 'prop-types';
 
+// @next
+import { usePathname } from 'next/navigation';
+
 import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
@@ -12,12 +15,14 @@ import SvgIcon from '@/components/SvgIcon';
 
 /***************************  PREVIEW CARD  ***************************/
 
-export default function PreviewCard({ title, image, status }) {
+export default function PreviewCard({ title, theme, image, status }) {
+  const pathname = usePathname();
+
   const cardStyle = {
-    bgcolor: 'transparent',
+    bgcolor: theme && pathname.includes(theme) ? 'grey.100' : 'transparent',
     borderRadius: 3,
     padding: 1,
-    '&:hover': { bgcolor: 'grey.50', cursor: 'pointer' }
+    '&:hover': { bgcolor: theme && pathname.includes(theme) ? 'grey.200' : 'grey.50', cursor: 'pointer' }
   };
 
   return (
@@ -52,4 +57,4 @@ export default function PreviewCard({ title, image, status }) {
   );
 }
 
-PreviewCard.propTypes = { title: PropTypes.any, image: PropTypes.any, status: PropTypes.any };
+PreviewCard.propTypes = { title: PropTypes.any, theme: PropTypes.any, image: PropTypes.any, status: PropTypes.any };

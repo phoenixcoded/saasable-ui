@@ -13,6 +13,7 @@ import Typography from '@mui/material/Typography';
 import { motion } from 'framer-motion';
 
 // @project
+import branding from '@/branding.json';
 import { GraphicsCard } from '@/components/cards';
 import ContainerWrapper from '@/components/ContainerWrapper';
 import { Copyright, FollowUS, Sitemap } from '@/components/footer';
@@ -27,6 +28,7 @@ import { SECTION_COMMON_PY } from '@/utils/constant';
 
 /***************************  FOOTER - 7 DATA  ***************************/
 
+const linkProps = { target: '_blank', rel: 'noopener noreferrer' };
 const data = [
   {
     id: 'company',
@@ -37,16 +39,16 @@ const data = [
         label: 'Why Phoenixcoded?',
         link: {
           href: 'https://blog.saasable.io/a-decade-of-expertise-the-phoenixcoded-story-and-why-you-should-trust-us',
-          target: '_blank'
+          ...linkProps
         }
       },
       {
         label: 'About',
-        link: { href: 'https://stage.saasable.io/about', target: '_blank' }
+        link: { href: 'https://stage.saasable.io/about', ...linkProps }
       },
       {
         label: 'Contact Us',
-        link: { href: '/contact', target: '_blank' }
+        link: { href: '/contact', ...linkProps }
       }
     ]
   },
@@ -65,11 +67,11 @@ const data = [
       },
       {
         label: 'Support',
-        link: { href: 'https://support.phoenixcoded.net/', target: '_blank' }
+        link: { href: branding.company.socialLink.support, ...linkProps }
       },
       {
         label: 'License Terms',
-        link: { href: 'https://mui.com/store/license/', target: '_blank' }
+        link: { href: 'https://mui.com/store/license/', ...linkProps }
       }
     ]
   },
@@ -80,51 +82,51 @@ const data = [
     menu: [
       {
         label: 'Freebies',
-        link: { href: FREEBIES_URL, target: '_blank' }
+        link: { href: FREEBIES_URL, ...linkProps }
       },
       {
         label: 'Documentation',
-        link: { href: DOCS_URL, target: '_blank' }
+        link: { href: DOCS_URL, ...linkProps }
       },
       {
         label: 'Blog',
-        link: { href: 'https://blog.saasable.io/', target: '_blank' }
+        link: { href: 'https://blog.saasable.io/', ...linkProps }
       },
       {
         label: 'Privacy Policy',
-        link: { href: '/privacy-policy', target: '_blank' }
+        link: { href: '/privacy-policy', ...linkProps }
       },
       {
         label: 'Refund Policy',
-        link: { href: 'https://mui.com/store/customer-refund-policy/', target: '_blank' }
+        link: { href: 'https://mui.com/store/customer-refund-policy/', ...linkProps }
       }
     ]
+  }
+];
+
+const iconProps = { color: 'text.secondary' };
+
+const usefullLinks = [
+  {
+    icon: <SvgIcon name="tabler-brand-figma" {...iconProps} />,
+    title: 'Figma Version 1.0.0',
+    href: 'https://www.figma.com/community/file/1425095061180549847'
+  },
+  {
+    icon: <SvgIcon name="tabler-route" {...iconProps} />,
+    title: 'React Material UI v6.1.4',
+    href: 'https://mui.com/material-ui/getting-started'
+  },
+  {
+    icon: <SvgIcon name="tabler-sparkles" {...iconProps} />,
+    title: 'Documentation',
+    href: DOCS_URL
   }
 ];
 
 /***************************  FOOTER - 7  ***************************/
 
 export default function Footer7() {
-  const iconProps = { color: 'text.secondary' };
-
-  const contactDetails = {
-    address: {
-      icon: <SvgIcon name="tabler-map-pin" {...iconProps} />,
-      title: 'Figma Version 1.0.0',
-      href: 'https://www.figma.com/community/file/1425095061180549847'
-    },
-    email: {
-      icon: <SvgIcon name="tabler-route" {...iconProps} />,
-      title: 'React Material UI v6.1.4',
-      href: 'https://mui.com/material-ui/getting-started'
-    },
-    mobile: {
-      icon: <SvgIcon name="tabler-sparkles" {...iconProps} />,
-      title: 'Documentation',
-      href: DOCS_URL
-    }
-  };
-
   const logoFollowContent = (
     <Stack sx={{ alignItems: 'flex-start', gap: { xs: 1.5, sm: 3 } }}>
       <LogoSection />
@@ -139,7 +141,7 @@ export default function Footer7() {
 
   return (
     <ContainerWrapper sx={{ py: SECTION_COMMON_PY }}>
-      <Stack sx={{ gap: { xs: 3, sm: 4, md: 5 } }}>
+      <Stack id="footer-7" role="contentinfo" rel="noopener noreferrer" aria-label="Footer 7" sx={{ gap: { xs: 3, sm: 4, md: 5 } }}>
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -154,24 +156,22 @@ export default function Footer7() {
               <Stack direction={{ sm: 'row', md: 'column' }} sx={{ gap: 3, justifyContent: 'space-between', height: 1 }}>
                 {logoFollowContent}
                 <Stack sx={{ gap: { xs: 2, sm: 2.5, md: 3 } }}>
-                  <Stack direction="row" sx={{ gap: 1, alignItems: 'center' }}>
-                    {contactDetails.address.icon}
-                    <Link component={NextLink} variant="body2" color="text.secondary" href={contactDetails.address.href} target="_blank">
-                      {contactDetails.address.title}
-                    </Link>
-                  </Stack>
-                  <Stack direction="row" sx={{ gap: 1, alignItems: 'center' }}>
-                    {contactDetails.email.icon}
-                    <Link component={NextLink} variant="body2" color="text.secondary" href={contactDetails.email.href} target="_blank">
-                      {contactDetails.email.title}
-                    </Link>
-                  </Stack>
-                  <Stack direction="row" sx={{ gap: 1, alignItems: 'center' }}>
-                    {contactDetails.mobile.icon}
-                    <Link component={NextLink} variant="body2" color="text.secondary" href={contactDetails.mobile.href} target="_blank">
-                      {contactDetails.mobile.title}
-                    </Link>
-                  </Stack>
+                  {usefullLinks.map((item, index) => (
+                    <Stack direction="row" sx={{ gap: 1, alignItems: 'center' }} key={index}>
+                      {item.icon}
+                      <Link
+                        component={NextLink}
+                        variant="body2"
+                        color="text.secondary"
+                        href={item.href}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        aria-label="Usefull Links"
+                      >
+                        {item.title}
+                      </Link>
+                    </Stack>
+                  ))}
                 </Stack>
               </Stack>
             </Grid>

@@ -134,7 +134,7 @@ export default function PrivacyPolicyPage() {
     <ContainerWrapper sx={{ pb: SECTION_COMMON_PY }}>
       <Grid container spacing={{ xs: 2, md: 3 }}>
         <Grid size={{ xs: 12, sm: 4, md: 3 }}>
-          <List sx={{ position: 'sticky', top: 20 }} disablePadding>
+          <List component="div" sx={{ position: 'sticky', top: 20 }} disablePadding>
             {menuItems.map((item, index) => (
               <ListItemButton
                 key={index}

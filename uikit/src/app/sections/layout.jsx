@@ -8,7 +8,6 @@ import dynamic from 'next/dynamic';
 
 // @project
 import useDataThemeMode from '@/hooks/useDataThemeMode';
-import useScrollPosition from '@/hooks/useScrollPosition';
 
 const ScrollFab = dynamic(() => import('@/components/ScrollFab'));
 const SectionsLayout = dynamic(() => import('@/views/sections/layout'));
@@ -17,7 +16,6 @@ const SectionsLayout = dynamic(() => import('@/views/sections/layout'));
 
 export default function Sections({ children }) {
   useDataThemeMode();
-  useScrollPosition();
 
   return (
     <SectionsLayout>

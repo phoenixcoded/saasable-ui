@@ -9,7 +9,8 @@ export const integration = {
     children: 'Documentation',
     startIcon: <SvgIcon name="tabler-help" color="background.default" />,
     href: DOCS_URL,
-    target: '_blank'
+    target: '_blank',
+    rel: 'noopener noreferrer'
   },
   tagList: [
     { label: 'Project Management' },

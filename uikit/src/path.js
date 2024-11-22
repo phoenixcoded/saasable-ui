@@ -8,7 +8,7 @@ export const BUY_NOW_URL = 'https://mui.com/store/items/saasable-multipurpose-ui
 export const FREEBIES_URL = 'https://github.com/phoenixcoded/saasable-ui';
 export const DOCS_URL = 'https://phoenixcoded.gitbook.io/saasable ';
 export const BLOCK_PATH = '/blocks';
-export const AUTH_PATH = '/auth';
+const AUTH_PATH = 'auth';
 
 export const PAGE_PATH = {
   // auth pages path
@@ -21,7 +21,7 @@ export const PAGE_PATH = {
   about: path([SECTION_PATH, 'about']),
   benefit: path([SECTION_PATH, 'benefit']),
   blog: path([SECTION_PATH, 'blog']),
-  cliental: path([SECTION_PATH, 'cliental']),
+  clientele: path([SECTION_PATH, 'clientele']),
   color: path([SECTION_PATH, 'color']),
   comingSoon: path([SECTION_PATH, 'coming-soon']),
   contactUs: path([SECTION_PATH, 'contact-us']),
@@ -48,9 +48,19 @@ export const PAGE_PATH = {
   smallHero: path([SECTION_PATH, 'small-hero']),
   team: path([SECTION_PATH, 'team']),
   testimonial: path([SECTION_PATH, 'testimonial']),
+  termsCondition: path([SECTION_PATH, 'terms-condition']),
   topOffer: path([SECTION_PATH, 'top-offer']),
   typography: path([SECTION_PATH, 'typography']),
-  underMaintenance: path([SECTION_PATH, 'under-maintenance'])
+  underMaintenance: path([SECTION_PATH, 'under-maintenance']),
+
+  // pages path
+  aboutPage: '/about',
+  careerPage: '/career',
+  contactPage: '/contact',
+  faqPage: '/faq',
+  pricingPage: '/pricing',
+  privacyPolicyPage: '/privacy-policy',
+  termsConditionPage: '/terms-condition'
 };
 
 export const PRIVIEW_PATH = {
@@ -91,14 +101,14 @@ export const PRIVIEW_PATH = {
     blog5: path([BLOCK_PATH, 'blog', 'blog5']),
     blog6: path([BLOCK_PATH, 'blog', 'blog6'])
   },
-  cliental: {
-    cliental1: path([BLOCK_PATH, 'cliental', 'cliental1']),
-    cliental2: path([BLOCK_PATH, 'cliental', 'cliental2']),
-    cliental3: path([BLOCK_PATH, 'cliental', 'cliental3']),
-    cliental4: path([BLOCK_PATH, 'cliental', 'cliental4']),
-    cliental5: path([BLOCK_PATH, 'cliental', 'cliental5']),
-    cliental6: path([BLOCK_PATH, 'cliental', 'cliental6']),
-    cliental7: path([BLOCK_PATH, 'cliental', 'cliental7'])
+  clientele: {
+    clientele1: path([BLOCK_PATH, 'clientele', 'clientele1']),
+    clientele2: path([BLOCK_PATH, 'clientele', 'clientele2']),
+    clientele3: path([BLOCK_PATH, 'clientele', 'clientele3']),
+    clientele4: path([BLOCK_PATH, 'clientele', 'clientele4']),
+    clientele5: path([BLOCK_PATH, 'clientele', 'clientele5']),
+    clientele6: path([BLOCK_PATH, 'clientele', 'clientele6']),
+    clientele7: path([BLOCK_PATH, 'clientele', 'clientele7'])
   },
   cta: {
     cta1: path([BLOCK_PATH, 'cta', 'cta1']),
@@ -111,7 +121,8 @@ export const PRIVIEW_PATH = {
     cta8: path([BLOCK_PATH, 'cta', 'cta8']),
     cta9: path([BLOCK_PATH, 'cta', 'cta9']),
     cta10: path([BLOCK_PATH, 'cta', 'cta10']),
-    cta11: path([BLOCK_PATH, 'cta', 'cta11'])
+    cta11: path([BLOCK_PATH, 'cta', 'cta11']),
+    cta12: path([BLOCK_PATH, 'cta', 'cta12'])
   },
   comingSoon: path([BLOCK_PATH, 'coming-soon']),
   cookie: {
@@ -287,6 +298,7 @@ export const PRIVIEW_PATH = {
     testimonial10: path([BLOCK_PATH, 'testimonial', 'testimonial10']),
     testimonial11: path([BLOCK_PATH, 'testimonial', 'testimonial11'])
   },
+  termsCondition: path([BLOCK_PATH, 'terms-condition']),
   topOffer: {
     topOffer1: path([BLOCK_PATH, 'top-offer', 'top-offer1']),
     topOffer2: path([BLOCK_PATH, 'top-offer', 'top-offer2']),

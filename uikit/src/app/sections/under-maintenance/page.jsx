@@ -1,17 +1,13 @@
 import dynamic from 'next/dynamic';
 
 // @project
-import { PAGE_PATH } from '@/path';
 import { SEO_CONTENT } from '@/metadata';
 
 const UnderMaintenance = dynamic(() => import('@/views/sections/UnderMaintenance'));
 
 /***************************  METADATA - UNDER MAINTENANCE  ***************************/
 
-export const metadata = {
-  ...SEO_CONTENT.underMaintenance,
-  openGraph: { ...SEO_CONTENT.underMaintenance, url: PAGE_PATH.underMaintenance }
-};
+export const metadata = { ...SEO_CONTENT.underMaintenance };
 
 /***************************  PAGE - UNDER MAINTENANCE  ***************************/
 

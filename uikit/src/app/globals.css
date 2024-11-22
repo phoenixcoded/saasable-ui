@@ -16,22 +16,3 @@ html {
 
 /* scrollbar */
 @import '../styles/scrollbar.css';
-
-/* Styles for RTL (right-to-left) direction */
-[dir='rtl'] {
-  /* Apply RTL direction to slick-slider slides */
-  .slick-slider .slick-slide {
-    float: left; /* Ensure slides are aligned correctly */
-    direction: rtl;
-  }
-
-  /* Apply LTR (left-to-right) direction to marquee container */
-  .rfm-marquee-container {
-    direction: ltr;
-  }
-
-  /* Apply RTL direction to marquee container children */
-  .rfm-marquee-container .rfm-child {
-    direction: rtl;
-  }
-}
