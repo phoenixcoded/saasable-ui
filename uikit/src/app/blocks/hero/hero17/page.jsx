@@ -32,7 +32,7 @@ const data = {
   headLine: 'Real-time Performance Monitoring',
   captionLine: 'Identify and resolve issues proactively for uninterrupted operations.',
   primaryBtn: { children: 'Try Predictive Cost Analytics' },
-  videoSrc: '/assets/videos/saasable-intro.mp4',
+  videoSrc: 'https://cthemes.s3.us-west-2.amazonaws.com/Admin+Templates/saasable/saasable-intro.mp4',
   listData: [
     { image: '/assets/images/shared/react.svg', title: 'React 18' },
     { image: '/assets/images/shared/next-js.svg', title: 'Next.js' },

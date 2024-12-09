@@ -34,7 +34,7 @@ export const hero = {
   headLine: 'Multipurpose UI Kit and Dashboard Template',
   captionLine: 'Design marketing pages and powerful admin dashboards with ease using our UI Kit, built following Material 3 guidelines.',
   primaryBtn: { children: 'Explore Blocks', href: SECTION_PATH },
-  videoSrc: '/assets/videos/saasable-intro.mp4',
+  videoSrc: 'https://cthemes.s3.us-west-2.amazonaws.com/Admin+Templates/saasable/saasable-intro.mp4',
   listData: [
     { image: '/assets/images/shared/react.svg', title: 'React 18' },
     { image: '/assets/images/shared/next-js.svg', title: 'Next.js' },
