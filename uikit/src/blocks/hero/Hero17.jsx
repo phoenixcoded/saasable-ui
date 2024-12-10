@@ -31,7 +31,7 @@ const options = { root: null, rootMargin: '0px', threshold: 0.6 };
 
 /***************************  HERO - 17  ***************************/
 
-export default function Hero17({ chip, headLine, captionLine, primaryBtn, videoSrc, listData }) {
+export default function Hero17({ chip, headLine, captionLine, primaryBtn, videoSrc, videoThumbnail, listData }) {
   const theme = useTheme();
   const boxRadius = { xs: 24, sm: 32, md: 40 };
 
@@ -237,6 +237,7 @@ export default function Hero17({ chip, headLine, captionLine, primaryBtn, videoS
                 autoPlay={false}
                 loop={true}
                 muted={true}
+                poster={videoThumbnail}
               >
                 <source src={videoSrc} type="video/mp4" />
               </video>

@@ -8,7 +8,7 @@ const cspHeader = `
     object-src 'self';
     base-uri 'self';
     form-action 'self';
-    media-src 'self' https://cthemes.s3.us-west-2.amazonaws.com;
+    media-src 'self' https://*.cloudfront.net;
     connect-src 'self' https://www.googletagmanager.com https://raw.githubusercontent.com;
 `;
 
