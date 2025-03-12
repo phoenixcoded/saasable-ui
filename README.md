@@ -82,11 +82,11 @@ Looking for even more features? Check out SaasAble's [premium version](https://m
 | -                                          | ✓ RTL                                             |
 | -                                          | ✓ Supabase authentication                         |
 | -                                          | ✓ [More components](https://saasable.io/sections) |
-| ✓ MIT License                              | ✓ [Pro License](https://mui.com/store/license/)   |
+| ✓ [MIT License](https://github.com/phoenixcoded/saasable-ui/blob/main/LICENSE)                              | ✓ [Pro License](https://mui.com/store/license/)   |
 
 ## Documentation
 
-[SaasAble documentation](https://phoenixcoded.gitbook.io/saasable) helps you with installation, deployment, and troubleshooting.
+[SaasAble Documentation](https://phoenixcoded.gitbook.io/saasable) helps you with installation, deployment, and troubleshooting.
 
 ## Browser support
 
