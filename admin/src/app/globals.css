@@ -1,0 +1,5 @@
+/* simpebar styles */
+@import 'simplebar-react/dist/simplebar.min.css';
+
+/* public styles */
+@import '../../public/assets/styles/index.css';
