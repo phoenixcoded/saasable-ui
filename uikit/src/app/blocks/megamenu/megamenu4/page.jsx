@@ -7,6 +7,7 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 
 // @project
+import branding from '@/branding.json';
 import { MegaMenu4 } from '@/blocks/mega-menu';
 import { MenuPopper } from '@/components/navbar';
 import { Themes } from '@/config';
@@ -29,20 +30,27 @@ function footerData() {
               display: { xs: 'none', sm: 'inline-flex' }
             }}
             icon={
-              <CardMedia component="img" image="/assets/images/shared/celebration.svg" sx={{ width: 16, height: 16 }} alt="celebration" />
+              <CardMedia
+                component="img"
+                image="/assets/images/shared/celebration.svg"
+                sx={{ width: 16, height: 16 }}
+                alt="celebration"
+                loading="lazy"
+              />
             }
           />
         </Stack>
         <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-          SaasAble offers 200+ customizable blocks, empowering you to effortlessly design and build landing pages tailored to your product
-          or service needs.
+          {branding.brandName} offers 200+ customizable blocks, empowering you to effortlessly design and build landing pages tailored to
+          your product or service needs.
         </Typography>
       </Stack>
       <Button
         variant="contained"
-        sx={{ display: { xs: 'none', sm: 'inline-flex' }, minWidth: 92, px: { xs: 2 }, py: 1.25 }}
+        sx={{ minWidth: 92, px: { xs: 2 }, py: 1.25 }}
         href={BUY_NOW_URL}
         target="_blank"
+        rel="noopener noreferrer"
       >
         Buy Now
       </Button>

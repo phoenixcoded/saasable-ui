@@ -4,7 +4,7 @@ import { Pricing9 } from '@/blocks/pricing';
 /***************************  PRICING 9 - DATA  ***************************/
 
 const data = {
-  heading: 'The Affordable Unfair Advantage.',
+  heading: 'The Affordable Unfair Advantage',
   caption: 'Choose the plan that aligns with your cloud management requirements.',
   features: [
     { id: 1, label: '1 Demo Landing' },

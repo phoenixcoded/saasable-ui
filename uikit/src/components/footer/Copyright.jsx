@@ -16,20 +16,21 @@ import { CopyrightType } from '@/enum';
 
 /***************************  FOOTER - COPYRIGHT  ***************************/
 
-export default function Copyright({ type = CopyrightType.TYPE1, isDivider = true }) {
+export default function Copyright({ type = CopyrightType.TYPE1, textProps, isDivider = true }) {
   const downSM = useMediaQuery((theme) => theme.breakpoints.down('sm'));
 
   const dividerProps = { ...(!downSM && { orientation: 'vertical' }), ...(downSM && { variant: 'middle' }), flexItem: true };
 
   const linkProps = {
     component: NextLink,
-    variant: 'caption',
+    variant: 'caption2',
     color: 'text.secondary',
     target: '_blank',
     rel: 'noopener noreferrer',
     underline: 'hover',
     'aria-label': 'Opens in a new tab',
-    sx: { '&:hover': { color: 'primary.main' } }
+    ...textProps,
+    sx: { '&:hover': { color: 'primary.main' }, ...textProps?.sx }
   };
 
   return (
@@ -37,8 +38,8 @@ export default function Copyright({ type = CopyrightType.TYPE1, isDivider = true
       direction={{ sm: 'row' }}
       sx={{ alignItems: 'center', justifyContent: { xs: 'center', md: 'flex-end' }, gap: { xs: 1.5, sm: isDivider ? 1.5 : 3 } }}
     >
-      <Typography variant="caption2" sx={{ color: 'text.secondary' }}>
-        Copyright © 2024
+      <Typography variant="caption2" {...textProps} sx={{ color: 'text.secondary', ...textProps?.sx }}>
+        Copyright © 2025
         <Link {...linkProps} href={branding.company.url} sx={{ ...linkProps.sx, ml: 0.5 }}>
           {branding.company.name}
         </Link>
@@ -56,7 +57,7 @@ export default function Copyright({ type = CopyrightType.TYPE1, isDivider = true
             {isDivider && (
               <Divider {...dividerProps} {...(downSM && type === CopyrightType.TYPE2 && { orientation: 'vertical', sx: { my: 0 } })} />
             )}
-            <Link {...linkProps} href="/privacy-policy">
+            <Link {...linkProps} href="/terms-condition">
               Terms & Conditions
             </Link>
           </Stack>
@@ -66,4 +67,10 @@ export default function Copyright({ type = CopyrightType.TYPE1, isDivider = true
   );
 }
 
-Copyright.propTypes = { type: PropTypes.any, CopyrightType: PropTypes.any, TYPE1: PropTypes.any, isDivider: PropTypes.bool };
+Copyright.propTypes = {
+  type: PropTypes.any,
+  CopyrightType: PropTypes.any,
+  TYPE1: PropTypes.any,
+  textProps: PropTypes.any,
+  isDivider: PropTypes.bool
+};

@@ -10,23 +10,23 @@ const imagePrefix = '/assets/images/presentation';
 const data = {
   heading: 'Customizable Building Blocks',
   description: 'Kickstart your SaaS landing page design with pre-designed templates featuring versatile components.',
-  primaryBtn: { children: 'Explore All Components', href: SECTION_PATH },
+  primaryBtn: { children: 'Explore all Blocks', href: SECTION_PATH },
   sections: [
     {
       title: 'Hero',
-      subTitle: '16 Different Variants',
+      subTitle: '17 Different Variants',
       image: `${imagePrefix}/hero-light.svg`,
       link: PAGE_PATH.hero
     },
     {
       title: 'Call to Action',
-      subTitle: '11 Different Variants',
+      subTitle: '12 Different Variants',
       image: `${imagePrefix}/cta-light.svg`,
       link: PAGE_PATH.cta
     },
     {
       title: 'Feature',
-      subTitle: '7 Different Variants',
+      subTitle: '23 Different Variants',
       image: `${imagePrefix}/feature-light.svg`,
       link: PAGE_PATH.feature
     },

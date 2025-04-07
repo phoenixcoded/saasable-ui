@@ -1,42 +1,46 @@
 {
   "name": "saasable-ui-free",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "private": true,
   "author": {
     "email": "phoenixcoded@gmail.com",
     "name": "phoenixcoded"
   },
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
     "lint": "eslint \"src/**/*.{js,jsx,ts,tsx}\"",
     "lint:fix": "eslint --fix \"src/**/*.{js,jsx,ts,tsx}\"",
-    "prettier": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\""
+    "prettier": "prettier --write \"src/**/*.{js,jsx,ts,tsx}\"",
+    "knip": "knip"
   },
   "dependencies": {
-    "@emotion/cache": "11.13.1",
-    "@emotion/react": "11.13.3",
-    "@emotion/styled": "11.13.0",
-    "@mui/lab": "6.0.0-beta.15",
-    "@mui/material": "6.1.7",
-    "@mui/material-nextjs": "6.1.7",
-    "axios": "1.7.7",
+    "@emotion/cache": "11.14.0",
+    "@emotion/react": "11.14.0",
+    "@emotion/styled": "11.14.0",
+    "@mui/lab": "7.0.0-beta.10",
+    "@mui/material": "7.0.1",
+    "@mui/material-nextjs": "7.0.0",
+    "axios": "1.8.4",
     "framer-motion": "11.11.17",
     "lodash-es": "4.17.21",
-    "next": "15.0.3",
+    "next": "15.2.4",
     "react": "18.3.1",
     "react-dom": "18.3.1",
-    "react-hook-form": "7.53.2",
-    "react-slick": "0.30.2",
+    "react-hook-form": "7.55.0",
+    "react-slick": "0.30.3",
     "slick-carousel": "1.8.1"
   },
   "devDependencies": {
-    "@eslint/js": "9.15.0",
-    "eslint": "9.15.0",
-    "eslint-config-next": "15.0.3",
-    "eslint-config-prettier": "9.1.0",
-    "eslint-plugin-prettier": "5.2.1",
-    "prettier": "3.3.3"
+    "@eslint/js": "9.23.0",
+    "eslint": "9.23.0",
+    "eslint-config-next": "15.2.4",
+    "eslint-config-prettier": "10.1.1",
+    "eslint-plugin-prettier": "5.2.5",
+    "prettier": "3.5.3"
+  },
+  "resolutions": {
+    "punycode": "2.3.1"
   }
 }

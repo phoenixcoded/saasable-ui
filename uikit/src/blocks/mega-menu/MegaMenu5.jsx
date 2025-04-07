@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 // @mui
 import { useTheme, alpha } from '@mui/material/styles';
 import Chip from '@mui/material/Chip';
-import Grid from '@mui/material/Grid2';
+import Grid from '@mui/material/Grid';
 import List from '@mui/material/List';
 import ListSubheader from '@mui/material/ListSubheader';
 import ListItemButton from '@mui/material/ListItemButton';
@@ -28,27 +28,23 @@ export default function MegaMenu5({ menuItems, bannerData, popperWidth = 750 }) 
           <Box sx={{ p: 2.5, bgcolor: 'grey.100', height: 1, borderRadius: 2 }}>{bannerData}</Box>
         </Grid>
       )}
-      <Grid size={{ xs: 12, sm: 8 }}>
+      <Grid size={{ xs: 12, sm: bannerData ? 8 : 12 }}>
         <Grid container spacing={1}>
           {menuItems.map((items, index) => (
             <Grid key={index} size={{ xs: 12, sm: menuItems.length > 2 ? 4 : gridItem }}>
               <List
                 component="nav"
-                sx={{
-                  p: 1,
-                  width: '100%',
-                  maxWidth: { xs: 1, md: popperWidth },
-                  display: 'flex',
-                  flexDirection: 'column'
-                }}
-                subheader={
-                  <ListSubheader
-                    component="div"
-                    sx={{ ...theme.typography.subtitle1, p: 1, color: 'text.primary', bgcolor: 'transparent' }}
-                  >
-                    {items.title}
-                  </ListSubheader>
-                }
+                sx={{ p: 1, width: '100%', maxWidth: { xs: 1, md: popperWidth }, display: 'flex', flexDirection: 'column' }}
+                {...(items.title && {
+                  subheader: (
+                    <ListSubheader
+                      component="div"
+                      sx={{ ...theme.typography.subtitle1, p: 1, color: 'text.primary', bgcolor: 'transparent' }}
+                    >
+                      {items.title}
+                    </ListSubheader>
+                  )
+                })}
               >
                 {items?.itemsList &&
                   items?.itemsList.map((item, index) => (
@@ -73,12 +69,14 @@ export default function MegaMenu5({ menuItems, bannerData, popperWidth = 750 }) 
                       <ListItemText
                         primary={item.title}
                         secondary={item.content}
-                        primaryTypographyProps={{
-                          variant: 'body1',
-                          sx: { whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', mr: 0.5, color: 'text.secondary' }
+                        slotProps={{
+                          primary: {
+                            variant: 'body1',
+                            sx: { whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis', mr: 0.5, color: 'text.primary' }
+                          }
                         }}
                       />
-                      {!item.status ? (
+                      {item && item?.link && item?.link !== undefined && item?.link?.target === '_blank' ? (
                         <SvgIcon name="tabler-arrow-up-right" size={16} stroke={2} color={theme.palette.grey[800]} />
                       ) : (
                         <Chip

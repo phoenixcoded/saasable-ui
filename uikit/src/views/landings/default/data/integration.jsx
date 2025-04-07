@@ -14,7 +14,7 @@ export const integration = {
   },
   tagList: [
     { label: 'Project Management' },
-    { label: 'Customer Relationship Management CRM' },
+    { label: 'Customer Relationship Management (CRM)' },
     { label: 'HR & Recruitment' },
     { label: 'Finance & Accounting' },
     { label: 'E-commerce Solutions' },

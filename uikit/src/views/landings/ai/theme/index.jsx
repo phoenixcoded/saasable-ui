@@ -29,6 +29,7 @@ export default function ThemeCustomization({ children }) {
         xl: 1440
       }
     },
+    direction: 'ltr',
     palette: themePalette
   });
 

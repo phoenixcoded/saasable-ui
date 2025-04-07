@@ -99,7 +99,8 @@ export const PRIVIEW_PATH = {
     blog3: path([BLOCK_PATH, 'blog', 'blog3']),
     blog4: path([BLOCK_PATH, 'blog', 'blog4']),
     blog5: path([BLOCK_PATH, 'blog', 'blog5']),
-    blog6: path([BLOCK_PATH, 'blog', 'blog6'])
+    blog6: path([BLOCK_PATH, 'blog', 'blog6']),
+    blog7: path([BLOCK_PATH, 'blog', 'blog7'])
   },
   clientele: {
     clientele1: path([BLOCK_PATH, 'clientele', 'clientele1']),
@@ -148,7 +149,8 @@ export const PRIVIEW_PATH = {
     faq4: path([BLOCK_PATH, 'faq', 'faq4']),
     faq5: path([BLOCK_PATH, 'faq', 'faq5']),
     faq6: path([BLOCK_PATH, 'faq', 'faq6']),
-    faq7: path([BLOCK_PATH, 'faq', 'faq7'])
+    faq7: path([BLOCK_PATH, 'faq', 'faq7']),
+    faq8: path([BLOCK_PATH, 'faq', 'faq8'])
   },
   feature: {
     feature1: path([BLOCK_PATH, 'feature', 'feature1']),
@@ -173,7 +175,9 @@ export const PRIVIEW_PATH = {
     feature20: path([BLOCK_PATH, 'feature', 'feature20']),
     feature21: path([BLOCK_PATH, 'feature', 'feature21']),
     feature22: path([BLOCK_PATH, 'feature', 'feature22']),
-    feature23: path([BLOCK_PATH, 'feature', 'feature23'])
+    feature23: path([BLOCK_PATH, 'feature', 'feature23']),
+    feature24: path([BLOCK_PATH, 'feature', 'feature24']),
+    feature25: path([BLOCK_PATH, 'feature', 'feature25'])
   },
   footer: {
     footer1: path([BLOCK_PATH, 'footer', 'footer1']),
@@ -207,7 +211,9 @@ export const PRIVIEW_PATH = {
     hero14: path([BLOCK_PATH, 'hero', 'hero14']),
     hero15: path([BLOCK_PATH, 'hero', 'hero15']),
     hero16: path([BLOCK_PATH, 'hero', 'hero16']),
-    hero17: path([BLOCK_PATH, 'hero', 'hero17'])
+    hero17: path([BLOCK_PATH, 'hero', 'hero17']),
+    hero18: path([BLOCK_PATH, 'hero', 'hero18']),
+    hero19: path([BLOCK_PATH, 'hero', 'hero19'])
   },
   integration: {
     integration1: path([BLOCK_PATH, 'integration', 'integration1']),
@@ -262,10 +268,14 @@ export const PRIVIEW_PATH = {
     process4: path([BLOCK_PATH, 'process', 'process4']),
     process5: path([BLOCK_PATH, 'process', 'process5']),
     process6: path([BLOCK_PATH, 'process', 'process6']),
-    process7: path([BLOCK_PATH, 'process', 'process7'])
+    process7: path([BLOCK_PATH, 'process', 'process7']),
+    process8: path([BLOCK_PATH, 'process', 'process8'])
   },
-  privacyPolicy: path([BLOCK_PATH, 'privacy-policy']),
-  proPage: path([BLOCK_PATH, 'pro-page']),
+  privacyPolicy: {
+    privacyPolicy1: path([BLOCK_PATH, 'privacy-policy', 'privacy-policy1']),
+    privacyPolicy2: path([BLOCK_PATH, 'privacy-policy', 'privacy-policy2'])
+  },
+
   smallHero: {
     smallHero1: path([BLOCK_PATH, 'small-hero', 'small-hero1']),
     smallHero2: path([BLOCK_PATH, 'small-hero', 'small-hero2']),
@@ -296,7 +306,9 @@ export const PRIVIEW_PATH = {
     testimonial8: path([BLOCK_PATH, 'testimonial', 'testimonial8']),
     testimonial9: path([BLOCK_PATH, 'testimonial', 'testimonial9']),
     testimonial10: path([BLOCK_PATH, 'testimonial', 'testimonial10']),
-    testimonial11: path([BLOCK_PATH, 'testimonial', 'testimonial11'])
+    testimonial11: path([BLOCK_PATH, 'testimonial', 'testimonial11']),
+    testimonial12: path([BLOCK_PATH, 'testimonial', 'testimonial12']),
+    testimonial13: path([BLOCK_PATH, 'testimonial', 'testimonial13'])
   },
   termsCondition: path([BLOCK_PATH, 'terms-condition']),
   topOffer: {

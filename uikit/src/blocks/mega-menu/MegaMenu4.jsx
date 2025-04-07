@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 // @next
 import NextLink from 'next/link';
 
-import Grid from '@mui/material/Grid2';
+import Grid from '@mui/material/Grid';
 import Link from '@mui/material/Link';
 import Box from '@mui/material/Box';
 
@@ -18,10 +18,7 @@ export default function MegaMenu4({ menuItems, footerData, popperWidth = 936, fo
       <Grid container spacing={1} sx={{ p: 1, bgcolor: 'background.paper' }}>
         {menuItems.map((item, index) => (
           <Grid key={index} size={{ xs: 6, sm: 4, md: 3 }}>
-            <Link
-              {...(item.link && { component: NextLink, ...item.link, sx: { ...item.link?.sx, WebkitTapHighlightColor: 'transparent' } })}
-              aria-label={item.title}
-            >
+            <Link {...(item.link && { component: NextLink, ...item.link, sx: { ...item.link?.sx } })} aria-label={item.title}>
               <PreviewCard {...item} />
             </Link>
           </Grid>

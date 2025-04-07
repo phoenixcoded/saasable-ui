@@ -16,7 +16,7 @@ import { FIGMA_LINK } from '@/utils/constant';
 
 let breadcrumbs = [
   { title: 'Home', to: process.env.NEXT_PUBLIC_BASE_NAME || '/' },
-  { title: 'Components', to: SECTION_PATH },
+  { title: 'Blocks', to: SECTION_PATH },
   { title: 'About' }
 ];
 
@@ -25,30 +25,27 @@ let breadcrumbs = [
 const sectionsData = [
   {
     typeset: {
-      heading: 'Default about section 01',
-      caption:
-        'Use this default example with an announcement badge, heading, CTA buttons, and customer logos to showcase what your website offers.',
+      heading: 'About Section - 01',
+      caption: '',
       figmaLink: FIGMA_LINK.about.variant.about1
     },
-    src: PRIVIEW_PATH.proPage
+    src: PRIVIEW_PATH.about.about1
   },
   {
     typeset: {
-      heading: 'Default about section 02',
-      caption:
-        'Use this default example with an announcement badge, heading, CTA buttons, and customer logos to showcase what your website offers.',
+      heading: 'About Section - 02',
+      caption: '',
       figmaLink: FIGMA_LINK.about.variant.about2
     },
-    src: PRIVIEW_PATH.proPage
+    src: PRIVIEW_PATH.about.about2
   },
   {
     typeset: {
-      heading: 'Default about section 03',
-      caption:
-        'Use this default example with an announcement badge, heading, CTA buttons, and customer logos to showcase what your website offers.',
+      heading: 'About Section - 03',
+      caption: '',
       figmaLink: FIGMA_LINK.about.variant.about3
     },
-    src: PRIVIEW_PATH.proPage
+    src: PRIVIEW_PATH.about.about3
   }
 ];
 
@@ -57,7 +54,7 @@ const sectionsData = [
 export default function About() {
   return (
     <>
-      <SectionHero {...{ heading: `${branding.brandName} About Section`, breadcrumbs }} />
+      <SectionHero {...{ heading: `${branding.brandName} About Sections`, breadcrumbs }} />
       <ContainerWrapper>
         <Stack sx={{ gap: { xs: 3, sm: 4, md: 5 }, my: 6 }}>
           {sectionsData.map((item, index) => (

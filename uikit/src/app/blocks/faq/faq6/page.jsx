@@ -10,6 +10,11 @@ const data = {
   defaultExpanded: 'Fees & Charges',
   faqList: [
     {
+      question: `Is ${branding.brandName} only for SaaS web apps?`,
+      answer: `While ${branding.brandName} is designed with SaaS applications in mind, it’s not limited to SaaS products. ${branding.brandName} is multipurpose and can be used for a variety of websites and applications, whether it’s for an agency, digital product, CRM, blog, AI platform, or any other system. ${branding.brandName} is versatile and adaptable to fit any use case, SaaS or not. It’s built for all types of projects!`,
+      category: 'General'
+    },
+    {
       question: `What makes ${branding.brandName} different from other UI Kits?`,
       answer: `${branding.brandName} offers industry-specific templates, a React Material UI Kit, Figma UI Kit, and flexible customization options that cater to both front-end marketing and admin interfaces.`,
       category: 'General'
@@ -34,12 +39,12 @@ const data = {
       category: 'General'
     },
     {
-      question: 'How can i download the template after purchase?',
+      question: 'How can I download the template after purchase?',
       answer: 'You will receive the template in a .zip format immediately after successfully purchasing the template.',
       category: 'General'
     },
     {
-      question: `Whats included in the ${branding.brandName} license?`,
+      question: `What's included in the ${branding.brandName} license?`,
       answer: {
         content: 'It includes the Figma UI kit, React Material UI codebase, regular updates, and customer support.',
         type: 'list',
@@ -93,7 +98,7 @@ const data = {
       category: 'Support & Updates'
     }
   ],
-  getInTouch: { link: { children: 'Get in Touch', href: 'https://support.phoenixcoded.net/', target: '_blank' } },
+  getInTouch: { link: { children: 'Get in Touch' } },
   categories: ['General', 'Pricing & Licenses', 'Support & Updates'],
   activeCategory: 'General'
 };

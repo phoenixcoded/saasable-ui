@@ -23,7 +23,6 @@ export default function LogoIcon() {
         position: 'relative',
         cursor: 'pointer',
         display: 'block',
-        WebkitTapHighlightColor: 'transparent',
         '& svg': {
           display: 'block'
         }

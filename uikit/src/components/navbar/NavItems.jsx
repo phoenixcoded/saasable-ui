@@ -41,7 +41,7 @@ function ExpanedList({ item, menuTextColor }) {
   return (
     <>
       <ListItemButton sx={navItemSX} onClick={handleClick}>
-        <ListItemText primary={item.title} primaryTypographyProps={{ variant: 'caption2', color: menuTextColor || 'text.primary' }} />
+        <ListItemText primary={item.title} slotProps={{ primary: { variant: 'caption2', color: menuTextColor || 'text.primary' } }} />
         <Box
           sx={{
             position: 'absolute',
@@ -80,7 +80,7 @@ function MenuDrawer({ item, menuTextColor }) {
           {...(item.link && { component: NextLink, href: item.link, underline: 'none', ...(item?.target && { target: item.target }) })}
           sx={navItemSX}
         >
-          <ListItemText primary={item.title} primaryTypographyProps={{ variant: 'caption2', color: menuTextColor || 'text.primary' }} />
+          <ListItemText primary={item.title} slotProps={{ primary: { variant: 'caption2', color: menuTextColor || 'text.primary' } }} />
         </ListItemButton>
       ) : (
         <ExpanedList item={item} menuTextColor={menuTextColor} />
@@ -123,6 +123,7 @@ function NavList({ item, menuTextColor }) {
       ) : (
         <MenuPopper
           menuTextColor={menuTextColor}
+          {...(item.megaMenu?.hoverToggler && { hoverToggler: item.megaMenu?.hoverToggler })}
           {...(downMD && item.megaMenu?.popperOffset && { offset: item.megaMenu?.popperOffset })}
           {...(!downMD && item.megaMenu?.popperOffsetX && { offsetX: item.megaMenu?.popperOffsetX })}
           toggleProps={{ ...item.megaMenu.toggleBtn, sx: toggleProps, endIcon: true }}

@@ -5,7 +5,6 @@ import PropTypes from 'prop-types';
 import Box from '@mui/material/Box';
 
 // @project
-import useScrollPosition from '@/hooks/useScrollPosition';
 import useDataThemeMode from '@/hooks/useDataThemeMode';
 
 // @types
@@ -14,7 +13,6 @@ import useDataThemeMode from '@/hooks/useDataThemeMode';
 
 export default function Blocks({ children }) {
   useDataThemeMode();
-  useScrollPosition();
 
   return <Box sx={{ '& :focus-visible': { outline: 'none' } }}>{children}</Box>;
 }

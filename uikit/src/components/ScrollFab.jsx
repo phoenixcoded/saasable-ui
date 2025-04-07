@@ -32,7 +32,7 @@ export default function ScrollFab() {
   return (
     <>
       {isVisible && (
-        <Box sx={{ position: 'fixed', zIndex: 1, right: { xs: 20, md: 40 }, bottom: { xs: 20, md: 40 } }}>
+        <Box sx={{ position: 'fixed', zIndex: 3, right: { xs: 20, md: 40 }, bottom: { xs: 20, md: 40 } }}>
           <motion.div initial={{ opacity: 0, y: 10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.4, delay: 0.4 }}>
             <Fab
               color="primary"

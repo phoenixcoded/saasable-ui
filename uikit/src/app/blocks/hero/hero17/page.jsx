@@ -23,7 +23,13 @@ const data = {
           }
           sx={{ height: 24, bgcolor: 'primary.lighter', mr: -1, ml: 0.75, '& .MuiChip-label': { px: 1.25 } }}
           icon={
-            <CardMedia component="img" image="/assets/images/shared/celebration.svg" sx={{ width: 16, height: 16 }} alt="celebration" />
+            <CardMedia
+              component="img"
+              image="/assets/images/shared/celebration.svg"
+              sx={{ width: 16, height: 16 }}
+              alt="celebration"
+              loading="lazy"
+            />
           }
         />
       </>
@@ -37,7 +43,7 @@ const data = {
   listData: [
     { image: '/assets/images/shared/react.svg', title: 'React 18' },
     { image: '/assets/images/shared/next-js.svg', title: 'Next.js' },
-    { image: '/assets/images/shared/material-ui.svg', title: 'Material UI v6' },
+    { image: '/assets/images/shared/material-ui.svg', title: 'Material UI v7' },
     { image: '/assets/images/shared/typescript.svg', title: 'TypeScript' },
     { image: '/assets/images/shared/javascript.svg', title: 'JavaScript' },
     { image: '/assets/images/shared/m3.svg', title: 'Material 3' },

@@ -9,9 +9,6 @@ import { Footer7 } from '@/blocks/footer';
 import { Navbar10 } from '@/blocks/navbar';
 import { NavbarContent10 } from '@/blocks/navbar/navbar-content';
 
-import useScrollPosition from '@/hooks/useScrollPosition';
-import useDataThemeMode from '@/hooks/useDataThemeMode';
-
 // @data
 import { navbar } from './data';
 
@@ -20,9 +17,6 @@ import { navbar } from './data';
 /***************************  LAYOUT - MAIN  ***************************/
 
 export default function MainLayout({ children }) {
-  useDataThemeMode();
-  useScrollPosition();
-
   return (
     <>
       {/* header section */}

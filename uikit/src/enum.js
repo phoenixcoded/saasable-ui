@@ -1,6 +1,4 @@
-//@auth.ts
-
-//@faq.ts
+//@faq.js
 export let ListBadgeColors;
 
 (function (ListBadgeColors) {
@@ -8,7 +6,7 @@ export let ListBadgeColors;
   ListBadgeColors['PRIMARY'] = 'primary';
 })(ListBadgeColors || (ListBadgeColors = {}));
 
-//@footer.ts
+//@footer.js
 export let CopyrightType;
 
 (function (CopyrightType) {
@@ -26,7 +24,7 @@ export let IconType;
   IconType['CUSTOM'] = 'custom';
 })(IconType || (IconType = {}));
 
-//@navbar.ts
+//@navbar.js
 export let MegaMenuType;
 
 (function (MegaMenuType) {
@@ -37,7 +35,7 @@ export let MegaMenuType;
   MegaMenuType['MEGAMENU5'] = 'megamenu-5';
 })(MegaMenuType || (MegaMenuType = {}));
 
-//@root.ts
+//@root.js
 export let DynamicComponentType;
 
 (function (DynamicComponentType) {

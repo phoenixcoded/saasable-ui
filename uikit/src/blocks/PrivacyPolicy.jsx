@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 
 // @mui
 import Divider from '@mui/material/Divider';
-import Grid from '@mui/material/Grid2';
+import Grid from '@mui/material/Grid';
 import List from '@mui/material/List';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
@@ -131,7 +131,7 @@ export default function PrivacyPolicyPage() {
   }, [activeId]);
 
   return (
-    <ContainerWrapper sx={{ pb: SECTION_COMMON_PY }}>
+    <ContainerWrapper sx={{ py: SECTION_COMMON_PY }}>
       <Grid container spacing={{ xs: 2, md: 3 }}>
         <Grid size={{ xs: 12, sm: 4, md: 3 }}>
           <List component="div" sx={{ position: 'sticky', top: 20 }} disablePadding>
@@ -149,7 +149,7 @@ export default function PrivacyPolicyPage() {
                 }}
                 onClick={() => setSelectedID(item.id)}
               >
-                <ListItemText primary={item.heading} primaryTypographyProps={{ variant: 'subtitle1' }} sx={{ my: 0 }} />
+                <ListItemText primary={item.heading} slotProps={{ primary: { variant: 'subtitle1' } }} sx={{ my: 0 }} />
               </ListItemButton>
             ))}
           </List>

@@ -9,7 +9,7 @@ import Box from '@mui/material/Box';
 // @project
 import { MegaMenu5 } from '@/blocks/mega-menu';
 import { MenuPopper } from '@/components/navbar';
-import { ADMIN_PATH, DOCS_URL } from '@/path';
+import { BUY_NOW_URL, DOCS_URL } from '@/path';
 
 /***************************  MEGAMENU 5 - BANNER  ***************************/
 
@@ -19,21 +19,33 @@ function bannerData() {
       <Stack sx={{ gap: 1 }}>
         <Stack sx={{ alignItems: 'flex-start', gap: 1.5 }}>
           <Chip
-            label={<Typography variant="subtitle2">SaasAble Admin</Typography>}
+            label={<Typography variant="subtitle2">Coming Soon</Typography>}
             icon={
-              <CardMedia component="img" image="/assets/images/shared/celebration.svg" sx={{ width: 16, height: 16 }} alt="celebration" />
+              <CardMedia
+                component="img"
+                image="/assets/images/shared/celebration.svg"
+                sx={{ width: 16, height: 16 }}
+                alt="celebration"
+                loading="lazy"
+              />
             }
             size="small"
             sx={{ bgcolor: 'background.default', '& .MuiChip-label': { px: 1.5, py: 0.5 }, '& .MuiChip-icon': { ml: 1.25 } }}
           />
-          <Typography variant="h5">Exciting Dashboard on the Way!</Typography>
+          <Typography variant="h5">We are coming with many more landings</Typography>
         </Stack>
         <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-          Effortlessly manage your app’s backend with customizable admin dashboards that enhance productivity.
+          Discover tailored solutions to elevate your business. Stay ahead with our latest updates and insights.
         </Typography>
       </Stack>
-      <Button href={ADMIN_PATH} target="_blank" variant="contained" sx={{ minWidth: 92, px: { xs: 2 }, py: 1.25 }}>
-        View Dashboard
+      <Button
+        variant="contained"
+        sx={{ minWidth: 92, px: { xs: 2 }, py: 1.25 }}
+        href={BUY_NOW_URL}
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Buy Now
       </Button>
     </Stack>
   );

@@ -4,6 +4,7 @@ import { Archivo, Figtree, Roboto } from 'next/font/google';
 export let Themes;
 
 (function (Themes) {
+  Themes['THEME_DEFAULT'] = 'default';
   Themes['THEME_CRM'] = 'crm';
   Themes['THEME_AI'] = 'ai';
   Themes['THEME_CRYPTO'] = 'crypto';
@@ -11,12 +12,13 @@ export let Themes;
   Themes['THEME_PMS'] = 'pms';
   Themes['THEME_HRM'] = 'hrm';
   Themes['THEME_PLUGIN'] = 'plugin';
+  Themes['THEME_LMS'] = 'lms';
 })(Themes || (Themes = {}));
 
 /***************************  CONFIG  ***************************/
 
 const config = {
-  currentTheme: Themes.THEME_AI
+  currentTheme: Themes.THEME_DEFAULT
 };
 
 export default config;

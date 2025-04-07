@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 
 // @mui
 import Divider from '@mui/material/Divider';
-import Grid from '@mui/material/Grid2';
+import Grid from '@mui/material/Grid';
 import List from '@mui/material/List';
 import ListItemButton from '@mui/material/ListItemButton';
 import ListItemText from '@mui/material/ListItemText';
@@ -149,7 +149,7 @@ export default function TermsConditionPage() {
                 }}
                 onClick={() => setSelectedID(item.id)}
               >
-                <ListItemText primary={item.heading} primaryTypographyProps={{ variant: 'subtitle1' }} sx={{ my: 0 }} />
+                <ListItemText primary={item.heading} sx={{ my: 0 }} slotProps={{ primary: { variant: 'subtitle1' } }} />
               </ListItemButton>
             ))}
           </List>

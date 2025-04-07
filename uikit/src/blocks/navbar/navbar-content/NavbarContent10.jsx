@@ -16,7 +16,7 @@ import SvgIcon from '@/components/SvgIcon';
 
 /***************************  NAVBAR - CONTENT 10  ***************************/
 
-export default function NavbarContent10({ navItems, primaryBtn, secondaryBtn }) {
+export default function NavbarContent10({ landingBaseUrl, navItems, primaryBtn, secondaryBtn }) {
   const theme = useTheme();
 
   const downMD = useMediaQuery(theme.breakpoints.down('md'));
@@ -24,7 +24,7 @@ export default function NavbarContent10({ navItems, primaryBtn, secondaryBtn }) 
 
   return (
     <Stack direction="row" sx={{ alignItems: 'center', justifyContent: 'space-between', width: 1 }}>
-      <Logo />
+      <Logo to={landingBaseUrl} />
       {!downMD && navItems && (
         <Box sx={{ bgcolor: 'grey.200', borderRadius: 10 }}>
           <NavMenu {...{ navItems }} />
@@ -73,8 +73,8 @@ export default function NavbarContent10({ navItems, primaryBtn, secondaryBtn }) 
 }
 
 NavbarContent10.propTypes = {
+  landingBaseUrl: PropTypes.any,
   navItems: PropTypes.any,
   primaryBtn: PropTypes.any,
-  secondaryBtn: PropTypes.any,
-  customization: PropTypes.any
+  secondaryBtn: PropTypes.any
 };

@@ -1,19 +1,22 @@
 'use client';
 import PropTypes from 'prop-types';
 
+import { useId } from 'react';
+
 // @mui
 import { useTheme } from '@mui/material/styles';
 
 // @types
 
-/***************************  ICON - CLOSEEYE  ***************************/
+/***************************  ICON - CLOSE EYE  ***************************/
 
 export default function CloseEye({ size = 24, color, stroke = 1.5 }) {
   const theme = useTheme();
+  const uniqueId = useId(); // Generate a unique ID
 
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-      <g clipPath="url(#clip0_2893_70783)">
+      <g clipPath={`url(#${uniqueId})`}>
         <path
           d="M3 20.9992L5.5 17.1992"
           stroke={color || theme.palette.primary.main}
@@ -51,7 +54,7 @@ export default function CloseEye({ size = 24, color, stroke = 1.5 }) {
         />
       </g>
       <defs>
-        <clipPath id="clip0_2893_70783">
+        <clipPath id={uniqueId}>
           <rect width="24" height="24" fill="white" />
         </clipPath>
       </defs>

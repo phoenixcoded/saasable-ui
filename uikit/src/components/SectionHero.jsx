@@ -193,15 +193,6 @@ export default function SectionHero({ heading, search = true, offer = false, bre
                   </ListItem>
                 );
               }}
-              ListboxProps={{
-                sx: {
-                  maxHeight: 250,
-                  overflowY: 'auto',
-                  '&::-webkit-scrollbar': { width: 8, borderRadius: 1 },
-                  '&::-webkit-scrollbar-track': { bgcolor: 'grey.50', borderRadius: 1 },
-                  '&::-webkit-scrollbar-thumb': { bgcolor: 'grey.300', borderRadius: 1 }
-                }
-              }}
               slotProps={{
                 paper: {
                   sx: {
@@ -210,6 +201,15 @@ export default function SectionHero({ heading, search = true, offer = false, bre
                     py: 1.25,
                     borderRadius: 4,
                     boxShadow: `0px 16px 10px 0px ${alpha(theme.palette.grey[900], 0.06)}`
+                  }
+                },
+                listbox: {
+                  sx: {
+                    maxHeight: 250,
+                    overflowY: 'auto',
+                    '&::-webkit-scrollbar': { width: 8, borderRadius: 1 },
+                    '&::-webkit-scrollbar-track': { bgcolor: 'grey.50', borderRadius: 1 },
+                    '&::-webkit-scrollbar-thumb': { bgcolor: 'grey.300', borderRadius: 1 }
                   }
                 }
               }}

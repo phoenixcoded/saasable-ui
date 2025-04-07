@@ -25,7 +25,8 @@ export default function MenuPopper({
   popperWidth = 368,
   offset = 0,
   offsetX = 0,
-  menuTextColor
+  menuTextColor,
+  hoverToggler = false
 }) {
   const theme = useTheme();
 
@@ -77,6 +78,7 @@ export default function MenuPopper({
             </Box>
           )
         })}
+        {...(hoverToggler && { onMouseEnter: () => setAnchorEl(anchorRef.current) })}
       />
       <Popper
         placement="bottom"
@@ -86,6 +88,7 @@ export default function MenuPopper({
         transition
         sx={{ width: { xs: 1, md: 'auto' }, zIndex: 1201 }}
         popperOptions={{ modifiers: [{ name: 'offset', options: { offset: [offsetX, offset] } }] }}
+        {...(hoverToggler && { onMouseLeave: () => setAnchorEl(null) })}
       >
         {({ TransitionProps }) => (
           <Fade in={open} {...TransitionProps}>
@@ -124,5 +127,6 @@ MenuPopper.propTypes = {
   popperWidth: PropTypes.number,
   offset: PropTypes.number,
   offsetX: PropTypes.number,
-  menuTextColor: PropTypes.string
+  menuTextColor: PropTypes.string,
+  hoverToggler: PropTypes.bool
 };

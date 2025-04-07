@@ -71,95 +71,6 @@ export const feature5 = {
   actionBtn: { children: 'Explore all Features', href: '#' }
 };
 
-export const feature9 = {
-  heading: 'Streamline Your Business with Our CRM Solution',
-  caption: 'Discover the features that will transform your customer relationships',
-  features: [
-    {
-      icon: 'custom-brain',
-      title: 'AI-Powered Analytics',
-      content: 'Leverage AI for Predictive Insights and Sales Opportunities.'
-    },
-    {
-      icon: 'custom-path',
-      title: 'Journey Mapping',
-      content: 'Customer experiences at every touchpoint with it.'
-    },
-    {
-      icon: 'custom-statastic',
-      title: 'Voice & Speech Analytics',
-      content: 'Actionable insights from customer interactions through it.'
-    },
-    {
-      icon: 'custom-remote',
-      title: 'Sales Gamification',
-      content: 'Boost sales team motivation and performance with it.'
-    },
-    {
-      icon: 'custom-lock',
-      title: 'Subscription Management',
-      content: 'Effortlessly handle and optimize subscriptions with it.'
-    },
-    {
-      icon: 'custom-interface',
-      title: 'Intuitive Interface',
-      content: 'Simplify user interactions & enhance usability with it.'
-    }
-  ]
-};
-
-export const feature10 = {
-  heading: 'Design Seamlessly with Figma',
-  caption: 'Use Figma tools like Component Architecture and Dark Mode to speed up your design process.',
-  typesetPosition: 'center',
-  primaryBtn: { children: 'Buy Figma' },
-  secondaryBtn: { children: 'Live Figma Preview' },
-  features: [
-    {
-      animationDelay: 0.1,
-      icon: { name: 'tabler-components', type: IconType.STROKE, stroke: 1.25 },
-      title: 'Component Architecture',
-      content: 'Organize and reuse components for scalable design.'
-    },
-    {
-      animationDelay: 0.2,
-      icon: { name: 'tabler-layout-list', type: IconType.STROKE, stroke: 1.25 },
-      title: 'Auto-layout',
-      content: 'Auto-layout system for effortless design alignment and responsiveness.'
-    },
-    {
-      animationDelay: 0.3,
-      icon: { name: 'tabler-clipboard-text', type: IconType.STROKE, stroke: 1.25 },
-      title: 'Clear Guidance',
-      content: 'Easy-to-follow instructions for seamless navigation & understanding.'
-    },
-    {
-      animationDelay: 0.1,
-      icon: { name: 'tabler-devices-code', type: IconType.STROKE, stroke: 1.25 },
-      title: 'Responsive',
-      content: 'Design adaptable layouts for all screen sizes effortlessly.'
-    },
-
-    {
-      animationDelay: 0.2,
-      icon: { name: 'tabler-keyframe-align-center', type: IconType.STROKE, stroke: 1.25 },
-      title: 'Dark Mode',
-      content: 'Seamlessly switch to dark mode with a single click.'
-    },
-
-    {
-      animationDelay: 0.3,
-      icon: { name: 'tabler-settings-2', type: IconType.STROKE, stroke: 1.25 },
-      title: 'Variables',
-      content: 'Manage color and typography settings efficiently with variables.'
-    }
-  ],
-  video: {
-    thumbnail: '/assets/images/graphics/ai/background2.svg',
-    src: '/assets/videos/test.mp4'
-  }
-};
-
 export const feature20 = {
   heading: 'Comprehensive UI Kit Tailored to your Need',
   caption: 'Ready to transform your SaaS designs with one powerful UI Kit?',
@@ -359,9 +270,12 @@ export const feature18 = {
       title: 'Material UI Powered',
       title2: 'Leverage Power of Material UI Components',
       description: 'The power and flexibility of Material UI components in admin template',
-      image: '/assets/images/graphics/default/admin-dashboard.png',
+      image: {
+        light: '/assets/images/graphics/default/admin-dashboard.png',
+        dark: '/assets/images/graphics/default/admin-dashboard-dark.png'
+      },
       list: [
-        { primary: 'Nextjs JavaScript/TypeScript' },
+        { primary: 'Next.js JavaScript/TypeScript' },
         { primary: 'Customizable Themes' },
         { primary: 'Rich Form and Table Components' },
         { primary: 'Responsive Grid System' }
@@ -373,7 +287,7 @@ export const feature18 = {
       icon: 'tabler-palette',
       title: 'Customizable Themes',
       title2: 'Flexible Theming Options',
-      description: 'Tailor themes effortlessly with MUI v6 robust theming system.',
+      description: 'Tailor themes effortlessly with MUI 7 robust theming system.',
       image: '/assets/images/graphics/default/admin-dashboard-2.png',
       list: [
         { primary: 'Easy options for Theming' },

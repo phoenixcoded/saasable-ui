@@ -41,7 +41,7 @@ export default function typography(theme) {
       }
     },
 
-    // disaply - medium
+    // display - medium
     h3: {
       fontWeight: 400,
       fontSize: 28,
@@ -57,7 +57,7 @@ export default function typography(theme) {
       }
     },
 
-    // disaply - small
+    // display - small
     h4: {
       fontWeight: 400,
       fontSize: 24,

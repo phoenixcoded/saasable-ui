@@ -12,7 +12,7 @@ export default function Button(theme) {
       styleOverrides: {
         root: {
           fontSize: 14,
-          fontWeight: 600,
+          fontWeight: 500,
           lineHeight: 1.429,
           letterSpacing: 0.1,
           borderRadius: 100,

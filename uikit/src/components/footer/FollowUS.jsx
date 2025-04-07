@@ -51,7 +51,7 @@ export default function FollowUS({ heading = true, color }) {
             component={NextLink}
             key={index}
             {...item.link}
-            sx={{ ...item.link?.sx, WebkitTapHighlightColor: 'transparent' }}
+            sx={{ ...item.link?.sx }}
             rel="noopener noreferrer"
             aria-label="follow us on social media"
           >

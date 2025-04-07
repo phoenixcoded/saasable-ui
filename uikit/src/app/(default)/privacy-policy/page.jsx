@@ -1,4 +1,3 @@
-// @next
 import dynamic from 'next/dynamic';
 
 // @project

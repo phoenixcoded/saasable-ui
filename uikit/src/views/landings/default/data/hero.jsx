@@ -39,7 +39,7 @@ export const hero = {
   listData: [
     { image: '/assets/images/shared/react.svg', title: 'React 18' },
     { image: '/assets/images/shared/next-js.svg', title: 'Next.js' },
-    { image: '/assets/images/shared/material-ui.svg', title: 'Material UI v6' },
+    { image: '/assets/images/shared/material-ui.svg', title: 'Material UI v7' },
     { image: '/assets/images/shared/typescript.svg', title: 'TypeScript' },
     { image: '/assets/images/shared/javascript.svg', title: 'JavaScript' },
     { image: '/assets/images/shared/m3.svg', title: 'Material 3' },

@@ -57,7 +57,8 @@ export const FIGMA_LINK = {
       blog3: BUY_NOW_URL,
       blog4: BUY_NOW_URL,
       blog5: BUY_NOW_URL,
-      blog6: BUY_NOW_URL
+      blog6: BUY_NOW_URL,
+      blog7: BUY_NOW_URL
     }
   },
   clientele: {
@@ -128,7 +129,8 @@ export const FIGMA_LINK = {
       faq4: BUY_NOW_URL,
       faq5: BUY_NOW_URL,
       faq6: BUY_NOW_URL,
-      faq7: BUY_NOW_URL
+      faq7: BUY_NOW_URL,
+      faq8: BUY_NOW_URL
     }
   },
   feature: {
@@ -156,7 +158,9 @@ export const FIGMA_LINK = {
       feature20: BUY_NOW_URL,
       feature21: BUY_NOW_URL,
       feature22: BUY_NOW_URL,
-      feature23: BUY_NOW_URL
+      feature23: BUY_NOW_URL,
+      feature24: BUY_NOW_URL,
+      feature25: BUY_NOW_URL
     }
   },
   footer: {
@@ -199,7 +203,9 @@ export const FIGMA_LINK = {
       hero14: BUY_NOW_URL,
       hero15: BUY_NOW_URL,
       hero16: BUY_NOW_URL,
-      hero17: BUY_NOW_URL
+      hero17: BUY_NOW_URL,
+      hero18: BUY_NOW_URL,
+      hero19: BUY_NOW_URL
     }
   },
   icon: {
@@ -275,10 +281,17 @@ export const FIGMA_LINK = {
       process4: BUY_NOW_URL,
       process5: BUY_NOW_URL,
       process6: BUY_NOW_URL,
-      process7: BUY_NOW_URL
+      process7: BUY_NOW_URL,
+      process8: BUY_NOW_URL
     }
   },
-  privacyPolicy: { link: BUY_NOW_URL },
+  privacyPolicy: {
+    link: BUY_NOW_URL,
+    variant: {
+      privacyPolicy1: BUY_NOW_URL,
+      privacyPolicy2: BUY_NOW_URL
+    }
+  },
   smallHero: {
     link: BUY_NOW_URL,
     variant: {
@@ -317,7 +330,9 @@ export const FIGMA_LINK = {
       testimonial8: BUY_NOW_URL,
       testimonial9: BUY_NOW_URL,
       testimonial10: BUY_NOW_URL,
-      testimonial11: BUY_NOW_URL
+      testimonial11: BUY_NOW_URL,
+      testimonial12: BUY_NOW_URL,
+      testimonial13: BUY_NOW_URL
     }
   },
   termsCondition: { link: BUY_NOW_URL },

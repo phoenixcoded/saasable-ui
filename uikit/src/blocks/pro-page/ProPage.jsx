@@ -5,7 +5,7 @@ import NextLink from 'next/link';
 // @mui
 import Button from '@mui/material/Button';
 import CardMedia from '@mui/material/CardMedia';
-import Grid from '@mui/material/Grid2';
+import Grid from '@mui/material/Grid';
 import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';

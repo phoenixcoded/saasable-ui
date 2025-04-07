@@ -2,7 +2,7 @@
 import { Clientele3 } from '@/blocks/clientele';
 import { DynamicComponentType } from '@/enum';
 
-/***************************  CLIENTAL 3 - DATA  ***************************/
+/***************************  CLIENTELE 3 - DATA  ***************************/
 
 const data = {
   title: '4,000+ companies already growing',
@@ -15,8 +15,8 @@ const data = {
   ]
 };
 
-/***************************  BLOCK - CLIENTAL 3  ***************************/
+/***************************  BLOCK - CLIENTELE 3  ***************************/
 
-export default function BlockCliental3() {
+export default function BlockClientele3() {
   return <Clientele3 {...data} />;
 }

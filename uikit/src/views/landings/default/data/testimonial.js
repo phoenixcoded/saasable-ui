@@ -3,22 +3,23 @@ export const testimonial = {
   caption: `Trusted by thousands of users worldwide, hear how Phoenixcoded helps bring their projects to life.`,
   testimonials: [
     {
-      title: 'Better support',
+      title: 'Customer Support',
       ratings: 5,
-      review: 'An excellent theme for complex projects, incredible development, even better support!',
-      profile: { avatar: '', name: 'TechGu.', role: '' }
+      review:
+        'Very organized code base. Love the ability reuse components for many different use cases. Customer service is very active and willing to take suggestions for new features!',
+      profile: { avatar: '/assets/images/mui-reviews/matt-s.png', name: 'Matt S.', role: '' }
     },
     {
-      title: 'Code Quality',
+      title: 'Customizability',
       ratings: 5,
-      review: `I'm the pickiest when it comes to code. This may be the cleanest, best EVER template, and the minimalistic design is what I was looking for, for a long time. `,
-      profile: { avatar: '', name: 'Pvarel.', role: '' }
+      review: `We integrated SaaSable into our project and are extremely pleased with the results. The code quality is excellent, and the architecture is thoughtfully designed. The components are not only visually appealing but also flexible and easily customizable, allowing us to save significant development time. This enabled us to focus fully on essential aspects of our project. Moreover, the support is exceptional-always quick, helpful, and responsive. Highly recommended for any professional project!`,
+      profile: { avatar: '', name: 'Dmitri H.', role: '' }
     },
     {
       title: 'Design Quality',
       ratings: 5,
-      review: `“This is the best template I have seen so far on this platform! Thanks for Team design and developing it. I definitely will recommend it to everybody!`,
-      profile: { avatar: '', name: 'Puxtaa.', role: '' }
+      review: `I am thoroughly impressed with the customer support, code quality, modularity, and quality of the web components. This has been a tremendous support, saving us months of time designing and architecting the project, and significantly enhancing our development efficiency. Truly a valuable resource for anyone looking to build robust solutions.`,
+      profile: { avatar: '', name: 'Puneet P.', role: '' }
     },
     {
       title: 'Code Quality',

@@ -4,7 +4,7 @@
 import NextLink from 'next/link';
 
 // @mui
-import Grid from '@mui/material/Grid2';
+import Grid from '@mui/material/Grid';
 import Link from '@mui/material/Link';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
@@ -44,7 +44,7 @@ const data = [
       },
       {
         label: 'About',
-        link: { href: 'https://stage.saasable.io/about', ...linkProps }
+        link: { href: 'https://saasable.io/about', ...linkProps }
       },
       {
         label: 'Contact Us',
@@ -109,12 +109,12 @@ const iconProps = { color: 'text.secondary' };
 const usefullLinks = [
   {
     icon: <SvgIcon name="tabler-brand-figma" {...iconProps} />,
-    title: 'Figma Version 1.0.0',
+    title: 'Figma Version 1.1.0',
     href: 'https://www.figma.com/community/file/1425095061180549847'
   },
   {
     icon: <SvgIcon name="tabler-route" {...iconProps} />,
-    title: 'React Material UI v6.1.4',
+    title: 'React Material UI v7',
     href: 'https://mui.com/material-ui/getting-started'
   },
   {
@@ -134,7 +134,7 @@ export default function Footer7() {
         {process.env.NEXT_PUBLIC_VERSION}
       </Typography>
       <Typography variant="body2" sx={{ maxWidth: { sm: 280 } }}>
-        Explore the different versions of our SaasAble template.
+        Explore the different versions of our {branding.brandName} template.
       </Typography>
     </Stack>
   );

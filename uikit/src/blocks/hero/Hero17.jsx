@@ -255,5 +255,6 @@ Hero17.propTypes = {
   captionLine: PropTypes.string,
   primaryBtn: PropTypes.any,
   videoSrc: PropTypes.string,
+  videoThumbnail: PropTypes.string,
   listData: PropTypes.array
 };
