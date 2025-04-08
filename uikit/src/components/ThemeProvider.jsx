@@ -9,8 +9,6 @@ import Loader from './Loader';
 import { Themes } from '@/config';
 import useConfig from '@/hooks/useConfig';
 
-// @types
-
 // @ui-themes
 const ThemeAI = dynamic(() => import(`@/views/landings/ai/theme`));
 

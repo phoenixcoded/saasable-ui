@@ -15,18 +15,10 @@ import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 
 // @project
-// import SelectBox from './SelectBox';
 import SvgIcon from './SvgIcon';
-// import ThemeSelector from './ThemeSelector';
 
-// import { ThemeMode, Themes } from '@/config';
 import { getBackgroundDots } from '@/utils/getBackgroundDots';
 import Loader from '@/utils/Loader';
-
-// interface TypographyListProps {
-//   title: string;
-//   value: string;
-// }
 
 /***************************  SIMULATOR - DATA  ***************************/
 
@@ -68,21 +60,11 @@ export default function Simulator({ src, defaultHeight }) {
   const simulatorID = useId();
 
   const [screenSize, setScreenSize] = useState('desktop');
-  // const [mode, setMode] = useState(ThemeMode.LIGHT);
   const [viewportHeight, setViewportHeight] = useState(minimumHeight);
   const [observerEvent, setObserverEvent] = useState(false);
   const [iframeObserverEvent, setIframeObserverEvent] = useState(false);
 
   const boxRadius = 3;
-  // const iconProps = { size: 16, stroke: 2, color: 'text.primary' };
-  // const btnStyle = {
-  //   width: 36,
-  //   height: 36,
-  //   bgcolor: 'grey.100',
-  //   border: '1px solid',
-  //   borderColor: 'grey.300',
-  //   '&.MuiIconButton-root:hover': { borderColor: 'grey.600', bgcolor: 'grey.100' }
-  // };
 
   // Set iframe height based on its content
   const setIframeHeight = (type) => {
