@@ -32,8 +32,6 @@ import { contactSchema } from '@/utils/validationSchema';
 // @icons
 import { IconChevronDown, IconHelp } from '@tabler/icons-react';
 
-// @types
-
 // @data
 import countries from '@/data/countries';
 

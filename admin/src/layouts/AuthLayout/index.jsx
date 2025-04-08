@@ -12,8 +12,6 @@ import Box from '@mui/material/Box';
 import LogoMain from '@/components/logo/LogoMain';
 import GetImagePath from '@/utils/GetImagePath';
 
-// @types
-
 const dashBoardImage = {
   light: '/assets/images/graphics/hosting/dashboard-light.svg',
   dark: '/assets/images/graphics/hosting/dashboard-dark.svg'

@@ -3,7 +3,7 @@ import { styled } from '@mui/material/styles';
 import Drawer from '@mui/material/Drawer';
 
 // @project
-import { DRAWER_WIDTH, MINI_DRAWER_WIDTH } from '@/config';
+import { DRAWER_WIDTH } from '@/config';
 
 // Mixin for common ) (open/closed) drawer state0....
 const commonDrawerStyles = (theme) => ({
@@ -25,7 +25,7 @@ const openedMixin = (theme) => ({
 // Mixin for closed drawer state
 const closedMixin = (theme) => ({
   ...commonDrawerStyles(theme),
-  width: MINI_DRAWER_WIDTH,
+  width: 0,
 
   transition: theme.transitions.create('width', {
     easing: theme.transitions.easing.sharp,

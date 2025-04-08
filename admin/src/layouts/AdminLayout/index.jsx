@@ -1,5 +1,4 @@
 'use client';
-
 import PropTypes from 'prop-types';
 
 import { useEffect } from 'react';
@@ -16,24 +15,18 @@ import Header from './Header';
 import { handlerDrawerOpen, useGetMenuMaster } from '@/states/menu';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import Loader from '@/components/Loader';
-import useConfig from '@/hooks/useConfig';
 
-// @types
 import { DRAWER_WIDTH } from '@/config';
 
 /***************************  ADMIN LAYOUT  ***************************/
 
 export default function DashboardLayout({ children }) {
   const { menuMasterLoading } = useGetMenuMaster();
-  const { miniDrawer } = useConfig();
 
   const downXL = useMediaQuery((theme) => theme.breakpoints.down('xl'));
 
-  // set drawer media and `miniDrawer` config wise
   useEffect(() => {
-    if (!miniDrawer) {
-      handlerDrawerOpen(!downXL);
-    }
+    handlerDrawerOpen(!downXL);
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [downXL]);
 

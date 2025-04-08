@@ -3,7 +3,6 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import Stack from '@mui/material/Stack';
 
 // @project
-import MiniDrawer from './MiniDrawer';
 import NavCard from './NavCard';
 import ResponsiveDrawer from './ResponsiveDrawer';
 
@@ -24,7 +23,7 @@ export default function DrawerContent() {
   return (
     <SimpleBar sx={{ height: contentHeight }}>
       <Stack sx={{ minHeight: contentHeight, px: !drawerOpen && upMD ? 0 : 2, justifyContent: 'space-between' }}>
-        {!drawerOpen && upMD ? <MiniDrawer /> : <ResponsiveDrawer />}
+        <ResponsiveDrawer />
         <NavCard isMiniDrawer={!drawerOpen && upMD} />
       </Stack>
     </SimpleBar>

@@ -32,7 +32,7 @@ export default function SimpleBar({ children, sx, ...other }) {
   return (
     <>
       <RootStyle>
-        <SimpleBarStyle clickOnTrack={false} sx={sx} data-simplebar-direction={'ltr'} {...other}>
+        <SimpleBarStyle clickOnTrack={false} sx={sx} data-simplebar-direction="ltr" {...other}>
           {children}
         </SimpleBarStyle>
       </RootStyle>

@@ -2,8 +2,11 @@
 import { merge } from 'lodash-es';
 
 // @project
+import Alert from './Alert';
 import Avatar from './Avatar';
+import AvatarGroup from './AvatarGroup';
 import Backdrop from './Backdrop';
+import BarLabel from './BarLabel';
 import Breadcrumbs from './Breadcrumbs';
 import Button from './Button';
 import CardActions from './CardActions';
@@ -12,8 +15,8 @@ import CardHeader from './CardHeader';
 import ChartsAxis from './ChartsAxis';
 import ChartsAxiasHighlight from './ChartsAxisHighlight';
 import ChartsTooltip from './ChartsTooltip';
-import Checkbox from './Checkbox';
 import Chip from './Chip';
+import FormControlLabel from './FormControlLabel';
 import FormHelperText from './FormHelperText';
 import IconButton from './IconButton';
 import InputAdornment from './InputAdornment';
@@ -23,10 +26,7 @@ import ListItemButton from './ListItemButton';
 import ListItemIcon from './ListItemIcon';
 import ListItemText from './ListItemText';
 import OutlinedInput from './OutlinedInput';
-import Pagination from './Pagination';
-import PaginationItem from './PaginationItem';
 import Popper from './Popper';
-import Slider from './Slider';
 import Switch from './Switch';
 import Tab from './Tab';
 import Tabs from './Tabs';
@@ -36,8 +36,11 @@ import Tooltip from './Tooltip';
 
 export default function ComponentsOverrides(theme) {
   return merge(
+    Alert(),
     Avatar(theme),
+    AvatarGroup(),
     Backdrop(theme),
+    BarLabel(theme),
     Breadcrumbs(theme),
     Button(theme),
     CardActions(theme),
@@ -46,8 +49,8 @@ export default function ComponentsOverrides(theme) {
     ChartsAxis(theme),
     ChartsAxiasHighlight(theme),
     ChartsTooltip(theme),
-    Checkbox(theme),
     Chip(theme),
+    FormControlLabel(theme),
     FormHelperText(theme),
     IconButton(theme),
     InputAdornment(theme),
@@ -57,10 +60,7 @@ export default function ComponentsOverrides(theme) {
     ListItemIcon(),
     ListItemText(),
     OutlinedInput(theme),
-    Pagination(theme),
-    PaginationItem(theme),
     Popper(),
-    Slider(theme),
     Switch(theme),
     Tab(theme),
     Tabs(theme),

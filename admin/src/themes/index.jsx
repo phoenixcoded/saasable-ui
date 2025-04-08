@@ -18,7 +18,7 @@ import useConfig from '@/hooks/useConfig';
 /*************************** DEFAULT THEME - MAIN ***************************/
 
 export default function ThemeCustomization({ children }) {
-  const { mode } = useConfig();
+  const { mode, themeDirection } = useConfig();
 
   const themePalette = useMemo(() => palette(mode), [mode]);
 
@@ -32,7 +32,7 @@ export default function ThemeCustomization({ children }) {
         xl: 1440
       }
     },
-    direction: 'rtl',
+    direction: themeDirection,
     palette: themePalette,
     customShadows: {}
   });

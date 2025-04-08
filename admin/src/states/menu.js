@@ -5,7 +5,7 @@ import useSWR, { mutate } from 'swr';
 
 const initialState = {
   openedItem: '',
-  isDashboardDrawerOpened: false
+  isDashboardDrawerOpened: true
 };
 
 export const endpoints = {

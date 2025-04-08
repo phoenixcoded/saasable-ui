@@ -10,8 +10,6 @@ import Box from '@mui/material/Box';
 // @assets
 import { DumpingDoodle } from '@/images/illustration';
 
-// @types
-
 /***************************  HEADER - EMPTY SEARCH ***************************/
 
 function EmptySearch(props, ref) {

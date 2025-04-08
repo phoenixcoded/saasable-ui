@@ -4,8 +4,6 @@ import Avatar from '@mui/material/Avatar';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
-// @types
-
 /***************************  PROFILE  ***************************/
 
 export default function Profile({ avatar, title, caption, label, sx, titleProps, captionProps }) {

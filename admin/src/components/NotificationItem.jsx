@@ -14,8 +14,6 @@ import Box from '@mui/material/Box';
 // @project
 import { AvatarSize } from '@/enum';
 
-// @types
-
 /***************************  NOTIFICATION - LIST  ***************************/
 
 export default function NotificationItem({ avatar, badgeAvatar, title, subTitle, dateTime, isSeen = false }) {

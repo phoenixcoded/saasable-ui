@@ -12,20 +12,6 @@ export let LinearProgressType;
   LinearProgressType['LIGHT'] = 'light';
 })(LinearProgressType || (LinearProgressType = {}));
 
-/** LinearProgress with label custom props `placement` enum */
-export let LinearProgressPlacement;
-
-(function (LinearProgressPlacement) {
-  LinearProgressPlacement['TOP'] = 'top';
-  LinearProgressPlacement['BOTTOM'] = 'bottom';
-  LinearProgressPlacement['LEFT'] = 'left';
-  LinearProgressPlacement['RIGHT'] = 'right';
-  LinearProgressPlacement['TOPRIGHT'] = 'top-right';
-  LinearProgressPlacement['BOTTOMRIGHT'] = 'bottom-right';
-  LinearProgressPlacement['TOPLEFT'] = 'top-left';
-  LinearProgressPlacement['BOTTOMLEFT'] = 'bottom-left';
-})(LinearProgressPlacement || (LinearProgressPlacement = {}));
-
 /** Chip custom props `position` enum */
 export let ChipIconPosition;
 
@@ -45,17 +31,6 @@ export let AvatarSize;
   AvatarSize['LG'] = 'lg';
   AvatarSize['XL'] = 'xl';
 })(AvatarSize || (AvatarSize = {}));
-
-/** Modal custom props `maxWidth` enum */
-export let ModalSize;
-
-(function (ModalSize) {
-  ModalSize['XS'] = 'xs';
-  ModalSize['SM'] = 'sm';
-  ModalSize['MD'] = 'md';
-  ModalSize['LG'] = 'lg';
-  ModalSize['XL'] = 'xl';
-})(ModalSize || (ModalSize = {}));
 
 /** Chart custom view mode enum */
 export let ViewMode;

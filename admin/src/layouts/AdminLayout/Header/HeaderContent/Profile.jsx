@@ -20,13 +20,15 @@ import Stack from '@mui/material/Stack';
 import Switch from '@mui/material/Switch';
 import Box from '@mui/material/Box';
 
+// @third-party
+import { enqueueSnackbar } from 'notistack';
+
 // @project
+import { ThemeI18n } from '@/config';
 import MainCard from '@/components/MainCard';
 import Profile from '@/components/Profile';
 import { AvatarSize, ChipIconPosition } from '@/enum';
 import useConfig from '@/hooks/useConfig';
-
-// @types
 
 // @assets
 import { IconChevronRight, IconLanguage, IconLogout, IconSettings, IconSunMoon, IconTextDirectionLtr } from '@tabler/icons-react';
@@ -40,16 +42,17 @@ const profileData = {
 };
 
 const languageList = [
-  { key: 'en', value: 'English' },
-  { key: 'fr', value: 'French' },
-  { key: 'ro', value: 'Romanian' },
-  { key: 'zh', value: 'Chinese' }
+  { key: ThemeI18n.EN, value: 'English' },
+  { key: ThemeI18n.FR, value: 'French' },
+  { key: ThemeI18n.RO, value: 'Romanian' },
+  { key: ThemeI18n.ZH, value: 'Chinese' }
 ];
 
 /***************************  HEADER - PROFILE  ***************************/
 
 export default function ProfileSection() {
   const theme = useTheme();
+  const { i18n } = useConfig();
 
   const [anchorEl, setAnchorEl] = useState(null);
   const [innerAnchorEl, setInnerAnchorEl] = useState(null);
@@ -66,6 +69,15 @@ export default function ProfileSection() {
 
   const handleInnerActionClick = (event) => {
     setInnerAnchorEl(innerAnchorEl ? null : event.currentTarget);
+  };
+
+  const logoutAccount = () => {
+    setAnchorEl(null);
+  };
+
+  const i18nHandler = (event, key) => {
+    handleInnerActionClick(event);
+    if (key != i18n) enqueueSnackbar('Upgrade to pro for language change');
   };
 
   return (
@@ -104,7 +116,9 @@ export default function ProfileSection() {
                   <Divider sx={{ my: 1 }} />
                   <List disablePadding>
                     <ListItem
-                      secondaryAction={<Switch size="small" />}
+                      secondaryAction={
+                        <Switch size="small" checked={false} onChange={() => enqueueSnackbar('Upgrade to pro for dark theme')} />
+                      }
                       sx={{ py: 0.5, pl: 1, '& .MuiListItemSecondaryAction-root': { right: 8 } }}
                     >
                       <ListItemIcon>
@@ -113,7 +127,7 @@ export default function ProfileSection() {
                       <ListItemText primary="Dark Theme" />
                     </ListItem>
                     <ListItem
-                      secondaryAction={<Switch size="small" />}
+                      secondaryAction={<Switch size="small" checked={false} onChange={() => enqueueSnackbar('Upgrade to pro for RTL')} />}
                       sx={{ py: 1, pl: 1, '& .MuiListItemSecondaryAction-root': { right: 8 } }}
                     >
                       <ListItemIcon>
@@ -127,7 +141,7 @@ export default function ProfileSection() {
                       </ListItemIcon>
                       <ListItemText primary="Language" />
                       <Chip
-                        label={'en'}
+                        label={languageList.filter((item) => item.key === i18n)[0]?.value.slice(0, 3)}
                         variant="text"
                         size="small"
                         color="secondary"
@@ -159,7 +173,12 @@ export default function ProfileSection() {
                               <ClickAwayListener onClickAway={() => setInnerAnchorEl(null)}>
                                 <List disablePadding>
                                   {languageList.map((item, index) => (
-                                    <ListItemButton key={index} sx={buttonStyle}>
+                                    <ListItemButton
+                                      selected={item.key === i18n}
+                                      key={index}
+                                      sx={buttonStyle}
+                                      onClick={(event) => i18nHandler(event, item.key)}
+                                    >
                                       <ListItemText>{item.value}</ListItemText>
                                     </ListItemButton>
                                   ))}
@@ -177,7 +196,14 @@ export default function ProfileSection() {
                       <ListItemText primary="Settings" />
                     </ListItemButton>
                     <ListItem disablePadding>
-                      <Button fullWidth variant="outlined" color="secondary" size="small" endIcon={<IconLogout size={16} />}>
+                      <Button
+                        fullWidth
+                        variant="outlined"
+                        color="secondary"
+                        size="small"
+                        endIcon={<IconLogout size={16} />}
+                        onClick={logoutAccount}
+                      >
                         Logout
                       </Button>
                     </ListItem>

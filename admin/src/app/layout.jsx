@@ -10,8 +10,6 @@ import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
 import branding from '@/branding.json';
 import ProviderWrapper from './ProviderWrapper';
 
-// @types
-
 /***************************  METADATA - MAIN  ***************************/
 
 // Configures the viewport settings for the application.
