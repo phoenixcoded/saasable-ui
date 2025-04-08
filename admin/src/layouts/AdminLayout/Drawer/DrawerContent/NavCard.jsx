@@ -50,7 +50,10 @@ const popperArrowStyles = (theme) => ({
   bgcolor: 'grey.50',
   transform: 'translateY(-50%) rotate(45deg)',
   zIndex: 120,
-
+  borderLeft: '1px solid',
+  borderLeftColor: 'divider',
+  borderBottom: '1px solid',
+  borderBottomColor: 'divider',
   boxShadow: theme.customShadows.tooltip
 });
 

@@ -46,13 +46,3 @@ export const contactSchema = {
   required: 'Contact number is required',
   pattern: { value: /^[0-9()\-\.]{7,15}$/, message: 'Invalid contact number' }
 };
-
-export const otpSchema = {
-  required: 'OTP is required',
-  minLength: { value: 6, message: 'OTP must be exactly 6 characters' }
-};
-
-export const featureNameSchema = {
-  required: 'Feature name is required',
-  pattern: { value: /^[a-zA-Z\s]+$/, message: 'Invalid feature name' }
-};

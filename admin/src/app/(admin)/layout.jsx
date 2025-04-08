@@ -1,8 +1,7 @@
 import PropTypes from 'prop-types';
+
 // @next
 import dynamic from 'next/dynamic';
-
-// @types
 
 // @project
 const AdminLayout = dynamic(() => import('@/layouts/AdminLayout'));

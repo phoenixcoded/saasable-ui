@@ -20,13 +20,6 @@ const avatarSizes = (theme) => ({
     '& ~ span.MuiBadge-dot': { ...badgeSX, borderWidth: 1 },
     '& svg': { width: 14, height: 14 }
   },
-  [AvatarSize.XXS]: {
-    ...theme.typography.caption,
-    width: 24,
-    height: 24,
-    '& ~ span.MuiBadge-dot': { ...badgeSX, borderWidth: 1 },
-    '& svg': { width: 14, height: 14 }
-  },
   [AvatarSize.XS]: {
     ...theme.typography.caption,
     width: 32,
@@ -40,16 +33,6 @@ const avatarSizes = (theme) => ({
     height: 40,
     '& ~ span.MuiBadge-dot': { width: 12, height: 12, ...badgeSX },
     '& svg': { width: 16, height: 16 }
-  },
-  [AvatarSize.MD]: { ...theme.typography.body2, width: 48, height: 48, '& ~ span.MuiBadge-dot': { width: 14, height: 14, ...badgeSX } },
-  [AvatarSize.LG]: { ...theme.typography.body1, width: 56, height: 56, '& ~ span.MuiBadge-dot': { width: 16, height: 16, ...badgeSX } },
-  [AvatarSize.XL]: {
-    ...theme.typography.h6,
-    fontWeight: 400,
-    width: 64,
-    height: 64,
-    '& ~ span.MuiBadge-dot': { width: 18, height: 18, ...badgeSX },
-    '& svg': { width: 32, height: 32 }
   }
 });
 
@@ -95,13 +78,7 @@ export default function Avatar(theme) {
               }
             },
             ...colorVariants,
-            ...sizeVariants(theme),
-            {
-              props: { variant: 'rounded' },
-              style: {
-                borderRadius: 8
-              }
-            }
+            ...sizeVariants(theme)
           ]
         }
       }

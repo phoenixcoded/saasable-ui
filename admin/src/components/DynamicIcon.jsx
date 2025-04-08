@@ -2,8 +2,6 @@ import PropTypes from 'prop-types';
 // @third-party
 import * as TablerIcons from '@tabler/icons-react';
 
-// @types
-
 /***************************  DYNAMIC - TABLER ICONS  ***************************/
 
 export default function DynamicIcon({ name, size = 24, color = 'black', stroke = 2 }) {
@@ -14,7 +12,6 @@ export default function DynamicIcon({ name, size = 24, color = 'black', stroke =
   if (!IconComponent) {
     return null;
   }
-  console.log('DynamicIcon', stroke);
 
   return <IconComponent {...{ size, color, stroke }} />;
 }

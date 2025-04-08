@@ -1,19 +1,20 @@
 'use client';
+
 import PropTypes from 'prop-types';
 
 // @project
-
+import Notistack from '@/components/third-party/Notistack';
 import { ConfigProvider } from '@/contexts/ConfigContext';
 import ThemeCustomization from '@/themes';
-
-// @types
 
 /***************************  LAYOUT - CONFIG, THEME  ***************************/
 
 export default function ProviderWrapper({ children }) {
   return (
     <ConfigProvider>
-      <ThemeCustomization>{children}</ThemeCustomization>
+      <ThemeCustomization>
+        <Notistack>{children}</Notistack>
+      </ThemeCustomization>
     </ConfigProvider>
   );
 }

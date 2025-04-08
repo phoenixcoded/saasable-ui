@@ -14,10 +14,6 @@ export default function Tooltip(theme) {
           '& svg': {
             opacity: 0.7
           }
-        },
-        arrow: {
-          color: theme.palette.secondary.lighter,
-          width: '2em'
         }
       }
     }

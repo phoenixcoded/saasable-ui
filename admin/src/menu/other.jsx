@@ -1,5 +1,3 @@
-// @types
-
 /***************************  MENU ITEMS - APPLICATIONS  ***************************/
 
 const other = {

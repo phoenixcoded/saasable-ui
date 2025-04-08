@@ -77,8 +77,7 @@ export default function IconButton(theme) {
           variants: [...colorTextVariants, ...colorContainedVariants, ...colorOutlinedVariants]
         },
         sizeSmall: { width: 36, height: 36 },
-        sizeMedium: { width: 42, height: 42 },
-        sizeLarge: { width: 48, height: 48 }
+        sizeMedium: { width: 42, height: 42 }
       }
     }
   };

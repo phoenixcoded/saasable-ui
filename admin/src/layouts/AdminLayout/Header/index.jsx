@@ -11,10 +11,10 @@ import Toolbar from '@mui/material/Toolbar';
 import AppBarStyled from './AppBarStyled';
 import HeaderContent from './HeaderContent';
 import { handlerDrawerOpen, useGetMenuMaster } from '@/states/menu';
-import { DRAWER_WIDTH, MINI_DRAWER_WIDTH } from '@/config';
+import { DRAWER_WIDTH } from '@/config';
 
 // @assets
-import { IconMenu2 } from '@tabler/icons-react';
+import { IconLayoutSidebarRightCollapse, IconMenu2 } from '@tabler/icons-react';
 
 /***************************  ADMIN LAYOUT - HEADER  ***************************/
 
@@ -37,9 +37,12 @@ export default function Header() {
         size="small"
         color="secondary"
         variant="outlined"
-        sx={{ display: { xs: 'inline-flex', lg: 'none' }, mr: 1 }}
+        sx={{ display: { xs: 'inline-flex', lg: !drawerOpen ? 'inline-flex' : 'none' }, mr: 1 }}
       >
-        <IconMenu2 size={20} />
+        <>
+          {!drawerOpen && !downLG && <IconLayoutSidebarRightCollapse size={20} />}
+          {downLG && <IconMenu2 size={20} />}
+        </>
       </IconButton>
       {headerContent}
     </Toolbar>
@@ -53,7 +56,7 @@ export default function Header() {
     sx: {
       borderBottom: `1px solid ${theme.palette.grey[300]}`,
       zIndex: 1200,
-      width: { xs: '100%', lg: drawerOpen ? `calc(100% - ${DRAWER_WIDTH}px)` : `calc(100% - ${MINI_DRAWER_WIDTH}px)` }
+      width: { xs: '100%', lg: drawerOpen ? `calc(100% - ${DRAWER_WIDTH}px)` : 1 }
     }
   };
 

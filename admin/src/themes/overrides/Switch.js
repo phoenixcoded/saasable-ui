@@ -6,9 +6,6 @@ function getSizeStyle(size) {
   switch (size) {
     case 'small':
       return { width: 34, height: 20, base: 14, thumb: 16, trackRadius: 16 };
-    case 'large':
-      return { width: 42, height: 24, base: 18, thumb: 20, trackRadius: 16 };
-    case 'medium':
     default:
       return { width: 38, height: 22, base: 16, thumb: 18, trackRadius: 16 };
   }
@@ -66,7 +63,6 @@ export default function Switch(theme) {
           color: theme.palette.text.primary,
           padding: 0,
           display: 'flex',
-          ...switchStyle('medium'),
           variants: [...colorVariants]
         },
         track: {
@@ -105,7 +101,6 @@ export default function Switch(theme) {
             }
           }
         },
-        sizeLarge: { ...switchStyle('large'), '& ~ .MuiFormControlLabel-label': theme.typography.body1 },
         sizeSmall: { ...switchStyle('small'), '& ~ .MuiFormControlLabel-label': theme.typography.body2 }
       }
     }

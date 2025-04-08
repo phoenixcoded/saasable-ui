@@ -20,8 +20,6 @@ import { generateFocusStyle } from '@/utils/generateFocusStyle';
 // @assets
 import { IconChevronRight } from '@tabler/icons-react';
 
-// @types
-
 // @data
 const homeBreadcrumb = { title: 'Home', url: APP_DEFAULT_PATH };
 

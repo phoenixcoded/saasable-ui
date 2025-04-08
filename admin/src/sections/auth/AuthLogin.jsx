@@ -1,14 +1,17 @@
 'use client';
 import PropTypes from 'prop-types';
 
+import { useState } from 'react';
+
 // @next
 import NextLink from 'next/link';
-
-import { useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 // @mui
 import { useTheme } from '@mui/material/styles';
+import Alert from '@mui/material/Alert';
 import Button from '@mui/material/Button';
+import CircularProgress from '@mui/material/CircularProgress';
 import FormHelperText from '@mui/material/FormHelperText';
 import InputAdornment from '@mui/material/InputAdornment';
 import InputLabel from '@mui/material/InputLabel';
@@ -21,6 +24,7 @@ import Box from '@mui/material/Box';
 import { useForm } from 'react-hook-form';
 
 // @project
+import { APP_DEFAULT_PATH } from '@/config';
 import { emailSchema, passwordSchema } from '@/utils/validationSchema';
 
 // @icons
@@ -40,19 +44,31 @@ function isChildObjectContained(parent, child) {
 /***************************  AUTH - LOGIN  ***************************/
 
 export default function AuthLogin({ inputSx }) {
+  const router = useRouter();
   const theme = useTheme();
 
   const [isPasswordVisible, setIsPasswordVisible] = useState(false);
+  const [isProcessing, setIsProcessing] = useState(false);
+  const [loginError, setLoginError] = useState('');
 
   // Initialize react-hook-form
   const {
-    watch,
     register,
+    watch,
+    handleSubmit,
     reset,
     formState: { errors }
   } = useForm({ defaultValues: { email: 'super_admin@saasable.io', password: 'Super@123' } });
 
   const formData = watch();
+
+  // Handle form submission
+  const onSubmit = (formData) => {
+    setIsProcessing(true);
+    setLoginError('');
+
+    router.push(APP_DEFAULT_PATH);
+  };
 
   const commonIconProps = { size: 16, color: theme.palette.grey[700] };
 
@@ -73,13 +89,13 @@ export default function AuthLogin({ inputSx }) {
           </Button>
         ))}
       </Stack>
-      <form>
+      <form onSubmit={handleSubmit(onSubmit)}>
         <Stack gap={2}>
           <Box>
             <InputLabel>Email</InputLabel>
             <OutlinedInput
-              placeholder="example@saasable.io"
               {...register('email', emailSchema)}
+              placeholder="example@saasable.io"
               fullWidth
               error={Boolean(errors.email)}
               sx={inputSx}
@@ -90,8 +106,8 @@ export default function AuthLogin({ inputSx }) {
           <Box>
             <InputLabel>Password</InputLabel>
             <OutlinedInput
-              type={isPasswordVisible ? 'text' : 'password'}
               {...register('password', passwordSchema)}
+              type={isPasswordVisible ? 'text' : 'password'}
               placeholder="Enter your password"
               fullWidth
               error={Boolean(errors.password)}
@@ -122,9 +138,22 @@ export default function AuthLogin({ inputSx }) {
           </Box>
         </Stack>
 
-        <Button color="primary" variant="contained" sx={{ minWidth: 120, mt: { xs: 1, sm: 4 }, '& .MuiButton-endIcon': { ml: 1 } }}>
+        <Button
+          type="submit"
+          color="primary"
+          variant="contained"
+          disabled={isProcessing}
+          endIcon={isProcessing && <CircularProgress color="secondary" size={16} />}
+          sx={{ minWidth: 120, mt: { xs: 1, sm: 4 }, '& .MuiButton-endIcon': { ml: 1 } }}
+        >
           Sign In
         </Button>
+
+        {loginError && (
+          <Alert sx={{ mt: 2 }} severity="error" variant="filled" icon={false}>
+            {loginError}
+          </Alert>
+        )}
       </form>
     </>
   );

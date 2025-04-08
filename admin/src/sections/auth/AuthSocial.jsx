@@ -11,8 +11,6 @@ import Typography from '@mui/material/Typography';
 import GetImagePath from '@/utils/GetImagePath';
 import { SocialTypes } from '@/enum';
 
-// @types
-
 /***************************  SOCIAL BUTTON - DATA  ***************************/
 
 const authButtons = [

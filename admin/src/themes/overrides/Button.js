@@ -14,13 +14,6 @@ export default function Button(theme) {
     }
   };
 
-  const textColorVariants = colors.map((color) => {
-    return {
-      props: { variant: 'text', color },
-      style: {}
-    };
-  });
-
   const outlinedColorVariants = colors.map((color) => {
     const paletteColor = theme.palette[color];
     return {
@@ -58,7 +51,6 @@ export default function Button(theme) {
             ...generateFocusStyle(theme.palette.primary.main)
           },
           variants: [
-            ...textColorVariants,
             ...outlinedColorVariants,
             {
               props: { variant: 'text', color: 'secondary' },
@@ -89,13 +81,6 @@ export default function Button(theme) {
           lineHeight: '18px',
           letterSpacing: 0,
           padding: 12
-        },
-        sizeLarge: {
-          height: 48,
-          fontSize: 16,
-          lineHeight: '20px',
-          letterSpacing: 0,
-          padding: '16px 18px'
         }
       }
     }

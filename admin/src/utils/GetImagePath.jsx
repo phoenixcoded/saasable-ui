@@ -3,8 +3,6 @@
 // @mui
 import { useTheme } from '@mui/material/styles';
 
-// @types
-
 /***************************  IMAGE - TYPE IDENTIFY ***************************/
 
 function isImageComponentProps(value) {

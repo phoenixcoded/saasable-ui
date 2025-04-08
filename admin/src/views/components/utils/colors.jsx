@@ -17,12 +17,8 @@ import { ColorBox } from '@/sections/components/color';
 function getColorString(themes) {
   switch (themes) {
     case Themes.THEME_HOSTING:
-      return 'HOSTING';
-    case Themes.THEME_AI:
-      return 'AI';
-    case Themes.THEME_CRM:
     default:
-      return 'CRM';
+      return 'HOSTING';
   }
 }
 
@@ -34,8 +30,6 @@ function getColorCode(themes, index) {
 
   switch (themes) {
     case Themes.THEME_HOSTING:
-    case Themes.THEME_AI:
-    case Themes.THEME_CRM:
     default:
       return code1[index];
   }
@@ -49,8 +43,6 @@ function getGreyCode(themes, index) {
 
   switch (themes) {
     case Themes.THEME_HOSTING:
-    case Themes.THEME_AI:
-    case Themes.THEME_CRM:
     default:
       return code1[index];
   }
