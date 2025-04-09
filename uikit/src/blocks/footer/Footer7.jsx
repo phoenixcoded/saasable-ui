@@ -72,6 +72,10 @@ const data = [
       {
         label: 'License Terms',
         link: { href: 'https://mui.com/store/license/', ...linkProps }
+      },
+      {
+        label: 'Discord',
+        link: { href: 'https://discord.com/invite/gmqz4BWYA8', ...linkProps }
       }
     ]
   },
