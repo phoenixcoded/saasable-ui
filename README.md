@@ -33,7 +33,7 @@ SaasAble is a complete solution for building SaaS products as well as non-SaaS p
 git clone https://github.com/phoenixcoded/saasable-ui.git
 ```
 
-2. Goto `uikit` directory and Install packages
+2. Goto `uikit / admin` directory and Install Packages
 
 ```
 npm install
@@ -47,12 +47,12 @@ npm run dev
 
 ## Download
 
-- SaasAble Free
-  - [Live Preview](https://free.saasable.io/)
-  - [Download](https://github.com/phoenixcoded/saasable-ui)
-- SaasAble
-  - [Live Preview](https://saasable.io/)
-  - [Download](https://mui.com/store/items/saasable-multipurpose-ui-kit-and-dashboard/)
+| Product     | Preview                                             | Download                                                                                       |
+| ----------- | --------------------------------------------------- | ---------------------------------------------------------------------------------------------- |
+| Admin Free  | [**Live Preview**](https://free.admin.saasable.io/) | [**Download**](https://github.com/phoenixcoded/saasable-ui)</span>                             |
+| Admin Pro   | [**Live Preview**](https://admin.saasable.io/)      | [**Download**](https://mui.com/store/items/saasable-multipurpose-ui-kit-and-dashboard/)</span> |
+| Ui Kit Free | [**Live Preview**](https://free.saasable.io/)       | [**Download**](https://github.com/phoenixcoded/saasable-ui/)</span>                            |
+| Ui Kit Pro  | [**Live Preview**](https://saasable.io/)            | [**Download**](https://mui.com/store/items/saasable-multipurpose-ui-kit-and-dashboard/)</span> |
 
 ## Why SaasAble?
 
@@ -71,18 +71,31 @@ The SaasAble theme is a modern, responsive, and highly customizable solution for
 
 Looking for even more features? Check out SaasAble's [premium version](https://mui.com/store/items/saasable-multipurpose-ui-kit-and-dashboard/), which offers a complete UI solution that includes both Front End UI components (like Hero sections, CTAs, and Footers) and Admin Interface components (such as Roles & Permissions pages, Analytics dashboards, and Billing systems).
 
-| [SaasAble Free](https://free.saasable.io/) | [SaasAble Pro](https://www.saasable.io/)          |
-| ------------------------------------------ | :------------------------------------------------ |
-| **1** Demo Landing                         | **7+** Demo Landing                               |
-| **25** Component Blocks                    | **200+** Component blocks                         |
-| -                                          | ✓ Dark/Light Mode 🌓                              |
-| -                                          | ✓ TypeScript version                              |
-| -                                          | ✓ Design files (Figma)                            |
-| -                                          | ✓ Multiple color options                          |
-| -                                          | ✓ RTL                                             |
-| -                                          | ✓ Supabase authentication                         |
-| -                                          | ✓ [More components](https://saasable.io/sections) |
-| ✓ [MIT License](https://github.com/phoenixcoded/saasable-ui/blob/main/LICENSE)                              | ✓ [Pro License](https://mui.com/store/license/)   |
+| [SaasAble Ui Kit Free](https://free.saasable.io/)                              | [SaasAble Ui Kit Pro](https://www.saasable.io/)   |
+| ------------------------------------------------------------------------------ | :------------------------------------------------ |
+| **1** Demo Landing                                                             | **7+** Demo Landing                               |
+| **25** Component Blocks                                                        | **200+** Component blocks                         |
+| -                                                                              | ✓ Dark/Light Mode 🌓                              |
+| -                                                                              | ✓ TypeScript version                              |
+| -                                                                              | ✓ Design files (Figma)                            |
+| -                                                                              | ✓ Multiple color options                          |
+| -                                                                              | ✓ RTL                                             |
+| -                                                                              | ✓ Supabase authentication                         |
+| -                                                                              | ✓ [More components](https://saasable.io/sections) |
+| ✓ [MIT License](https://github.com/phoenixcoded/saasable-ui/blob/main/LICENSE) | ✓ [Pro License](https://mui.com/store/license/)   |
+
+| [SaasAble Admin Free](https://free.saasable.io/)                               | [SaasAble Admin Pro](https://www.saasable.io/)                     |
+| ------------------------------------------------------------------------------ | :----------------------------------------------------------------- |
+| **9** Demo Pages                                                               | **45+** Demo Landing                                               |
+|                                                                                | ✓ Multi-language                                                   |
+| -                                                                              | ✓ Dark/Light Mode 🌓                                               |
+| -                                                                              | ✓ TypeScript version                                               |
+| -                                                                              | ✓ Design files (Figma)                                             |
+| -                                                                              | ✓ Role Base Authentication                                         |
+| -                                                                              | ✓ RTL                                                              |
+| -                                                                              | ✓ Supabase, AWS authentication                                     |
+| -                                                                              | ✓ [More components](https://admin.saasable.io/data-display/avatar) |
+| ✓ [MIT License](https://github.com/phoenixcoded/saasable-ui/blob/main/LICENSE) | ✓ [Pro License](https://mui.com/store/license/)                    |
 
 ## Documentation
 
@@ -97,7 +110,7 @@ Looking for even more features? Check out SaasAble's [premium version](https://m
 - React 18
 - Next js
 - TypeScript
-- Material UI v6
+- Material UI v7
 - JavaScript
 - Material 3
 - Figma
@@ -105,14 +118,10 @@ Looking for even more features? Check out SaasAble's [premium version](https://m
 
 ## SaasAble Figma UI Kit
 
-<div>
-  <a href="https://www.figma.com/community/file/1425095061180549847">
-    <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/Banners/Figma-Free_SaasAble.png" width="450" alt="Figma Free">
-  </a>&nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://codedthemes.com/item/saasable-figma-ui-kit/">
-    <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/Banners/Figma-Pro_SaasAble.png" width="450" alt="Figma Pro">
-  </a>
-</div>
+| UI KIT                                                                                                                        | ADMIN                                                                                                                          |
+| ----------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------ |
+| <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/Banners/Figma_Free_SaasAble.png" width="450" alt="Figma Free"> | <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/Banners/Figma_Free_SaasAdmin.png" width="450" alt="Figma Free"> |
+| <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/Banners/Figma_Pro_SaasAble.png" width="450" alt="Figma Pro">   | <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/Banners/Figma_Pro_SaasAdmin.png" width="450" alt="Figma Free">  |
 
 ## More products from PhoenixCoded
 
