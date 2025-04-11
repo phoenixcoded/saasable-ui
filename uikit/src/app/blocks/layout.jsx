@@ -7,8 +7,6 @@ import Box from '@mui/material/Box';
 // @project
 import useDataThemeMode from '@/hooks/useDataThemeMode';
 
-// @types
-
 /***************************  LAYOUT - BLOCKS  ***************************/
 
 export default function Blocks({ children }) {

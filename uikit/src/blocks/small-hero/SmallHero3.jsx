@@ -13,8 +13,6 @@ import Typography from '@mui/material/Typography';
 import ContainerWrapper from '@/components/ContainerWrapper';
 import { SECTION_COMMON_PY } from '@/utils/constant';
 
-// @types
-
 /***************************  SMALL HERO - 3  ***************************/
 
 export default function SmallHero3({ chip, headLine, captionLine, exploreBtn }) {

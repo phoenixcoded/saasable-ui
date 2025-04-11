@@ -9,8 +9,6 @@ import Typography from '@mui/material/Typography';
 // @project
 import GetImagePath from '@/utils/GetImagePath';
 
-// @types
-
 // @assets
 import Wave from '@/images/graphics/Wave';
 

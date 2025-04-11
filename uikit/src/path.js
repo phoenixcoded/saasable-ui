@@ -271,10 +271,8 @@ export const PRIVIEW_PATH = {
     process7: path([BLOCK_PATH, 'process', 'process7']),
     process8: path([BLOCK_PATH, 'process', 'process8'])
   },
-  privacyPolicy: {
-    privacyPolicy1: path([BLOCK_PATH, 'privacy-policy', 'privacy-policy1']),
-    privacyPolicy2: path([BLOCK_PATH, 'privacy-policy', 'privacy-policy2'])
-  },
+  privacyPolicy: path([BLOCK_PATH, 'privacy-policy']),
+  proPage: path([BLOCK_PATH, 'pro-page']),
 
   smallHero: {
     smallHero1: path([BLOCK_PATH, 'small-hero', 'small-hero1']),

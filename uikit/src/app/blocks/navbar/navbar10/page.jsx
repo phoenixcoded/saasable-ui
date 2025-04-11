@@ -4,8 +4,6 @@ import { Navbar10 } from '@/blocks/navbar';
 import { NavbarContent10 } from '@/blocks/navbar/navbar-content';
 import { MegaMenuType } from '@/enum';
 
-// @types
-
 /***************************  NAVBAR 10 - DATA  ***************************/
 
 const navbar = {

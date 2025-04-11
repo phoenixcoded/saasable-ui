@@ -12,8 +12,6 @@ import palette from './palette';
 import componentsOverride from './overrides';
 import typography from './typography';
 
-// @types
-
 /*************************** DEFAULT / AI THEME - MAIN ***************************/
 
 export default function ThemeCustomization({ children }) {

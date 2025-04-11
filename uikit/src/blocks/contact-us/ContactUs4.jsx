@@ -20,8 +20,6 @@ import SvgIcon from '@/components/SvgIcon';
 import Typeset from '@/components/Typeset';
 import { SECTION_COMMON_PY } from '@/utils/constant';
 
-// @types
-
 /***************************  CONTACT US - CARD  ***************************/
 
 function ContactCard({ icon, title, content, link }) {

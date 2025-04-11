@@ -11,8 +11,6 @@ import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
 import ProviderWrapper from './ProviderWrapper';
 import { mainMetadata } from '@/metadata';
 
-// @types
-
 const gaId = process.env.NEXT_PUBLIC_ANALYTICS_ID || '';
 
 /***************************  METADATA - MAIN  ***************************/

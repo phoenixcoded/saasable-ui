@@ -15,8 +15,6 @@ import ContainerWrapper from '@/components/ContainerWrapper';
 import Typeset from '@/components/Typeset';
 import { SECTION_COMMON_PY } from '@/utils/constant';
 
-// @types
-
 /***************************  BENEFIT - 5  ***************************/
 
 export default function Benefit5({ heading, caption, blockDetail }) {

@@ -8,8 +8,6 @@ import Box from '@mui/material/Box';
 //@project
 import { IconType } from '@/enum';
 
-// @types
-
 const spritePaths = {
   [IconType.STROKE]: '/assets/svg/tabler-sprite-outline.svg',
   [IconType.FILL]: '/assets/svg/tabler-sprite-fill.svg',

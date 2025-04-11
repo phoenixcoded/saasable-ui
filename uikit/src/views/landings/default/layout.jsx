@@ -12,8 +12,6 @@ import { NavbarContent10 } from '@/blocks/navbar/navbar-content';
 // @data
 import { navbar } from './data';
 
-// @types
-
 /***************************  LAYOUT - MAIN  ***************************/
 
 export default function MainLayout({ children }) {

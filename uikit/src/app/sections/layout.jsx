@@ -4,8 +4,6 @@ import PropTypes from 'prop-types';
 // @next
 import dynamic from 'next/dynamic';
 
-// @types
-
 // @project
 import useDataThemeMode from '@/hooks/useDataThemeMode';
 

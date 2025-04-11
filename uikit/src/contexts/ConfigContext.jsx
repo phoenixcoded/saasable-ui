@@ -7,8 +7,6 @@ import { createContext } from 'react';
 import defaultConfig from '@/config';
 import useLocalStorage from '@/hooks/useLocalStorage';
 
-// @types
-
 // @initial
 const initialState = {
   ...defaultConfig,

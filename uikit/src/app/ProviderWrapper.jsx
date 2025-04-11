@@ -8,8 +8,6 @@ import Loader from '@/components/Loader';
 import ThemeProvider from '@/components/ThemeProvider';
 import { ConfigProvider } from '@/contexts/ConfigContext';
 
-// @types
-
 /***************************  COMMON - CONFIG, THEME  ***************************/
 
 export default function ProviderWrapper({ children }) {

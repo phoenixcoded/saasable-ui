@@ -15,8 +15,6 @@ import Typeset from '@/components/Typeset';
 
 import { SECTION_COMMON_PY } from '@/utils/constant';
 
-// @types
-
 /***************************  TESTIMONIAL - 10  ***************************/
 
 export default function Testimonial10({ heading, caption, testimonials }) {

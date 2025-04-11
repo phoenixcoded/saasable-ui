@@ -9,8 +9,6 @@ import Toolbar from '@mui/material/Toolbar';
 // @project
 import ContainerWrapper from '@/components/ContainerWrapper';
 
-// @types
-
 // override media queries injected by theme.mixins.toolbar
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   '@media all': {

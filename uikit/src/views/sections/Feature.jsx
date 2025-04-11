@@ -10,8 +10,6 @@ import SimulatorTypeset from '@/components/SimulatorTypeset';
 import { PRIVIEW_PATH, SECTION_PATH } from '@/path';
 import { FIGMA_LINK } from '@/utils/constant';
 
-// @types
-
 /***************************  FEATURE - BREADCRUMBS  ***************************/
 
 let breadcrumbs = [
@@ -228,6 +226,24 @@ const sectionsData = [
       caption:
         'Use this default example with an announcement badge, heading, CTA buttons, and customer logos to showcase what your website offers.',
       figmaLink: FIGMA_LINK.feature.variant.feature23
+    },
+    src: PRIVIEW_PATH.proPage
+  },
+  {
+    typeset: {
+      heading: 'Default feature section 24',
+      caption:
+        'Use this default example with an announcement badge, heading, CTA buttons, and customer logos to showcase what your website offers.',
+      figmaLink: FIGMA_LINK.feature.variant.feature24
+    },
+    src: PRIVIEW_PATH.proPage
+  },
+  {
+    typeset: {
+      heading: 'Default feature section 25',
+      caption:
+        'Use this default example with an announcement badge, heading, CTA buttons, and customer logos to showcase what your website offers.',
+      figmaLink: FIGMA_LINK.feature.variant.feature25
     },
     src: PRIVIEW_PATH.proPage
   }

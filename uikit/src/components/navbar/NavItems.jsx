@@ -25,8 +25,6 @@ import { MegaMenu4, MegaMenu5 } from '@/blocks/mega-menu';
 import SvgIcon from '@/components/SvgIcon';
 import { MegaMenuType } from '@/enum';
 
-// @types
-
 const navItemSX = { py: 1.5, borderRadius: { xs: 0, sm: 4 } };
 
 /***************************  MENU - EXPANDED  ***************************/

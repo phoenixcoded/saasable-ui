@@ -24,8 +24,6 @@ import { CopyrightType } from '@/enum';
 import { DOCS_URL, FREEBIES_URL } from '@/path';
 import { SECTION_COMMON_PY } from '@/utils/constant';
 
-// @types
-
 /***************************  FOOTER - 7 DATA  ***************************/
 
 const linkProps = { target: '_blank', rel: 'noopener noreferrer' };

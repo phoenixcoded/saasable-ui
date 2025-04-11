@@ -8,8 +8,6 @@ import { navbar } from '../landings/default/data';
 import { Navbar10 } from '@/blocks/navbar';
 import { NavbarContent10 } from '@/blocks/navbar/navbar-content';
 
-// @types
-
 /***************************  LANDING - SECTIONS  ***************************/
 
 export default function SectionsLayout({ children }) {

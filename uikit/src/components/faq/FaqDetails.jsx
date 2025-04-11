@@ -11,8 +11,6 @@ import Typography from '@mui/material/Typography';
 // @project
 import SvgIcon from '../SvgIcon';
 
-// @types
-
 /***************************  FAQ - DETAILS  ***************************/
 
 export default function FaqDetails({ answer }) {

@@ -10,8 +10,6 @@ import SimulatorTypeset from '@/components/SimulatorTypeset';
 import { PRIVIEW_PATH, SECTION_PATH } from '@/path';
 import { FIGMA_LINK } from '@/utils/constant';
 
-// @types
-
 /***************************  TESTIMONIAL - BREADCRUMBS  ***************************/
 
 let breadcrumbs = [
@@ -119,6 +117,24 @@ const sectionsData = [
       caption:
         'Use this default example with an announcement badge, heading, CTA buttons, and customer logos to showcase what your website offers.',
       figmaLink: FIGMA_LINK.testimonial.variant.testimonial11
+    },
+    src: PRIVIEW_PATH.proPage
+  },
+  {
+    typeset: {
+      heading: 'Default testimonial section 12',
+      caption:
+        'Use this default example with an announcement badge, heading, CTA buttons, and customer logos to showcase what your website offers.',
+      figmaLink: FIGMA_LINK.testimonial.variant.testimonial12
+    },
+    src: PRIVIEW_PATH.proPage
+  },
+  {
+    typeset: {
+      heading: 'Default testimonial section 13',
+      caption:
+        'Use this default example with an announcement badge, heading, CTA buttons, and customer logos to showcase what your website offers.',
+      figmaLink: FIGMA_LINK.testimonial.variant.testimonial13
     },
     src: PRIVIEW_PATH.proPage
   }

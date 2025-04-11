@@ -6,8 +6,6 @@ import { useId } from 'react';
 // @mui
 import { useTheme } from '@mui/material/styles';
 
-// @types
-
 /***************************  ICON - LINE  ***************************/
 
 export default function Line({ size = 24, color }) {

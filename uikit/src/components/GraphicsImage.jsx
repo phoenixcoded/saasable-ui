@@ -10,8 +10,6 @@ import CardMedia from '@mui/material/CardMedia';
 import DynamicComponent from './DynamicComponent';
 import GetImagePath from '@/utils/GetImagePath';
 
-// @types
-
 /***************************  IMAGE - TYPE IDENTIFY ***************************/
 
 function isImageComponentProps(value) {

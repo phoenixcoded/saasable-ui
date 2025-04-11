@@ -10,8 +10,6 @@ import SimulatorTypeset from '@/components/SimulatorTypeset';
 import { PRIVIEW_PATH, SECTION_PATH } from '@/path';
 import { FIGMA_LINK } from '@/utils/constant';
 
-// @types
-
 /***************************  UNDER MAINTENANCE - BREADCRUMBS  ***************************/
 
 let breadcrumbs = [

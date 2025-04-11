@@ -10,8 +10,6 @@ import SimulatorTypeset from '@/components/SimulatorTypeset';
 import { PRIVIEW_PATH, SECTION_PATH } from '@/path';
 import { FIGMA_LINK } from '@/utils/constant';
 
-// @types
-
 /***************************  BLOG - BREADCRUMBS  ***************************/
 
 let breadcrumbs = [
@@ -31,7 +29,8 @@ const sectionsData = [
   { typeset: { heading: 'Default blog section 03', caption, figmaLink: FIGMA_LINK.blog.variant.blog3 }, src: PRIVIEW_PATH.proPage },
   { typeset: { heading: 'Default blog section 04', caption, figmaLink: FIGMA_LINK.blog.variant.blog4 }, src: PRIVIEW_PATH.proPage },
   { typeset: { heading: 'Default blog section 05', caption, figmaLink: FIGMA_LINK.blog.variant.blog5 }, src: PRIVIEW_PATH.proPage },
-  { typeset: { heading: 'Default blog section 06', caption, figmaLink: FIGMA_LINK.blog.variant.blog6 }, src: PRIVIEW_PATH.proPage }
+  { typeset: { heading: 'Default blog section 06', caption, figmaLink: FIGMA_LINK.blog.variant.blog6 }, src: PRIVIEW_PATH.proPage },
+  { typeset: { heading: 'Default blog section 07', caption, figmaLink: FIGMA_LINK.blog.variant.blog7 }, src: PRIVIEW_PATH.proPage }
 ];
 
 /***************************  SECTIONS - BLOG  ***************************/

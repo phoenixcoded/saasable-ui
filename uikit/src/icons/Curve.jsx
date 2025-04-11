@@ -6,8 +6,6 @@ import { useId } from 'react';
 // @mui
 import { useTheme } from '@mui/material/styles';
 
-// @types
-
 /***************************  ICON - CURVE  ***************************/
 
 export default function Curve({ size = 24, color }) {

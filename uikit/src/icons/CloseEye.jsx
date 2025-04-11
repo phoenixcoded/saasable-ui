@@ -6,8 +6,6 @@ import { useId } from 'react';
 // @mui
 import { useTheme } from '@mui/material/styles';
 
-// @types
-
 /***************************  ICON - CLOSE EYE  ***************************/
 
 export default function CloseEye({ size = 24, color, stroke = 1.5 }) {

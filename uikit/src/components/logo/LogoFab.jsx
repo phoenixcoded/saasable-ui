@@ -8,8 +8,6 @@ import CardMedia from '@mui/material/CardMedia';
 // @project
 import branding from '@/branding.json';
 
-// @types
-
 /***************************  LOGO - FAB  ***************************/
 
 export default function LogoFab({ size = 24 }) {

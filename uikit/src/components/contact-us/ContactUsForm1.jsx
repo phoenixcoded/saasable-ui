@@ -32,8 +32,6 @@ import SvgIcon from '@/components/SvgIcon';
 import countries from '@/data/countries';
 import { emailSchema, firstNameSchema, lastNameSchema, phoneSchema } from '@/utils/validationSchema';
 
-// @types
-
 /***************************  FORM - INPUT LABEL  ***************************/
 
 function FieldLabel({ name }) {

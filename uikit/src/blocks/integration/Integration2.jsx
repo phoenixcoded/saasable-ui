@@ -17,8 +17,6 @@ import ContainerWrapper from '@/components/ContainerWrapper';
 import SvgIcon from '@/components/SvgIcon';
 import { SECTION_COMMON_PY } from '@/utils/constant';
 
-// @types
-
 /***************************  INTEGRATION - TAG  ***************************/
 
 function IntegrationTag({ label, icon }) {

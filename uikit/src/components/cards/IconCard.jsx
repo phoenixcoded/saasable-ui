@@ -9,8 +9,6 @@ import Box from '@mui/material/Box';
 import { GraphicsCard } from '@/components/cards';
 import SvgIcon from '@/components/SvgIcon';
 
-// @types
-
 /***************************  COMMON - ICON CARD  ***************************/
 
 export default function IconCard({ icon, title, content, iconAvatar, contentCard, titleProps, stackProps, contentProps, cardPadding }) {

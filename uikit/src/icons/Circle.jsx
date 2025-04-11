@@ -6,8 +6,6 @@ import { useId } from 'react';
 // @mui
 import { useTheme } from '@mui/material/styles';
 
-// @types
-
 /***************************  ICON - CIRCLE  ***************************/
 
 export default function Circle({ size = 24, color }) {
