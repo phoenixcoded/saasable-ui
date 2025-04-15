@@ -1,4 +1,4 @@
-import { useContext } from 'react';
+import { use } from 'react';
 
 // @project
 import { ConfigContext } from '@/contexts/ConfigContext';
@@ -6,5 +6,5 @@ import { ConfigContext } from '@/contexts/ConfigContext';
 /***************************  HOOKS - CONFIG  ***************************/
 
 export default function useConfig() {
-  return useContext(ConfigContext);
+  return use(ConfigContext);
 }

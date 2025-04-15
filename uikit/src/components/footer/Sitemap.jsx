@@ -63,6 +63,10 @@ const menuItems = [
       {
         label: 'License Terms',
         link: { href: 'https://mui.com/store/license/', ...linkProps }
+      },
+      {
+        label: 'Discord',
+        link: { href: branding.company.socialLink.discord, ...linkProps }
       }
     ]
   },
