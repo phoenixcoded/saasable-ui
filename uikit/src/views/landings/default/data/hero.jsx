@@ -37,7 +37,7 @@ export const hero = {
   videoSrc: 'https://d2elhhoq00m1pj.cloudfront.net/saasable-intro.mp4',
   videoThumbnail: '/assets/videos/thumbnails/intro-thumbnail.png',
   listData: [
-    { image: '/assets/images/shared/react.svg', title: 'React 18' },
+    { image: '/assets/images/shared/react.svg', title: 'React 19' },
     { image: '/assets/images/shared/next-js.svg', title: 'Next.js' },
     { image: '/assets/images/shared/material-ui.svg', title: 'Material UI v7' },
     { image: '/assets/images/shared/typescript.svg', title: 'TypeScript' },

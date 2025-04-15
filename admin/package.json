@@ -1,6 +1,6 @@
 {
   "name": "saas-able-react-mui-admin-next-seed-js",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "private": true,
   "author": {
     "email": "phoenixcoded@gmail.com",
@@ -19,17 +19,17 @@
     "@emotion/cache": "11.14.0",
     "@emotion/react": "11.14.0",
     "@emotion/styled": "11.14.0",
-    "@mui/material": "7.0.1",
-    "@mui/material-nextjs": "7.0.0",
+    "@mui/material": "7.0.2",
+    "@mui/material-nextjs": "7.0.2",
     "@mui/x-charts": "7.28.0",
-    "@mui/x-date-pickers": "7.28.2",
+    "@mui/x-date-pickers": "7.28.3",
     "@tabler/icons-react": "3.31.0",
     "lodash-es": "4.17.21",
-    "next": "15.2.4",
+    "next": "15.3.0",
     "notistack": "3.0.2",
-    "react": "18.3.1",
+    "react": "19.1.0",
     "react-device-detect": "2.2.3",
-    "react-dom": "18.3.1",
+    "react-dom": "19.1.0",
     "react-hook-form": "7.55.0",
     "simplebar-react": "3.3.0",
     "stylis": "4.3.6",
@@ -38,15 +38,12 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "3.3.1",
-    "@eslint/js": "9.23.0",
-    "eslint": "9.23.0",
-    "eslint-config-next": "15.2.4",
-    "eslint-config-prettier": "10.1.1",
-    "eslint-plugin-prettier": "5.2.5",
-    "knip": "5.46.4",
+    "@eslint/js": "9.24.0",
+    "eslint": "9.24.0",
+    "eslint-config-next": "15.3.0",
+    "eslint-config-prettier": "10.1.2",
+    "eslint-plugin-prettier": "5.2.6",
+    "knip": "5.50.4",
     "prettier": "3.5.3"
-  },
-  "resolutions": {
-    "punycode": "2.3.1"
   }
 }

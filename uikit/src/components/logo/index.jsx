@@ -18,7 +18,7 @@ import LogoIcon from './LogoIcon';
 export default function LogoSection({ isIcon, sx, to }) {
   const theme = useTheme();
   return (
-    <NextLink href={!to ? process.env.NEXT_PUBLIC_BASE_NAME || '/' : to} passHref legacyBehavior>
+    <NextLink href={!to ? process.env.NEXT_PUBLIC_BASE_NAME || '/' : to} passHref>
       <ButtonBase
         disableRipple
         sx={{ ...sx, display: 'block', '&:focus-visible': generateFocusVisibleStyles(theme.palette.primary.main) }}

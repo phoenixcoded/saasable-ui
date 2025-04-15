@@ -10,7 +10,7 @@ import Box from '@mui/material/Box';
 import branding from '@/branding.json';
 import { MegaMenu4 } from '@/blocks/mega-menu';
 import { MenuPopper } from '@/components/navbar';
-import { Themes } from '@/config';
+import { landings } from '@/data/landings';
 import { BUY_NOW_URL } from '@/path';
 
 /***************************  MEGAMENU 4 - FOOTER  ***************************/
@@ -20,9 +20,9 @@ function footerData() {
     <Stack direction={{ sm: 'row' }} sx={{ gap: 1.5, justifyContent: 'space-between', alignItems: { xs: 'flex-start', sm: 'center' } }}>
       <Stack sx={{ gap: 1 }}>
         <Stack direction="row" sx={{ alignItems: 'center', gap: 1 }}>
-          <Typography variant="h5">New landing demos are coming soon!</Typography>
+          <Typography variant="h5">Explore our range of landing demos tailored to suit your needs</Typography>
           <Chip
-            label={<Typography variant="caption">Coming Soon</Typography>}
+            label={<Typography variant="caption">Featured</Typography>}
             size="small"
             sx={{
               bgcolor: 'background.default',
@@ -47,7 +47,7 @@ function footerData() {
       </Stack>
       <Button
         variant="contained"
-        sx={{ minWidth: 92, px: { xs: 2 }, py: 1.25 }}
+        sx={{ display: { xs: 'none', sm: 'inline-flex' }, minWidth: 100, px: { xs: 2 }, py: 1.25 }}
         href={BUY_NOW_URL}
         target="_blank"
         rel="noopener noreferrer"
@@ -61,50 +61,7 @@ function footerData() {
 /***************************  MEGAMENU 4 - DATA  ***************************/
 
 const data = {
-  menuItems: [
-    {
-      title: 'CRM',
-      theme: Themes.THEME_CRM,
-      image: '/assets/images/mega-menu/crm-light.svg',
-      status: 'Pro'
-    },
-    {
-      title: 'AI',
-      theme: Themes.THEME_AI,
-      image: '/assets/images/mega-menu/ai-light.svg',
-      status: 'Pro'
-    },
-    {
-      title: 'Crypto',
-      theme: Themes.THEME_CRYPTO,
-      image: '/assets/images/mega-menu/crypto-light.svg',
-      status: 'Pro'
-    },
-    {
-      title: 'Hosting',
-      theme: Themes.THEME_HOSTING,
-      image: '/assets/images/mega-menu/hosting-light.svg',
-      status: 'Pro'
-    },
-    {
-      title: 'PMS',
-      theme: Themes.THEME_PMS,
-      image: '/assets/images/mega-menu/pms-light.svg',
-      status: 'Pro'
-    },
-    {
-      title: 'HRM',
-      theme: Themes.THEME_HRM,
-      image: '/assets/images/mega-menu/hrm-light.svg',
-      status: 'Pro'
-    },
-    {
-      title: 'Plugin',
-      theme: Themes.THEME_PLUGIN,
-      image: '/assets/images/mega-menu/plugin-light.svg',
-      status: 'Pro'
-    }
-  ],
+  menuItems: landings,
   footerData: footerData()
 };
 

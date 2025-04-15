@@ -1,7 +1,5 @@
 'use client';
 
-import { forwardRef } from 'react';
-
 // @mui
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
@@ -12,7 +10,7 @@ import { DumpingDoodle } from '@/images/illustration';
 
 /***************************  HEADER - EMPTY SEARCH ***************************/
 
-function EmptySearch(props, ref) {
+export default function EmptySearch(props, ref) {
   return (
     <Stack ref={ref} {...props} sx={{ width: 1, alignItems: 'center', justifyContent: 'center', textAlign: 'center', gap: 1.5, p: 1.5 }}>
       <Box sx={{ width: 230, height: 170 }}>
@@ -29,5 +27,3 @@ function EmptySearch(props, ref) {
     </Stack>
   );
 }
-
-export default forwardRef(EmptySearch);
