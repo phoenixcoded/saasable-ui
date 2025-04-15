@@ -107,7 +107,7 @@ Looking for even more features? Check out SaasAble's [premium version](https://m
 
 ## Technology Stack
 
-- React 18
+- React 19
 - Next js
 - TypeScript
 - Material UI v7

@@ -73,7 +73,7 @@ const data = [
       },
       {
         label: 'Discord',
-        link: { href: 'https://discord.com/invite/gmqz4BWYA8', ...linkProps }
+        link: { href: branding.company.socialLink.discord, ...linkProps }
       }
     ]
   },
