@@ -1,0 +1,243 @@
+@import "tailwindcss";
+@custom-variant dark (&:where([data-theme=dark], [data-pc-theme="dark"] *));
+
+@layer utilities {
+    @import "../partial/typography";
+    @import "../partial/general";
+    @import "../partial/breadcrumb";
+    @import "../partial/keyframes";
+    @import "../partial/navbar";
+    @import "../partial/accordion";
+    @import "../partial/dropdown";
+    @import "../partial/buttons";
+    @import "../partial/forms";
+}
+
+@layer {
+    .container {
+        @apply max-w-full mx-auto px-4 sm:px-6;
+    }
+
+    @media (min-width: 1024px) {
+        .container {
+            @apply max-w-[1128px];
+        }
+    }
+
+    @media (min-width: 1280px) {
+        .container {
+            @apply max-w-[1128px];
+        }
+    }
+
+    @media (min-width: 1536px) {
+        .container {
+            @apply max-w-[1266px];
+        }
+    }
+}
+
+@theme {
+    --spacing: 4px;
+    --font-display: "Figtree", "sans-serif";
+    --color-primary-50: var(--primary-50);
+    --color-primary-100: var(--primary-100);
+    --color-primary-200: var(--primary-200);
+    --color-primary-300: var(--primary-300);
+    --color-primary-400: var(--primary-400);
+    --color-primary-500: var(--primary-500);
+    --color-primary-600: var(--primary-600);
+    --color-primary-700: var(--primary-700);
+    --color-primary-800: var(--primary-800);
+    --color-primary-900: var(--primary-900);
+    --color-primary-950: var(--primary-950);
+
+    --color-secondary-50: var(--secondary-50);
+    --color-secondary-100: var(--secondary-100);
+    --color-secondary-200: var(--secondary-200);
+    --color-secondary-300: var(--secondary-300);
+    --color-secondary-400: var(--secondary-400);
+    --color-secondary-500: var(--secondary-500);
+    --color-secondary-600: var(--secondary-600);
+    --color-secondary-700: var(--secondary-700);
+    --color-secondary-800: var(--secondary-800);
+    --color-secondary-900: var(--secondary-900);
+    --color-secondary-950: var(--secondary-950);
+
+    --color-neutral-50: var(--neutral-50);
+    --color-neutral-100: var(--neutral-100);
+    --color-neutral-200: var(--neutral-200);
+    --color-neutral-300: var(--neutral-300);
+    --color-neutral-400: var(--neutral-400);
+    --color-neutral-500: var(--neutral-500);
+    --color-neutral-600: var(--neutral-600);
+    --color-neutral-700: var(--neutral-700);
+    --color-neutral-800: var(--neutral-800);
+    --color-neutral-900: var(--neutral-900);
+    --color-neutral-950: var(--neutral-950);
+
+    --color-theme-text-primary: var(--theme-text-primary);
+    --color-theme-text-secondary: var(--theme-text-secondary);
+    --color-theme-divider: var(--theme-divider);
+    --color-theme-bg-default: var(--theme-bg-default);
+    --color-theme-bg-paper: var(--theme-bg-paper);
+
+    --color-checkbox-bg: var(--color-checkbox-bg); 
+    --color-radio-bg: var(--color-radio-bg); 
+    --color-select-bg: var(--color-select-bg); 
+    --color-select-bg-dark:  var(--color-select-bg-dark:); 
+    --color-switch-bg:  var(--color-switch-bg:); 
+    --color-switch-active-bg: var(--color-switch-active-bg); 
+}
+
+:root {
+    --primary-50: #ebf5ff;
+    --primary-100: #CCE5FF;
+    --primary-200: #92CCFF;
+    --primary-300: #0098E9;
+    --primary-400: #007EC0;
+    --primary-500: #006397;
+    --primary-600: #003E5F;
+    --primary-700: #001927;
+    --primary-800: #004b73;
+    --primary-900: #001D31;
+    --primary-950: #000305;
+    --secondary-50: #B0BCC7;
+    --secondary-100: #D3E4F8;
+    --secondary-200: #B7C8DB;
+    --secondary-300: #74899D;
+    --secondary-400: #607588;
+    --secondary-500: #4F6070;
+    --secondary-600: #38444F;
+    --secondary-700: #21282E;
+    --secondary-800: #384858;
+    --secondary-900: #0B1D2B;
+    --secondary-950: #000000;
+    --neutral-50: #F9F9FC;
+    --neutral-100: #F1F4F9;
+    --neutral-200: #EBEEF3;
+    --neutral-300: #E6E8EE;
+    --neutral-400: #E2E2E5;
+    --neutral-500: #D7DADF;
+    --neutral-600: #C2C7CE;
+    --neutral-700: #72787E;
+    --neutral-800: #42474E;
+    --neutral-900: #1A1C1E;
+    --neutral-950: #000000;
+
+    --theme-text-primary: #1A1C1E;
+    --theme-text-secondary: #42474E;
+    --theme-divider: #C2C7CE;
+    --theme-bg-default: #fff;
+    --theme-bg-paper: #fff;
+
+    --breadcrumb-bg: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 60'><text x='0' y='25' fill='%23E6E8EE' font-size='60px'>.</text></svg>");
+    --breadcrumb-bg-dark: url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 60'><text x='0' y='25' fill='%23272A2E' font-size='60px'>.</text></svg>");
+    --checkbox-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3e%3cpath fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-linejoin='round' stroke-width='3' d='M6 10l3 3l6-6'/%3e%3c/svg%3e");
+    --radio-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='2' fill='%23ffffff'/%3e%3c/svg%3e");
+    --select-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%231d2630' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+    --select-bg-dark: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'%3e%3cpath fill='none' stroke='%23bfbfbf' stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M2 5l6 6 6-6'/%3e%3c/svg%3e");
+    --switch-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3.6' fill='rgba%28255, 255, 255, 1%29'/%3e%3c/svg%3e");
+    --switch-active-bg: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='-4 -4 8 8'%3e%3ccircle r='3.6' fill='%23ffffff'/%3e%3c/svg%3e");
+
+    --font-h1-fontFamily: "archivo", serif;
+    --font-h1-fontWeight: 400;
+    --font-h1-fontSize: 57px;
+    --font-h1-lineHeight: 1.123;
+    --font-h1-letterSpacing: -0.25px;
+    --font-h1-md-fontSize: 45px;
+    --font-h1-md-lineHeight: 1.156;
+    --font-h1-sm-fontSize: 32px;
+    --font-h1-sm-lineHeight: 1.222;
+    --font-h2-fontFamily: "archivo", serif;
+    --font-h2-fontWeight: 400;
+    --font-h2-fontSize: 45px;
+    --font-h2-lineHeight: 1.156;
+    --font-h2-letterSpacing: 0px;
+    --font-h2-md-fontSize: 36px;
+    --font-h2-md-lineHeight: 1.222;
+    --font-h2-sm-fontSize: 24px;
+    --font-h2-sm-lineHeight: 1.333;
+    --font-h3-fontFamily: "archivo", serif;
+    --font-h3-fontWeight: 400;
+    --font-h3-fontSize: 28px;
+    --font-h3-lineHeight: 1.286;
+    --font-h3-letterSpacing: 0px;
+    --font-h3-md-fontSize: 24px;
+    --font-h3-md-lineHeight: 1.333;
+    --font-h3-sm-fontSize: 20px;
+    --font-h3-sm-lineHeight: 1.4;
+    --font-h4-fontFamily: "archivo", serif;
+    --font-h4-fontWeight: 400;
+    --font-h4-fontSize: 24px;
+    --font-h4-lineHeight: 1.333;
+    --font-h4-letterSpacing: 0px;
+    --font-h4-md-fontSize: 20px;
+    --font-h4-md-lineHeight: 1.4;
+    --font-h4-sm-fontSize: 16px;
+    --font-h4-sm-lineHeight: 1.5;
+    --font-h5-fontFamily: "figtree", serif;
+    --font-h5-fontWeight: 500;
+    --font-h5-fontSize: 22px;
+    --font-h5-lineHeight: 1.273;
+    --font-h5-letterSpacing: 0px;
+    --font-h5-md-fontSize: 16px;
+    --font-h5-md-lineHeight: 1.5;
+    --font-h5-md-letterSpacing: 0.15px;
+    --font-h6-fontFamily: "figtree", serif;
+    --font-h6-fontWeight: 400;
+    --font-h6-fontSize: 22px;
+    --font-h6-lineHeight: 1.364;
+    --font-h6-letterSpacing: 0px;
+    --font-h6-md-fontSize: 16px;
+    --font-h6-md-lineHeight: 1.5;
+    --font-h6-md-letterSpacing: 0.5px;
+    --font-body1-fontFamily: "figtree", serif;
+    --font-body1-fontWeight: 400;
+    --font-body1-fontSize: 16px;
+    --font-body1-lineHeight: 1.5;
+    --font-body1-letterSpacing: 0.5px;
+    --font-body1-md-fontSize: 14px;
+    --font-body1-md-lineHeight: 1.429;
+    --font-body1-md-letterSpacing: 0.25px;
+    --font-body2-fontFamily: "figtree", serif;
+    --font-body2-fontWeight: 400;
+    --font-body2-fontSize: 14px;
+    --font-body2-lineHeight: 1.429;
+    --font-body2-letterSpacing: 0.25px;
+    --font-body2-md-fontSize: 12px;
+    --font-body2-md-lineHeight: 1.5;
+    --font-subtitle1-fontFamily: "figtree", serif;
+    --font-subtitle1-fontWeight: 500;
+    --font-subtitle1-fontSize: 16px;
+    --font-subtitle1-lineHeight: 1.5;
+    --font-subtitle1-letterSpacing: 0.15px;
+    --font-subtitle1-md-fontWeight: 600;
+    --font-subtitle1-md-fontSize: 14px;
+    --font-subtitle1-md-lineHeight: 1.429;
+    --font-subtitle1-md-letterSpacing: 0.1px;
+    --font-subtitle2-fontFamily: "figtree", serif;
+    --font-subtitle2-fontWeight: 600;
+    --font-subtitle2-fontSize: 14px;
+    --font-subtitle2-lineHeight: 1.429;
+    --font-subtitle2-letterSpacing: 0.1px;
+    --font-subtitle2-md-fontSize: 12px;
+    --font-subtitle2-md-lineHeight: 1.5;
+    --font-caption-fontFamily: "figtree", serif;
+    --font-caption-fontWeight: 600;
+    --font-caption-fontSize: 12px;
+    --font-caption-lineHeight: 1.333;
+    --font-caption-letterSpacing: 0px;
+    --font-caption1-fontFamily: "figtree", serif;
+    --font-caption1-fontWeight: 400;
+    --font-caption1-fontSize: 16px;
+    --font-caption1-lineHeight: 1.5;
+    --font-caption1-letterSpacing: 0.5px;
+    --font-caption2-fontFamily: "figtree", serif;
+    --font-caption2-fontWeight: 500;
+    --font-caption2-fontSize: 14px;
+    --font-caption2-lineHeight: 1.429;
+    --font-caption2-letterSpacing: 0.1px;
+    --font-btn-fontFamily: "archivo", serif;
+}
+@import "../partial/presets";

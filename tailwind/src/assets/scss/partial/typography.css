@@ -1,0 +1,287 @@
+@layer {
+  h1,
+  .h1 {
+    font-family: var(--font-h1-fontFamily);
+    font-size: var(--font-h1-fontSize);
+    line-height: var(--font-h1-lineHeight);
+    letter-spacing: var(--font-h1-letterSpacing);
+    font-weight: var(--font-h1-fontWeight);
+  }
+
+  @media (max-width: 992px) {
+
+    h1,
+    .h1 {
+      font-size: var(--font-h1-md-fontSize);
+      line-height: var(--font-h1-md-lineHeight);
+    }
+  }
+
+  @media (max-width: 640px) {
+
+    h1,
+    .h1 {
+      font-size: var(--font-h1-sm-fontSize);
+      line-height: var(--font-h1-sm-lineHeight);
+    }
+  }
+
+  h2,
+  .h2 {
+    font-family: var(--font-h2-fontFamily);
+    font-size: var(--font-h2-fontSize);
+    line-height: var(--font-h2-lineHeight);
+    letter-spacing: var(--font-h2-letterSpacing);
+    font-weight: var(--font-h2-fontWeight);
+  }
+
+  @media (max-width: 992px) {
+
+    h2,
+    .h2 {
+      font-size: var(--font-h2-md-fontSize);
+      line-height: var(--font-h2-md-lineHeight);
+    }
+  }
+
+  @media (max-width: 640px) {
+
+    h2,
+    .h2 {
+      font-size: var(--font-h2-sm-fontSize);
+      line-height: var(--font-h2-sm-lineHeight);
+    }
+  }
+
+  h3,
+  .h3 {
+    font-family: var(--font-h3-fontFamily);
+    font-size: var(--font-h3-fontSize);
+    line-height: var(--font-h3-lineHeight);
+    letter-spacing: var(--font-h3-letterSpacing);
+    font-weight: var(--font-h3-fontWeight);
+  }
+
+  @media (max-width: 992px) {
+
+    h3,
+    .h3 {
+      font-size: var(--font-h3-md-fontSize);
+      line-height: var(--font-h3-md-lineHeight);
+    }
+  }
+
+  @media (max-width: 640px) {
+
+    h3,
+    .h3 {
+      font-size: var(--font-h3-sm-fontSize);
+      line-height: var(--font-h3-sm-lineHeight);
+    }
+  }
+
+  h4,
+  .h4 {
+    font-family: var(--font-h4-fontFamily);
+    font-size: var(--font-h4-fontSize);
+    line-height: var(--font-h4-lineHeight);
+    letter-spacing: var(--font-h4-letterSpacing);
+    font-weight: var(--font-h4-fontWeight);
+  }
+
+  @media (max-width: 992px) {
+
+    h4,
+    .h4 {
+      font-size: var(--font-h4-md-fontSize);
+      line-height: var(--font-h4-md-lineHeight);
+    }
+  }
+
+  @media (max-width: 640px) {
+
+    h4,
+    .h4 {
+      font-size: var(--font-h4-sm-fontSize);
+      line-height: var(--font-h4-sm-lineHeight);
+    }
+  }
+
+  h5,
+  .h5 {
+    font-family: var(--font-h5-fontFamily);
+    font-size: var(--font-h5-fontSize);
+    line-height: var(--font-h5-lineHeight);
+    letter-spacing: var(--font-h5-letterSpacing);
+    font-weight: var(--font-h5-fontWeight);
+  }
+
+  @media (max-width: 992px) {
+
+    h5,
+    .h5 {
+      font-size: var(--font-h5-md-fontSize);
+      line-height: var(--font-h5-md-lineHeight);
+      letter-spacing: var(--font-h5-md-letterSpacing);
+    }
+  }
+
+  @media (max-width: 640px) {
+
+    h5,
+    .h5 {
+      font-size: var(--font-h5-sm-fontSize);
+      line-height: var(--font-h5-sm-lineHeight);
+    }
+  }
+
+  h6,
+  .h6 {
+    font-family: var(--font-h6-fontFamily);
+    font-size: var(--font-h6-fontSize);
+    line-height: var(--font-h6-lineHeight);
+    letter-spacing: var(--font-h6-letterSpacing);
+    font-weight: var(--font-h6-fontWeight);
+  }
+
+  @media (max-width: 992px) {
+
+    h6,
+    .h6 {
+      font-size: var(--font-h6-md-fontSize);
+      line-height: var(--font-h6-md-lineHeight);
+      letter-spacing: var(--font-h6-md-letterSpacing);
+    }
+  }
+
+  @media (max-width: 640px) {
+
+    h6,
+    .h6 {
+      font-size: var(--font-h6-sm-fontSize);
+      line-height: var(--font-h6-sm-lineHeight);
+    }
+  }
+
+  .body1 {
+    font-family: var(--font-body1-fontFamily);
+    font-size: var(--font-body1-fontSize);
+    line-height: var(--font-body1-lineHeight);
+    letter-spacing: var(--font-body1-letterSpacing);
+    font-weight: var(--font-body1-fontWeight);
+  }
+
+  @media (max-width: 992px) {
+    .body1 {
+      font-size: var(--font-body1-md-fontSize);
+      line-height: var(--font-body1-md-lineHeight);
+      letter-spacing: var(--font-body1-md-letterSpacing);
+    }
+  }
+
+  .body2 {
+    font-family: var(--font-body2-fontFamily);
+    font-size: var(--font-body2-fontSize);
+    line-height: var(--font-body2-lineHeight);
+    letter-spacing: var(--font-body2-letterSpacing);
+    font-weight: var(--font-body2-fontWeight);
+  }
+
+  @media (max-width: 992px) {
+    .body2 {
+      font-size: var(--font-body2-md-fontSize);
+      line-height: var(--font-body2-md-lineHeight);
+      letter-spacing: var(--font-body2-md-letterSpacing);
+    }
+  }
+
+  .subtitle1 {
+    font-family: var(--font-subtitle1-fontFamily);
+    font-size: var(--font-subtitle1-fontSize);
+    line-height: var(--font-subtitle1-lineHeight);
+    letter-spacing: var(--font-subtitle1-letterSpacing);
+    font-weight: var(--font-subtitle1-fontWeight);
+  }
+
+  @media (max-width: 992px) {
+    .subtitle1 {
+      font-size: var(--font-subtitle1-md-fontSize);
+      line-height: var(--font-subtitle1-md-lineHeight);
+      letter-spacing: var(--font-subtitle1-md-letterSpacing);
+    }
+  }
+
+  .subtitle2 {
+    font-family: var(--font-subtitle2-fontFamily);
+    font-size: var(--font-subtitle2-fontSize);
+    line-height: var(--font-subtitle2-lineHeight);
+    letter-spacing: var(--font-subtitle2-letterSpacing);
+    font-weight: var(--font-subtitle2-fontWeight);
+  }
+
+  @media (max-width: 992px) {
+    .subtitle2 {
+      font-size: var(--font-subtitle2-md-fontSize);
+      line-height: var(--font-subtitle2-md-lineHeight);
+      letter-spacing: var(--font-subtitle2-md-letterSpacing);
+    }
+  }
+
+  .caption {
+    font-family: var(--font-caption-fontFamily);
+    font-size: var(--font-caption-fontSize);
+    line-height: var(--font-caption-lineHeight);
+    letter-spacing: var(--font-caption-letterSpacing);
+    font-weight: var(--font-caption-fontWeight);
+  }
+
+  .caption1 {
+    font-family: var(--font-caption1-fontFamily);
+    font-size: var(--font-caption1-fontSize);
+    line-height: var(--font-caption1-lineHeight);
+    letter-spacing: var(--font-caption1-letterSpacing);
+    font-weight: var(--font-caption1-fontWeight);
+  }
+
+  .caption2 {
+    font-family: var(--font-caption2-fontFamily);
+    font-size: var(--font-caption2-fontSize);
+    line-height: var(--font-caption2-lineHeight);
+    letter-spacing: var(--font-caption2-letterSpacing);
+    font-weight: var(--font-caption2-fontWeight);
+  }
+
+  h1:not([class*="text-theme"]),
+  h2:not([class*="text-theme"]),
+  h3:not([class*="text-theme"]),
+  h4:not([class*="text-theme"]),
+  h5:not([class*="text-theme"]),
+  h6:not([class*="text-theme"]),
+  .h1:not([class*="text-theme"]),
+  .h2:not([class*="text-theme"]),
+  .h3:not([class*="text-theme"]),
+  .h4:not([class*="text-theme"]),
+  .h5:not([class*="text-theme"]),
+  .h6:not([class*="text-theme"]) {
+    color: var(--theme-text-primary);
+  }
+
+  .text-muted {
+    color: var(--theme-text-secondary);
+  }
+
+  .material-icons-two-tone {
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .material-icons-two-tone:not([class*="bg-"]) {
+    background-color: var(--theme-bodycolor);
+  }
+
+  @media (prefers-color-scheme: dark) {
+    .material-icons-two-tone:not([class*="bg-"]) {
+      background-color: var(--themedark-bodycolor);
+    }
+  }
+}

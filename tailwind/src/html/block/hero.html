@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en" @@bodySetup>
+<!-- [Head] start -->
+
+<head>
+  @@include('../layouts/head-page-meta.html', {'title': 'Hero'}) @@include('../layouts/head-css.html')
+</head>
+<!-- [Head] end -->
+<!-- [Body] Start -->
+
+<body>
+  @@include('../layouts/loader.html') @@include('../layouts/component/component-header.html")
+  <!-- prettier-ignore -->
+  @@include('../layouts/component/component-breadcrumb.html', {
+    'breadcrumb_item': 'Block',
+    'breadcrumb_item_active': 'Hero',
+    'page_title': 'SaasAble Hero Section'
+  })
+  <!-- [ Main Content ] start -->
+  <section class="py-12">
+    <div class="container">
+      <div class="my-12 flex flex-col gap-6 md:gap-8 lg:gap-10">
+        @@include('../layouts/component/component-show.html', {
+          'title': 'Hero Section - 17',
+          'url': '../hero/hero-17.html',
+          'figmaLink': '#',
+        })
+        @@include('../layouts/component/component-show.html', {
+          'title': 'Hero Section - 01',
+          'url': '../hero/hero-1.html',
+          'figmaLink': '#',
+        })
+        @@include('../layouts/component/component-show.html', {
+          'title': 'Hero Section - 02',
+          'url': '../hero/hero-2.html',
+          'figmaLink': '#',
+        })
+        @@include('../layouts/component/component-show.html', {
+          'title': 'Hero Section - 03',
+          'url': '../hero/hero-3.html',
+          'figmaLink': '#',
+        })
+        @@include('../layouts/component/component-show.html', {
+          'title': 'Hero Section - 09',
+          'url': '../hero/hero-9.html',
+          'figmaLink': '#',
+        })
+        @@include('../layouts/component/component-show.html', {
+          'title': 'Hero Section - 10',
+          'url': '../hero/hero-10.html',
+          'figmaLink': '#',
+        })
+        @@include('../layouts/component/component-show.html', {
+          'title': 'Hero Section - 11',
+          'url': '../hero/hero-11.html',
+          'figmaLink': '#',
+        })
+        @@include('../layouts/component/component-show.html', {
+          'title': 'Hero Section - 15',
+          'url': '../hero/hero-15.html',
+          'figmaLink': '#',
+        })
+      </div>
+    </div>
+  </section>
+  <!-- [ Main Content ] end -->
+  @@include('../layouts/scroll-top.html')
+  @@include('../layouts/footer-js.html')
+</body>
+
+</html>

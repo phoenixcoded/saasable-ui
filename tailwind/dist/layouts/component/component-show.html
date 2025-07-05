@@ -1,0 +1,60 @@
+<!-- [ Component View ] start -->
+<div class="flex flex-col gap-3 lg:gap-5">
+  <!-- [ Component View ] start -->
+  <div class="flex flex-col gap-3 lg:gap-5">
+     <div class="flex items-center justify-between flex-col sm:flex-row gap-4">
+      <h4>@@title</h4>
+      <a class="btn btn-outline-primary" href="@@figmaLink" data-pc-toggle="tooltip" data-pc-title="Figma is available to buy separately and not included with Themeforest package" data-pc-placement="top">
+        <div class="flex items-center gap-2 leading-none">
+          <img src="../assets/images/shared/figma.svg" alt="image" class="w-4 h-4" />
+        
+          <span>Get Figma File </span>
+          <i class="ti ti-arrow-narrow-right text-2xl leading-none"></i>
+        </div>
+      </a>
+    </div>
+  </div>
+  <!-- [ Component View ] start -->
+
+  <div class="block-simulator group desktop">
+    <div class="card rounded-xl border border-neutral-300 bg-[image:var(--breadcrumb-bg)] dark:bg-[image:var(--breadcrumb-bg-dark)] bg-[length:20px_20px] bg-neutral-50/50 overflow-hidden">
+      <div class="card-header !p-4 bg-neutral-50 border-b border-b-neutral-300 rounded-xl">
+        <div class="flex items-center justify-between flex-col sm:flex-row">
+          <div class="hidden lg:inline-flex items-center gap-2 resize-button-group">
+            <div class="group/btnresize active" data-frame-size="desktop">
+              <button
+                class="w-9 h-9 border flex items-center justify-center rounded-lg bg-neutral-100 group-[.active]/btnresize:bg-neutral-300 border-neutral-300 group-[.active]/btnresize:border-neutral-600 hover:border-neutral-600 hover:bg-neutral-100 group-[.active]/btnresize:hover:bg-neutral-300"
+              >
+                <i class="ti ti-device-imac text-xl leading-none"></i>
+              </button>
+            </div>
+            <div class="group/btnresize" data-frame-size="tablet">
+              <button
+                class="w-9 h-9 border flex items-center justify-center rounded-lg bg-neutral-100 group-[.active]/btnresize:bg-neutral-300 border-neutral-300 group-[.active]/btnresize:border-neutral-600 hover:border-neutral-600 hover:bg-neutral-100 group-[.active]/btnresize:hover:bg-neutral-300"
+              >
+                <i class="ti ti-device-tablet text-xl leading-none"></i>
+              </button>
+            </div>
+            <div class="group/btnresize" data-frame-size="mobile">
+              <button
+                class="w-9 h-9 border flex items-center justify-center rounded-lg bg-neutral-100 group-[.active]/btnresize:bg-neutral-300 border-neutral-300 group-[.active]/btnresize:border-neutral-600 hover:border-neutral-600 hover:bg-neutral-100 group-[.active]/btnresize:hover:bg-neutral-300"
+              >
+                <i class="ti ti-device-mobile text-xl leading-none"></i>
+              </button>
+            </div>
+          </div>
+          <a href="@@url" target="_blank" class="px-3 py-2 rounded-full text-theme-text-primary hover:bg-primary-500/[.04]">
+            <div class="flex items-center gap-1 leading-none">
+              <span>Preview</span>
+              <i class="ti ti-arrow-up-right text-xl leading-none"></i>
+            </div>
+          </a>
+        </div>
+      </div>
+      <div class="card-body !p-0">
+        <iframe src="@@url" class="block-iframe w-full group-[.desktop]:w-full group-[.tablet]:w-[850px] group-[.mobile]:w-[425px] h-[@@defaultHeight] mx-auto shadow-[5px_0_4px_-4px_var(--neutral-300),_-5px_0_4px_-4px_var(--neutral-300)]"></iframe>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- [ Component View ] start -->

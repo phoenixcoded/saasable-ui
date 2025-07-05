@@ -1,0 +1,20 @@
+<!-- [ Error 500 ] start -->
+<section>
+  <div class="container">
+    <div class="flex items-center justify-center w-full h-screen common-section min-h-[450px] sm:min-h-[600px] lg:min-h-[800px]">
+      <div class="rounded-3xl sm:rounded-[32px] md:rounded-[40px] bg-neutral-100 overflow-hidden w-full h-full relative">
+        <div class="flex flex-col items-center justify-center h-[70%] gap-[18px]">
+          <div class="w-full max-w-[340px] sm:max-w-[486px] lg:max-w-[728px] p-4">
+            @@include('../../images/maintenance/Error500.html', {'substyle': 'class="w-full h-auto"'})
+          </div>
+          <p class="body1 w-[248px] sm:w-[340px] lg:w-[448px] text-center">Please try again later or feel free to contact us if the problem persists.</p>
+          <a href="../index.html" class="btn btn-primary btn-md relative z-20">Back To Home Page</a>
+        </div>
+        <div class="w-[95%] lg:w-[90%] absolute -left-0.5 -bottom-1.5">
+          @@include('../../images/maintenance/Error500Server.html', {'substyle': 'class="w-full h-auto"'})
+        </div>
+      </div> 
+    </div>
+  </div>
+</section>
+<!-- [ Error 500 ] end -->

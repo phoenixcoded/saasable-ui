@@ -1,0 +1,810 @@
+<!doctype html>
+<html lang="en" @@bodySetup>
+<!-- [Head] start -->
+
+<head>
+  @@include('../layouts/head-page-meta.html', {'title': 'Typography'}) @@include('../layouts/head-css.html')
+</head>
+<!-- [Head] end -->
+<!-- [Body] Start -->
+
+<body>
+  @@include('../layouts/loader.html') @@include('../layouts/component/component-header.html")
+  <!-- prettier-ignore -->
+  @@include('../layouts/component/component-breadcrumb.html', {
+    'breadcrumb_item': 'Block',
+    'breadcrumb_item_active': 'Typography',
+    'page_title': 'SaasAble Typography Section'
+  })
+  <!-- [ Main Content ] start -->
+  <section class="py-12">
+    <div class="container">
+      <!-- [ Main Content ] start -->
+      <div class="flex flex-col gap-6 md:gap-8 lg:gap-10">
+        @@include('../layouts/component/component-title.html',{'title':'Typography'})
+        <div class="grid grid-cols-12 gap-6">
+          <div class="col-span-12">
+            <div class="flex flex-col gap-3">
+              <h2>Headings</h2>
+              <div class="bg-neutral-100 p-6 sm:p-8 md:p-10 rounded-3xl sm:rounded-[32px] md:rounded-[40px]">
+                <div class="grid grid-cols-12 gap-5">
+                  <div class="col-span-12 sm:col-span-3 md:col-span-2">
+                    <h4>Heading 01</h4>
+                    <div class="body2 text-neutral-700 mb-1">h1 - Heading Large</div>
+                  </div>
+                  <div class="col-span-12 sm:col-span-6 md:col-span-4">
+                    <div class="flex flex-col gap-5">
+                      <div class="subtitle1">Regular (400)</div>
+                      <div class="grid grid-cols-12 gap-2">
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Desktop</div>
+                          <div class="subtitle1">57px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Tablet</div>
+                          <div class="subtitle1">45px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Mobile</div>
+                          <div class="subtitle1">36px</div>
+                        </div>
+                      </div>
+                      <div class="grid grid-cols-12 gap-2">
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Line Height</div>
+                          <div class="subtitle1">64px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Line Height</div>
+                          <div class="subtitle1">52px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Line Height</div>
+                          <div class="subtitle1">44px</div>
+                        </div>
+                      </div>
+                      <div class="grid grid-cols-12 gap-2">
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Letter Spacing</div>
+                          <div class="subtitle1">-0.25px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Letter Spacing</div>
+                          <div class="subtitle1">0px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Letter Spacing</div>
+                          <div class="subtitle1">0px</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-span-12 sm:col-span-12 md:col-span-6">
+                    <h1>Quick brown fox jumps!</h1>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-neutral-100 p-6 sm:p-8 md:p-10 rounded-3xl sm:rounded-[32px] md:rounded-[40px]">
+                <div class="grid grid-cols-12 gap-5">
+                  <div class="col-span-12 sm:col-span-3 md:col-span-2">
+                    <h4>Heading 02</h4>
+                    <div class="body2 text-neutral-700 mb-1">h2 - Heading Medium</div>
+                  </div>
+                  <div class="col-span-12 sm:col-span-6 md:col-span-4">
+                    <div class="flex flex-col gap-5">
+                      <div class="subtitle1">Regular (400)</div>
+                      <div class="grid grid-cols-12 gap-2">
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Desktop</div>
+                          <div class="subtitle1">45px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Tablet</div>
+                          <div class="subtitle1">36px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Mobile</div>
+                          <div class="subtitle1">24px</div>
+                        </div>
+                      </div>
+                      <div class="grid grid-cols-12 gap-2">
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Line Height</div>
+                          <div class="subtitle1">52px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Line Height</div>
+                          <div class="subtitle1">44px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Line Height</div>
+                          <div class="subtitle1">32px</div>
+                        </div>
+                      </div>
+                      <div class="grid grid-cols-12 gap-2">
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Letter Spacing</div>
+                          <div class="subtitle1">0px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Letter Spacing</div>
+                          <div class="subtitle1">0px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Letter Spacing</div>
+                          <div class="subtitle1">0px</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-span-12 sm:col-span-12 md:col-span-6">
+                    <h2>Quick brown fox jumps!</h2>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-neutral-100 p-6 sm:p-8 md:p-10 rounded-3xl sm:rounded-[32px] md:rounded-[40px]">
+                <div class="grid grid-cols-12 gap-5">
+                  <div class="col-span-12 sm:col-span-3 md:col-span-2">
+                    <h4>Heading 03</h4>
+                    <div class="body2 text-neutral-700 mb-1">h3 - Display Medium</div>
+                  </div>
+                  <div class="col-span-12 sm:col-span-6 md:col-span-4">
+                    <div class="flex flex-col gap-5">
+                      <div class="subtitle1">Regular (400)</div>
+                      <div class="grid grid-cols-12 gap-2">
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Desktop</div>
+                          <div class="subtitle1">28px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Tablet</div>
+                          <div class="subtitle1">24px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Mobile</div>
+                          <div class="subtitle1">20px</div>
+                        </div>
+                      </div>
+                      <div class="grid grid-cols-12 gap-2">
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Line Height</div>
+                          <div class="subtitle1">36px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Line Height</div>
+                          <div class="subtitle1">32px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Line Height</div>
+                          <div class="subtitle1">28px</div>
+                        </div>
+                      </div>
+                      <div class="grid grid-cols-12 gap-2">
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Letter Spacing</div>
+                          <div class="subtitle1">0px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Letter Spacing</div>
+                          <div class="subtitle1">0px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Letter Spacing</div>
+                          <div class="subtitle1">0px</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-span-12 sm:col-span-12 md:col-span-6">
+                    <h3>Quick brown fox jumps!</h3>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-neutral-100 p-6 sm:p-8 md:p-10 rounded-3xl sm:rounded-[32px] md:rounded-[40px]">
+                <div class="grid grid-cols-12 gap-5">
+                  <div class="col-span-12 sm:col-span-3 md:col-span-2">
+                    <h4>Heading 04</h4>
+                    <div class="body2 text-neutral-700 mb-1">h4 - Display Small</div>
+                  </div>
+                  <div class="col-span-12 sm:col-span-6 md:col-span-4">
+                    <div class="flex flex-col gap-5">
+                      <div class="subtitle1">Regular (400)</div>
+                      <div class="grid grid-cols-12 gap-2">
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Desktop</div>
+                          <div class="subtitle1">24px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Tablet</div>
+                          <div class="subtitle1">20px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Mobile</div>
+                          <div class="subtitle1">16px</div>
+                        </div>
+                      </div>
+                      <div class="grid grid-cols-12 gap-2">
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Line Height</div>
+                          <div class="subtitle1">32px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Line Height</div>
+                          <div class="subtitle1">28px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Line Height</div>
+                          <div class="subtitle1">24px</div>
+                        </div>
+                      </div>
+                      <div class="grid grid-cols-12 gap-2">
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Letter Spacing</div>
+                          <div class="subtitle1">0px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Letter Spacing</div>
+                          <div class="subtitle1">0px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Letter Spacing</div>
+                          <div class="subtitle1">0px</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-span-12 sm:col-span-12 md:col-span-6">
+                    <h4>Quick brown fox jumps!</h4>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-neutral-100 p-6 sm:p-8 md:p-10 rounded-3xl sm:rounded-[32px] md:rounded-[40px]">
+                <div class="grid grid-cols-12 gap-5">
+                  <div class="col-span-12 sm:col-span-3 md:col-span-2">
+                    <h5>Heading 05</h5>
+                    <div class="body2 text-neutral-700 mb-1">h5 - Label Large</div>
+                  </div>
+                  <div class="col-span-12 sm:col-span-6 md:col-span-4">
+                    <div class="flex flex-col gap-5">
+                      <div class="subtitle1">Medium (500)</div>
+                      <div class="grid grid-cols-12 gap-2">
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Desktop</div>
+                          <div class="subtitle1">22px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Tablet</div>
+                          <div class="subtitle1">16px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Mobile</div>
+                          <div class="subtitle1">16px</div>
+                        </div>
+                      </div>
+                      <div class="grid grid-cols-12 gap-2">
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Line Height</div>
+                          <div class="subtitle1">28px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Line Height</div>
+                          <div class="subtitle1">24px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Line Height</div>
+                          <div class="subtitle1">24px</div>
+                        </div>
+                      </div>
+                      <div class="grid grid-cols-12 gap-2">
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Letter Spacing</div>
+                          <div class="subtitle1">0px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Letter Spacing</div>
+                          <div class="subtitle1">0.15px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Letter Spacing</div>
+                          <div class="subtitle1">0.15px</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-span-12 sm:col-span-12 md:col-span-6">
+                    <h5>Quick brown fox jumps!</h5>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-neutral-100 p-6 sm:p-8 md:p-10 rounded-3xl sm:rounded-[32px] md:rounded-[40px]">
+                <div class="grid grid-cols-12 gap-5">
+                  <div class="col-span-12 sm:col-span-3 md:col-span-2">
+                    <h6>Heading 06</h6>
+                    <div class="body2 text-neutral-700 mb-1">h6 - Paragraph Large</div>
+                  </div>
+                  <div class="col-span-12 sm:col-span-6 md:col-span-4">
+                    <div class="flex flex-col gap-5">
+                      <div class="subtitle1">Regular (400)</div>
+                      <div class="grid grid-cols-12 gap-2">
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Desktop</div>
+                          <div class="subtitle1">22px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Tablet</div>
+                          <div class="subtitle1">16px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Mobile</div>
+                          <div class="subtitle1">16px</div>
+                        </div>
+                      </div>
+                      <div class="grid grid-cols-12 gap-2">
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Line Height</div>
+                          <div class="subtitle1">30px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Line Height</div>
+                          <div class="subtitle1">24px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Line Height</div>
+                          <div class="subtitle1">24px</div>
+                        </div>
+                      </div>
+                      <div class="grid grid-cols-12 gap-2">
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Letter Spacing</div>
+                          <div class="subtitle1">0px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Letter Spacing</div>
+                          <div class="subtitle1">0.5px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Letter Spacing</div>
+                          <div class="subtitle1">0.5px</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-span-12 sm:col-span-12 md:col-span-6">
+                    <h6>Quick brown fox jumps!</h6>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-12">    
+            <div class="flex flex-col gap-3">
+              <h2>Body / Paragraph</h2>
+              <div class="bg-neutral-100 p-6 sm:p-8 md:p-10 rounded-3xl sm:rounded-[32px] md:rounded-[40px]">
+                <div class="grid grid-cols-12 gap-5">
+                  <div class="col-span-12 sm:col-span-3 md:col-span-2">
+                    <h4>Body 01</h4>
+                    <div class="body2 text-neutral-700 mb-1">body1 - Paragraph Medium</div>
+                  </div>
+                  <div class="col-span-12 sm:col-span-6 md:col-span-4">
+                    <div class="flex flex-col gap-5">
+                      <div class="subtitle1">Regular (400)</div>
+                      <div class="grid grid-cols-12 gap-2">
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Desktop</div>
+                          <div class="subtitle1">16px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Tablet</div>
+                          <div class="subtitle1">14px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Mobile</div>
+                          <div class="subtitle1">14px</div>
+                        </div>
+                      </div>
+                      <div class="grid grid-cols-12 gap-2">
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Line Height</div>
+                          <div class="subtitle1">24px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Line Height</div>
+                          <div class="subtitle1">20px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Line Height</div>
+                          <div class="subtitle1">20px</div>
+                        </div>
+                      </div>
+                      <div class="grid grid-cols-12 gap-2">
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Letter Spacing</div>
+                          <div class="subtitle1">0.5px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Letter Spacing</div>
+                          <div class="subtitle1">0.25px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Letter Spacing</div>
+                          <div class="subtitle1">0.25px</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-span-12 sm:col-span-12 md:col-span-6">
+                    <p class="body1">Quick brown fox jumps!</h1>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-neutral-100 p-6 sm:p-8 md:p-10 rounded-3xl sm:rounded-[32px] md:rounded-[40px]">
+                <div class="grid grid-cols-12 gap-5">
+                  <div class="col-span-12 sm:col-span-3 md:col-span-2">
+                    <h4>Body 02</h4>
+                    <div class="body2 text-neutral-700 mb-1">body2 - Paragraph Small</div>
+                  </div>
+                  <div class="col-span-12 sm:col-span-6 md:col-span-4">
+                    <div class="flex flex-col gap-5">
+                      <div class="subtitle1">Regular (400)</div>
+                      <div class="grid grid-cols-12 gap-2">
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Desktop</div>
+                          <div class="subtitle1">14px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Tablet</div>
+                          <div class="subtitle1">12px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Mobile</div>
+                          <div class="subtitle1">12px</div>
+                        </div>
+                      </div>
+                      <div class="grid grid-cols-12 gap-2">
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Line Height</div>
+                          <div class="subtitle1">20px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Line Height</div>
+                          <div class="subtitle1">18px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Line Height</div>
+                          <div class="subtitle1">18px</div>
+                        </div>
+                      </div>
+                      <div class="grid grid-cols-12 gap-2">
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Letter Spacing</div>
+                          <div class="subtitle1">0.25px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Letter Spacing</div>
+                          <div class="subtitle1">0.25px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Letter Spacing</div>
+                          <div class="subtitle1">0.25px</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-span-12 sm:col-span-12 md:col-span-6">
+                    <p class="body2">Quick brown fox jumps!</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-12">    
+            <div class="flex flex-col gap-3">
+              <h2>Subtitle</h2>
+              <div class="bg-neutral-100 p-6 sm:p-8 md:p-10 rounded-3xl sm:rounded-[32px] md:rounded-[40px]">
+                <div class="grid grid-cols-12 gap-5">
+                  <div class="col-span-12 sm:col-span-3 md:col-span-2">
+                    <h4>Subtitle 01</h4>
+                    <div class="body2 text-neutral-700 mb-1">subtitle1 - Label Medium</div>
+                  </div>
+                  <div class="col-span-12 sm:col-span-6 md:col-span-4">
+                    <div class="flex flex-col gap-5">
+                      <div class="subtitle1">Medium (500)</div>
+                      <div class="grid grid-cols-12 gap-2">
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Desktop</div>
+                          <div class="subtitle1">16px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Tablet</div>
+                          <div class="subtitle1">14px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Mobile</div>
+                          <div class="subtitle1">14px</div>
+                        </div>
+                      </div>
+                      <div class="grid grid-cols-12 gap-2">
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Line Height</div>
+                          <div class="subtitle1">24px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Line Height</div>
+                          <div class="subtitle1">20px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Line Height</div>
+                          <div class="subtitle1">20px</div>
+                        </div>
+                      </div>
+                      <div class="grid grid-cols-12 gap-2">
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Letter Spacing</div>
+                          <div class="subtitle1">0.15px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Letter Spacing</div>
+                          <div class="subtitle1">0.1px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Letter Spacing</div>
+                          <div class="subtitle1">0.1px</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-span-12 sm:col-span-12 md:col-span-6">
+                    <p class="subtitle1">Quick brown fox jumps!</h1>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-neutral-100 p-6 sm:p-8 md:p-10 rounded-3xl sm:rounded-[32px] md:rounded-[40px]">
+                <div class="grid grid-cols-12 gap-5">
+                  <div class="col-span-12 sm:col-span-3 md:col-span-2">
+                    <h4>Subtitle 02</h4>
+                    <div class="body2 text-neutral-700 mb-1">subtitle2 - Label Small</div>
+                  </div>
+                  <div class="col-span-12 sm:col-span-6 md:col-span-4">
+                    <div class="flex flex-col gap-5">
+                      <div class="subtitle1">Semibold (600)</div>
+                      <div class="grid grid-cols-12 gap-2">
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Desktop</div>
+                          <div class="subtitle1">14px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Tablet</div>
+                          <div class="subtitle1">12px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Mobile</div>
+                          <div class="subtitle1">12px</div>
+                        </div>
+                      </div>
+                      <div class="grid grid-cols-12 gap-2">
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Line Height</div>
+                          <div class="subtitle1">20px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Line Height</div>
+                          <div class="subtitle1">18px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Line Height</div>
+                          <div class="subtitle1">18px</div>
+                        </div>
+                      </div>
+                      <div class="grid grid-cols-12 gap-2">
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Letter Spacing</div>
+                          <div class="subtitle1">0.1px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Letter Spacing</div>
+                          <div class="subtitle1">0.1px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Letter Spacing</div>
+                          <div class="subtitle1">0.1px</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-span-12 sm:col-span-12 md:col-span-6">
+                    <p class="subtitle2">Quick brown fox jumps!</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-12">
+            <div class="flex flex-col gap-3">
+              <h2>Caption</h2>
+              <div class="bg-neutral-100 p-6 sm:p-8 md:p-10 rounded-3xl sm:rounded-[32px] md:rounded-[40px]">
+                <div class="grid grid-cols-12 gap-5">
+                  <div class="col-span-12 sm:col-span-3 md:col-span-2">
+                    <h4>Caption</h4>
+                    <div class="body2 text-neutral-700 mb-1">caption - Hyperlink Small</div>
+                  </div>
+                  <div class="col-span-12 sm:col-span-6 md:col-span-4">
+                    <div class="flex flex-col gap-5">
+                      <div class="subtitle1">Semibold (600)</div>
+                      <div class="grid grid-cols-12 gap-2">
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Desktop</div>
+                          <div class="subtitle1">12px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Tablet</div>
+                          <div class="subtitle1">12px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Mobile</div>
+                          <div class="subtitle1">12px</div>
+                        </div>
+                      </div>
+                      <div class="grid grid-cols-12 gap-2">
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Line Height</div>
+                          <div class="subtitle1">16px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Line Height</div>
+                          <div class="subtitle1">16px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Line Height</div>
+                          <div class="subtitle1">16px</div>
+                        </div>
+                      </div>
+                      <div class="grid grid-cols-12 gap-2">
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Letter Spacing</div>
+                          <div class="subtitle1">0px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Letter Spacing</div>
+                          <div class="subtitle1">0px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Letter Spacing</div>
+                          <div class="subtitle1">0px</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-span-12 sm:col-span-12 md:col-span-6">
+                    <p class="caption">Quick brown fox jumps!</h1>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-neutral-100 p-6 sm:p-8 md:p-10 rounded-3xl sm:rounded-[32px] md:rounded-[40px]">
+                <div class="grid grid-cols-12 gap-5">
+                  <div class="col-span-12 sm:col-span-3 md:col-span-2">
+                    <h4>Caption 01</h4>
+                    <div class="body2 text-neutral-700 mb-1">caption1 - Hyperlink Large</div>
+                  </div>
+                  <div class="col-span-12 sm:col-span-6 md:col-span-4">
+                    <div class="flex flex-col gap-5">
+                      <div class="subtitle1">Regular (400)</div>
+                      <div class="grid grid-cols-12 gap-2">
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Desktop</div>
+                          <div class="subtitle1">16px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Tablet</div>
+                          <div class="subtitle1">16px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Mobile</div>
+                          <div class="subtitle1">16px</div>
+                        </div>
+                      </div>
+                      <div class="grid grid-cols-12 gap-2">
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Line Height</div>
+                          <div class="subtitle1">24px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Line Height</div>
+                          <div class="subtitle1">24px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Line Height</div>
+                          <div class="subtitle1">24px</div>
+                        </div>
+                      </div>
+                      <div class="grid grid-cols-12 gap-2">
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Letter Spacing</div>
+                          <div class="subtitle1">0.5px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Letter Spacing</div>
+                          <div class="subtitle1">0.5px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Letter Spacing</div>
+                          <div class="subtitle1">0.5px</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-span-12 sm:col-span-12 md:col-span-6">
+                    <p class="caption1">Quick brown fox jumps!</h1>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-neutral-100 p-6 sm:p-8 md:p-10 rounded-3xl sm:rounded-[32px] md:rounded-[40px]">
+                <div class="grid grid-cols-12 gap-5">
+                  <div class="col-span-12 sm:col-span-3 md:col-span-2">
+                    <h4>Caption 02</h4>
+                    <div class="body2 text-neutral-700 mb-1">caption2 - Hyperlink Medium</div>
+                  </div>
+                  <div class="col-span-12 sm:col-span-6 md:col-span-4">
+                    <div class="flex flex-col gap-5">
+                      <div class="subtitle1">Medium (500)</div>
+                      <div class="grid grid-cols-12 gap-2">
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Desktop</div>
+                          <div class="subtitle1">14px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Tablet</div>
+                          <div class="subtitle1">14px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Mobile</div>
+                          <div class="subtitle1">14px</div>
+                        </div>
+                      </div>
+                      <div class="grid grid-cols-12 gap-2">
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Line Height</div>
+                          <div class="subtitle1">20px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Line Height</div>
+                          <div class="subtitle1">20px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Line Height</div>
+                          <div class="subtitle1">20px</div>
+                        </div>
+                      </div>
+                      <div class="grid grid-cols-12 gap-2">
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Letter Spacing</div>
+                          <div class="subtitle1">0.1px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Letter Spacing</div>
+                          <div class="subtitle1">0.1px</div>
+                        </div>
+                        <div class="col-span-4">
+                          <div class="body2 text-neutral-700 mb-1">Letter Spacing</div>
+                          <div class="subtitle1">0.1px</div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-span-12 sm:col-span-12 md:col-span-6">
+                    <p class="caption2">Quick brown fox jumps!</h1>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- [ Main Content ] end -->
+    </div>
+  </section>
+  <!-- [ Main Content ] end -->
+  @@include('../layouts/scroll-top.html')
+  @@include('../layouts/footer-js.html')
+</body>
+
+</html>

@@ -1,0 +1,6 @@
+@layer {
+  .nav-collapse.nav-show {
+    @apply bg-[var(--theme-bg-paper)] absolute !block top-full left-0 right-0;
+    box-shadow: rgba(26, 28, 30, 0.06) 0px 16px 10px 0px
+  }
+}

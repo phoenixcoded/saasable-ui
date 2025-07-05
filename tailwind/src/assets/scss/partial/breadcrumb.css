@@ -1,0 +1,17 @@
+@layer {
+  .breadcrumb {
+    @apply flex items-center gap-2 shrink-0 mb-4 font-semibold text-xs leading-[1.333] text-theme-text-secondary;
+  }
+
+  .breadcrumb-item {
+    @apply last:text-primary-500;
+  }
+
+  .breadcrumb-item:not(:last-child) {
+    @apply relative ltr:before:content-['\ea61'] rtl:before:content-['\ea60'] before:font-['tabler-icons'] before:absolute ltr:before:right-[-20px] ltr:mr-[1.35rem] rtl:before:left-[-20px] rtl:ml-[1.35rem];
+  }
+
+  .breadcrumb-item:not(:last-child) a {
+    @apply hover:text-primary-500 ease-in-out duration-200
+  }
+}

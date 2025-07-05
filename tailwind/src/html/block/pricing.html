@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en" @@bodySetup>
+<!-- [Head] start -->
+
+<head>
+  @@include('../layouts/head-page-meta.html', {'title': 'Pricing'}) @@include('../layouts/head-css.html')
+</head>
+<!-- [Head] end -->
+<!-- [Body] Start -->
+
+<body>
+  @@include('../layouts/loader.html') @@include('../layouts/component/component-header.html")
+  <!-- prettier-ignore -->
+  @@include('../layouts/component/component-breadcrumb.html', {
+    'breadcrumb_item': 'Block',
+    'breadcrumb_item_active': 'Pricing',
+    'page_title': 'SaasAble Pricing Section'
+  })
+  <!-- [ Main Content ] start -->
+  <section class="py-12">
+    <div class="container">
+      <div class="my-12 flex flex-col gap-6 md:gap-8 lg:gap-10">
+        @@include('../layouts/component/component-show.html', {
+          'title': 'Pricing Section - 09',
+          'url': '../pricing/pricing-9.html',
+          'figmaLink': '#',
+        })
+        @@include('../layouts/component/component-show.html', {
+          'title': 'Pricing Section - 01',
+          'url': '../pricing/pricing-1.html',
+          'figmaLink': '#',
+        })
+        @@include('../layouts/component/component-show.html', {
+          'title': 'Pricing Section - 03',
+          'url': '../pricing/pricing-3.html',
+          'figmaLink': '#',
+        })
+        @@include('../layouts/component/component-show.html', {
+          'title': 'Pricing Section - 04',
+          'url': '../pricing/pricing-4.html',
+          'figmaLink': '#',
+        })
+        @@include('../layouts/component/component-show.html', {
+          'title': 'Pricing Section - 05',
+          'url': '../pricing/pricing-5.html',
+          'figmaLink': '#',
+        })
+        @@include('../layouts/component/component-show.html', {
+          'title': 'Pricing Section - 08',
+          'url': '../pricing/pricing-8.html',
+          'figmaLink': '#',
+        })
+      </div>
+    </div>
+  </section>
+  <!-- [ Main Content ] end -->
+  @@include('../layouts/scroll-top.html')
+  @@include('../layouts/footer-js.html')
+</body>
+
+</html>

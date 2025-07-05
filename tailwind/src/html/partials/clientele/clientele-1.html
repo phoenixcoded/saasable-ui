@@ -1,0 +1,55 @@
+<!-- [ Clientele ] start -->
+<section class="common-section">
+  <div class="container">
+    <div class="grid grid-cols-12 gap-5 sm:gap-3">
+      <div class="col-span-12 sm:col-span-3 self-center">
+        <h6 class="subtitle2 text-theme-textsecondary">4,000+ companies already growing</h6>
+      </div>
+      <div class="col-span-12 sm:col-span-9 self-center">
+        <div class="clientele-1-marquee overflow-hidden" dir="ltr">
+          <ul class="list-inline marquee-list flex flex-nowrap items-center justify-center *:px-3 *:sm:px-4 *:md:px-6 *:opacity-40 *:hover:opacity-100 *:transition-all *:duration-500">
+            <li class="list-inline-item">
+              @@include('../../images/clientele/Techlify.html', {
+              'substyle': 'class="w-[84px] sm:w-[100px] md:w-[136px] h-[22px] sm:h-[25px] md:h-[38px]"'
+              })
+            </li>
+            <li class="list-inline-item">
+              @@include('../../images/clientele/Marketly.html', {
+              'substyle': 'class="w-[84px] sm:w-[100px] md:w-[136px] h-[22px] sm:h-[25px] md:h-[38px]"'
+              })
+            </li>
+            <li class="list-inline-item">
+              @@include('../../images/clientele/Realtor.html', {
+              'substyle': 'class="w-[84px] sm:w-[100px] md:w-[136px] h-[22px] sm:h-[25px] md:h-[38px]"'
+              })
+            </li>
+            <li class="list-inline-item">
+              @@include('../../images/clientele/Financely.html',{
+              'substyle': 'class="w-[84px] sm:w-[100px] md:w-[136px] h-[22px] sm:h-[25px] md:h-[38px]"'
+              })
+            </li>
+            <li class="list-inline-item">
+              @@include('../../images/clientele/Realtor.html', {
+              'substyle': 'class="w-[84px] sm:w-[100px] md:w-[136px] h-[22px] sm:h-[25px] md:h-[38px]"'
+              })
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<script type="module">
+  import marquee from '../assets/js/plugins/vanilla-marquee.min.js';
+  document.addEventListener('DOMContentLoaded', function () {
+    new marquee(document.querySelector('.clientele-1-marquee'), {
+      duplicated: true,
+      gap: 0,
+      speed: 50,
+      pauseOnHover: true,
+      startVisible: true,
+      recalcResize: true
+    });
+  });
+</script>
+<!-- [ Clientele ] end -->

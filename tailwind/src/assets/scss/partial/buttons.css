@@ -1,0 +1,69 @@
+@layer {
+  .btn {
+    @apply inline-block py-2.5 px-[23px] text-center border rounded-[100px] border-transparent bg-transparent text-[14px] font-semibold leading-[1.429] tracking-[0.1px] transition-all ease-in-out duration-[0.250s] cursor-pointer;
+    font-family: var(--font-btn-fontFamily);
+  }
+
+  .btn.disabled {
+    @apply cursor-default pointer-events-none opacity-75;
+  }
+
+  .btn.btn-lg {
+    @apply py-[19px] max-sm:py-[10px];
+  }
+
+  .btn.btn-md {
+    @apply py-[13px] max-sm:py-[10px];
+  }
+
+  .btn.btn-sm {
+    @apply py-2 max-sm:py-[10px]
+  }
+
+  .btn:not([class*="btn-outline-"]) {
+    @apply dark:text-black/[.87];
+  }
+  .btn:not([class*="btn-outline-"]):hover {
+    box-shadow: rgba(0, 0, 0, 0.2) 0px 2px 4px -1px, rgba(0, 0, 0, 0.14) 0px 4px 5px 0px, rgba(0, 0, 0, 0.12) 0px 1px 10px 0px;
+  }
+
+  .btn.btn-icon {
+    @apply w-10 h-10 inline-flex text-lg p-0 items-center justify-center;
+  }
+
+  .btn.btn-icon.avtar-xl {
+    @apply w-[60px] h-[60px] text-xl;
+  }
+
+  .btn.btn-icon.avtar-l {
+    @apply w-[50px] h-[50px] text-lg;
+  }
+
+  .btn.btn-icon.avtar-s {
+    @apply w-[30px] h-[30px] text-base;
+  }
+
+  .btn.btn-icon.avtar-xs {
+    @apply w-5 h-5 text-sm;
+  }
+
+  .btn-pc-default:not(:hover) {
+    @apply text-[var(--theme-text-secondary)]
+  }
+
+  .btn-primary {
+    @apply bg-primary-500 text-white hover:bg-primary-800 focus:bg-primary-800 active:bg-primary-800;
+  }
+
+  .btn-outline-primary {
+    @apply border border-primary-500 bg-primary-500/0 text-primary-500 hover:bg-primary-100/40 focus:bg-primary-100/40 active:bg-primary-100/40;
+  }
+
+  .btn-light-primary {
+    @apply bg-primary-100 dark:bg-primary-500/10 text-primary-500 hover:bg-primary-500 dark:hover:bg-primary-500 hover:text-white focus:bg-primary-600 focus:text-white;
+  }
+
+  .btn-link-primary {
+    @apply bg-transparent text-primary-500 hover:bg-primary-100 focus:bg-primary-100/50;
+  }
+}
