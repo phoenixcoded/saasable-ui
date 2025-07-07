@@ -1,0 +1,74 @@
+@layer {
+  .form-control {
+    @apply border rounded-2xl block text-base py-[16.5px] px-[14px] w-full placeholder:text-[#bec8d0] disabled:bg-secondary-200/10 disabled:pointer-events-none focus:outline-none focus:border-primary-500 dark:focus:border-primary-500 border-theme-divider bg-theme-bg-paper;
+  }
+
+  .form-control[type="file"]::file-selector-button {
+    @apply py-[.8rem] px-3 -my-[.8rem] -mx-3 me-3 bg-secondary-300/10 cursor-pointer border-0 border-r border-theme-divider shadow-none outline-none;
+  }
+
+  .form-control-plaintext {
+    @apply rounded-lg block text-base py-[.8rem] px-3 w-full focus:outline-none placeholder:text-[#bec8d0] disabled:pointer-events-none bg-transparent dark:bg-transparent;
+  }
+
+  .form-control-lg {
+    @apply py-[.775rem] px-[.85rem] text-[1.09375rem] rounded-[10px];
+  }
+
+  .form-control-sm {
+    @apply py-[.375rem] px-[.7rem] text-[.765625rem] rounded-md;
+  }
+
+  .form-select {
+    @apply appearance-none bg-[length:16px_12px] ltr:bg-[right_1rem_center] rtl:bg-[left_1rem_center] bg-no-repeat bg-[var(--select-bg)] dark:bg-[var(--select-bg-dark)] border rounded-lg block text-base py-[.8rem] pl-3 pr-8 w-full focus:outline-none focus:border-primary-500 dark:focus:border-primary-500 border-theme-divider;
+  }
+
+  .form-select[multiple],
+  .form-select[size]:not([size="1"]),
+  [multiple].datatable-selector,
+  [size].datatable-selector:not([size="1"]) {
+    @apply bg-none pr-3;
+  }
+
+  .form-select-lg {
+    @apply py-[.775rem] px-[.85rem] text-[1.09375rem] rounded-[10px];
+  }
+
+  .form-select-sm {
+    @apply py-[.375rem] pl-[.7rem] text-[.765625rem] rounded-[6px];
+  }
+
+  .input-group-text {
+    @apply flex items-center p-[.8rem_.75rem] text-base border border-theme-divider;
+  }
+
+  .input-group {
+    @apply relative flex flex-wrap items-stretch w-full *:rounded-none ltr:*:first:rounded-l-lg ltr:*:last:rounded-r-lg ltr:*:-ml-px ltr:*:first:ml-0 rtl:*:-mr-px rtl:*:first:mr-0 rtl:*:first:rounded-r-lg rtl:*:last:rounded-l-lg;
+  }
+
+  .input-group .form-control,
+  .input-group .form-select {
+    @apply relative flex-auto w-[1%] min-w-0;
+  }
+  .form-label{
+    @apply mb-2 inline-block text-theme-text-primary;
+  }
+  .form-check-input{
+    @apply w-[1.375em] h-[1.375em] align-text-top appearance-none transition-all bg-contain bg-center bg-no-repeat bg-primary-100 border border-primary-100 checked:bg-primary-500 checked:border-primary-500 disabled:opacity-50 disabled:pointer-events-none
+  }
+  .form-check-input[disabled] ~.form-check-label, .form-check-input:disabled ~.form-check-label {
+    @apply opacity-50 cursor-default;
+  }
+  .form-check-input[type="checkbox"]{
+    @apply rounded-md checked:bg-[image:var(--checkbox-bg)];
+  }
+  .form-check-input[type="radio"]{
+    @apply rounded-full checked:bg-[image:var(--radio-bg)];
+  }
+  .form-check.form-switch{
+    @apply flex items-center gap-2 mb-1;
+  }
+  .form-check.form-switch .form-check-input{
+    @apply w-[38px] rounded-full bg-[image:var(--switch-bg)] bg-left checked:bg-right checked:bg-[image:var(--switch-active-bg)];
+  }
+}

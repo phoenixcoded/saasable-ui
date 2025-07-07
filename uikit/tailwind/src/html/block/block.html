@@ -1,0 +1,937 @@
+<!doctype html>
+<html lang="en" @@bodySetup>
+<!-- [Head] start -->
+
+<head>
+  @@include('../layouts/head-page-meta.html', {'title': 'Block'}) @@include('../layouts/head-css.html')
+</head>
+<!-- [Head] end -->
+<!-- [Body] Start -->
+
+<body>
+  @@include('../layouts/loader.html') @@include('../layouts/component/component-header.html")
+  <!-- prettier-ignore -->
+  @@include('../layouts/component/component-breadcrumb.html', {
+  'breadcrumb_item': 'offer',
+  'breadcrumb_item_active': '',
+  'page_title': 'Craft Stunning Design with SaasAble Blocks'
+  })
+  <!-- [ Main Content ] start -->
+  <section class="py-12">
+    <div class="container">
+      <!-- [ Main Content ] start -->
+      <div class="flex flex-col md:flex-row items-center justify-between gap-5 mb-6 sm:mb-8 md:mb-10">
+
+        <div class="relative w-full sm:w-[456px]">
+          <i class="ti ti-search absolute top-4 ltr:left-3.5 rtl:right-3.5 text-[24px] text-neutral-700"></i>
+          <input type="search" class="form-control ltr:pl-12 rtl:pr-12" id="block-search"
+            placeholder="Search for blocks... (e.g., Hero, Testimonial, Pricing)" />
+        </div>
+
+        <div class="inline-flex flex-wrap items-center justify-center gap-3 group filter-button flt-all">
+          <button class="btn btn-outline-primary group-[.flt-all]:bg-primary-500 group-[.flt-all]:text-white active" data-filter="all">
+            All Section
+          </button>
+          <button class="btn btn-outline-primary group-[.flt-marketing]:bg-primary-500 group-[.flt-marketing]:text-white" data-filter="marketing">
+            Marketing
+          </button>
+          <button class="btn btn-outline-primary group-[.flt-feature]:bg-primary-500 group-[.flt-feature]:text-white" data-filter="feature">
+            Feature
+          </button>
+          <button class="btn btn-outline-primary group-[.flt-essential]:bg-primary-500 group-[.flt-essential]:text-white" data-filter="essential">
+            Essential
+          </button>
+        </div>
+      </div>
+      <div class="grid grid-cols-12 gap-3 group block-fiter-wrapper flt-all">
+        <div class="col-span-6 md:col-span-4 hidden group-[.flt-all]:block group-[.flt-essential]:block">
+          <a href="../block/navbar.html" class="card overflow-hidden !mb-0 group/child rounded-[40px] block bg-neutral-100 h-full">
+            <div class="relative group-hover/child:scale-[1.02] transition-all duration-1000">
+              @@include('../images/block-bg.html',{'substyle': 'class="absolute z-10"'})
+              <div class="card-body relative inset-0 z-20 !px-[14.5%] !pt-[16%] !pb-[6%]">
+                <div class="pb-4 lg:pb-2">
+                  <img src="../assets/images/presentation/navbar-light.svg" class="block w-full dark:hidden"
+                    alt="images" />
+                  <img src="../assets/images/presentation/navbar-dark.svg" class="hidden w-full dark:block"
+                    alt="images" />
+                </div>
+                <div class="text-primary-500 pt-[7px] text-center">
+                  @@include('../images/wave.html', {'substyle': 'class="w-[92px] md:w-[122px] h-auto mx-auto"'})
+                </div>
+                <div class="text-center mt-6">
+                  <h4 class="text-primary-500 mb-1">Nav Bar</h4>
+                  <p class="text-theme-text-secondary body-2">6 Different Variants</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-span-6 md:col-span-4 hidden group-[.flt-all]:block group-[.flt-marketing]:block">
+          <a href="../block/hero.html" class="card overflow-hidden !mb-0 group/child rounded-[40px] block bg-neutral-100 h-full">
+            <div class="relative group-hover/child:scale-[1.02] transition-all duration-1000">
+              @@include('../images/block-bg.html',{'substyle': 'class="absolute z-10"'})
+              <div class="card-body relative inset-0 z-20 !px-[14.5%] !pt-[16%] !pb-[6%]">
+                <div class="pb-4 lg:pb-2">
+                  <img src="../assets/images/presentation/hero-light.svg" class="block w-full dark:hidden"
+                    alt="images" />
+                  <img src="../assets/images/presentation/hero-dark.svg" class="hidden w-full dark:block"
+                    alt="images" />
+                </div>
+                <div class="text-primary-500 pt-[7px] text-center">
+                  @@include('../images/wave.html', {'substyle': 'class="w-[92px] md:w-[122px] h-auto mx-auto"'})
+                </div>
+                <div class="text-center mt-6">
+                  <h4 class="text-primary-500 mb-1">Hero</h4>
+                  <p class="text-theme-text-secondary body-2">8 Different Variants</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-span-6 md:col-span-4 hidden group-[.flt-all]:block group-[.flt-marketing]:block">
+          <a href="../block/clientele.html" class="card overflow-hidden !mb-0 group/child rounded-[40px] block bg-neutral-100 h-full">
+            <div class="relative group-hover/child:scale-[1.02] transition-all duration-1000">
+              @@include('../images/block-bg.html',{'substyle': 'class="absolute z-10"'})
+              <div class="card-body relative inset-0 z-20 !px-[14.5%] !pt-[16%] !pb-[6%]">
+                <div class="pb-4 lg:pb-2">
+                  <img src="../assets/images/presentation/clientele-light.svg" class="block w-full dark:hidden"
+                    alt="images" />
+                  <img src="../assets/images/presentation/clientele-dark.svg" class="hidden w-full dark:block"
+                    alt="images" />
+                </div>
+                <div class="text-primary-500 pt-[7px] text-center">
+                  @@include('../images/wave.html', {'substyle': 'class="w-[92px] md:w-[122px] h-auto mx-auto"'})
+                </div>
+                <div class="text-center mt-6">
+                  <h4 class="text-primary-500 mb-1">Clientele</h4>
+                  <p class="text-theme-text-secondary body-2">5 Different Variants</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-span-6 md:col-span-4 hidden group-[.flt-all]:block group-[.flt-feature]:block">
+          <a href="../block/benefit.html" class="card overflow-hidden !mb-0 group/child rounded-[40px] block bg-neutral-100 h-full">
+            <div class="relative group-hover/child:scale-[1.02] transition-all duration-1000">
+              @@include('../images/block-bg.html',{'substyle': 'class="absolute z-10"'})
+              <div class="card-body relative inset-0 z-20 !px-[14.5%] !pt-[16%] !pb-[6%]">
+                <div class="pb-4 lg:pb-2">
+                  <img src="../assets/images/presentation/benefits-light.svg" class="block w-full dark:hidden"
+                    alt="images" />
+                  <img src="../assets/images/presentation/benefits-dark.svg" class="hidden w-full dark:block"
+                    alt="images" />
+                </div>
+                <div class="text-primary-500 pt-[7px] text-center">
+                  @@include('../images/wave.html', {'substyle': 'class="w-[92px] md:w-[122px] h-auto mx-auto"'})
+                </div>
+                <div class="text-center mt-6">
+                  <h4 class="text-primary-500 mb-1">Benefits</h4>
+                  <p class="text-theme-text-secondary body-2">4 Different Variants</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-span-6 md:col-span-4 hidden group-[.flt-all]:block group-[.flt-feature]:block">
+          <a href="../block/feature.html" class="card overflow-hidden !mb-0 group/child rounded-[40px] block bg-neutral-100 h-full">
+            <div class="relative group-hover/child:scale-[1.02] transition-all duration-1000">
+              @@include('../images/block-bg.html',{'substyle': 'class="absolute z-10"'})
+              <div class="card-body relative inset-0 z-20 !px-[14.5%] !pt-[16%] !pb-[6%]">
+                <div class="pb-4 lg:pb-2">
+                  <img src="../assets/images/presentation/feature-light.svg" class="block w-full dark:hidden"
+                    alt="images" />
+                  <img src="../assets/images/presentation/feature-dark.svg" class="hidden w-full dark:block"
+                    alt="images" />
+                </div>
+                <div class="text-primary-500 pt-[7px] text-center">
+                  @@include('../images/wave.html', {'substyle': 'class="w-[92px] md:w-[122px] h-auto mx-auto"'})
+                </div>
+                <div class="text-center mt-6">
+                  <h4 class="text-primary-500 mb-1">Feature</h4>
+                  <p class="text-theme-text-secondary body-2">19 Different Variants</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-span-6 md:col-span-4 hidden group-[.flt-all]:block group-[.flt-feature]:block">
+          <a href="../block/process.html" class="card overflow-hidden !mb-0 group/child rounded-[40px] block bg-neutral-100 h-full">
+            <div class="relative group-hover/child:scale-[1.02] transition-all duration-1000">
+              @@include('../images/block-bg.html',{'substyle': 'class="absolute z-10"'})
+              <div class="card-body relative inset-0 z-20 !px-[14.5%] !pt-[16%] !pb-[6%]">
+                <div class="pb-4 lg:pb-2">
+                  <img src="../assets/images/presentation/process-light.svg" class="block w-full dark:hidden"
+                    alt="images" />
+                  <img src="../assets/images/presentation/process-dark.svg" class="hidden w-full dark:block"
+                    alt="images" />
+                </div>
+                <div class="text-primary-500 pt-[7px] text-center">
+                  @@include('../images/wave.html', {'substyle': 'class="w-[92px] md:w-[122px] h-auto mx-auto"'})
+                </div>
+                <div class="text-center mt-6">
+                  <h4 class="text-primary-500 mb-1">Process</h4>
+                  <p class="text-theme-text-secondary body-2">4 Different Variants</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-span-6 md:col-span-4 hidden group-[.flt-all]:block group-[.flt-feature]:block">
+          <a href="../block/integration.html" class="card overflow-hidden !mb-0 group/child rounded-[40px] block bg-neutral-100 h-full">
+            <div class="relative group-hover/child:scale-[1.02] transition-all duration-1000">
+              @@include('../images/block-bg.html',{'substyle': 'class="absolute z-10"'})
+              <div class="card-body relative inset-0 z-20 !px-[14.5%] !pt-[16%] !pb-[6%]">
+                <div class="pb-4 lg:pb-2">
+                  <img src="../assets/images/presentation/integration-light.svg" class="block w-full dark:hidden"
+                    alt="images" />
+                  <img src="../assets/images/presentation/integration-dark.svg" class="hidden w-full dark:block"
+                    alt="images" />
+                </div>
+                <div class="text-primary-500 pt-[7px] text-center">
+                  @@include('../images/wave.html', {'substyle': 'class="w-[92px] md:w-[122px] h-auto mx-auto"'})
+                </div>
+                <div class="text-center mt-6">
+                  <h4 class="text-primary-500 mb-1">Integration</h4>
+                  <p class="text-theme-text-secondary body-2">6 Different Variants</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-span-6 md:col-span-4 hidden group-[.flt-all]:block group-[.flt-marketing]:block">
+          <a href="../block/testimonial.html" class="card overflow-hidden !mb-0 group/child rounded-[40px] block bg-neutral-100 h-full">
+            <div class="relative group-hover/child:scale-[1.02] transition-all duration-1000">
+              @@include('../images/block-bg.html',{'substyle': 'class="absolute z-10"'})
+              <div class="card-body relative inset-0 z-20 !px-[14.5%] !pt-[16%] !pb-[6%]">
+                <div class="pb-4 lg:pb-2">
+                  <img src="../assets/images/presentation/testimonial-light.svg" class="block w-full dark:hidden"
+                    alt="images" />
+                  <img src="../assets/images/presentation/testimonial-dark.svg" class="hidden w-full dark:block"
+                    alt="images" />
+                </div>
+                <div class="text-primary-500 pt-[7px] text-center">
+                  @@include('../images/wave.html', {'substyle': 'class="w-[92px] md:w-[122px] h-auto mx-auto"'})
+                </div>
+                <div class="text-center mt-6">
+                  <h4 class="text-primary-500 mb-1">Testimonial</h4>
+                  <p class="text-theme-text-secondary body-2">7 Different Variants</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-span-6 md:col-span-4 hidden group-[.flt-all]:block group-[.flt-marketing]:block">
+          <a href="../block/cta.html" class="card overflow-hidden !mb-0 group/child rounded-[40px] block bg-neutral-100 h-full">
+            <div class="relative group-hover/child:scale-[1.02] transition-all duration-1000">
+              @@include('../images/block-bg.html',{'substyle': 'class="absolute z-10"'})
+              <div class="card-body relative inset-0 z-20 !px-[14.5%] !pt-[16%] !pb-[6%]">
+                <div class="pb-4 lg:pb-2">
+                  <img src="../assets/images/presentation/cta-light.svg" class="block w-full dark:hidden"
+                    alt="images" />
+                  <img src="../assets/images/presentation/cta-dark.svg" class="hidden w-full dark:block" alt="images" />
+                </div>
+                <div class="text-primary-500 pt-[7px] text-center">
+                  @@include('../images/wave.html', {'substyle': 'class="w-[92px] md:w-[122px] h-auto mx-auto"'})
+                </div>
+                <div class="text-center mt-6">
+                  <h4 class="text-primary-500 mb-1">Call-To-Action</h4>
+                  <p class="text-theme-text-secondary body-2">10 Different Variants</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-span-6 md:col-span-4 hidden group-[.flt-all]:block group-[.flt-marketing]:block">
+          <a href="../block/blog.html" class="card overflow-hidden !mb-0 group/child rounded-[40px] block bg-neutral-100 h-full">
+            <div class="relative group-hover/child:scale-[1.02] transition-all duration-1000">
+              @@include('../images/block-bg.html',{'substyle': 'class="absolute z-10"'})
+              <div class="card-body relative inset-0 z-20 !px-[14.5%] !pt-[16%] !pb-[6%]">
+                <div class="pb-4 lg:pb-2">
+                  <img src="../assets/images/presentation/blog-light.svg" class="block w-full dark:hidden"
+                    alt="images" />
+                  <img src="../assets/images/presentation/blog-dark.svg" class="hidden w-full dark:block"
+                    alt="images" />
+                </div>
+                <div class="text-primary-500 pt-[7px] text-center">
+                  @@include('../images/wave.html', {'substyle': 'class="w-[92px] md:w-[122px] h-auto mx-auto"'})
+                </div>
+                <div class="text-center mt-6">
+                  <h4 class="text-primary-500 mb-1">Blog</h4>
+                  <p class="text-theme-text-secondary body-2">4 Different Variants</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-span-6 md:col-span-4 hidden group-[.flt-all]:block group-[.flt-essential]:block">
+          <a href="../block/faq.html" class="card overflow-hidden !mb-0 group/child rounded-[40px] block bg-neutral-100 h-full">
+            <div class="relative group-hover/child:scale-[1.02] transition-all duration-1000">
+              @@include('../images/block-bg.html',{'substyle': 'class="absolute z-10"'})
+              <div class="card-body relative inset-0 z-20 !px-[14.5%] !pt-[16%] !pb-[6%]">
+                <div class="pb-4 lg:pb-2">
+                  <img src="../assets/images/presentation/faqs-light.svg" class="block w-full dark:hidden"
+                    alt="images" />
+                  <img src="../assets/images/presentation/faqs-dark.svg" class="hidden w-full dark:block"
+                    alt="images" />
+                </div>
+                <div class="text-primary-500 pt-[7px] text-center">
+                  @@include('../images/wave.html', {'substyle': 'class="w-[92px] md:w-[122px] h-auto mx-auto"'})
+                </div>
+                <div class="text-center mt-6">
+                  <h4 class="text-primary-500 mb-1">FAQs</h4>
+                  <p class="text-theme-text-secondary body-2">5 Different Variants</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-span-6 md:col-span-4 hidden group-[.flt-all]:block group-[.flt-essential]:block">
+          <a href="../block/footer.html" class="card overflow-hidden !mb-0 group/child rounded-[40px] block bg-neutral-100 h-full">
+            <div class="relative group-hover/child:scale-[1.02] transition-all duration-1000">
+              @@include('../images/block-bg.html',{'substyle': 'class="absolute z-10"'})
+              <div class="card-body relative inset-0 z-20 !px-[14.5%] !pt-[16%] !pb-[6%]">
+                <div class="pb-4 lg:pb-2">
+                  <img src="../assets/images/presentation/footer-light.svg" class="block w-full dark:hidden"
+                    alt="images" />
+                  <img src="../assets/images/presentation/footer-dark.svg" class="hidden w-full dark:block"
+                    alt="images" />
+                </div>
+                <div class="text-primary-500 pt-[7px] text-center">
+                  @@include('../images/wave.html', {'substyle': 'class="w-[92px] md:w-[122px] h-auto mx-auto"'})
+                </div>
+                <div class="text-center mt-6">
+                  <h4 class="text-primary-500 mb-1">Footer</h4>
+                  <p class="text-theme-text-secondary body-2">6 Different Variants</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-span-6 md:col-span-4 hidden group-[.flt-all]:block group-[.flt-marketing]:block">
+          <a href="../block/team.html" class="card overflow-hidden !mb-0 group/child rounded-[40px] block bg-neutral-100 h-full">
+            <div class="relative group-hover/child:scale-[1.02] transition-all duration-1000">
+              @@include('../images/block-bg.html',{'substyle': 'class="absolute z-10"'})
+              <div class="card-body relative inset-0 z-20 !px-[14.5%] !pt-[16%] !pb-[6%]">
+                <div class="pb-4 lg:pb-2">
+                  <img src="../assets/images/presentation/team-light.svg" class="block w-full dark:hidden"
+                    alt="images" />
+                  <img src="../assets/images/presentation/team-dark.svg" class="hidden w-full dark:block"
+                    alt="images" />
+                </div>
+                <div class="text-primary-500 pt-[7px] text-center">
+                  @@include('../images/wave.html', {'substyle': 'class="w-[92px] md:w-[122px] h-auto mx-auto"'})
+                </div>
+                <div class="text-center mt-6">
+                  <h4 class="text-primary-500 mb-1">Team</h4>
+                  <p class="text-theme-text-secondary body-2">1 Different Variants</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-span-6 md:col-span-4 hidden group-[.flt-all]:block group-[.flt-essential]:block">
+          <a href="../block/contact-us.html" class="card overflow-hidden !mb-0 group/child rounded-[40px] block bg-neutral-100 h-full">
+            <div class="relative group-hover/child:scale-[1.02] transition-all duration-1000">
+              @@include('../images/block-bg.html',{'substyle': 'class="absolute z-10"'})
+              <div class="card-body relative inset-0 z-20 !px-[14.5%] !pt-[16%] !pb-[6%]">
+                <div class="pb-4 lg:pb-2">
+                  <img src="../assets/images/presentation/contact-us-light.svg" class="block w-full dark:hidden"
+                    alt="images" />
+                  <img src="../assets/images/presentation/contact-us-dark.svg" class="hidden w-full dark:block"
+                    alt="images" />
+                </div>
+                <div class="text-primary-500 pt-[7px] text-center">
+                  @@include('../images/wave.html', {'substyle': 'class="w-[92px] md:w-[122px] h-auto mx-auto"'})
+                </div>
+                <div class="text-center mt-6">
+                  <h4 class="text-primary-500 mb-1">Contact Us</h4>
+                  <p class="text-theme-text-secondary body-2">1 Different Variants</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-span-6 md:col-span-4 !hidden group-[.flt-all]:block group-[.flt-marketing]:block">
+          <a href="#" class="card overflow-hidden !mb-0 group/child rounded-[40px] block bg-neutral-100 h-full">
+            <div class="relative group-hover/child:scale-[1.02] transition-all duration-1000">
+              @@include('../images/block-bg.html',{'substyle': 'class="absolute z-10"'})
+              <div class="card-body relative inset-0 z-20 !px-[14.5%] !pt-[16%] !pb-[6%]">
+                <div class="pb-4 lg:pb-2">
+                  <img src="../assets/images/presentation/gallery-light.svg" class="block w-full dark:hidden"
+                    alt="images" />
+                  <img src="../assets/images/presentation/gallery-dark.svg" class="hidden w-full dark:block"
+                    alt="images" />
+                </div>
+                <div class="text-primary-500 pt-[7px] text-center">
+                  @@include('../images/wave.html', {'substyle': 'class="w-[92px] md:w-[122px] h-auto mx-auto"'})
+                </div>
+                <div class="text-center mt-6">
+                  <h4 class="text-primary-500 mb-1">Gallery</h4>
+                  <p class="text-theme-text-secondary body-2">4 Different Variants</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-span-6 md:col-span-4 !hidden group-[.flt-all]:block group-[.flt-essential]:block">
+          <a href="#" class="card overflow-hidden !mb-0 group/child rounded-[40px] block bg-neutral-100 h-full">
+            <div class="relative group-hover/child:scale-[1.02] transition-all duration-1000">
+              @@include('../images/block-bg.html',{'substyle': 'class="absolute z-10"'})
+              <div class="card-body relative inset-0 z-20 !px-[14.5%] !pt-[16%] !pb-[6%]">
+                <div class="pb-4 lg:pb-2">
+                  <img src="../assets/images/presentation/sign-in-light.svg" class="block w-full dark:hidden"
+                    alt="images" />
+                  <img src="../assets/images/presentation/sign-in-dark.svg" class="hidden w-full dark:block"
+                    alt="images" />
+                </div>
+                <div class="text-primary-500 pt-[7px] text-center">
+                  @@include('../images/wave.html', {'substyle': 'class="w-[92px] md:w-[122px] h-auto mx-auto"'})
+                </div>
+                <div class="text-center mt-6">
+                  <h4 class="text-primary-500 mb-1">Login</h4>
+                  <p class="text-theme-text-secondary body-2">5 Different Variants</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-span-6 md:col-span-4 !hidden group-[.flt-all]:block group-[.flt-essential]:block">
+          <a href="#" class="card overflow-hidden !mb-0 group/child rounded-[40px] block bg-neutral-100 h-full">
+            <div class="relative group-hover/child:scale-[1.02] transition-all duration-1000">
+              @@include('../images/block-bg.html',{'substyle': 'class="absolute z-10"'})
+              <div class="card-body relative inset-0 z-20 !px-[14.5%] !pt-[16%] !pb-[6%]">
+                <div class="pb-4 lg:pb-2">
+                  <img src="../assets/images/presentation/sign-up-light.svg" class="block w-full dark:hidden"
+                    alt="images" />
+                  <img src="../assets/images/presentation/sign-up-dark.svg" class="hidden w-full dark:block"
+                    alt="images" />
+                </div>
+                <div class="text-primary-500 pt-[7px] text-center">
+                  @@include('../images/wave.html', {'substyle': 'class="w-[92px] md:w-[122px] h-auto mx-auto"'})
+                </div>
+                <div class="text-center mt-6">
+                  <h4 class="text-primary-500 mb-1">Register</h4>
+                  <p class="text-theme-text-secondary body-2">1 Variants</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-span-6 md:col-span-4 hidden group-[.flt-all]:block group-[.flt-feature]:block">
+          <a href="../block/pricing.html" class="card overflow-hidden !mb-0 group/child rounded-[40px] block bg-neutral-100 h-full">
+            <div class="relative group-hover/child:scale-[1.02] transition-all duration-1000">
+              @@include('../images/block-bg.html',{'substyle': 'class="absolute z-10"'})
+              <div class="card-body relative inset-0 z-20 !px-[14.5%] !pt-[16%] !pb-[6%]">
+                <div class="pb-4 lg:pb-2">
+                  <img src="../assets/images/presentation/pricing-light.svg" class="block w-full dark:hidden"
+                    alt="images" />
+                  <img src="../assets/images/presentation/pricing-dark.svg" class="hidden w-full dark:block"
+                    alt="images" />
+                </div>
+                <div class="text-primary-500 pt-[7px] text-center">
+                  @@include('../images/wave.html', {'substyle': 'class="w-[92px] md:w-[122px] h-auto mx-auto"'})
+                </div>
+                <div class="text-center mt-6">
+                  <h4 class="text-primary-500 mb-1">Pricing</h4>
+                  <p class="text-theme-text-secondary body-2">6 Different Variants</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-span-6 md:col-span-4 hidden group-[.flt-all]:block group-[.flt-essential]:block">
+          <a href="../block/small-hero.html" class="card overflow-hidden !mb-0 group/child rounded-[40px] block bg-neutral-100 h-full">
+            <div class="relative group-hover/child:scale-[1.02] transition-all duration-1000">
+              @@include('../images/block-bg.html',{'substyle': 'class="absolute z-10"'})
+              <div class="card-body relative inset-0 z-20 !px-[14.5%] !pt-[16%] !pb-[6%]">
+                <div class="pb-4 lg:pb-2">
+                  <img src="../assets/images/presentation/small-hero-light.svg" class="block w-full dark:hidden"
+                    alt="images" />
+                  <img src="../assets/images/presentation/small-hero-dark.svg" class="hidden w-full dark:block"
+                    alt="images" />
+                </div>
+                <div class="text-primary-500 pt-[7px] text-center">
+                  @@include('../images/wave.html', {'substyle': 'class="w-[92px] md:w-[122px] h-auto mx-auto"'})
+                </div>
+                <div class="text-center mt-6">
+                  <h4 class="text-primary-500 mb-1">Small Hero</h4>
+                  <p class="text-theme-text-secondary body-2">3 Different Variants</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-span-6 md:col-span-4 !hidden group-[.flt-all]:block group-[.flt-essential]:block">
+          <a href="#" class="card overflow-hidden !mb-0 group/child rounded-[40px] block bg-neutral-100 h-full">
+            <div class="relative group-hover/child:scale-[1.02] transition-all duration-1000">
+              @@include('../images/block-bg.html',{'substyle': 'class="absolute z-10"'})
+              <div class="card-body relative inset-0 z-20 !px-[14.5%] !pt-[16%] !pb-[6%]">
+                <div class="pb-4 lg:pb-2">
+                  <img src="../assets/images/presentation/cookies-light.svg" class="block w-full dark:hidden"
+                    alt="images" />
+                  <img src="../assets/images/presentation/cookies-dark.svg" class="hidden w-full dark:block"
+                    alt="images" />
+                </div>
+                <div class="text-primary-500 pt-[7px] text-center">
+                  @@include('../images/wave.html', {'substyle': 'class="w-[92px] md:w-[122px] h-auto mx-auto"'})
+                </div>
+                <div class="text-center mt-6">
+                  <h4 class="text-primary-500 mb-1">Cookies</h4>
+                  <p class="text-theme-text-secondary body-2">3 Different Variants</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-span-6 md:col-span-4 !hidden group-[.flt-all]:block group-[.flt-marketing]:block">
+          <a href="#" class="card overflow-hidden !mb-0 group/child rounded-[40px] block bg-neutral-100 h-full">
+            <div class="relative group-hover/child:scale-[1.02] transition-all duration-1000">
+              @@include('../images/block-bg.html',{'substyle': 'class="absolute z-10"'})
+              <div class="card-body relative inset-0 z-20 !px-[14.5%] !pt-[16%] !pb-[6%]">
+                <div class="pb-4 lg:pb-2">
+                  <img src="../assets/images/presentation/top-offer-bar-light.svg" class="block w-full dark:hidden"
+                    alt="images" />
+                  <img src="../assets/images/presentation/top-offer-bar-dark.svg" class="hidden w-full dark:block"
+                    alt="images" />
+                </div>
+                <div class="text-primary-500 pt-[7px] text-center">
+                  @@include('../images/wave.html', {'substyle': 'class="w-[92px] md:w-[122px] h-auto mx-auto"'})
+                </div>
+                <div class="text-center mt-6">
+                  <h4 class="text-primary-500 mb-1">Top-Offer</h4>
+                  <p class="text-theme-text-secondary body-2">5 Different Variants</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-span-6 md:col-span-4 !hidden group-[.flt-all]:block group-[.flt-essential]:block">
+          <a href="#" class="card overflow-hidden !mb-0 group/child rounded-[40px] block bg-neutral-100 h-full">
+            <div class="relative group-hover/child:scale-[1.02] transition-all duration-1000">
+              @@include('../images/block-bg.html',{'substyle': 'class="absolute z-10"'})
+              <div class="card-body relative inset-0 z-20 !px-[14.5%] !pt-[16%] !pb-[6%]">
+                <div class="pb-4 lg:pb-2">
+                  <img src="../assets/images/presentation/mega-menu-light.svg" class="block w-full dark:hidden"
+                    alt="images" />
+                  <img src="../assets/images/presentation/mega-menu-dark.svg" class="hidden w-full dark:block"
+                    alt="images" />
+                </div>
+                <div class="text-primary-500 pt-[7px] text-center">
+                  @@include('../images/wave.html', {'substyle': 'class="w-[92px] md:w-[122px] h-auto mx-auto"'})
+                </div>
+                <div class="text-center mt-6">
+                  <h4 class="text-primary-500 mb-1">Mega Menu</h4>
+                  <p class="text-theme-text-secondary body-2">5 Different Variants</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-span-6 md:col-span-4 hidden group-[.flt-all]:block group-[.flt-marketing]:block">
+          <a href="../block/about.html" class="card overflow-hidden !mb-0 group/child rounded-[40px] block bg-neutral-100 h-full">
+            <div class="relative group-hover/child:scale-[1.02] transition-all duration-1000">
+              @@include('../images/block-bg.html',{'substyle': 'class="absolute z-10"'})
+              <div class="card-body relative inset-0 z-20 !px-[14.5%] !pt-[16%] !pb-[6%]">
+                <div class="pb-4 lg:pb-2">
+                  <img src="../assets/images/presentation/content-light.svg" class="block w-full dark:hidden"
+                    alt="images" />
+                  <img src="../assets/images/presentation/content-dark.svg" class="hidden w-full dark:block"
+                    alt="images" />
+                </div>
+                <div class="text-primary-500 pt-[7px] text-center">
+                  @@include('../images/wave.html', {'substyle': 'class="w-[92px] md:w-[122px] h-auto mx-auto"'})
+                </div>
+                <div class="text-center mt-6">
+                  <h4 class="text-primary-500 mb-1">About</h4>
+                  <p class="text-theme-text-secondary body-2">2 Different Variants</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-span-6 md:col-span-4 !hidden group-[.flt-all]:block group-[.flt-essential]:block">
+          <a href="#" class="card overflow-hidden !mb-0 group/child rounded-[40px] block bg-neutral-100 h-full">
+            <div class="relative group-hover/child:scale-[1.02] transition-all duration-1000">
+              @@include('../images/block-bg.html',{'substyle': 'class="absolute z-10"'})
+              <div class="card-body relative inset-0 z-20 !px-[14.5%] !pt-[16%] !pb-[6%]">
+                <div class="pb-4 lg:pb-2">
+                  <img src="../assets/images/presentation/forgot-pass-light.svg" class="block w-full dark:hidden"
+                    alt="images" />
+                  <img src="../assets/images/presentation/forgot-pass-dark.svg" class="hidden w-full dark:block"
+                    alt="images" />
+                </div>
+                <div class="text-primary-500 pt-[7px] text-center">
+                  @@include('../images/wave.html', {'substyle': 'class="w-[92px] md:w-[122px] h-auto mx-auto"'})
+                </div>
+                <div class="text-center mt-6">
+                  <h4 class="text-primary-500 mb-1">Forgot Password</h4>
+                  <p class="text-theme-text-secondary body-2">1 Variants</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-span-6 md:col-span-4 !hidden group-[.flt-all]:block group-[.flt-essential]:block">
+          <a href="#" class="card overflow-hidden !mb-0 group/child rounded-[40px] block bg-neutral-100 h-full">
+            <div class="relative group-hover/child:scale-[1.02] transition-all duration-1000">
+              @@include('../images/block-bg.html',{'substyle': 'class="absolute z-10"'})
+              <div class="card-body relative inset-0 z-20 !px-[14.5%] !pt-[16%] !pb-[6%]">
+                <div class="pb-4 lg:pb-2">
+                  <img src="../assets/images/presentation/new-pass-light.svg" class="block w-full dark:hidden"
+                    alt="images" />
+                  <img src="../assets/images/presentation/new-pass-dark.svg" class="hidden w-full dark:block"
+                    alt="images" />
+                </div>
+                <div class="text-primary-500 pt-[7px] text-center">
+                  @@include('../images/wave.html', {'substyle': 'class="w-[92px] md:w-[122px] h-auto mx-auto"'})
+                </div>
+                <div class="text-center mt-6">
+                  <h4 class="text-primary-500 mb-1">Create New Password</h4>
+                  <p class="text-theme-text-secondary body-2">1 Variants</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-span-6 md:col-span-4 !hidden group-[.flt-all]:block group-[.flt-essential]:block">
+          <a href="#" class="card overflow-hidden !mb-0 group/child rounded-[40px] block bg-neutral-100 h-full">
+            <div class="relative group-hover/child:scale-[1.02] transition-all duration-1000">
+              @@include('../images/block-bg.html',{'substyle': 'class="absolute z-10"'})
+              <div class="card-body relative inset-0 z-20 !px-[14.5%] !pt-[16%] !pb-[6%]">
+                <div class="pb-4 lg:pb-2">
+                  <img src="../assets/images/presentation/otp-gen-light.svg" class="block w-full dark:hidden"
+                    alt="images" />
+                  <img src="../assets/images/presentation/otp-gen-dark.svg" class="hidden w-full dark:block"
+                    alt="images" />
+                </div>
+                <div class="text-primary-500 pt-[7px] text-center">
+                  @@include('../images/wave.html', {'substyle': 'class="w-[92px] md:w-[122px] h-auto mx-auto"'})
+                </div>
+                <div class="text-center mt-6">
+                  <h4 class="text-primary-500 mb-1">OTP Verification</h4>
+                  <p class="text-theme-text-secondary body-2">1 Variants</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-span-6 md:col-span-4 hidden group-[.flt-all]:block group-[.flt-essential]:block">
+          <a href="../block/error404.html" class="card overflow-hidden !mb-0 group/child rounded-[40px] block bg-neutral-100 h-full">
+            <div class="relative group-hover/child:scale-[1.02] transition-all duration-1000">
+              @@include('../images/block-bg.html',{'substyle': 'class="absolute z-10"'})
+              <div class="card-body relative inset-0 z-20 !px-[14.5%] !pt-[16%] !pb-[6%]">
+                <div class="pb-4 lg:pb-2">
+                  <img src="../assets/images/presentation/404-light.svg" class="block w-full dark:hidden"
+                    alt="images" />
+                  <img src="../assets/images/presentation/404-dark.svg" class="hidden w-full dark:block" alt="images" />
+                </div>
+                <div class="text-primary-500 pt-[7px] text-center">
+                  @@include('../images/wave.html', {'substyle': 'class="w-[92px] md:w-[122px] h-auto mx-auto"'})
+                </div>
+                <div class="text-center mt-6">
+                  <h4 class="text-primary-500 mb-1">404 Error</h4>
+                  <p class="text-theme-text-secondary body-2">1 Variants</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-span-6 md:col-span-4 hidden group-[.flt-all]:block group-[.flt-essential]:block">
+          <a href="../block/error500.html" class="card overflow-hidden !mb-0 group/child rounded-[40px] block bg-neutral-100 h-full">
+            <div class="relative group-hover/child:scale-[1.02] transition-all duration-1000">
+              @@include('../images/block-bg.html',{'substyle': 'class="absolute z-10"'})
+              <div class="card-body relative inset-0 z-20 !px-[14.5%] !pt-[16%] !pb-[6%]">
+                <div class="pb-4 lg:pb-2">
+                  <img src="../assets/images/presentation/500-light.svg" class="block w-full dark:hidden"
+                    alt="images" />
+                  <img src="../assets/images/presentation/500-dark.svg" class="hidden w-full dark:block" alt="images" />
+                </div>
+                <div class="text-primary-500 pt-[7px] text-center">
+                  @@include('../images/wave.html', {'substyle': 'class="w-[92px] md:w-[122px] h-auto mx-auto"'})
+                </div>
+                <div class="text-center mt-6">
+                  <h4 class="text-primary-500 mb-1">500 Error</h4>
+                  <p class="text-theme-text-secondary body-2">1 Variants</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-span-6 md:col-span-4 hidden group-[.flt-all]:block group-[.flt-essential]:block">
+          <a href="../block/under-maintenance.html" class="card overflow-hidden !mb-0 group/child rounded-[40px] block bg-neutral-100 h-full">
+            <div class="relative group-hover/child:scale-[1.02] transition-all duration-1000">
+              @@include('../images/block-bg.html',{'substyle': 'class="absolute z-10"'})
+              <div class="card-body relative inset-0 z-20 !px-[14.5%] !pt-[16%] !pb-[6%]">
+                <div class="pb-4 lg:pb-2">
+                  <img src="../assets/images/presentation/maintenance-light.svg" class="block w-full dark:hidden"
+                    alt="images" />
+                  <img src="../assets/images/presentation/maintenance-dark.svg" class="hidden w-full dark:block"
+                    alt="images" />
+                </div>
+                <div class="text-primary-500 pt-[7px] text-center">
+                  @@include('../images/wave.html', {'substyle': 'class="w-[92px] md:w-[122px] h-auto mx-auto"'})
+                </div>
+                <div class="text-center mt-6">
+                  <h4 class="text-primary-500 mb-1">Under Maintenance</h4>
+                  <p class="text-theme-text-secondary body-2">1 Variants</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-span-6 md:col-span-4 hidden group-[.flt-all]:block group-[.flt-essential]:block">
+          <a href="../block/coming-soon.html" class="card overflow-hidden !mb-0 group/child rounded-[40px] block bg-neutral-100 h-full">
+            <div class="relative group-hover/child:scale-[1.02] transition-all duration-1000">
+              @@include('../images/block-bg.html',{'substyle': 'class="absolute z-10"'})
+              <div class="card-body relative inset-0 z-20 !px-[14.5%] !pt-[16%] !pb-[6%]">
+                <div class="pb-4 lg:pb-2">
+                  <img src="../assets/images/presentation/coming-soon-light.svg" class="block w-full dark:hidden"
+                    alt="images" />
+                  <img src="../assets/images/presentation/coming-soon-dark.svg" class="hidden w-full dark:block"
+                    alt="images" />
+                </div>
+                <div class="text-primary-500 pt-[7px] text-center">
+                  @@include('../images/wave.html', {'substyle': 'class="w-[92px] md:w-[122px] h-auto mx-auto"'})
+                </div>
+                <div class="text-center mt-6">
+                  <h4 class="text-primary-500 mb-1">Coming Soon</h4>
+                  <p class="text-theme-text-secondary body-2">1 Variants</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-span-6 md:col-span-4 !hidden group-[.flt-all]:block group-[.flt-essential]:block">
+          <a href="#" class="card overflow-hidden !mb-0 group/child rounded-[40px] block bg-neutral-100 h-full">
+            <div class="relative group-hover/child:scale-[1.02] transition-all duration-1000">
+              @@include('../images/block-bg.html',{'substyle': 'class="absolute z-10"'})
+              <div class="card-body relative inset-0 z-20 !px-[14.5%] !pt-[16%] !pb-[6%]">
+                <div class="pb-4 lg:pb-2">
+                  <img src="../assets/images/presentation/early-access-light.svg" class="block w-full dark:hidden"
+                    alt="images" />
+                  <img src="../assets/images/presentation/early-access-dark.svg" class="hidden w-full dark:block"
+                    alt="images" />
+                </div>
+                <div class="text-primary-500 pt-[7px] text-center">
+                  @@include('../images/wave.html', {'substyle': 'class="w-[92px] md:w-[122px] h-auto mx-auto"'})
+                </div>
+                <div class="text-center mt-6">
+                  <h4 class="text-primary-500 mb-1">Early Access</h4>
+                  <p class="text-theme-text-secondary body-2">1 Variants</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-span-6 md:col-span-4 !hidden group-[.flt-all]:block group-[.flt-essential]:block">
+          <a href="#" class="card overflow-hidden !mb-0 group/child rounded-[40px] block bg-neutral-100 h-full">
+            <div class="relative group-hover/child:scale-[1.02] transition-all duration-1000">
+              @@include('../images/block-bg.html',{'substyle': 'class="absolute z-10"'})
+              <div class="card-body relative inset-0 z-20 !px-[14.5%] !pt-[16%] !pb-[6%]">
+                <div class="pb-4 lg:pb-2">
+                  <img src="../assets/images/presentation/onboard-light.svg" class="block w-full dark:hidden"
+                    alt="images" />
+                  <img src="../assets/images/presentation/onboard-dark.svg" class="hidden w-full dark:block"
+                    alt="images" />
+                </div>
+                <div class="text-primary-500 pt-[7px] text-center">
+                  @@include('../images/wave.html', {'substyle': 'class="w-[92px] md:w-[122px] h-auto mx-auto"'})
+                </div>
+                <div class="text-center mt-6">
+                  <h4 class="text-primary-500 mb-1">Onboard</h4>
+                  <p class="text-theme-text-secondary body-2">1 Variants</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-span-6 md:col-span-4 hidden group-[.flt-all]:block group-[.flt-essential]:block">
+          <a href="../block/other.html" class="card overflow-hidden !mb-0 group/child rounded-[40px] block bg-neutral-100 h-full">
+            <div class="relative group-hover/child:scale-[1.02] transition-all duration-1000">
+              @@include('../images/block-bg.html',{'substyle': 'class="absolute z-10"'})
+              <div class="card-body relative inset-0 z-20 !px-[14.5%] !pt-[16%] !pb-[6%]">
+                <div class="pb-4 lg:pb-2">
+                  <img src="../assets/images/presentation/other-light.svg" class="block w-full dark:hidden"
+                    alt="images" />
+                  <img src="../assets/images/presentation/other-dark.svg" class="hidden w-full dark:block"
+                    alt="images" />
+                </div>
+                <div class="text-primary-500 pt-[7px] text-center">
+                  @@include('../images/wave.html', {'substyle': 'class="w-[92px] md:w-[122px] h-auto mx-auto"'})
+                </div>
+                <div class="text-center mt-6">
+                  <h4 class="text-primary-500 mb-1">Other</h4>
+                  <p class="text-theme-text-secondary body-2">3 Different Variants</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-span-6 md:col-span-4 hidden group-[.flt-all]:block group-[.flt-essential]:block">
+          <a href="../block/privacy-policy.html" class="card overflow-hidden !mb-0 group/child rounded-[40px] block bg-neutral-100 h-full">
+            <div class="relative group-hover/child:scale-[1.02] transition-all duration-1000">
+              @@include('../images/block-bg.html',{'substyle': 'class="absolute z-10"'})
+              <div class="card-body relative inset-0 z-20 !px-[14.5%] !pt-[16%] !pb-[6%]">
+                <div class="pb-4 lg:pb-2">
+                  <img src="../assets/images/presentation/privacy-policy-light.svg" class="block w-full dark:hidden"
+                    alt="images" />
+                  <img src="../assets/images/presentation/privacy-policy-dark.svg" class="hidden w-full dark:block"
+                    alt="images" />
+                </div>
+                <div class="text-primary-500 pt-[7px] text-center">
+                  @@include('../images/wave.html', {'substyle': 'class="w-[92px] md:w-[122px] h-auto mx-auto"'})
+                </div>
+                <div class="text-center mt-6">
+                  <h4 class="text-primary-500 mb-1">Privacy Policy</h4>
+                  <p class="text-theme-text-secondary body-2">1 Variants</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-span-6 md:col-span-4 !hidden group-[.flt-all]:block group-[.flt-essential]:block">
+          <a href="#" class="card overflow-hidden !mb-0 group/child rounded-[40px] block bg-neutral-100 h-full">
+            <div class="relative group-hover/child:scale-[1.02] transition-all duration-1000">
+              @@include('../images/block-bg.html',{'substyle': 'class="absolute z-10"'})
+              <div class="card-body relative inset-0 z-20 !px-[14.5%] !pt-[16%] !pb-[6%]">
+                <div class="pb-4 lg:pb-2">
+                  <img src="../assets/images/presentation/privacy-policy-light.svg" class="block w-full dark:hidden"
+                    alt="images" />
+                  <img src="../assets/images/presentation/privacy-policy-dark.svg" class="hidden w-full dark:block"
+                    alt="images" />
+                </div>
+                <div class="text-primary-500 pt-[7px] text-center">
+                  @@include('../images/wave.html', {'substyle': 'class="w-[92px] md:w-[122px] h-auto mx-auto"'})
+                </div>
+                <div class="text-center mt-6">
+                  <h4 class="text-primary-500 mb-1">Terms Conditions</h4>
+                  <p class="text-theme-text-secondary body-2">1 Variants</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-span-6 md:col-span-4 hidden group-[.flt-all]:block group-[.flt-essential]:block">
+          <a href="../block/typography.html"
+            class="card overflow-hidden !mb-0 group/child rounded-[40px] block bg-neutral-100 h-full">
+            <div class="relative group-hover/child:scale-[1.02] transition-all duration-1000">
+              @@include('../images/block-bg.html',{'substyle': 'class="absolute z-10"'})
+              <div class="card-body relative inset-0 z-20 !px-[14.5%] !pt-[16%] !pb-[6%]">
+                <div class="pb-4 lg:pb-2">
+                  <img src="../assets/images/presentation/typography-light.svg" class="block w-full dark:hidden"
+                    alt="images" />
+                  <img src="../assets/images/presentation/typography-dark.svg" class="hidden w-full dark:block"
+                    alt="images" />
+                </div>
+                <div class="text-primary-500 pt-[7px] text-center">
+                  @@include('../images/wave.html', {'substyle': 'class="w-[92px] md:w-[122px] h-auto mx-auto"'})
+                </div>
+                <div class="text-center mt-6">
+                  <h4 class="text-primary-500 mb-1">Typography</h4>
+                  <p class="text-theme-text-secondary body-2">1 Variants</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-span-6 md:col-span-4 hidden group-[.flt-all]:block group-[.flt-essential]:block">
+          <a href="../block/color.html"
+            class="card overflow-hidden !mb-0 group/child rounded-[40px] block bg-neutral-100 h-full">
+            <div class="relative group-hover/child:scale-[1.02] transition-all duration-1000">
+              @@include('../images/block-bg.html',{'substyle': 'class="absolute z-10"'})
+              <div class="card-body relative inset-0 z-20 !px-[14.5%] !pt-[16%] !pb-[6%]">
+                <div class="pb-4 lg:pb-2">
+                  <img src="../assets/images/presentation/color-light.svg" class="block w-full dark:hidden"
+                    alt="images" />
+                  <img src="../assets/images/presentation/color-dark.svg" class="hidden w-full dark:block"
+                    alt="images" />
+                </div>
+                <div class="text-primary-500 pt-[7px] text-center">
+                  @@include('../images/wave.html', {'substyle': 'class="w-[92px] md:w-[122px] h-auto mx-auto"'})
+                </div>
+                <div class="text-center mt-6">
+                  <h4 class="text-primary-500 mb-1">Color</h4>
+                  <p class="text-theme-text-secondary body-2">1 Variants</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+        <div class="col-span-6 md:col-span-4 hidden group-[.flt-all]:block group-[.flt-essential]:block">
+          <a href="../block/icon.html"
+            class="card overflow-hidden !mb-0 group/child rounded-[40px] block bg-neutral-100 h-full">
+            <div class="relative group-hover/child:scale-[1.02] transition-all duration-1000">
+              @@include('../images/block-bg.html',{'substyle': 'class="absolute z-10"'})
+              <div class="card-body relative inset-0 z-20 !px-[14.5%] !pt-[16%] !pb-[6%]">
+                <div class="pb-4 lg:pb-2">
+                  <img src="../assets/images/presentation/icon-light.svg" class="block w-full dark:hidden"
+                    alt="images" />
+                  <img src="../assets/images/presentation/icon-dark.svg" class="hidden w-full dark:block"
+                    alt="images" />
+                </div>
+                <div class="text-primary-500 pt-[7px] text-center">
+                  @@include('../images/wave.html', {'substyle': 'class="w-[92px] md:w-[122px] h-auto mx-auto"'})
+                </div>
+                <div class="text-center mt-6">
+                  <h4 class="text-primary-500 mb-1">Icons</h4>
+                  <p class="text-theme-text-secondary body-2">1 Variants</p>
+                </div>
+              </div>
+            </div>
+          </a>
+        </div>
+      </div>
+      <!-- [ Main Content ] end -->
+    </div>
+  </section>
+  <!-- [ Main Content ] end -->
+  @@include('../layouts/scroll-top.html') @@include('../layouts/footer-js.html')
+  <script>
+    // Cache elements for repeated use
+    const filterButtonContainer = document.querySelector('.filter-button');
+    const filterWrapper = document.querySelector('.block-fiter-wrapper');
+
+    // Check if elements exist to avoid potential errors
+    if (filterButtonContainer && filterWrapper) {
+      const buttons = filterButtonContainer.querySelectorAll('button');
+
+      // Loop through each button and add event listener
+      buttons.forEach((button) => {
+        button.addEventListener('click', (event) => {
+          const targetElement = event.target;
+          const filterClass = 'flt-' + targetElement.getAttribute('data-filter');
+
+          // Remove existing filter classes
+          removeClassByPrefix(filterButtonContainer, 'flt-');
+          removeClassByPrefix(filterWrapper, 'flt-');
+
+          // Add new filter classes
+          filterButtonContainer.classList.add(filterClass);
+          filterWrapper.classList.add(filterClass);
+        });
+      });
+    }
+    // 
+    document.querySelector('#block-search').addEventListener('keyup', function () {
+      var g = document.querySelector('#block-search').value.toLowerCase();
+      var tc = document.querySelectorAll('.block-fiter-wrapper > div');
+      for (var i = 0; i < tc.length; i++) {
+        var c = tc[i];
+        var t = c.outerHTML;
+        if (t) {
+          var s = t.toLowerCase();
+        }
+        if (s) {
+          var n = s.indexOf(g);
+          if (n !== -1) {
+            c.style.display = 'block';
+          } else {
+            c.style.display = 'none';
+          }
+        }
+      }
+    });
+  </script>
+</body>
+
+</html>

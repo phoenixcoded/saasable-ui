@@ -1,0 +1,64 @@
+<!-- [ breadcrumb ] start -->
+<div class="py-6 md:py-16 sm:py-10 [background-image:var(--breadcrumb-bg)] dark:[background-image:var(--breadcrumb-bg-dark)] bg-[length:30px_30px] bg-neutral-100 rounded-b-3xl sm:rounded-b-[40px]">
+  <div class="text-center container flex flex-col items-center gap-4 ">
+    <!-- Ensure you have an empty container where the HTML content will be injected -->
+    <div id="breadcrumb-container"></div>
+    <script>
+      window.pageData = {
+        offer: '@@breadcrumb_item',  // This is the value you're checking
+      };
+
+      var checkoffer = window.pageData.offer;
+      var container = document.getElementById('breadcrumb-container');  // Assume this is an existing container element in your HTML
+
+      if (checkoffer === 'offer') {
+        // Create and append the offer HTML structure
+        container.innerHTML = `
+          <div class="inline-flex items-center p-1 rounded-full border border-theme-divider bg-neutral-100">
+            <span class="px-2 text-[12px] font-semibold font-figtree text-neutral-800">Over 200+</span>
+            <div class="bg-primary-100 inline-flex items-center py-1 px-2 rounded-full gap-1">
+              <img src="../assets/images/shared/celebration.svg" alt="celebration" class="w-5 h-5">
+              <span class="text-primary-500 font-semibold text-xs leading-none">Design Blocks</span>
+            </div>
+          </div>
+        `;
+      } else {
+        // Create and append the breadcrumb HTML structure
+        container.innerHTML = `
+          <ul class="breadcrumb justify-center bg-neutral-100 border border-theme-divider rounded-full px-3 py-2">
+            <li class="breadcrumb-item"><a href="../index.html">Home</a></li>
+            <li class="breadcrumb-item"><a href="../block/block.html">@@breadcrumb_item</a></li>
+            <li class="breadcrumb-item" aria-current="page">@@breadcrumb_item_active</li>
+          </ul>
+        `;
+      }
+    </script>
+    <div class="page-header-title font-archivo w-[345px] sm:w-[550px] md:w-[700px]">
+      <h1 class="mb-0">@@page_title</h1>
+    </div>
+    <div class="text-primary-500 py-[4.6px] lg:py-[7px]">
+      <!-- [ wawe image ] -->
+      <svg class="w-[92px] md:w-[122px] h-auto" viewBox="0 0 122 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path
+          opacity="0.4"
+          d="M1.46484 6.83613L4.45387 3.7103C7.74598 0.267505 13.38 0.760513 16.0241 4.72277L16.5428 5.50001C19.2423 9.54539 25.1877 9.54539 27.8873 5.5V5.5C30.5869 1.45461 36.5322 1.45461 39.2318 5.5V5.5C41.9314 9.54539 47.8768 9.54539 50.5764 5.5V5.5C53.2759 1.45461 59.2213 1.45461 61.9209 5.5V5.5C64.6205 9.54539 70.5658 9.54539 73.2654 5.5V5.5C75.965 1.45461 81.9104 1.45461 84.61 5.5V5.5C87.3096 9.54539 93.2549 9.54539 95.9545 5.5V5.5C98.6541 1.45461 104.599 1.45461 107.299 5.5V5.5C109.999 9.54539 115.944 9.54539 118.644 5.5L120.534 2.66667"
+          stroke="currentColor"
+          strokeLinecap="round"
+        />
+      </svg>
+    </div>
+    <div id="header-search" class="relative w-full sm:w-[456px]">
+      <i class="ti ti-search absolute top-4 ltr:left-3.5 rtl:right-3.5 text-[24px] text-neutral-700"></i>
+      <input type="search" class="form-control ltr:pl-12 rtl:pr-12 bg-neutral-100"
+        placeholder="Search for blocks... (e.g., Hero, Testimonial, Pricing)" />
+    </div>
+    <script>
+      var search_hide = '@@search_hide';
+      var header_search = document.getElementById('header-search');
+      if (search_hide == 'true') {
+        header_search.classList.add('hidden');
+      }
+    </script>
+  </div>
+</div>
+<!-- [ breadcrumb ] end -->

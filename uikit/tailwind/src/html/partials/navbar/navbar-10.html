@@ -1,0 +1,107 @@
+<!-- [ Nav ] start -->
+<nav class="z-50 w-full relative">
+  <div class="container">
+    <div class="static flex py-4 items-center justify-between">
+      <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-between">
+        <div class="flex flex-1 flex-shrink-0 items-center justify-between text-primary-500">
+          @@include('../../images/logo-main.html', {'substyle': 'class="w-[112px] lg:w-[140px] h-auto"'})
+        </div>
+        <div class="nav-collapse grow hidden w-full lg:flex lg:w-full flex-auto justify-center"
+          id="main-navbar-collapse">
+          <div class="justify-center flex flex-col lg:flex-row p-0 lg:rounded-full lg:bg-neutral-100">
+            <a class="inline-block text-neutral-900 hover:bg-primary-500/[.04] dark:text-themedark-bodycolor rounded-full px-[18px] py-3 text-[14px] font-medium transition-all leading-[1.429]"
+              href="#">
+              Overview
+            </a>
+            <a class="inline-block text-neutral-900 hover:bg-primary-500/[.04] dark:text-themedark-bodycolor rounded-full px-[18px] py-3 text-[14px] font-medium transition-all leading-[1.429]"
+              href="#">
+              Products
+            </a>
+            <a class="inline-block text-neutral-900 hover:bg-primary-500/[.04] dark:text-themedark-bodycolor rounded-full px-[18px] py-3 text-[14px] font-medium transition-all leading-[1.429]"
+              href="#">
+              Pricing
+            </a>
+            <div class="btn-group group">
+              <button
+                class="inline-flex text-neutral-900 hover:bg-primary-500/[.04] dark:text-themedark-bodycolor rounded-full px-[18px] py-3 text-[14px] font-medium transition-all leading-[1.429] dropdown-toggle arrow-none ltr:text-left rtl:text-right max-lg:w-full justify-between items-center"
+                type="button" data-pc-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Resource
+                <i class="ti ti-chevron-down"></i>
+              </button>
+              <div class="dropdown-menu dropdown-center group-[.drp-show]:max-lg:!relative !w-[368px] max-lg:!w-full max-lg:!transform-none !p-0 overflow-hidden shadow-[0px_0px_2px_0px_rgba(0,0,0,0.2),_rgba(26,28,30,0.06)_0px_16px_10px_0px]">
+                <ul class="p-2">
+                  <li>
+                    <a href="#"
+                      class="px-3 md:px-4 py-[6px] md:py-[10px] hover:bg-neutral-50 focus:bg-neutral-200 rounded-xl transition-all block my-0.5">
+                      <div class="my-[6px]">
+                        <h6 class="subtitle1 mb-1">Blog</h6>
+                        <p class="body2 text-theme-textsecondary">Explore our latest articles and insights.</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      class="bg-neutral-200/80 px-3 md:px-4 py-[6px] md:py-[10px] hover:bg-neutral-50 focus:bg-neutral-200 rounded-xl transition-all block my-0.5">
+                      <div class="my-[6px]">
+                        <h6 class="subtitle1 mb-1">Help Center</h6>
+                        <p class="body2 text-theme-textsecondary">Find answers to common questions and support topics.
+                        </p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      class="px-3 md:px-4 py-[6px] md:py-[10px] hover:bg-neutral-50 focus:bg-neutral-200 rounded-xl transition-all block my-0.5">
+                      <div class="my-[6px]">
+                        <h6 class="subtitle1 mb-1">Guides</h6>
+                        <p class="body2 text-theme-textsecondary">Follow our comprehensive guides to get started.</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      class="px-3 md:px-4 py-[6px] md:py-[10px] hover:bg-neutral-50 focus:bg-neutral-200 rounded-xl transition-all block my-0.5">
+                      <div class="my-[6px]">
+                        <h6 class="subtitle1 mb-1">Events</h6>
+                        <p class="body2 text-theme-textsecondary">Stay informed about upcoming events and webinars.</p>
+                      </div>
+                    </a>
+                  </li>
+                  <li>
+                    <a href="#"
+                      class="px-3 md:px-4 py-[6px] md:py-[10px] hover:bg-neutral-50 focus:bg-neutral-200 rounded-xl transition-all block my-0.5">
+                      <div class="my-[6px]">
+                        <h6 class="subtitle1 mb-1">Security</h6>
+                        <p class="body2 text-theme-textsecondary">Learn about our security measures to protect your
+                          data.</p>
+                      </div>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <a class="inline-block text-neutral-900 hover:bg-primary-500/[.04] dark:text-themedark-bodycolor rounded-full px-[18px] py-3 text-[14px] font-medium transition-all leading-[1.429]"
+              href="#">
+              Help
+            </a>
+            <div class="py-5 px-6 sm:hidden bg-neutral-100">
+              <div class="flex items-center justify-between gap-2">
+                <a href="#" class="btn-outline-primary btn">Sign in</a>
+                <a href="#" class="btn-primary btn">Get Started</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex items-center gap-3">
+        <a href="#" class="btn-outline-primary btn max-sm:hidden">Sign in</a>
+        <a href="#" class="btn-primary btn max-sm:hidden">Get Started</a>
+      </div>
+      <button data-pc-toggle="nav-collapse" type="button" data-pc-target="#main-navbar-collapse"
+        class="inline-flex ltr:ml-2 rtl:mr-2 items-center p-2 w-10 h-10 justify-center text-sm text-neutral-900 rounded-full lg:hidden hover:bg-neutral-100 focus:outline-none">
+        <i class="ti ti-menu-2 text-2xl leading-none"></i>
+      </button>
+    </div>
+  </div>
+</nav>
+<!-- [ Nav ] end -->

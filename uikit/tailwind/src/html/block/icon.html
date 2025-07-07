@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en" @@bodySetup>
+<!-- [Head] start -->
+
+<head>
+  @@include('../layouts/head-page-meta.html', {'title': 'Icon'}) @@include('../layouts/head-css.html')
+</head>
+<!-- [Head] end -->
+<!-- [Body] Start -->
+
+<body>
+  @@include('../layouts/loader.html') @@include('../layouts/component/component-header.html")
+  <!-- prettier-ignore -->
+  @@include('../layouts/component/component-breadcrumb.html', {
+    'breadcrumb_item': 'Blocks',
+    'breadcrumb_item_active': 'Icon',
+    'page_title': 'SaasAble Icon Section'
+  })
+  <!-- [ Main Content ] start -->
+  <section class="py-12">
+    <div class="container">
+      <!-- [ Main Content ] start -->
+      <div class="my-12 flex flex-col gap-6 md:gap-8 lg:gap-10">
+        @@include('../layouts/component/component-title.html',{'title':'Icons'})
+        @@include('../partials/pro-page/pro-page.html')
+      </div>
+      <!-- [ Main Content ] end -->
+    </div>
+  </section>
+  <!-- [ Main Content ] end -->
+  @@include('../layouts/scroll-top.html') @@include('../layouts/footer-js.html')
+</body>
+
+</html>

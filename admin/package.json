@@ -1,7 +1,7 @@
 {
   "name": "saas-able-react-mui-admin-next-seed-js",
   "version": "1.2.0",
-  "private": true,
+  "private": false,
   "author": {
     "email": "phoenixcoded@gmail.com",
     "name": "phoenixcoded"

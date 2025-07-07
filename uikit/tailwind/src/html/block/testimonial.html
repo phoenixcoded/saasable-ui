@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en" @@bodySetup>
+<!-- [Head] start -->
+
+<head>
+  @@include('../layouts/head-page-meta.html', {'title': 'Testimonial'}) @@include('../layouts/head-css.html')
+</head>
+<!-- [Head] end -->
+<!-- [Body] Start -->
+
+<body>
+  @@include('../layouts/loader.html') @@include('../layouts/component/component-header.html")
+  <!-- prettier-ignore -->
+  @@include('../layouts/component/component-breadcrumb.html', {
+    'breadcrumb_item': 'Block',
+    'breadcrumb_item_active': 'Testimonial',
+    'page_title': 'SaasAble Testimonial Section'
+  })
+  <!-- [ Main Content ] start -->
+  <section class="py-12">
+    <div class="container">
+      <div class="my-12 flex flex-col gap-6 md:gap-8 lg:gap-10">
+        @@include('../layouts/component/component-show.html', {
+          'title': 'Testimonial Section - 10',
+          'url': '../testimonial/testimonial-10.html',
+          'figmaLink': '#',
+        })
+        @@include('../layouts/component/component-show.html', {
+          'title': 'Testimonial Section - 01',
+          'url': '../testimonial/testimonial-1.html',
+          'figmaLink': '#',
+        })
+        @@include('../layouts/component/component-show.html', {
+          'title': 'Testimonial Section - 02',
+          'url': '../testimonial/testimonial-2.html',
+          'figmaLink': '#',
+        })
+        @@include('../layouts/component/component-show.html', {
+          'title': 'Testimonial Section - 03',
+          'url': '../testimonial/testimonial-3.html',
+          'figmaLink': '#',
+        })
+        @@include('../layouts/component/component-show.html', {
+          'title': 'Testimonial Section - 05',
+          'url': '../testimonial/testimonial-5.html',
+          'figmaLink': '#',
+        })
+        @@include('../layouts/component/component-show.html', {
+          'title': 'Testimonial Section - 06',
+          'url': '../testimonial/testimonial-6.html',
+          'figmaLink': '#',
+        })
+        @@include('../layouts/component/component-show.html', {
+          'title': 'Testimonial Section - 09',
+          'url': '../testimonial/testimonial-9.html',
+          'figmaLink': '#',
+        })
+      </div>
+    </div>
+  </section>
+  <!-- [ Main Content ] end -->
+  @@include('../layouts/scroll-top.html')
+  @@include('../layouts/footer-js.html')
+</body>
+
+</html>
