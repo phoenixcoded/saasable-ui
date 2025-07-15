@@ -1,0 +1,402 @@
+<!-- [ Nav ] start -->
+<nav class="bg-neutral-100 z-50 w-full relative">
+  <div class="container">
+    <div class="static flex py-4 items-center justify-between">
+      <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-between">
+        <div class="flex flex-1 flex-shrink-0 items-center justify-between text-primary-500">
+          <a href="../index.html">
+            @@include('../../images/logo-main.html', {'substyle': 'class="w-[112px] lg:w-[140px] h-auto"'})
+          </a>
+        </div>
+        <div class="nav-collapse grow hidden w-full lg:flex lg:w-full flex-auto justify-center"
+          id="main-navbar-collapse">
+          <div class="justify-center flex flex-col lg:flex-row p-0 lg:bg-neutral-200 lg:rounded-full">
+            <a class="inline-block text-neutral-900 hover:bg-primary-500/[.04] dark:text-themedark-bodycolor rounded-full px-[18px] lg:px-6 py-3 text-[14px] font-medium transition-all leading-[1.429] open:text-primary-500 open:font-semibold"
+              href="../index.html">
+              Home
+            </a>
+            <div class="btn-group group">
+              <button
+                class="inline-flex text-neutral-900 hover:bg-primary-500/[.04] dark:text-themedark-bodycolor rounded-full px-[18px] py-3 text-[14px] font-medium transition-all leading-[1.429] dropdown-toggle arrow-none ltr:text-left rtl:text-right max-lg:w-full justify-between items-center"
+                type="button" data-pc-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Landings
+                <i class="ti ti-chevron-down"></i>
+              </button>
+              <div class="dropdown-menu dropdown-center group-[.drp-show]:max-lg:!relative !w-[936px] max-lg:!w-full max-lg:!transform-none !p-0 overflow-hidden shadow-[0px_0px_2px_0px_rgba(0,0,0,0.2),_rgba(26,28,30,0.06)_0px_16px_10px_0px]">
+                <div class="p-2">
+                  <div class="grid grid-cols-12 gap-2">
+                    <div class="col-span-6 sm:col-span-4 lg:col-span-3">
+                      <a href="#" class="group/landinglinks block cursor-default">
+                        <div class="p-2 rounded-xl overflow-hidden group-hover/landinglinks:bg-neutral-50 transition-all duration-300">
+                          <div class="flex flex-col gap-2">
+                            <img src="../assets/images/mega-menu/crm-light.svg" class="block dark:hidden w-full" alt="images">
+                            <img src="../assets/images/mega-menu/crm-dark.svg" class="hidden dark:block w-full" alt="images">
+                            <div class="flex flex-row justify-between items-center">
+                              <h6 class="subtitle1 text-theme-text-primary mt-0.5">CRM</h6>
+                              <span class="px-2 py-1 text-primary-500 bg-primary-100 rounded-full caption">Pro</span>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-span-6 sm:col-span-4 lg:col-span-3">
+                      <a href="#" class="group/landinglinks block cursor-default">
+                        <div class="p-2 rounded-xl overflow-hidden group-hover/landinglinks:bg-neutral-50 transition-all duration-300">
+                          <div class="flex flex-col gap-2">
+                            <img src="../assets/images/mega-menu/ai-light.svg" class="block dark:hidden w-full" alt="images">
+                            <img src="../assets/images/mega-menu/ai-dark.svg" class="hidden dark:block w-full" alt="images">
+                            <div class="flex flex-row justify-between items-center">
+                              <h6 class="subtitle1 text-theme-text-primary mt-0.5">AI</h6>
+                              <span class="px-2 py-1 text-primary-500 bg-primary-100 rounded-full caption">Pro</span>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-span-6 sm:col-span-4 lg:col-span-3">
+                      <a href="#" class="group/landinglinks block cursor-default">
+                        <div class="p-2 rounded-xl overflow-hidden group-hover/landinglinks:bg-neutral-50 transition-all duration-300">
+                          <div class="flex flex-col gap-2">
+                            <img src="../assets/images/mega-menu/crypto-light.svg" class="block dark:hidden w-full" alt="images">
+                            <img src="../assets/images/mega-menu/crypto-dark.svg" class="hidden dark:block w-full" alt="images">
+                            <div class="flex flex-row justify-between items-center">
+                              <h6 class="subtitle1 text-theme-text-primary mt-0.5">Crypto</h6>
+                              <span class="px-2 py-1 text-primary-500 bg-primary-100 rounded-full caption">Pro</span>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-span-6 sm:col-span-4 lg:col-span-3">
+                      <a href="#" class="group/landinglinks block cursor-default">
+                        <div class="p-2 rounded-xl overflow-hidden group-hover/landinglinks:bg-neutral-50 transition-all duration-300">
+                          <div class="flex flex-col gap-2">
+                            <img src="../assets/images/mega-menu/hosting-light.svg" class="block dark:hidden w-full" alt="images">
+                            <img src="../assets/images/mega-menu/hosting-dark.svg" class="hidden dark:block w-full" alt="images">
+                            <div class="flex flex-row justify-between items-center">
+                              <h6 class="subtitle1 text-theme-text-primary mt-0.5">Hosting</h6>
+                              <span class="px-2 py-1 text-primary-500 bg-primary-100 rounded-full caption">Pro</span>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-span-6 sm:col-span-4 lg:col-span-3">
+                      <a href="#" class="group/landinglinks block cursor-default">
+                        <div class="p-2 rounded-xl overflow-hidden group-hover/landinglinks:bg-neutral-50 transition-all duration-300">
+                          <div class="flex flex-col gap-2">
+                            <img src="../assets/images/mega-menu/pms-light.svg" class="block dark:hidden w-full" alt="images">
+                            <img src="../assets/images/mega-menu/pms-dark.svg" class="hidden dark:block w-full" alt="images">
+                            <div class="flex flex-row justify-between items-center">
+                              <h6 class="subtitle1 text-theme-text-primary mt-0.5">PMS</h6>
+                              <span class="px-2 py-1 text-primary-500 bg-primary-100 rounded-full caption">Pro</span>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-span-6 sm:col-span-4 lg:col-span-3">
+                      <a href="#" class="group/landinglinks block cursor-default">
+                        <div class="p-2 rounded-xl overflow-hidden group-hover/landinglinks:bg-neutral-50 transition-all duration-300">
+                          <div class="flex flex-col gap-2">
+                            <img src="../assets/images/mega-menu/hrm-light.svg" class="block dark:hidden w-full" alt="images">
+                            <img src="../assets/images/mega-menu/hrm-dark.svg" class="hidden dark:block w-full" alt="images">
+                            <div class="flex flex-row justify-between items-center">
+                              <h6 class="subtitle1 text-theme-text-primary mt-0.5">HRM</h6>
+                              <span class="px-2 py-1 text-primary-500 bg-primary-100 rounded-full caption">Pro</span>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-span-6 sm:col-span-4 lg:col-span-3">
+                      <a href="#" class="group/landinglinks block cursor-default">
+                        <div class="p-2 rounded-xl overflow-hidden group-hover/landinglinks:bg-neutral-50 transition-all duration-300">
+                          <div class="flex flex-col gap-2">
+                            <img src="../assets/images/mega-menu/plugin-light.svg" class="block dark:hidden w-full" alt="images">
+                            <img src="../assets/images/mega-menu/plugin-dark.svg" class="hidden dark:block w-full" alt="images">
+                            <div class="flex flex-row justify-between items-center">
+                              <h6 class="subtitle1 text-theme-text-primary mt-0.5">Plugin</h6>
+                              <span class="px-2 py-1 text-primary-500 bg-primary-100 rounded-full caption">Pro</span>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-span-6 sm:col-span-4 lg:col-span-3">
+                      <a href="#" class="group/landinglinks block cursor-default">
+                        <div class="p-2 rounded-xl overflow-hidden group-hover/landinglinks:bg-neutral-50 transition-all duration-300">
+                          <div class="flex flex-col gap-2">
+                            <img src="../assets/images/mega-menu/lms-light.svg" class="block dark:hidden w-full grayscale blur-[2px]" alt="images">
+                            <img src="../assets/images/mega-menu/lms-dark.svg" class="hidden dark:block w-full grayscale blur-[2px]" alt="images">
+                            <div class="flex flex-row justify-between items-center">
+                              <h6 class="subtitle1 text-theme-text-primary mt-0.5">LMS</h6>
+                              <span class="px-2 py-1 text-primary-500 bg-primary-100 rounded-full caption">Coming Soon</span>
+                            </div>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="p-5 bg-neutral-100">
+                  <div class="flex flex-col sm:flex-row gap-3 justify-between items-start sm:items-center">
+                    <div class="flex flex-col gap-2">
+                      <div class="flex items-center gap-3">
+                        <h5>Explore our range of landing demos tailored to suit your needs</h5>
+                        <div class="bg-theme-bg-default py-1 px-2 rounded-full hidden sm:inline-flex">
+                          <h6 class="caption flex flex-row items-center">
+                            <img class="w-4 h-4" src="../assets/images/shared/celebration.svg" alt="celebration"> 
+                            <span class="px-3 py-1">Featured</span>                        
+                          </h6>
+                        </div>
+                      </div>
+                      <p class="body2 block">SaasAble offers 200+ customizable blocks, empowering you to effortlessly design and build landing pages tailored to your product or service needs.</p>
+                    </div>
+                    <a href="https://themeforest.net/item/saasable-tailwind-multipurpose-ui-kit-for-saas-startup-agency/58488275" target="_blank" class="btn btn-primary px-4 py-2.5 shrink-0">Buy Now</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a href="../block/block.html"
+              class="inline-block text-neutral-900 hover:bg-primary-500/[.04] dark:text-themedark-bodycolor rounded-full px-[18px] lg:px-6 py-3 text-[14px] font-medium transition-all leading-[1.429] open:text-primary-500 open:font-semibold">
+              Blocks
+            </a>
+            <div class="btn-group">
+              <button
+              class="inline-flex text-neutral-900 hover:bg-primary-500/[.04] dark:text-themedark-bodycolor rounded-full px-[18px] py-3 text-[14px] font-medium transition-all leading-[1.429] dropdown-toggle arrow-none ltr:text-left rtl:text-right max-lg:w-full justify-between items-center"
+                type="button" data-pc-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Pages
+                <i class="ti ti-chevron-down"></i>
+              </button>
+              <div class="dropdown-menu dropdown-center group-[.drp-show]:max-lg:!relative !w-[860px] max-lg:!w-full max-lg:!transform-none !p-0 overflow-hidden shadow-[0px_0px_2px_0px_rgba(0,0,0,0.2),_rgba(26,28,30,0.06)_0px_16px_10px_0px]">
+                <div class="grid grid-cols-12 gap-3">
+                  <div class="col-span-12 sm:col-span-4 p-2">
+                    <div class="p-5 bg-neutral-100 h-full rounded-lg">
+                        <div class="flex flex-col items-start gap-6 h-full justify-center">
+                          <div class="flex flex-col gap-2">
+                            <div class="flex flex-col items-start gap-3">
+                              <div class="bg-theme-bg-default rounded-full hidden sm:inline-flex">
+                                <span class="caption flex flex-row items-center">
+                                  <img class="w-4 h-4 ltr:ml-2.5 rtl:mr-2.5"
+                                    src="../assets/images/shared/celebration.svg" alt="celebration">
+                                  <span class="subtitle2 px-3 py-1">SaasAble UI Kit</span>
+                                </span>
+                              </div>
+                              <h4>Kickstart your project with pre-built essentials pages.</h4>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                  </div>
+                  <div class="col-span-12 sm:col-span-8">
+                    <div class="grid grid-cols-12 gap-2">
+                      <div class="col-span-12 sm:col-span-4">
+                        <div class="flex flex-col p-2 h-full max-w-full lg:max-w-[860px]">
+                          <div class="subtitle1 p-2 text-theme-text-primary">General</div>
+                          <ul class="*:*:block *:*:px-2.5 *:*:py-1 *:*:my-0.5 *:*:rounded-lg *:*:hover:bg-neutral-50 focus:*:*:bg-neutral-200 *:*:transition-all *:*:duration-300">
+                            <li>
+                              <a href="../pages/about.html" target="_blank">
+                                <div class="flex flex-row justify-between items-center">
+                                  <div class="body1 my-1 truncate">About</div>
+                                  <i class="ti ti-arrow-up-right text-neutral-800 text-base leading-none"></i>
+                                </div>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" class="cursor-default">
+                                <div class="flex flex-row justify-between items-center">
+                                  <div class="body1 my-1 truncate">Career</div>
+                                  <span class="px-2 py-1 text-primary-500 bg-primary-100 rounded-full caption">Pro</span>
+                                </div>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="../pages/privacy-policy.html" target="_blank">
+                                <div class="flex flex-row justify-between items-center">
+                                  <div class="body1 my-1 truncate">Privacy Policy</div>
+                                  <i class="ti ti-arrow-up-right text-neutral-800 text-base leading-none"></i>
+                                </div>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" class="cursor-default">
+                                <div class="flex flex-row justify-between items-center">
+                                  <div class="body1 my-1 truncate">Contact Us</div>
+                                  <span class="px-2 py-1 text-primary-500 bg-primary-100 rounded-full caption">Pro</span>
+                                </div>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" class="cursor-default">
+                                <div class="flex flex-row justify-between items-center">
+                                  <div class="body1 my-1 truncate">FAQs</div>
+                                  <span class="px-2 py-1 text-primary-500 bg-primary-100 rounded-full caption">Pro</span>
+                                </div>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" class="cursor-default">
+                                <div class="flex flex-row justify-between items-center">
+                                  <div class="body1 my-1 truncate">Pricing</div>
+                                  <span class="px-2 py-1 text-primary-500 bg-primary-100 rounded-full caption">Pro</span>
+                                </div>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="col-span-12 sm:col-span-4">
+                        <div class="flex flex-col p-2 h-full max-w-full lg:max-w-[860px]">
+                          <div class="subtitle1 p-2 text-theme-text-primary">Maintenance</div>
+                          <ul class="*:*:block *:*:px-2.5 *:*:py-1 *:*:my-0.5 *:*:rounded-lg *:*:hover:bg-neutral-50 focus:*:*:bg-neutral-200 *:*:transition-all *:*:duration-300">
+                            <li>
+                              <a href="#" class="cursor-default">
+                                <div class="flex flex-row justify-between items-center">
+                                  <div class="body1 my-1 truncate">Coming Soon</div>
+                                  <span class="px-2 py-1 text-primary-500 bg-primary-100 rounded-full caption">Pro</span>
+                                </div>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="../error404/error404-1.html" target="_blank">
+                                <div class="flex flex-row justify-between items-center">
+                                  <div class="body1 my-1 truncate">Error 404</div>
+                                  <i class="ti ti-arrow-up-right text-neutral-800 text-base leading-none"></i>
+                                </div>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="../error500/error500-1.html" target="_blank">
+                                <div class="flex flex-row justify-between items-center">
+                                  <div class="body1 my-1 truncate">Error 500</div>
+                                  <i class="ti ti-arrow-up-right text-neutral-800 text-base leading-none"></i>
+                                </div>
+                              </a>
+                            </li>
+                            <li>
+                              <a href="#" class="cursor-default">
+                                <div class="flex flex-row justify-between items-center">
+                                  <div class="body1 my-1 truncate">Under Maintenance</div>
+                                  <span class="px-2 py-1 text-primary-500 bg-primary-100 rounded-full caption">Pro</span>
+                                </div>
+                              </a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+                      <div class="col-span-12 sm:col-span-4">
+                        <div class="flex flex-col p-2 h-full max-w-full lg:max-w-[860px]">
+                          <div class="subtitle1 p-2 text-theme-text-primary">External</div>
+                            <ul class="*:*:block *:*:px-2.5 *:*:py-1 *:*:my-0.5 *:*:rounded-lg *:*:hover:bg-neutral-50 focus:*:*:bg-neutral-200 *:*:transition-all *:*:duration-300">
+                              <li>
+                                <a href="https://blog.saasable.io/" target="_blank">
+                                  <div class="flex flex-row justify-between items-center">
+                                    <div class="body1 my-1 truncate">Blog</div>
+                                    <i class="ti ti-arrow-up-right text-neutral-800 text-base leading-none"></i>
+                                  </div>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="https://phoenixcoded.gitbook.io/saasable-tailwind" target="_blank">
+                                  <div class="flex flex-row justify-between items-center">
+                                    <div class="body1 my-1 truncate">Documentation</div>
+                                    <i class="ti ti-arrow-up-right text-neutral-800 text-base leading-none"></i>
+                                  </div>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="https://phoenixcoded.authordesk.app/" target="_blank">
+                                  <div class="flex flex-row justify-between items-center">
+                                    <div class="body1 my-1 truncate">Support</div>
+                                    <i class="ti ti-arrow-up-right text-neutral-800 text-base leading-none"></i>
+                                  </div>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="https://discord.com/invite/gmqz4BWYA8" target="_blank">
+                                  <div class="flex flex-row justify-between items-center">
+                                    <div class="body1 my-1 truncate">Discord</div>
+                                    <i class="ti ti-arrow-up-right text-neutral-800 text-base leading-none"></i>
+                                  </div>
+                                </a>
+                              </li>
+                              <li>
+                                <a href="https://themeforest.net/licenses/standard" target="_blank">
+                                  <div class="flex flex-row justify-between items-center">
+                                    <div class="body1 my-1 truncate">Terms & Conditions</div>
+                                    <i class="ti ti-arrow-up-right text-neutral-800 text-base leading-none"></i>
+                                  </div>
+                                </a>
+                              </li>
+                            </ul>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <a href="https://phoenixcoded.gitbook.io/saasable-tailwind" target="_blank"
+              class="inline-block text-neutral-900 hover:bg-primary-500/[.04] dark:text-themedark-bodycolor rounded-full px-[18px] lg:px-6 py-3 text-[14px] font-medium transition-all leading-[1.429] open:text-primary-500 open:font-semibold">
+              Docs
+              <i class="ti ti-pin-invoke text-[16px]"></i>
+            </a>
+            <div class="py-5 px-6 bg-neutral-100 flex items-center justify-between sm:hidden">
+              <a href="https://github.com/phoenixcoded/saasable-ui" target="_blank" type="button" class="flex items-center justify-center h-10 w-10 rounded-full btn-outline-primary p-[9px_24px]">
+                <i class="ti ti-brand-github text-lg leading-none"></i>
+              </a>
+              <a href="https://themeforest.net/item/saasable-tailwind-multipurpose-ui-kit-for-saas-startup-agency/58488275" target="_blank" class="btn-primary btn">Buy Now</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="flex items-center gap-3">
+        <div class="btn-group">
+          <a href="#" type="button"
+            class="flex items-center justify-center h-10 w-10 rounded-full btn-outline-primary dropdown-toggle arrow-none p-[9px_24px]"
+            type="button" data-pc-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="ti ti-settings text-lg leading-none"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-end leading-none !mt-2">
+            <div class="dropdown-item !bg-transparent">
+              <label class="flex items-center gap-3 flex-1" for="theme-setup-dark">
+                <div class="shrink-0">
+                  <i class="ti ti-sun-moon !text-2xl !leading-none"></i>
+                </div>
+                <div class="grow text-base leading-none" for="theme-setup-dark">Dark</div>
+                <div class="shrink-0">
+                  <div class="form-check form-switch custom-switch-v1 !inline-flex !m-0">
+                    <input type="checkbox" class="form-check-input input-primary" id="theme-setup-dark">
+                  </div>
+                </div>
+              </label>
+            </div>
+            <div class="dropdown-item !bg-transparent">
+              <label class="flex items-center gap-3 flex-1" for="theme-setup-rtl">
+                <div class="shrink-0">
+                  <i class="ti ti-text-direction-ltr !text-2xl !leading-none"></i>
+                </div>
+                <div class="grow text-base leading-none">RTL</div>
+                <div class="shrink-0">
+                  <div class="form-check form-switch custom-switch-v1 !inline-flex !m-0">
+                    <input type="checkbox" class="form-check-input input-primary" id="theme-setup-rtl">
+                  </div>
+                </div>
+              </label>
+            </div>
+          </div>
+        </div>
+        <a href="https://github.com/phoenixcoded/saasable-ui" target="_blank" type="button" class="max-sm:hidden flex items-center justify-center h-10 w-10 rounded-full btn-outline-primary p-[9px_24px]">
+          <i class="ti ti-brand-github text-lg leading-none"></i>
+        </a>
+        <a href="https://themeforest.net/item/saasable-tailwind-multipurpose-ui-kit-for-saas-startup-agency/58488275" target="_blank" class="btn-primary btn max-sm:hidden">Buy Now</a>
+      </div>
+      <button data-pc-toggle="nav-collapse" type="button" data-pc-target="#main-navbar-collapse"
+        class="inline-flex ltr:ml-2 rtl:mr-2 items-center p-2 w-10 h-10 justify-center text-sm text-neutral-900 rounded-full lg:hidden hover:bg-neutral-100 focus:outline-none focus:ring-2 focus:ring-neutral-200  dark:focus:ring-gray-600">
+        <i class="ti ti-menu-2 text-2xl leading-none"></i>
+      </button>
+    </div>
+  </div>
+</nav>
+<!-- [ Nav ] start -->

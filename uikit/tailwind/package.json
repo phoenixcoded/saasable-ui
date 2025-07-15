@@ -1,0 +1,52 @@
+{
+  "name": "saasable-tailwind-free",
+  "version": "1.0.0",
+  "description": "saasable Tailwind uikit Template",
+  "main": "index.js",
+  "author": {
+    "name": "Phoenixcoded",
+    "email": "phoenixcoded@gmail.com",
+    "url": "https://themeforest.net/user/phoenixcoded"
+  },
+  "scripts": {
+    "start": "gulp",
+    "build": "gulp build-prod",
+    "format": "prettier --write ./src"
+  },
+  "overrides": {
+    "graceful-fs": "^4.2.11"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.24.3",
+    "@babel/helper-environment-visitor": "^7.22.20",
+    "del": "^6.1.1",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^6.1.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-cssbeautify": "^3.0.1",
+    "gulp-cssmin": "^0.2.0",
+    "gulp-htmlmin": "^5.0.1",
+    "gulp-inject": "^5.0.5",
+    "gulp-minify": "^3.1.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-smushit": "1.2.0",
+    "gulp-uglify": "^3.0.2",
+    "merge-stream": "^2.0.0",
+    "prettier": "3.2.5",
+    "prettier-plugin-tailwindcss": "^0.6.11",
+    "sass": "1.71.1"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "@tailwindcss/postcss": "^4.1.2",
+    "browser-sync": "^3.0.2",
+    "gulp-file-include": "^2.3.0",
+    "gulp-postcss": "^9.0.1",
+    "gulp-sourcemaps": "^3.0.0",
+    "motion": "^12.4.10",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.1.2",
+    "tiny-slider": "^2.9.4",
+    "vanilla-marquee": "^1.1.2"
+  }
+}

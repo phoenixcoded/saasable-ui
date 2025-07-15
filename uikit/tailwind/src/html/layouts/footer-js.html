@@ -1,0 +1,17 @@
+<!-- Required Js -->
+<script src="../assets/js/plugins/popper.min.js"></script>
+<script src="../assets/js/icon/custom-font.js"></script>
+<script src="../assets/js/component.js"></script>
+<script src="../assets/js/script.js"></script>
+<script src="../assets/js/theme.js"></script>
+
+@@if (pc_dark_layout != ""){
+<script>
+  layout_change('@@pc_dark_layout');
+</script>
+} 
+@@if (pc_rtl_layout != '') {
+<script>
+  layout_rtl_change('@@pc_rtl_layout');
+</script>
+}

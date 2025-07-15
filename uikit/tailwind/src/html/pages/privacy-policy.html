@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en" @@bodySetup>
+  <!-- [Head] start -->
+  <head>
+    @@include('../layouts/head-page-meta.html', {'title': 'Privacy Policy'})@@include('../layouts/head-css.html')
+  </head>
+  <!-- [Head] end -->
+  <!-- [Body] Start -->
+  <body>
+    
+    @@include('../layouts/loader.html')
+    @@include('../layouts/component/component-header.html")
+    
+    @@include('partials/small-hero-3.html')
+    @@include('partials/privacy-policy.html')
+
+    @@include('partials/footer-7.html')
+    @@include('../layouts/scroll-top.html')
+    @@include('../layouts/footer-js.html')
+    <script src="../assets/js/plugins/motion.js"></script>
+  <script type="module">
+    const { animate, inView, scroll } = Motion;
+    window.addEventListener('load', function () {
+      // translate y 
+      var anim = document.querySelectorAll('.animate-y');
+      var sec = 0;
+      inView(anim, (element) => {
+        if (element.classList.contains("delay-reset")) {
+          sec = 0
+        } else {
+          sec += 0.1;
+        }
+        animate(
+          element,
+          { opacity: [0, 1], y: [50, 0] },
+          {
+            duration: 1,
+            delay: sec,
+            ease: [0.215, 0.61, 0.355, 1]
+          }
+        )
+      })
+     
+      // translate y down
+      var anim = document.querySelector('.animate-y-down');
+        inView(anim, (element) => {
+          if(element.classList.contains("delay-reset")){
+            sec = 0
+          }else{
+            sec += 0.1;
+          }
+          animate(
+            element,
+            { opacity: [0,1], y: [-50, 0] },
+            {
+              duration: 1,
+              delay: 0.4,
+              ease: [0.215, 0.61, 0.355, 1]
+            }
+          )
+        })
+    
+    });
+  </script>
+  </body>
+</html>

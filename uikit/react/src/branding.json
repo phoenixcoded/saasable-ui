@@ -1,0 +1,24 @@
+{
+  "brandName": "SaasAble",
+  "title": "React Multipurpose UI Kit and Dashboard Template",
+  "company": {
+    "name": "Phoenixcoded",
+    "url": "https://phoenixcoded.net",
+    "socialLink": {
+      "linkedin": "https://in.linkedin.com/company/phoenixcoded",
+      "instagram": "#",
+      "facebook": "https://www.facebook.com/Phoenixcoded/",
+      "youtube": "https://www.youtube.com/@Phoenixcoded",
+      "github": "https://github.com/phoenixcoded",
+      "dribble": "https://dribbble.com/Phoenixcoded",
+      "discord": "https://discord.gg/gmqz4BWYA8",
+      "support": "https://support.phoenixcoded.net"
+    }
+  },
+  "logo": {
+    "main": "",
+    "logoIcon": "",
+    "logoFab": "",
+    "logoWatermark": ""
+  }
+}

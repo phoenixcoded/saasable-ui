@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en" @@bodySetup>
+<!-- [Head] start -->
+
+<head>
+  @@include('../layouts/head-page-meta.html', {'title': 'Navbar'}) @@include('../layouts/head-css.html')
+</head>
+<!-- [Head] end -->
+<!-- [Body] Start -->
+
+<body>
+  @@include('../layouts/loader.html') @@include('../layouts/component/component-header.html")
+  <!-- prettier-ignore -->
+  @@include('../layouts/component/component-breadcrumb.html', {
+    'breadcrumb_item': 'Block',
+    'breadcrumb_item_active': 'Navbar',
+    'page_title': 'SaasAble Navbar Section'
+  })
+  <!-- [ Main Content ] start -->
+  <section class="py-12">
+    <div class="container">
+      <div class="my-12 flex flex-col gap-6 md:gap-8 lg:gap-10">
+        @@include('../layouts/component/component-show.html', {
+          'title': 'Default navbar section 10',
+          'url': '../navbar/navbar-10.html',
+          'figmaLink': '#',
+          'defaultHeight':'320px'
+        })
+        @@include('../layouts/component/component-show.html', {
+          'title': 'Header with Social Icons - 01',
+          'url': '../navbar/navbar-1.html',
+          'figmaLink': '#',
+          'defaultHeight':'320px'
+        })
+        @@include('../layouts/component/component-show.html', {
+          'title': 'Header with Language Selection - 02',
+          'url': '../navbar/navbar-2.html',
+          'figmaLink': '#',
+          'defaultHeight':'320px'
+        })
+        @@include('../layouts/component/component-show.html', {
+          'title': 'Header with Search Input - 03',
+          'url': '../navbar/navbar-3.html',
+          'figmaLink': '#',
+          'defaultHeight':'320px'
+        })
+        @@include('../layouts/component/component-show.html', {
+          'title': 'Header with Center Full Logo & Social Icons - 06',
+          'url': '../navbar/navbar-6.html',
+          'figmaLink': '#',
+          'defaultHeight':'320px'
+        })
+        @@include('../layouts/component/component-show.html', {
+          'title': 'Default navbar section 09',
+          'url': '../navbar/navbar-9.html',
+          'figmaLink': '#',
+          'defaultHeight':'320px'
+        })
+
+      </div>
+    </div>
+  </section>
+  <!-- [ Main Content ] end -->
+  @@include('../layouts/scroll-top.html')
+  @@include('../layouts/footer-js.html')
+</body>
+
+</html>

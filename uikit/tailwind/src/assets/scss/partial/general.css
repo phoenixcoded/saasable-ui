@@ -1,0 +1,72 @@
+@layer {
+  html {
+    @apply scroll-smooth
+  }
+
+  b, strong {
+    @apply font-semibold
+  }
+
+  .container {
+    @apply max-w-full mx-auto;
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      @apply max-w-[1128px];
+    }
+  }
+
+  @media (min-width: 1280px) {
+    .container {
+      @apply max-w-[1128px];
+    }
+  }
+
+  @media (min-width: 1536px) {
+    .container {
+      @apply max-w-[1266px];
+    }
+  }
+
+
+  *:focus,
+  *:focus-visible {
+    outline: none;
+  }
+
+  hr {
+    @apply border-[var(--theme-divider)];
+  }
+
+  body {
+    font-family: "Figtree", sans-serif;
+    @apply text-base leading-normal text-[var(--theme-text-secondary)] bg-[var(--theme-bg-default)];
+  }
+
+  body::-webkit-scrollbar-track {
+    background: transparent
+  }
+
+  body::-webkit-scrollbar {
+    width: 8px;
+    background: transparent
+  }
+
+  body::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 10px
+  }
+
+  body::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+
+  body::-webkit-scrollbar-button {
+    display: none;
+  }
+
+  .common-section {
+    @apply py-8 sm:py-10 md:py-12;
+  }
+}
