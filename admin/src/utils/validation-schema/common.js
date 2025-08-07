@@ -42,7 +42,32 @@ export const lastNameSchema = {
   }
 };
 
+export const usernameSchema = {
+  required: 'Username is required',
+  pattern: {
+    value: /^[a-zA-Z0-9._]+$/, // Alphanumeric, underscores, and dots
+    message: 'Username can only contain letters, numbers, dots, and underscores'
+  },
+  validate: {
+    trim: (value) => {
+      const trimmedValue = value.trim();
+      return trimmedValue.length > 0 || 'Username cannot be empty or contain only spaces';
+    },
+    noSpaces: (value) => {
+      return !/\s/.test(value) || 'Username cannot contain spaces';
+    }
+  },
+  onBlur: (e) => {
+    e.target.value = e.target.value.trim();
+  }
+};
+
 export const contactSchema = {
   required: 'Contact number is required',
   pattern: { value: /^[0-9()\-\.]{7,15}$/, message: 'Invalid contact number' }
+};
+
+export const otpSchema = {
+  required: 'OTP is required',
+  minLength: { value: 6, message: 'OTP must be exactly 6 characters' }
 };

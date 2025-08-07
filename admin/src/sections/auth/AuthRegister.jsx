@@ -1,10 +1,10 @@
 'use client';
 import PropTypes from 'prop-types';
 
-import { useState, useRef } from 'react';
-
 // @next
 import { useRouter } from 'next/navigation';
+
+import { useState, useRef } from 'react';
 
 // @mui
 import { useTheme } from '@mui/material/styles';
@@ -22,7 +22,7 @@ import { useForm } from 'react-hook-form';
 
 // @project
 import Contact from '@/components/Contact';
-import { emailSchema, passwordSchema, firstNameSchema, lastNameSchema } from '@/utils/validationSchema';
+import { emailSchema, passwordSchema, firstNameSchema, lastNameSchema } from '@/utils/validation-schema/common';
 
 // @icons
 import { IconEye, IconEyeOff } from '@tabler/icons-react';
@@ -55,7 +55,6 @@ export default function AuthRegister({ inputSx }) {
   const onSubmit = (formData) => {
     setIsProcessing(true);
     setRegisterError('');
-
     router.push('/auth/login');
   };
 
@@ -119,11 +118,7 @@ export default function AuthRegister({ inputSx }) {
             autoComplete="new-password"
             error={Boolean(errors.password)}
             endAdornment={
-              <InputAdornment
-                position="end"
-                sx={{ cursor: 'pointer', WebkitTapHighlightColor: 'transparent' }}
-                onClick={() => setIsOpen(!isOpen)}
-              >
+              <InputAdornment position="end" sx={{ cursor: 'pointer' }} onClick={() => setIsOpen(!isOpen)}>
                 {isOpen ? <IconEye {...commonIconProps} /> : <IconEyeOff {...commonIconProps} />}
               </InputAdornment>
             }
@@ -140,11 +135,7 @@ export default function AuthRegister({ inputSx }) {
             fullWidth
             error={Boolean(errors.confirmPassword)}
             endAdornment={
-              <InputAdornment
-                position="end"
-                sx={{ cursor: 'pointer', WebkitTapHighlightColor: 'transparent' }}
-                onClick={() => setIsConfirmOpen(!isConfirmOpen)}
-              >
+              <InputAdornment position="end" sx={{ cursor: 'pointer' }} onClick={() => setIsConfirmOpen(!isConfirmOpen)}>
                 {isConfirmOpen ? <IconEye {...commonIconProps} /> : <IconEyeOff {...commonIconProps} />}
               </InputAdornment>
             }

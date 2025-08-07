@@ -1,5 +1,4 @@
 'use client';
-import PropTypes from 'prop-types';
 
 import { useEffect, useState } from 'react';
 
@@ -15,6 +14,7 @@ import Typography from '@mui/material/Typography';
 // @project
 import { APP_DEFAULT_PATH } from '@/config';
 import menuItems from '@/menu';
+import { useGetBreadcrumbsMaster } from '@/states/breadcrumbs';
 import { generateFocusStyle } from '@/utils/generateFocusStyle';
 
 // @assets
@@ -25,16 +25,17 @@ const homeBreadcrumb = { title: 'Home', url: APP_DEFAULT_PATH };
 
 /***************************  BREADCRUMBS  ***************************/
 
-export default function Breadcrumbs({ data }) {
+export default function Breadcrumbs() {
   const theme = useTheme();
   const location = usePathname();
+  const { breadcrumbsMaster } = useGetBreadcrumbsMaster();
 
   const [breadcrumbItems, setBreadcrumbItems] = useState([]);
   const [activeItem, setActiveItem] = useState();
 
   useEffect(() => {
-    if (data?.length) {
-      dataHandler(data);
+    if (breadcrumbsMaster && breadcrumbsMaster.data?.length && breadcrumbsMaster.activePath === location) {
+      dataHandler(breadcrumbsMaster.data);
     } else {
       for (const menu of menuItems?.items) {
         if (menu.type && menu.type === 'group') {
@@ -45,7 +46,7 @@ export default function Breadcrumbs({ data }) {
       }
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [data, location]);
+  }, [breadcrumbsMaster, location]);
 
   const dataHandler = (data) => {
     const active = data.at(-1);
@@ -106,5 +107,3 @@ export default function Breadcrumbs({ data }) {
     </MuiBreadcrumbs>
   );
 }
-
-Breadcrumbs.propTypes = { data: PropTypes.array };

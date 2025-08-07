@@ -32,7 +32,7 @@ export default function NotificationItem({ avatar, badgeAvatar, title, subTitle,
               overlap="circular"
               anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
               badgeContent={<Avatar size={AvatarSize.BADGE} sx={{ border: `1px solid ${theme.palette.common.white}` }} {...badgeAvatar} />}
-              sx={{ '& .MuiBadge-badge': { bottom: '22%' } }}
+              slotProps={{ badge: { sx: { bottom: '22%' } } }}
             >
               {avatarContent}
             </Badge>

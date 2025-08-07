@@ -78,7 +78,7 @@ const animation = {
   Fade
 };
 
-const iconSX = { marginRight: 8, fontSize: '1.15rem' };
+const iconSX = { fontSize: '1.15rem' };
 
 /***************************  SNACKBAR - NOTISTACK  ***************************/
 

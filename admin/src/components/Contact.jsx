@@ -27,7 +27,7 @@ import Box from '@mui/material/Box';
 import { Controller } from 'react-hook-form';
 
 // @project
-import { contactSchema } from '@/utils/validationSchema';
+import { contactSchema } from '@/utils/validation-schema/common';
 
 // @icons
 import { IconChevronDown, IconHelp } from '@tabler/icons-react';
@@ -120,7 +120,7 @@ export default function Contact({
                   type="button"
                   onClick={handleClick}
                 >
-                  {selectedCountry.countyCode}
+                  {selectedCountry.countryCode}
                 </Button>
                 <Divider orientation="vertical" flexItem />
               </Stack>
@@ -149,7 +149,7 @@ export default function Contact({
                                 >
                                   <ListItemAvatar sx={{ minWidth: 32 }}>
                                     <CardMedia
-                                      image={`https://flagcdn.com/w20/${country.countyCode.toLowerCase()}.png`}
+                                      image={`https://flagcdn.com/w20/${country.countryCode.toLowerCase()}.png`}
                                       component="img"
                                       sx={{ height: 'fit-content', width: 21 }}
                                     />

@@ -2,7 +2,7 @@
 import PropTypes from 'prop-types';
 
 // @mui
-import { alpha, styled, useTheme } from '@mui/material/styles';
+import { alpha, styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 
 // @third-party
@@ -27,8 +27,6 @@ const SimpleBarStyle = styled(MainSimpleBar)(({ theme }) => ({
 /***************************  SIMPLE SCROLL BAR   ***************************/
 
 export default function SimpleBar({ children, sx, ...other }) {
-  const theme = useTheme();
-
   return (
     <>
       <RootStyle>

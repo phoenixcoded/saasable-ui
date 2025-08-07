@@ -1,11 +1,11 @@
 'use client';
 import PropTypes from 'prop-types';
 
-import { useState } from 'react';
-
 // @next
 import NextLink from 'next/link';
 import { useRouter } from 'next/navigation';
+
+import { useState } from 'react';
 
 // @mui
 import { useTheme } from '@mui/material/styles';
@@ -25,7 +25,7 @@ import { useForm } from 'react-hook-form';
 
 // @project
 import { APP_DEFAULT_PATH } from '@/config';
-import { emailSchema, passwordSchema } from '@/utils/validationSchema';
+import { emailSchema, passwordSchema } from '@/utils/validation-schema/common';
 
 // @icons
 import { IconEye, IconEyeOff } from '@tabler/icons-react';
@@ -112,11 +112,7 @@ export default function AuthLogin({ inputSx }) {
               fullWidth
               error={Boolean(errors.password)}
               endAdornment={
-                <InputAdornment
-                  position="end"
-                  sx={{ cursor: 'pointer', WebkitTapHighlightColor: 'transparent' }}
-                  onClick={() => setIsPasswordVisible(!isPasswordVisible)}
-                >
+                <InputAdornment position="end" sx={{ cursor: 'pointer' }} onClick={() => setIsPasswordVisible(!isPasswordVisible)}>
                   {isPasswordVisible ? <IconEye {...commonIconProps} /> : <IconEyeOff {...commonIconProps} />}
                 </InputAdornment>
               }

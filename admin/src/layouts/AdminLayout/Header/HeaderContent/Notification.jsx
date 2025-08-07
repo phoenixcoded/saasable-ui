@@ -178,8 +178,8 @@ export default function Notification() {
           color="error"
           variant="dot"
           invisible={allRead || notifications.length === 0}
-          sx={{
-            '& .MuiBadge-badge': { height: 6, minWidth: 6, top: 4, right: 4, border: `1px solid ${theme.palette.background.default}` }
+          slotProps={{
+            badge: { sx: { height: 6, minWidth: 6, top: 4, right: 4, border: `1px solid ${theme.palette.background.default}` } }
           }}
         >
           <IconBell size={16} />

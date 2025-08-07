@@ -10,12 +10,7 @@ export default function Legend({ items, onToggle }) {
   return (
     <Stack direction="row" sx={{ justifyContent: 'flex-end', gap: 1.5 }}>
       {items.map((item) => (
-        <Stack
-          key={item.id}
-          direction="row"
-          sx={{ alignItems: 'center', gap: 0.5, cursor: 'pointer', WebkitTapHighlightColor: 'transparent' }}
-          onClick={() => onToggle(item.id)}
-        >
+        <Stack key={item.id} direction="row" sx={{ alignItems: 'center', gap: 0.5, cursor: 'pointer' }} onClick={() => onToggle(item.id)}>
           <Box sx={{ width: 15, height: 15, bgcolor: item.visible ? item.color : 'grey.600', borderRadius: '50%' }} />
           <Typography variant="caption" color="text.secondary">
             {item.label}

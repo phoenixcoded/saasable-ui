@@ -82,7 +82,7 @@ export default function ProfileSection() {
 
   return (
     <>
-      <Box onClick={handleActionClick} sx={{ cursor: 'pointer', WebkitTapHighlightColor: 'transparent' }}>
+      <Box onClick={handleActionClick} sx={{ cursor: 'pointer' }}>
         <Box sx={{ display: { xs: 'none', sm: 'flex' } }}>
           <Profile {...profileData} />
         </Box>

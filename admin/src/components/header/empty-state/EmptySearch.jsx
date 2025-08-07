@@ -1,4 +1,5 @@
 'use client';
+import PropTypes from 'prop-types';
 
 // @mui
 import Stack from '@mui/material/Stack';
@@ -10,7 +11,7 @@ import { DumpingDoodle } from '@/images/illustration';
 
 /***************************  HEADER - EMPTY SEARCH ***************************/
 
-export default function EmptySearch(props, ref) {
+export default function EmptySearch({ props, ref }) {
   return (
     <Stack ref={ref} {...props} sx={{ width: 1, alignItems: 'center', justifyContent: 'center', textAlign: 'center', gap: 1.5, p: 1.5 }}>
       <Box sx={{ width: 230, height: 170 }}>
@@ -27,3 +28,5 @@ export default function EmptySearch(props, ref) {
     </Stack>
   );
 }
+
+EmptySearch.propTypes = { props: PropTypes.any, ref: PropTypes.object };

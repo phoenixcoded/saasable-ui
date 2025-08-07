@@ -244,8 +244,8 @@ export default function TopReferrers() {
 
 TabPanel.propTypes = {
   children: PropTypes.any,
-  value: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-  index: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+  value: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
+  index: PropTypes.oneOfType([PropTypes.number, PropTypes.string]),
   other: PropTypes.any
 };
 

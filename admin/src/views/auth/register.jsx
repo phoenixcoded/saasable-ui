@@ -41,7 +41,7 @@ export default function Register() {
 
         <Typography variant="body2" color="text.secondary" sx={{ mt: { xs: 2, sm: 3 } }}>
           Already have an account?{' '}
-          <Link component={NextLink} underline="hover" variant="subtitle2" href="login" sx={{ '&:hover': { color: 'primary.dark' } }}>
+          <Link component={NextLink} underline="hover" variant="subtitle2" href="/auth/login" sx={{ '&:hover': { color: 'primary.dark' } }}>
             Sign In
           </Link>
         </Typography>

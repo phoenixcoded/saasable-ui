@@ -246,7 +246,7 @@ export default function Chart1() {
         series={visibleSeries.map((series) => ({ ...series, showMark: false, curve: 'linear', area: true }))}
         height={261}
         grid={{ horizontal: true }}
-        margin={{ top: 25, right: 20, bottom: 20, left: 60 }}
+        margin={{ top: 25, right: 0, bottom: -4, left: 0 }}
         xAxis={[
           {
             data: xData,
@@ -258,12 +258,8 @@ export default function Chart1() {
           }
         ]}
         yAxis={[{ scaleType: 'linear', disableLine: true, disableTicks: true, label: 'Visits' }]}
-        slotProps={{ legend: { hidden: true } }}
-        sx={{
-          '& .MuiLineElement-root': { strokeDasharray: '0', strokeWidth: 2 },
-          '& .MuiChartsAxis-left .MuiChartsAxis-label': { transform: 'translate(-15px, 0)' },
-          ...dynamicSeriesStyles
-        }}
+        hideLegend
+        sx={{ '& .MuiLineElement-root': { strokeDasharray: '0', strokeWidth: 2 }, ...dynamicSeriesStyles }}
       >
         <defs>
           {visibleSeries.map((series, index) => (
