@@ -7,7 +7,7 @@ export const ADMIN_PATH = 'https://free.admin.saasable.io/';
 export const BUY_NOW_URL = 'https://mui.com/store/items/saasable-multipurpose-ui-kit-and-dashboard-template';
 export const FREEBIES_URL = 'https://github.com/phoenixcoded/saasable-ui';
 export const DOCS_URL = 'https://phoenixcoded.gitbook.io/saasable ';
-export const BLOCK_PATH = '/blocks';
+const BLOCK_PATH = '/blocks';
 const AUTH_PATH = 'auth';
 
 export const PAGE_PATH = {
@@ -19,7 +19,7 @@ export const PAGE_PATH = {
   register: path([SECTION_PATH, AUTH_PATH, 'register']),
 
   about: path([SECTION_PATH, 'about']),
-  benefit: path([SECTION_PATH, 'benefit']),
+  metrics: path([SECTION_PATH, 'metrics']),
   blog: path([SECTION_PATH, 'blog']),
   clientele: path([SECTION_PATH, 'clientele']),
   color: path([SECTION_PATH, 'color']),
@@ -28,6 +28,7 @@ export const PAGE_PATH = {
   cookie: path([SECTION_PATH, 'cookie']),
   cta: path([SECTION_PATH, 'cta']),
   earlyAccess: path([SECTION_PATH, 'early-access']),
+  blogDetails: path([SECTION_PATH, 'blog-details']),
   error404: path([SECTION_PATH, 'error404']),
   error500: path([SECTION_PATH, 'error500']),
   faq: path([SECTION_PATH, 'faq']),
@@ -82,16 +83,17 @@ export const PRIVIEW_PATH = {
     newPassword: path([BLOCK_PATH, AUTH_PATH, 'new-password']),
     otpVerification: path([BLOCK_PATH, AUTH_PATH, 'otp-verification'])
   },
-  benefit: {
-    benefit1: path([BLOCK_PATH, 'benefit', 'benefit1']),
-    benefit2: path([BLOCK_PATH, 'benefit', 'benefit2']),
-    benefit3: path([BLOCK_PATH, 'benefit', 'benefit3']),
-    benefit4: path([BLOCK_PATH, 'benefit', 'benefit4']),
-    benefit5: path([BLOCK_PATH, 'benefit', 'benefit5']),
-    benefit6: path([BLOCK_PATH, 'benefit', 'benefit6']),
-    benefit7: path([BLOCK_PATH, 'benefit', 'benefit7']),
-    benefit8: path([BLOCK_PATH, 'benefit', 'benefit8']),
-    benefit9: path([BLOCK_PATH, 'benefit', 'benefit9'])
+  metrics: {
+    metrics1: path([BLOCK_PATH, 'metrics', 'metrics1']),
+    metrics2: path([BLOCK_PATH, 'metrics', 'metrics2']),
+    metrics3: path([BLOCK_PATH, 'metrics', 'metrics3']),
+    metrics4: path([BLOCK_PATH, 'metrics', 'metrics4']),
+    metrics5: path([BLOCK_PATH, 'metrics', 'metrics5']),
+    metrics6: path([BLOCK_PATH, 'metrics', 'metrics6']),
+    metrics7: path([BLOCK_PATH, 'metrics', 'metrics7']),
+    metrics8: path([BLOCK_PATH, 'metrics', 'metrics8']),
+    metrics9: path([BLOCK_PATH, 'metrics', 'metrics9']),
+    metrics10: path([BLOCK_PATH, 'metrics', 'metrics10'])
   },
   blog: {
     blog1: path([BLOCK_PATH, 'blog', 'blog1']),
@@ -100,8 +102,12 @@ export const PRIVIEW_PATH = {
     blog4: path([BLOCK_PATH, 'blog', 'blog4']),
     blog5: path([BLOCK_PATH, 'blog', 'blog5']),
     blog6: path([BLOCK_PATH, 'blog', 'blog6']),
-    blog7: path([BLOCK_PATH, 'blog', 'blog7'])
+    blog7: path([BLOCK_PATH, 'blog', 'blog7']),
+    blog8: path([BLOCK_PATH, 'blog', 'blog8']),
+    blog9: path([BLOCK_PATH, 'blog', 'blog9']),
+    blog10: path([BLOCK_PATH, 'blog', 'blog10'])
   },
+  blogDetails: path([BLOCK_PATH, 'blog-details']),
   clientele: {
     clientele1: path([BLOCK_PATH, 'clientele', 'clientele1']),
     clientele2: path([BLOCK_PATH, 'clientele', 'clientele2']),
@@ -109,7 +115,8 @@ export const PRIVIEW_PATH = {
     clientele4: path([BLOCK_PATH, 'clientele', 'clientele4']),
     clientele5: path([BLOCK_PATH, 'clientele', 'clientele5']),
     clientele6: path([BLOCK_PATH, 'clientele', 'clientele6']),
-    clientele7: path([BLOCK_PATH, 'clientele', 'clientele7'])
+    clientele7: path([BLOCK_PATH, 'clientele', 'clientele7']),
+    clientele8: path([BLOCK_PATH, 'clientele', 'clientele8'])
   },
   cta: {
     cta1: path([BLOCK_PATH, 'cta', 'cta1']),
@@ -123,7 +130,9 @@ export const PRIVIEW_PATH = {
     cta9: path([BLOCK_PATH, 'cta', 'cta9']),
     cta10: path([BLOCK_PATH, 'cta', 'cta10']),
     cta11: path([BLOCK_PATH, 'cta', 'cta11']),
-    cta12: path([BLOCK_PATH, 'cta', 'cta12'])
+    cta12: path([BLOCK_PATH, 'cta', 'cta12']),
+    cta13: path([BLOCK_PATH, 'cta', 'cta13']),
+    cta14: path([BLOCK_PATH, 'cta', 'cta14'])
   },
   comingSoon: path([BLOCK_PATH, 'coming-soon']),
   cookie: {
@@ -177,7 +186,9 @@ export const PRIVIEW_PATH = {
     feature22: path([BLOCK_PATH, 'feature', 'feature22']),
     feature23: path([BLOCK_PATH, 'feature', 'feature23']),
     feature24: path([BLOCK_PATH, 'feature', 'feature24']),
-    feature25: path([BLOCK_PATH, 'feature', 'feature25'])
+    feature25: path([BLOCK_PATH, 'feature', 'feature25']),
+    feature26: path([BLOCK_PATH, 'feature', 'feature26']),
+    feature27: path([BLOCK_PATH, 'feature', 'feature27'])
   },
   footer: {
     footer1: path([BLOCK_PATH, 'footer', 'footer1']),
@@ -223,7 +234,8 @@ export const PRIVIEW_PATH = {
     integration5: path([BLOCK_PATH, 'integration', 'integration5']),
     integration6: path([BLOCK_PATH, 'integration', 'integration6']),
     integration7: path([BLOCK_PATH, 'integration', 'integration7']),
-    integration8: path([BLOCK_PATH, 'integration', 'integration8'])
+    integration8: path([BLOCK_PATH, 'integration', 'integration8']),
+    integration9: path([BLOCK_PATH, 'integration', 'integration9'])
   },
   megamenu: {
     megamenu1: path([BLOCK_PATH, 'megamenu', 'megamenu1']),
@@ -259,7 +271,8 @@ export const PRIVIEW_PATH = {
     pricing6: path([BLOCK_PATH, 'pricing', 'pricing6']),
     pricing7: path([BLOCK_PATH, 'pricing', 'pricing7']),
     pricing8: path([BLOCK_PATH, 'pricing', 'pricing8']),
-    pricing9: path([BLOCK_PATH, 'pricing', 'pricing9'])
+    pricing9: path([BLOCK_PATH, 'pricing', 'pricing9']),
+    pricing10: path([BLOCK_PATH, 'pricing', 'pricing10'])
   },
   process: {
     process1: path([BLOCK_PATH, 'process', 'process1']),
@@ -271,7 +284,10 @@ export const PRIVIEW_PATH = {
     process7: path([BLOCK_PATH, 'process', 'process7']),
     process8: path([BLOCK_PATH, 'process', 'process8'])
   },
-  privacyPolicy: path([BLOCK_PATH, 'privacy-policy']),
+  privacyPolicy: {
+    privacyPolicy1: path([BLOCK_PATH, 'privacy-policy', 'privacy-policy1']),
+    privacyPolicy2: path([BLOCK_PATH, 'privacy-policy', 'privacy-policy2'])
+  },
   proPage: path([BLOCK_PATH, 'pro-page']),
 
   smallHero: {
@@ -281,7 +297,8 @@ export const PRIVIEW_PATH = {
     smallHero4: path([BLOCK_PATH, 'small-hero', 'small-hero4']),
     smallHero5: path([BLOCK_PATH, 'small-hero', 'small-hero5']),
     smallHero6: path([BLOCK_PATH, 'small-hero', 'small-hero6']),
-    smallHero7: path([BLOCK_PATH, 'small-hero', 'small-hero7'])
+    smallHero7: path([BLOCK_PATH, 'small-hero', 'small-hero7']),
+    smallHero8: path([BLOCK_PATH, 'small-hero', 'small-hero8'])
   },
   team: {
     team1: path([BLOCK_PATH, 'team', 'team1']),

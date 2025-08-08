@@ -18,6 +18,12 @@ import Error500Server from '@/images/maintenance/Error500Server';
 
 /***************************  ERROR 500 - PAGES  ***************************/
 
+/**
+ *
+ * Demos:
+ * - [Error500](https://www.saasable.io/blocks/error500)
+ */
+
 export default function Error500Page({ primaryBtn, heading }) {
   return (
     <ContainerWrapper>

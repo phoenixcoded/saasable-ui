@@ -16,7 +16,7 @@ export default function IconCard({ icon, title, content, iconAvatar, contentCard
   const boxPadding = cardPadding ? { ...cardPadding } : defaultBoxPadding;
 
   return (
-    <GraphicsCard sx={{ height: 1 }}>
+    <GraphicsCard sx={{ height: 1, width: 1 }}>
       <Stack sx={{ gap: iconAvatar || contentCard ? 2.5 : 2, height: 1 }} {...(stackProps && { ...stackProps })}>
         <Box sx={{ px: boxPadding, pt: boxPadding, lineHeight: 0 }}>
           {iconAvatar ? (
@@ -32,7 +32,7 @@ export default function IconCard({ icon, title, content, iconAvatar, contentCard
         <GraphicsCard
           sx={{ p: boxPadding, height: 1, ...(contentCard && { bgcolor: typeof contentCard === 'boolean' ? 'grey.200' : contentCard }) }}
         >
-          <Stack sx={{ gap: { xs: 1, sm: 1.5 } }}>
+          <Stack sx={{ gap: { xs: 1, sm: 1.5 }, justifyContent: 'flex-end', height: 1 }}>
             {title && (
               <Typography variant="h4" {...(titleProps && { ...titleProps })}>
                 {title}

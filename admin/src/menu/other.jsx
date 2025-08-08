@@ -26,7 +26,7 @@ const other = {
       id: 'support',
       title: 'Support',
       type: 'item',
-      url: 'https://support.phoenixcoded.net',
+      url: 'https://codedthemes.support-hub.io/',
       target: true,
       icon: 'IconLifebuoy'
     },

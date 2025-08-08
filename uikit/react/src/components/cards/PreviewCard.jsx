@@ -38,16 +38,10 @@ export default function PreviewCard({ title, theme, image, status }) {
               <SvgIcon name="tabler-arrow-up-right" color="text.primary" size={16} stroke={2} />
             ) : (
               <Chip
-                label={
-                  <Typography variant="caption" sx={{ color: 'primary.main' }}>
-                    {status}
-                  </Typography>
-                }
+                label={status}
                 size="small"
-                sx={{
-                  bgcolor: 'primary.lighter',
-                  '& .MuiChip-label': { px: 1.5, py: 0.5, minWidth: 20 }
-                }}
+                slotProps={{ label: { sx: { px: 1.5, py: 0.5, minWidth: 20, typography: 'caption', color: 'primary.main' } } }}
+                sx={{ bgcolor: 'primary.lighter' }}
               />
             )}
           </Stack>

@@ -35,18 +35,19 @@ export const FIGMA_LINK = {
       link: BUY_NOW_URL
     }
   },
-  benefit: {
+  metrics: {
     link: BUY_NOW_URL,
     variant: {
-      benefit1: BUY_NOW_URL,
-      benefit2: BUY_NOW_URL,
-      benefit3: BUY_NOW_URL,
-      benefit4: BUY_NOW_URL,
-      benefit5: BUY_NOW_URL,
-      benefit6: BUY_NOW_URL,
-      benefit7: BUY_NOW_URL,
-      benefit8: BUY_NOW_URL,
-      benefit9: BUY_NOW_URL
+      metrics1: BUY_NOW_URL,
+      metrics2: BUY_NOW_URL,
+      metrics3: BUY_NOW_URL,
+      metrics4: BUY_NOW_URL,
+      metrics5: BUY_NOW_URL,
+      metrics6: BUY_NOW_URL,
+      metrics7: BUY_NOW_URL,
+      metrics8: BUY_NOW_URL,
+      metrics9: BUY_NOW_URL,
+      metrics10: BUY_NOW_URL
     }
   },
   blog: {
@@ -58,9 +59,13 @@ export const FIGMA_LINK = {
       blog4: BUY_NOW_URL,
       blog5: BUY_NOW_URL,
       blog6: BUY_NOW_URL,
-      blog7: BUY_NOW_URL
+      blog7: BUY_NOW_URL,
+      blog8: BUY_NOW_URL,
+      blog9: BUY_NOW_URL,
+      blog10: BUY_NOW_URL
     }
   },
+  blogDetails: { link: BUY_NOW_URL },
   clientele: {
     link: BUY_NOW_URL,
     variant: {
@@ -70,7 +75,8 @@ export const FIGMA_LINK = {
       clientele4: BUY_NOW_URL,
       clientele5: BUY_NOW_URL,
       clientele6: BUY_NOW_URL,
-      clientele7: BUY_NOW_URL
+      clientele7: BUY_NOW_URL,
+      clientele8: BUY_NOW_URL
     }
   },
   color: {
@@ -90,7 +96,9 @@ export const FIGMA_LINK = {
       cta9: BUY_NOW_URL,
       cta10: BUY_NOW_URL,
       cta11: BUY_NOW_URL,
-      cta12: BUY_NOW_URL
+      cta12: BUY_NOW_URL,
+      cta13: BUY_NOW_URL,
+      cta14: BUY_NOW_URL
     }
   },
   cookie: {
@@ -160,7 +168,9 @@ export const FIGMA_LINK = {
       feature22: BUY_NOW_URL,
       feature23: BUY_NOW_URL,
       feature24: BUY_NOW_URL,
-      feature25: BUY_NOW_URL
+      feature25: BUY_NOW_URL,
+      feature26: BUY_NOW_URL,
+      feature27: BUY_NOW_URL
     }
   },
   footer: {
@@ -221,7 +231,8 @@ export const FIGMA_LINK = {
       integration5: BUY_NOW_URL,
       integration6: BUY_NOW_URL,
       integration7: BUY_NOW_URL,
-      integration8: BUY_NOW_URL
+      integration8: BUY_NOW_URL,
+      integration9: BUY_NOW_URL
     }
   },
   megamenu: {
@@ -269,7 +280,8 @@ export const FIGMA_LINK = {
       pricing6: BUY_NOW_URL,
       pricing7: BUY_NOW_URL,
       pricing8: BUY_NOW_URL,
-      pricing9: BUY_NOW_URL
+      pricing9: BUY_NOW_URL,
+      pricing10: BUY_NOW_URL
     }
   },
   process: {
@@ -301,7 +313,8 @@ export const FIGMA_LINK = {
       smallHero4: BUY_NOW_URL,
       smallHero5: BUY_NOW_URL,
       smallHero6: BUY_NOW_URL,
-      smallHero7: BUY_NOW_URL
+      smallHero7: BUY_NOW_URL,
+      smallHero8: BUY_NOW_URL
     }
   },
   team: {

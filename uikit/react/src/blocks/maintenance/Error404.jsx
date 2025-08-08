@@ -16,6 +16,15 @@ import Error404 from '@/images/maintenance/Error404';
 
 /***************************  ERROR 404 - PAGES  ***************************/
 
+/**
+ *
+ * Demos:
+ * - [Error404](https://www.saasable.io/blocks/error404)
+ *
+ *  API
+ * - [Error404 API](https://phoenixcoded.gitbook.io/saasable/ui-kit/development/components/maintenance/error404#props-details)
+ */
+
 export default function Error404Page({ primaryBtn, heading }) {
   return (
     <ContainerWrapper>

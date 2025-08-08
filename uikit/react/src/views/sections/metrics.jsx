@@ -10,106 +10,115 @@ import SimulatorTypeset from '@/components/SimulatorTypeset';
 import { PRIVIEW_PATH, SECTION_PATH } from '@/path';
 import { FIGMA_LINK } from '@/utils/constant';
 
-/***************************  BENEFIT - BREADCRUMBS  ***************************/
+/***************************  METRICS - BREADCRUMBS  ***************************/
 
 let breadcrumbs = [
   { title: 'Home', to: process.env.NEXT_PUBLIC_BASE_NAME || '/' },
   { title: 'Components', to: SECTION_PATH },
-  { title: 'Benefit' }
+  { title: 'metrics' }
 ];
 
-/***************************  BENEFIT - DATA  ***************************/
+/***************************  METRICS - DATA  ***************************/
 
 const sectionsData = [
   {
     typeset: {
-      heading: 'Default benefit section 05',
+      heading: 'Default metrics section 05',
       caption:
         'Use this default example with an announcement badge, heading, CTA buttons, and customer logos to showcase what your website offers.',
-      figmaLink: FIGMA_LINK.benefit.variant.benefit5
+      figmaLink: FIGMA_LINK.metrics.variant.metrics5
     },
-    src: PRIVIEW_PATH.benefit.benefit5
+    src: PRIVIEW_PATH.metrics.metrics5
   },
   {
     typeset: {
-      heading: 'Default benefit section 01',
+      heading: 'Default metrics section 01',
       caption:
         'Use this default example with an announcement badge, heading, CTA buttons, and customer logos to showcase what your website offers.',
-      figmaLink: FIGMA_LINK.benefit.variant.benefit1
-    },
-    src: PRIVIEW_PATH.proPage
-  },
-  {
-    typeset: {
-      heading: 'Default benefit section 02',
-      caption:
-        'Use this default example with an announcement badge, heading, CTA buttons, and customer logos to showcase what your website offers.',
-      figmaLink: FIGMA_LINK.benefit.variant.benefit2
+      figmaLink: FIGMA_LINK.metrics.variant.metrics1
     },
     src: PRIVIEW_PATH.proPage
   },
   {
     typeset: {
-      heading: 'Default benefit section 03',
+      heading: 'Default metrics section 02',
       caption:
         'Use this default example with an announcement badge, heading, CTA buttons, and customer logos to showcase what your website offers.',
-      figmaLink: FIGMA_LINK.benefit.variant.benefit3
+      figmaLink: FIGMA_LINK.metrics.variant.metrics2
     },
     src: PRIVIEW_PATH.proPage
   },
   {
     typeset: {
-      heading: 'Default benefit section 04',
+      heading: 'Default metrics section 03',
       caption:
         'Use this default example with an announcement badge, heading, CTA buttons, and customer logos to showcase what your website offers.',
-      figmaLink: FIGMA_LINK.benefit.variant.benefit4
+      figmaLink: FIGMA_LINK.metrics.variant.metrics3
     },
     src: PRIVIEW_PATH.proPage
   },
   {
     typeset: {
-      heading: 'Default benefit section 06',
+      heading: 'Default metrics section 04',
       caption:
         'Use this default example with an announcement badge, heading, CTA buttons, and customer logos to showcase what your website offers.',
-      figmaLink: FIGMA_LINK.benefit.variant.benefit6
+      figmaLink: FIGMA_LINK.metrics.variant.metrics4
     },
     src: PRIVIEW_PATH.proPage
   },
   {
     typeset: {
-      heading: 'Default benefit section 07',
+      heading: 'Default metrics section 06',
       caption:
         'Use this default example with an announcement badge, heading, CTA buttons, and customer logos to showcase what your website offers.',
-      figmaLink: FIGMA_LINK.benefit.variant.benefit7
+      figmaLink: FIGMA_LINK.metrics.variant.metrics6
     },
     src: PRIVIEW_PATH.proPage
   },
   {
     typeset: {
-      heading: 'Default benefit section 08',
+      heading: 'Default metrics section 07',
       caption:
         'Use this default example with an announcement badge, heading, CTA buttons, and customer logos to showcase what your website offers.',
-      figmaLink: FIGMA_LINK.benefit.variant.benefit8
+      figmaLink: FIGMA_LINK.metrics.variant.metrics7
     },
     src: PRIVIEW_PATH.proPage
   },
   {
     typeset: {
-      heading: 'Default benefit section 09',
+      heading: 'Default metrics section 08',
       caption:
         'Use this default example with an announcement badge, heading, CTA buttons, and customer logos to showcase what your website offers.',
-      figmaLink: FIGMA_LINK.benefit.variant.benefit9
+      figmaLink: FIGMA_LINK.metrics.variant.metrics8
+    },
+    src: PRIVIEW_PATH.proPage
+  },
+  {
+    typeset: {
+      heading: 'Default metrics section 09',
+      caption:
+        'Use this default example with an announcement badge, heading, CTA buttons, and customer logos to showcase what your website offers.',
+      figmaLink: FIGMA_LINK.metrics.variant.metrics9
+    },
+    src: PRIVIEW_PATH.proPage
+  },
+  {
+    typeset: {
+      heading: 'Default metrics section 10',
+      caption:
+        'Use this default example with an announcement badge, heading, CTA buttons, and customer logos to showcase what your website offers.',
+      figmaLink: FIGMA_LINK.metrics.variant.metrics10
     },
     src: PRIVIEW_PATH.proPage
   }
 ];
 
-/***************************  SECTIONS - BENEFIT  ***************************/
+/***************************  SECTIONS - METRICS  ***************************/
 
-export default function Benefit() {
+export default function Metrics() {
   return (
     <>
-      <SectionHero {...{ heading: `${branding.brandName} Benefit Section`, breadcrumbs }} />
+      <SectionHero {...{ heading: `${branding.brandName} Metrics Section`, breadcrumbs }} />
       <ContainerWrapper>
         <Stack sx={{ gap: { xs: 3, sm: 4, md: 5 }, my: 6 }}>
           {sectionsData.map((item, index) => (

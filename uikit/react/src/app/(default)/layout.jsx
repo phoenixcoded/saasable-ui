@@ -4,23 +4,23 @@ import dynamic from 'next/dynamic';
 
 // @project
 const ScrollFab = dynamic(() => import('@/components/ScrollFab'));
-const ThemeAI = dynamic(() => import('@/views/landings/ai/theme'));
+// const ThemeAI = dynamic(() => import('@/views/landings/ai/theme'));
 const MainLayout = dynamic(() => import('@/views/landings/default/layout'));
 
 /***************************  LAYOUT - AI  ***************************/
 
 export default function AI({ children }) {
   return (
-    <ThemeAI>
-      <MainLayout>
-        <>
-          {children}
+    // <ThemeAI>
+    <MainLayout>
+      <>
+        {children}
 
-          {/* scroll to top section */}
-          <ScrollFab />
-        </>
-      </MainLayout>
-    </ThemeAI>
+        {/* scroll to top section */}
+        <ScrollFab />
+      </>
+    </MainLayout>
+    // </ThemeAI>
   );
 }
 

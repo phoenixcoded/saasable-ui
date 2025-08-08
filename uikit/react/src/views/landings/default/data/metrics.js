@@ -1,4 +1,4 @@
-export const benefit = {
+export const metrics = {
   heading: 'Endless Possibilities',
   caption: 'Everything you need to design both the marketing site and the admin interface for your SaaS product.',
   blockDetail: [

@@ -76,6 +76,14 @@ const sectionsData = [
       figmaLink: FIGMA_LINK.clientele.variant.clientele7
     },
     src: PRIVIEW_PATH.proPage
+  },
+  {
+    typeset: {
+      heading: 'Clientele Section - 08',
+      caption: '',
+      figmaLink: FIGMA_LINK.clientele.variant.clientele8
+    },
+    src: PRIVIEW_PATH.proPage
   }
 ];
 

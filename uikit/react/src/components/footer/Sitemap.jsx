@@ -14,6 +14,7 @@ import Typography from '@mui/material/Typography';
 
 // @project
 import branding from '@/branding.json';
+import { DOCS_URL, FREEBIES_URL } from '@/path';
 import { generateFocusVisibleStyles } from '@/utils/CommonFocusStyle';
 
 /***************************  SITEMAP - DATA  ***************************/
@@ -21,25 +22,25 @@ import { generateFocusVisibleStyles } from '@/utils/CommonFocusStyle';
 const linkProps = { target: '_blank', rel: 'noopener noreferrer' };
 const menuItems = [
   {
-    id: 'use-case',
+    id: 'resources',
     grid: { size: { xs: 12, sm: 'auto' } },
-    title: 'Use Case',
+    title: 'Resources',
     menu: [
       {
-        label: 'Business Analytics',
-        link: { href: '#' }
+        label: 'Freebies',
+        link: { href: FREEBIES_URL, ...linkProps }
       },
       {
-        label: 'Marketing Automation',
-        link: { href: '#' }
+        label: 'Documentation',
+        link: { href: DOCS_URL, ...linkProps }
       },
       {
-        label: 'Collaboration Suites',
-        link: { href: '#' }
+        label: 'Blog',
+        link: { href: 'https://blog.saasable.io/', ...linkProps }
       },
       {
-        label: 'Project Management',
-        link: { href: '#' }
+        label: 'Refund Policy',
+        link: { href: 'https://mui.com/store/customer-refund-policy/', ...linkProps }
       }
     ]
   },
@@ -50,11 +51,11 @@ const menuItems = [
     menu: [
       {
         label: 'Pricing',
-        link: { href: '/pricing', ...linkProps }
+        link: { href: 'https://mui.com/store/items/saasable-multipurpose-ui-kit-and-dashboard/', ...linkProps }
       },
       {
         label: 'FAQ',
-        link: { href: '/faq', ...linkProps }
+        link: { href: 'https://phoenixcoded.gitbook.io/saasable/faq', ...linkProps }
       },
       {
         label: 'Support',
@@ -120,7 +121,7 @@ export default function Sitemap({ list, isMenuDesign }) {
                   <MenuItem
                     key={i}
                     disableRipple
-                    sx={{ ...menuItemStyle, ...(isMenuDesign && { ...theme.typography.caption2, fontWeight: 400, my: 0.25 }) }}
+                    sx={{ ...menuItemStyle, ...(isMenuDesign && { typography: 'caption2', fontWeight: 400, my: 0.25 }) }}
                     {...(menu.link && { component: NextLink, ...menu.link })}
                     tabIndex={0}
                     aria-label={menu.label}

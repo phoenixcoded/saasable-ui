@@ -246,6 +246,24 @@ const sectionsData = [
       figmaLink: FIGMA_LINK.feature.variant.feature25
     },
     src: PRIVIEW_PATH.proPage
+  },
+  {
+    typeset: {
+      heading: 'Default feature section 26',
+      caption:
+        'Use this default example with an announcement badge, heading, CTA buttons, and customer logos to showcase what your website offers.',
+      figmaLink: FIGMA_LINK.feature.variant.feature26
+    },
+    src: PRIVIEW_PATH.proPage
+  },
+  {
+    typeset: {
+      heading: 'Default feature section 27',
+      caption:
+        'Use this default example with an announcement badge, heading, CTA buttons, and customer logos to showcase what your website offers.',
+      figmaLink: FIGMA_LINK.feature.variant.feature27
+    },
+    src: PRIVIEW_PATH.proPage
   }
 ];
 

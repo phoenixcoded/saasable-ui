@@ -44,7 +44,7 @@ const socialIcons = [
 export default function FollowUS({ heading = true, color }) {
   return (
     <Stack sx={{ alignItems: { xs: 'center', md: 'flex-start' }, gap: 2, textAlign: { xs: 'center', md: 'left' } }}>
-      {heading && <Typeset {...{ heading: typeof heading === 'string' ? heading : 'Follow Us on', headingProps: { variant: 'h4' } }} />}
+      {heading && <Typeset {...{ heading: typeof heading === 'string' ? heading : 'Follow us on', headingProps: { variant: 'h4' } }} />}
       <Stack direction="row" sx={{ gap: { xs: 0.5, sm: 1.5 } }}>
         {socialIcons.map((item, index) => (
           <Link
@@ -74,4 +74,4 @@ export default function FollowUS({ heading = true, color }) {
   );
 }
 
-FollowUS.propTypes = { heading: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]), color: PropTypes.string };
+FollowUS.propTypes = { heading: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]), color: PropTypes.string };

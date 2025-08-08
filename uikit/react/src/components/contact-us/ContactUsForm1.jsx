@@ -91,7 +91,7 @@ export default function ContactUsForm1() {
             <FieldLabel name="First Name" />
             <OutlinedInput
               {...register('firstName', firstNameSchema)}
-              placeholder="First Name"
+              placeholder="First name"
               slotProps={{ input: { 'aria-label': 'First name' } }}
               fullWidth
               error={errors.firstName && Boolean(errors.firstName)}
@@ -104,7 +104,7 @@ export default function ContactUsForm1() {
             <FieldLabel name="Last Name" />
             <OutlinedInput
               {...register('lastName', lastNameSchema)}
-              placeholder="Last Name"
+              placeholder="Last name"
               slotProps={{ input: { 'aria-label': 'Last name' } }}
               fullWidth
               error={errors.lastName && Boolean(errors.lastName)}
@@ -127,7 +127,7 @@ export default function ContactUsForm1() {
         </Grid>
         <Grid size={12}>
           <Stack sx={{ gap: 0.5 }}>
-            <FieldLabel name="Phone number" />
+            <FieldLabel name="Phone Number" />
             <Controller
               control={control}
               name="phone"
@@ -144,7 +144,7 @@ export default function ContactUsForm1() {
                       <Button
                         endIcon={<SvgIcon name="tabler-chevron-down" size={16} color="text.primary" stroke={2} />}
                         sx={{
-                          ...theme.typography.body1,
+                          typography: 'body1',
                           fontWeight: 500,
                           p: { xs: 0.25 },
                           borderRadius: 2.5,
@@ -243,7 +243,7 @@ export default function ContactUsForm1() {
           <Stack sx={{ alignItems: 'flex-start', mt: { xs: 0.5, sm: 1.5 } }}>
             <ButtonAnimationWrapper>
               <Button type="submit" color="primary" variant="contained" size="large">
-                Send Message
+                Send message
               </Button>
             </ButtonAnimationWrapper>
           </Stack>

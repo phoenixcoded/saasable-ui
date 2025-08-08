@@ -92,7 +92,7 @@ export default function ContactUsForm2() {
               <FieldLabel name="First Name" />
               <OutlinedInput
                 {...register('firstName', firstNameSchema)}
-                placeholder="First Name"
+                placeholder="First name"
                 slotProps={{ input: { 'aria-label': 'First name' } }}
                 fullWidth
                 error={errors.firstName && Boolean(errors.firstName)}
@@ -105,7 +105,7 @@ export default function ContactUsForm2() {
               <FieldLabel name="Last Name" />
               <OutlinedInput
                 {...register('lastName', lastNameSchema)}
-                placeholder="Last Name"
+                placeholder="Last name"
                 slotProps={{ input: { 'aria-label': 'Last name' } }}
                 fullWidth
                 error={errors.lastName && Boolean(errors.lastName)}
@@ -128,7 +128,7 @@ export default function ContactUsForm2() {
           </Grid>
           <Grid size={{ xs: 12, sm: 6 }}>
             <Stack sx={{ gap: 0.5 }}>
-              <FieldLabel name="Phone number" />
+              <FieldLabel name="Phone Number" />
               <Controller
                 control={control}
                 name="phone"
@@ -242,7 +242,7 @@ export default function ContactUsForm2() {
         <Box sx={{ textAlign: 'center' }}>
           <ButtonAnimationWrapper>
             <Button type="submit" color="primary" size="large" variant="contained">
-              Send Message
+              Send message
             </Button>
           </ButtonAnimationWrapper>
         </Box>

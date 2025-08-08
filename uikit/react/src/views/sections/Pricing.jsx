@@ -101,6 +101,24 @@ const sectionsData = [
       figmaLink: FIGMA_LINK.pricing.variant.pricing8
     },
     src: PRIVIEW_PATH.proPage
+  },
+  {
+    typeset: {
+      heading: 'Default pricing section 09',
+      caption:
+        'Use this default example with an announcement badge, heading, CTA buttons, and customer logos to showcase what your website offers.',
+      figmaLink: FIGMA_LINK.pricing.variant.pricing9
+    },
+    src: PRIVIEW_PATH.proPage
+  },
+  {
+    typeset: {
+      heading: 'Default pricing section 10',
+      caption:
+        'Use this default example with an announcement badge, heading, CTA buttons, and customer logos to showcase what your website offers.',
+      figmaLink: FIGMA_LINK.pricing.variant.pricing10
+    },
+    src: PRIVIEW_PATH.proPage
   }
 ];
 

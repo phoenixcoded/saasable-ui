@@ -31,10 +31,10 @@ const data = {
       link: PAGE_PATH.feature
     },
     {
-      title: 'Benefits',
+      title: 'Metrics',
       subTitle: '9 Different Variants',
-      image: `${imagePrefix}/benefits-light.svg`,
-      link: PAGE_PATH.benefit
+      image: `${imagePrefix}/metrics-light.svg`,
+      link: PAGE_PATH.metrics
     },
     {
       title: 'Process',

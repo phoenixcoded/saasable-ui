@@ -26,8 +26,64 @@ import { SECTION_COMMON_PY } from '@/utils/constant';
 
 /***************************  FOOTER - 7 DATA  ***************************/
 
+/**
+ *
+ * Demos:
+ * - [Footer7](https://www.saasable.io/blocks/footer/footer7)
+ */
+
 const linkProps = { target: '_blank', rel: 'noopener noreferrer' };
 const data = [
+  {
+    id: 'resources',
+    grid: { size: { xs: 12, sm: 'auto' } },
+    title: 'Resources',
+    menu: [
+      {
+        label: 'Freebies',
+        link: { href: FREEBIES_URL, ...linkProps }
+      },
+      {
+        label: 'Documentation',
+        link: { href: DOCS_URL, ...linkProps }
+      },
+      {
+        label: 'Blog',
+        link: { href: 'https://blog.saasable.io/', ...linkProps }
+      },
+      {
+        label: 'Refund Policy',
+        link: { href: 'https://mui.com/store/customer-refund-policy/', ...linkProps }
+      }
+    ]
+  },
+  {
+    id: 'support',
+    grid: { size: { xs: 6, sm: 'auto' } },
+    title: 'Support',
+    menu: [
+      {
+        label: 'Pricing',
+        link: { href: 'https://mui.com/store/items/saasable-multipurpose-ui-kit-and-dashboard/', ...linkProps }
+      },
+      {
+        label: 'FAQs',
+        link: { href: 'https://phoenixcoded.gitbook.io/saasable/faq', ...linkProps }
+      },
+      {
+        label: 'Support',
+        link: { href: branding.company.socialLink.support, ...linkProps }
+      },
+      {
+        label: 'License Terms',
+        link: { href: 'https://mui.com/store/license/', ...linkProps }
+      },
+      {
+        label: 'Discord',
+        link: { href: branding.company.socialLink.discord, ...linkProps }
+      }
+    ]
+  },
   {
     id: 'company',
     grid: { size: { xs: 6, sm: 'auto' } },
@@ -47,60 +103,6 @@ const data = [
       {
         label: 'Contact Us',
         link: { href: '/contact', ...linkProps }
-      }
-    ]
-  },
-  {
-    id: 'support',
-    grid: { size: { xs: 6, sm: 'auto' } },
-    title: 'Support',
-    menu: [
-      {
-        label: 'Pricing',
-        link: { href: '#' }
-      },
-      {
-        label: 'FAQ',
-        link: { href: '#' }
-      },
-      {
-        label: 'Support',
-        link: { href: branding.company.socialLink.support, ...linkProps }
-      },
-      {
-        label: 'License Terms',
-        link: { href: 'https://mui.com/store/license/', ...linkProps }
-      },
-      {
-        label: 'Discord',
-        link: { href: branding.company.socialLink.discord, ...linkProps }
-      }
-    ]
-  },
-  {
-    id: 'resources',
-    grid: { size: { xs: 12, sm: 'auto' } },
-    title: 'Resources',
-    menu: [
-      {
-        label: 'Freebies',
-        link: { href: FREEBIES_URL, ...linkProps }
-      },
-      {
-        label: 'Documentation',
-        link: { href: DOCS_URL, ...linkProps }
-      },
-      {
-        label: 'Blog',
-        link: { href: 'https://blog.saasable.io/', ...linkProps }
-      },
-      {
-        label: 'Privacy Policy',
-        link: { href: '/privacy-policy', ...linkProps }
-      },
-      {
-        label: 'Refund Policy',
-        link: { href: 'https://mui.com/store/customer-refund-policy/', ...linkProps }
       }
     ]
   }
@@ -143,16 +145,16 @@ export default function Footer7() {
 
   return (
     <ContainerWrapper sx={{ py: SECTION_COMMON_PY }}>
-      <Stack id="footer-7" role="contentinfo" rel="noopener noreferrer" aria-label="Footer 7" sx={{ gap: { xs: 3, sm: 4, md: 5 } }}>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{
-            duration: 0.5,
-            delay: 0.4
-          }}
-        >
+      <motion.div
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{
+          duration: 0.5,
+          delay: 0.4
+        }}
+      >
+        <Stack id="footer-7" role="contentinfo" rel="noopener noreferrer" aria-label="Footer 7" sx={{ gap: { xs: 3, sm: 4, md: 5 } }}>
           <Grid container spacing={{ xs: 4, md: 3 }}>
             <Grid size={{ xs: 12, md: 6 }}>
               <Stack direction={{ sm: 'row', md: 'column' }} sx={{ gap: 3, justifyContent: 'space-between', height: 1 }}>
@@ -181,16 +183,6 @@ export default function Footer7() {
               <Sitemap list={data} isMenuDesign />
             </Grid>
           </Grid>
-        </motion.div>
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{
-            duration: 0.5,
-            delay: 0.4
-          }}
-        >
           <GraphicsCard sx={{ borderRadius: { xs: 6, sm: 8 } }}>
             <Stack
               direction={{ sm: 'row' }}
@@ -206,8 +198,8 @@ export default function Footer7() {
               <FollowUS heading={false} color="grey.100" />
             </Stack>
           </GraphicsCard>
-        </motion.div>
-      </Stack>
+        </Stack>
+      </motion.div>
     </ContainerWrapper>
   );
 }

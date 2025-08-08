@@ -15,7 +15,7 @@ import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 
 // @third-party
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 
 // @project
 import ButtonAnimationWrapper from '@/components/ButtonAnimationWrapper';
@@ -33,6 +33,15 @@ import Background from '@/images/graphics/Background';
 import Wave from '@/images/graphics/Wave';
 
 /***************************  OTHER - 1  ***************************/
+
+/**
+ *
+ * Demos:
+ * - [Other1](https://www.saasable.io/blocks/other/other1)
+ *
+ * API
+ * - [Other1 API](https://phoenixcoded.gitbook.io/saasable/ui-kit/development/components/other/other1#props-details)
+ */
 
 export default function Other1({ heading, description, primaryBtn, sections }) {
   const theme = useTheme();
@@ -71,7 +80,6 @@ export default function Other1({ heading, description, primaryBtn, sections }) {
                       height: { xs: 240, sm: 324, md: 380 },
                       position: 'relative',
                       overflow: 'hidden',
-                      WebkitTapHighlightColor: 'transparent',
                       ...(isFocusWithin && { '&:focus-within': generateFocusVisibleStyles(theme.palette.primary.main) })
                     }}
                   >
@@ -112,12 +120,26 @@ export default function Other1({ heading, description, primaryBtn, sections }) {
                         background: `linear-gradient(180deg, ${alpha(theme.palette.grey[100], 0)} 0%, ${theme.palette.grey[100]} 100%)`
                       }}
                     >
-                      <Typography variant="h4" sx={{ color: 'primary.main' }}>
-                        {item.title}
-                      </Typography>
-                      <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                        {item.subTitle}
-                      </Typography>
+                      <motion.div
+                        initial={{ opacity: 0, y: 25 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5, delay: 0.4 }}
+                      >
+                        <Typography variant="h4" sx={{ color: 'primary.main' }}>
+                          {item.title}
+                        </Typography>
+                      </motion.div>
+                      <motion.div
+                        initial={{ opacity: 0, y: 25 }}
+                        whileInView={{ opacity: 1, y: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.5, delay: 0.6 }}
+                      >
+                        <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+                          {item.subTitle}
+                        </Typography>
+                      </motion.div>
                     </Stack>
                   </GraphicsCard>
                 </motion.div>
@@ -140,13 +162,10 @@ export default function Other1({ heading, description, primaryBtn, sections }) {
             </motion.div>
           </Typography>
           <motion.div
-            initial={{ opacity: 0, y: 15 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{
-              duration: 0.5,
-              delay: 0.4
-            }}
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.3, ease: 'easeInOut' }}
+            whileHover={{ scale: 1.06 }}
           >
             <ButtonAnimationWrapper>
               <Button variant="outlined" {...primaryBtn} />
