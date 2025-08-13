@@ -83,6 +83,15 @@ const sectionsData = [
       figmaLink: FIGMA_LINK.smallHero.variant.smallHero7
     },
     src: PRIVIEW_PATH.proPage
+  },
+  {
+    typeset: {
+      heading: 'Default small hero section 08',
+      caption:
+        'Use this default example with an announcement badge, heading, CTA buttons, and customer logos to showcase what your website offers.',
+      figmaLink: FIGMA_LINK.smallHero.variant.smallHero8
+    },
+    src: PRIVIEW_PATH.proPage
   }
 ];
 

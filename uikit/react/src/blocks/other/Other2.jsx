@@ -13,6 +13,15 @@ import { GraphicsCard } from '@/components/cards';
 
 /***************************  OTHER - 2  ***************************/
 
+/**
+ *
+ * Demos:
+ * - [Other2](https://www.saasable.io/blocks/other/other2)
+ *
+ * API
+ * - [Other2 API](https://phoenixcoded.gitbook.io/saasable/ui-kit/development/components/other/other2#props-details)
+ */
+
 export default function Other2() {
   const theme = useTheme();
   const lightColor = theme.palette.secondary.light;

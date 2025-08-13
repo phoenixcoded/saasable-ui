@@ -43,7 +43,7 @@ export default function LazySection({ sections, fallback = <Loader />, offset = 
 }
 
 LazySection.propTypes = {
-  sections: PropTypes.oneOfType([PropTypes.any, PropTypes.array]),
+  sections: PropTypes.oneOfType([PropTypes.array, PropTypes.any]),
   fallback: PropTypes.node,
   Loader: PropTypes.any,
   offset: PropTypes.string,

@@ -32,8 +32,8 @@ import Wave from '@/images/graphics/Wave';
 
 const options = [
   { label: 'About', path: PAGE_PATH.about },
-  { label: 'Benefit', path: PAGE_PATH.benefit },
   { label: 'Blog', path: PAGE_PATH.blog },
+  { label: 'Blog Details', path: PAGE_PATH.blogDetails },
   { label: 'CTA', path: PAGE_PATH.cta },
   { label: 'Clientele', path: PAGE_PATH.clientele },
   { label: 'Color', path: PAGE_PATH.color },
@@ -52,6 +52,7 @@ const options = [
   { label: 'Integration', path: PAGE_PATH.integration },
   { label: 'Login', path: PAGE_PATH.login },
   { label: 'Mega Menu', path: PAGE_PATH.megaMenu },
+  { label: 'Metrics', path: PAGE_PATH.metrics },
   { label: 'Navbar', path: PAGE_PATH.navbar },
   { label: 'New Password', path: PAGE_PATH.newPassword },
   { label: 'Pricing', path: PAGE_PATH.pricing },
@@ -119,7 +120,8 @@ export default function SectionHero({ heading, search = true, offer = false, bre
                   ))}
                 </Breadcrumbs>
               }
-              sx={{ bgcolor: 'grey.100', '& .MuiChip-label': { py: 0.5, px: 1.5 } }}
+              slotProps={{ label: { sx: { py: 0.5, px: 1.5 } } }}
+              sx={{ bgcolor: 'grey.100' }}
             />
           )}
           {offer && (
@@ -131,22 +133,15 @@ export default function SectionHero({ heading, search = true, offer = false, bre
                     Over 200+
                   </Typography>
                   <Chip
-                    label={
-                      <Typography
-                        variant="caption"
-                        sx={{
-                          color: 'primary.main'
-                        }}
-                      >
-                        Design Blocks
-                      </Typography>
-                    }
-                    sx={{ bgcolor: 'primary.lighter', mr: -1, ml: 0.75, '& .MuiChip-label': { px: 1 } }}
+                    label="Design Blocks"
+                    size="small"
+                    slotProps={{ label: { sx: { px: 1.25, py: 0.75, typography: 'caption', color: 'primary.main' } } }}
+                    sx={{ bgcolor: 'primary.lighter', mr: -1, ml: 0.75 }}
                     icon={
                       <CardMedia
                         component="img"
                         image="/assets/images/shared/celebration.svg"
-                        sx={{ width: 20, height: 20 }}
+                        sx={{ width: 20, height: 20, pl: 0.75 }}
                         alt="celebration"
                         loading="lazy"
                       />
@@ -154,7 +149,8 @@ export default function SectionHero({ heading, search = true, offer = false, bre
                   />
                 </>
               }
-              sx={{ bgcolor: 'grey.100', '& .MuiChip-label': { py: 0.5, px: 1.5 } }}
+              slotProps={{ label: { sx: { py: 0.5, px: 1.5 } } }}
+              sx={{ bgcolor: 'grey.100' }}
             />
           )}
           <Typography variant="h1" sx={{ textAlign: 'center', width: { xs: 345, sm: 550, md: 700 } }}>

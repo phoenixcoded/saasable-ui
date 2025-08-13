@@ -30,7 +30,10 @@ const sectionsData = [
   { typeset: { heading: 'Default blog section 04', caption, figmaLink: FIGMA_LINK.blog.variant.blog4 }, src: PRIVIEW_PATH.proPage },
   { typeset: { heading: 'Default blog section 05', caption, figmaLink: FIGMA_LINK.blog.variant.blog5 }, src: PRIVIEW_PATH.proPage },
   { typeset: { heading: 'Default blog section 06', caption, figmaLink: FIGMA_LINK.blog.variant.blog6 }, src: PRIVIEW_PATH.proPage },
-  { typeset: { heading: 'Default blog section 07', caption, figmaLink: FIGMA_LINK.blog.variant.blog7 }, src: PRIVIEW_PATH.proPage }
+  { typeset: { heading: 'Default blog section 07', caption, figmaLink: FIGMA_LINK.blog.variant.blog7 }, src: PRIVIEW_PATH.proPage },
+  { typeset: { heading: 'Default blog section 08', caption, figmaLink: FIGMA_LINK.blog.variant.blog8 }, src: PRIVIEW_PATH.proPage },
+  { typeset: { heading: 'Default blog section 09', caption, figmaLink: FIGMA_LINK.blog.variant.blog9 }, src: PRIVIEW_PATH.proPage },
+  { typeset: { heading: 'Default blog section 010', caption, figmaLink: FIGMA_LINK.blog.variant.blog10 }, src: PRIVIEW_PATH.proPage }
 ];
 
 /***************************  SECTIONS - BLOG  ***************************/

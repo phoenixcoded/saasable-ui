@@ -8,7 +8,7 @@ import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 
 // @third-party
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 
 // @project
 import ButtonAnimationWrapper from '@/components/ButtonAnimationWrapper';
@@ -21,6 +21,15 @@ import { SECTION_COMMON_PY } from '@/utils/constant';
 
 /***************************  FEATURE - 21  ***************************/
 
+/**
+ *
+ * Demos:
+ * - [Feature21](https://www.saasable.io/blocks/feature/feature21)
+ *
+ * API
+ * - [Feature21 API](https://phoenixcoded.gitbook.io/saasable/ui-kit/development/components/feature/feature21#props-details)
+ */
+
 export default function Feature21({ heading, caption, image, features, primaryBtn, secondaryBtn }) {
   const imagePadding = { xs: 3, sm: 4, md: 5 };
   const iconProps = { color: 'text.primary', stroke: 1 };
@@ -28,17 +37,16 @@ export default function Feature21({ heading, caption, image, features, primaryBt
   return (
     <ContainerWrapper sx={{ py: SECTION_COMMON_PY }}>
       <Stack sx={{ gap: { xs: 3, sm: 4 } }}>
-        <motion.div
-          initial={{ opacity: 0, y: 5 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{
-            duration: 0.3,
-            delay: 0.3
-          }}
-        >
-          <Typeset {...{ heading, caption, stackProps: { sx: { textAlign: 'center' } } }} />
-        </motion.div>
+        {(heading || caption) && (
+          <motion.div
+            initial={{ opacity: 0, y: 5 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.3, delay: 0.3 }}
+          >
+            <Typeset {...{ heading, caption, stackProps: { sx: { textAlign: 'center' } } }} />
+          </motion.div>
+        )}
         <Stack sx={{ gap: 1.5 }}>
           {image && (
             <motion.div
@@ -77,16 +85,14 @@ export default function Feature21({ heading, caption, image, features, primaryBt
                   initial={{ opacity: 0, y: 10 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{
-                    duration: 0.3,
-                    delay: item.animationDelay
-                  }}
+                  transition={{ duration: 0.3, delay: index * 0.2 }}
                   style={{ height: '100%' }}
                 >
                   <IconCard
                     icon={{ ...(typeof item.icon === 'string' ? { name: item.icon, ...iconProps } : { ...iconProps, ...item.icon }) }}
                     title={item.title}
-                    stackProps={{ sx: { gap: 0 } }}
+                    stackProps={{ sx: { gap: 2, height: 1 } }}
+                    cardPadding={{ xs: 2, sm: 3 }}
                   />
                 </motion.div>
               </Grid>
@@ -98,25 +104,36 @@ export default function Feature21({ heading, caption, image, features, primaryBt
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{
-              duration: 0.3,
-              delay: 0.3
-            }}
+            transition={{ duration: 0.3, delay: 0.4 }}
           >
             <Stack direction="row" sx={{ alignItems: 'center', justifyContent: 'center', gap: 1.5 }}>
               {secondaryBtn && (
-                <ButtonAnimationWrapper>
-                  <Button variant="outlined" startIcon={<SvgIcon name="tabler-eye" size={16} stroke={3} />} {...secondaryBtn} />
-                </ButtonAnimationWrapper>
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3, ease: 'easeInOut' }}
+                  whileHover={{ scale: 1.06 }}
+                >
+                  <ButtonAnimationWrapper>
+                    <Button variant="outlined" startIcon={<SvgIcon name="tabler-eye" size={16} stroke={3} />} {...secondaryBtn} />
+                  </ButtonAnimationWrapper>
+                </motion.div>
               )}
               {primaryBtn && (
-                <ButtonAnimationWrapper>
-                  <Button
-                    variant="contained"
-                    startIcon={<SvgIcon name="tabler-download" size={16} stroke={3} color="background.default" />}
-                    {...primaryBtn}
-                  />
-                </ButtonAnimationWrapper>
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3, ease: 'easeInOut' }}
+                  whileHover={{ scale: 1.06 }}
+                >
+                  <ButtonAnimationWrapper>
+                    <Button
+                      variant="contained"
+                      startIcon={<SvgIcon name="tabler-download" size={16} stroke={3} color="background.default" />}
+                      {...primaryBtn}
+                    />
+                  </ButtonAnimationWrapper>
+                </motion.div>
               )}
             </Stack>
           </motion.div>

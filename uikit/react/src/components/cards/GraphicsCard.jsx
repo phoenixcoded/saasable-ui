@@ -53,7 +53,7 @@ export default function GraphicsCard({ sx, children, overLay = false, bgImage, .
 GraphicsCard.propTypes = {
   sx: PropTypes.any,
   children: PropTypes.any,
-  overLay: PropTypes.oneOfType([PropTypes.bool, PropTypes.string]),
+  overLay: PropTypes.oneOfType([PropTypes.string, PropTypes.bool]),
   bgImage: PropTypes.any,
   rest: PropTypes.any
 };

@@ -52,6 +52,15 @@ function ContactCard({ icon, title, content, link }) {
 
 /***************************  CONTACT US - 4  ***************************/
 
+/**
+ *
+ * Demos:
+ * - [ContactUs4](https://www.saasable.io/blocks/contact-us/contact-us4)
+ *
+ * API:
+ * - [ContactUs4 API](https://phoenixcoded.gitbook.io/saasable/ui-kit/development/components/contact-us/contactus4#props-details)
+ */
+
 export default function ContactUs4({ heading, caption, list, showForm = true }) {
   const sectionPadding = { xs: 2, sm: 3, md: 5 };
   const cardRadius = { xs: 6, sm: 8 };

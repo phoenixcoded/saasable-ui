@@ -1,5 +1,5 @@
 // @project
-import PrivacyPolicyPage from '@/blocks/PrivacyPolicy';
+import PrivacyPolicyPage from '@/blocks/privacy-policy/PrivacyPolicy1';
 import { SmallHero3 } from '@/blocks/small-hero';
 
 // @data

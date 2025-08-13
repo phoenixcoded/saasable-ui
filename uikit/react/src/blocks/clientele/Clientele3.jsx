@@ -9,7 +9,7 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 
 // @third-party
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import Slider from 'react-slick';
 
 // @project
@@ -19,6 +19,15 @@ import GraphicsImage from '@/components/GraphicsImage';
 import { SECTION_COMMON_PY } from '@/utils/constant';
 
 /***************************  CLIENTELE - 3  ***************************/
+
+/**
+ *
+ * Demos:
+ * - [Clientele3](https://www.saasable.io/blocks/clientele/clientele3)
+ *
+ * API:
+ * - [Clientele3 API](https://phoenixcoded.gitbook.io/saasable/ui-kit/development/components/clientele/clientele3#props-details)
+ */
 
 export default function Clientele3({ title, clienteleList }) {
   const theme = useTheme();
@@ -63,10 +72,7 @@ export default function Clientele3({ title, clienteleList }) {
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{
-              duration: 0.5,
-              delay: 0.3
-            }}
+            transition={{ duration: 0.5, delay: 0.3 }}
           >
             <Typography variant="subtitle2" align="center" sx={{ color: 'text.secondary' }}>
               {title}
@@ -85,19 +91,27 @@ export default function Clientele3({ title, clienteleList }) {
           >
             <Slider {...settings}>
               {clienteleList.map((item, index) => (
-                <Box
+                <motion.div
                   key={index}
-                  sx={{
-                    px: { xs: 0.25, sm: 0.5, md: 0.75 },
-                    '& svg': { opacity: 0.4, transition: ' all 0.5s ease-in-out' },
-                    '&:hover svg': { opacity: 1, transition: ' all 0.5s ease-in-out' }
-                  }}
+                  initial={{ opacity: 0, scale: 0.5 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, ease: 'easeOut', delay: index * 0.2 }}
                 >
-                  <Chip
-                    label={<GraphicsImage {...item} />}
-                    sx={{ bgcolor: 'grey.100', height: { xs: 40, sm: 46, md: 60 }, width: 1, '& .MuiChip-label': { p: 0 } }}
-                  />
-                </Box>
+                  <Box
+                    sx={{
+                      px: { xs: 0.25, sm: 0.5, md: 0.75 },
+                      '& svg': { opacity: 0.4, transition: ' all 0.5s ease-in-out' },
+                      '&:hover svg': { opacity: 1, transition: ' all 0.5s ease-in-out' }
+                    }}
+                  >
+                    <Chip
+                      label={<GraphicsImage {...item} />}
+                      slotProps={{ label: { sx: { p: 0 } } }}
+                      sx={{ bgcolor: 'grey.100', height: { xs: 40, sm: 46, md: 60 }, width: 1 }}
+                    />
+                  </Box>
+                </motion.div>
               ))}
             </Slider>
           </motion.div>

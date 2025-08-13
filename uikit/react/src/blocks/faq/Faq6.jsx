@@ -16,7 +16,7 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
 // @third-party
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 import Slider from 'react-slick';
 
 // @project
@@ -31,6 +31,15 @@ import { generateFocusVisibleStyles } from '@/utils/CommonFocusStyle';
 import { SECTION_COMMON_PY } from '@/utils/constant';
 
 /***************************  FAQ - 6  ***************************/
+
+/**
+ *
+ * Demos:
+ * - [FAQ6](https://www.saasable.io/blocks/faq/faq6)
+ *
+ * API:
+ * - [FAQ6 API](https://phoenixcoded.gitbook.io/saasable/ui-kit/development/components/faq/faq6#props-details)
+ */
 
 export default function Faq6({ heading, caption, defaultExpanded, faqList, getInTouch, categories, activeCategory }) {
   const theme = useTheme();
@@ -62,28 +71,36 @@ export default function Faq6({ heading, caption, defaultExpanded, faqList, getIn
   return (
     <ContainerWrapper sx={{ py: SECTION_COMMON_PY }}>
       <Stack sx={{ gap: { xs: 3, sm: 4 } }}>
-        <motion.div
-          initial={{ opacity: 0, y: 10 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{
-            duration: 0.5,
-            delay: 0.4
-          }}
-        >
-          <Stack direction={{ sm: 'row' }} sx={{ gap: 4, justifyContent: 'space-between', alignItems: { xs: 'flex-start', sm: 'end' } }}>
-            <Typeset {...{ heading, caption }} />
-            <ButtonAnimationWrapper>
-              <Button
-                variant="contained"
-                size="large"
-                {...getInTouch.link}
-                {...(getInTouch.link && getInTouch.link.href && { component: NextLink })}
-                sx={{ minWidth: 215 }}
-              />
-            </ButtonAnimationWrapper>
-          </Stack>
-        </motion.div>
+        {heading && (
+          <motion.div
+            initial={{ opacity: 0, y: 10 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+          >
+            <Stack direction={{ sm: 'row' }} sx={{ gap: 4, justifyContent: 'space-between', alignItems: { xs: 'flex-start', sm: 'end' } }}>
+              <Typeset {...{ heading, caption }} />
+              {getInTouch?.link && (
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3, ease: 'easeInOut' }}
+                  whileHover={{ scale: 1.06 }}
+                >
+                  <ButtonAnimationWrapper>
+                    <Button
+                      variant="contained"
+                      size="large"
+                      {...getInTouch.link}
+                      {...(getInTouch.link && getInTouch.link.href && { component: NextLink })}
+                      sx={{ minWidth: 215, ...getInTouch.link.sx }}
+                    />
+                  </ButtonAnimationWrapper>
+                </motion.div>
+              )}
+            </Stack>
+          </motion.div>
+        )}
         <Stack sx={{ gap: 2 }}>
           <motion.div
             initial={{ opacity: 0, y: 10 }}
@@ -147,7 +164,7 @@ export default function Faq6({ heading, caption, defaultExpanded, faqList, getIn
                 initial={{ y: 20, opacity: 0 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.2, delay: 0.3 }}
+                transition={{ duration: 0.2, delay: index * 0.2 }}
               >
                 <Accordion
                   key={index}

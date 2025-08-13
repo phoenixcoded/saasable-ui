@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { useEffect, useRef, useState } from 'react';
 
 // @mui
-import { useTheme } from '@mui/material/styles';
+import { useTheme, alpha } from '@mui/material/styles';
 import Button from '@mui/material/Button';
 import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
@@ -12,7 +12,7 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 
 // @third-party
-import { motion, useScroll, useTransform } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'motion/react';
 
 // @project
 import ButtonAnimationWrapper from '@/components/ButtonAnimationWrapper';
@@ -30,6 +30,15 @@ import Wave from '@/images/graphics/Wave';
 const options = { root: null, rootMargin: '0px', threshold: 0.6 };
 
 /***************************  HERO - 17  ***************************/
+
+/**
+ *
+ * Demos:
+ * - [Hero17](https://www.saasable.io/blocks/hero/hero17)
+ *
+ * API:
+ * - [Hero17 API](https://phoenixcoded.gitbook.io/saasable/ui-kit/development/components/hero/hero17#props-details)
+ */
 
 export default function Hero17({ chip, headLine, captionLine, primaryBtn, videoSrc, videoThumbnail, listData }) {
   const theme = useTheme();
@@ -100,45 +109,42 @@ export default function Hero17({ chip, headLine, captionLine, primaryBtn, videoS
           background: getBackgroundDots(theme.palette.grey[300], 60, 35),
           bgcolor: 'grey.100'
         }}
-      ></Box>
+      />
       <ContainerWrapper sx={{ py: SECTION_COMMON_PY }}>
         <Box ref={containerRef}>
           <Box sx={{ pb: { xs: 3, sm: 4, md: 5 } }}>
             <Stack sx={{ alignItems: 'center', gap: 1.5 }}>
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{
-                  duration: 1,
-                  delay: 0.1,
-                  ease: [0.215, 0.61, 0.355, 1]
+                initial={{ opacity: 0, scale: 0.6 }}
+                whileInView={{ opacity: 1, scale: [0.6, 1.15, 0.95, 1] }}
+                animate={{
+                  boxShadow: [
+                    `0 0 0px ${alpha(theme.palette.primary.dark, 0)}`,
+                    `0 0 20px ${alpha(theme.palette.primary.main, 0.8)}`,
+                    `0 0 0px ${alpha(theme.palette.primary.dark, 0)}`
+                  ],
+                  borderRadius: '74px'
                 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: 0.8, ease: 'linear' }}
               >
                 <Chip
                   variant="outlined"
-                  label={
-                    typeof chip.label === 'string' ? (
-                      <Typography variant="caption" sx={{ color: 'text.secondary' }}>
-                        {chip.label}
-                      </Typography>
-                    ) : (
-                      chip.label
-                    )
-                  }
-                  sx={{ bgcolor: 'grey.100', '& .MuiChip-label': { py: 0.5, px: 1.5 } }}
+                  label={chip.label}
+                  slotProps={{
+                    label: {
+                      sx: { py: 0.5, px: 1.5, ...(typeof chip.label === 'string' && { typography: 'caption', color: 'text.secondary' }) }
+                    }
+                  }}
+                  sx={{ bgcolor: 'grey.100' }}
                 />
               </motion.div>
 
               <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, scale: 0.6 }}
+                whileInView={{ opacity: 1, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{
-                  duration: 1,
-                  delay: 0.2,
-                  ease: [0.215, 0.61, 0.355, 1]
-                }}
+                transition={{ duration: 0.6, delay: 0.2, ease: 'linear' }}
               >
                 <Typography variant="h1" align="center" sx={{ maxWidth: 800 }}>
                   {headLine}
@@ -148,11 +154,7 @@ export default function Hero17({ chip, headLine, captionLine, primaryBtn, videoS
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{
-                  duration: 1,
-                  delay: 0.2,
-                  ease: [0.215, 0.61, 0.355, 1]
-                }}
+                transition={{ duration: 1, delay: 0.2, ease: [0.215, 0.61, 0.355, 1] }}
               >
                 <Box sx={{ pt: 0.5, pb: 0.75 }}>
                   <Wave />
@@ -162,11 +164,7 @@ export default function Hero17({ chip, headLine, captionLine, primaryBtn, videoS
                 initial={{ opacity: 0, y: 30 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{
-                  duration: 1,
-                  delay: 0.3,
-                  ease: [0.215, 0.61, 0.355, 1]
-                }}
+                transition={{ duration: 1, delay: 0.3, ease: [0.215, 0.61, 0.355, 1] }}
               >
                 <Typography variant="h6" align="center" sx={{ color: 'text.secondary', maxWidth: 650 }}>
                   {captionLine}
@@ -176,13 +174,9 @@ export default function Hero17({ chip, headLine, captionLine, primaryBtn, videoS
             <Stack sx={{ alignItems: 'center', gap: 2, mt: { xs: 3, sm: 4, md: 5 } }}>
               <motion.div
                 initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{
-                  duration: 1,
-                  delay: 0.4,
-                  ease: [0.215, 0.61, 0.355, 1]
-                }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3, ease: 'easeInOut' }}
+                whileHover={{ scale: 1.06 }}
               >
                 <ButtonAnimationWrapper>
                   <Button
@@ -193,37 +187,32 @@ export default function Hero17({ chip, headLine, captionLine, primaryBtn, videoS
                   />
                 </ButtonAnimationWrapper>
               </motion.div>
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{
-                  duration: 1,
-                  delay: 0.5,
-                  ease: [0.215, 0.61, 0.355, 1]
-                }}
-              >
-                <Stack direction="row" sx={{ gap: 1, flexWrap: 'wrap', justifyContent: 'center' }}>
-                  {listData.map((item, index) => (
+              <Stack direction="row" sx={{ gap: 1, flexWrap: 'wrap', justifyContent: 'center' }}>
+                {listData.map((item, index) => (
+                  <motion.div
+                    key={index}
+                    initial={{ opacity: 0, scale: 0.6 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.9, delay: index * 0.08, ease: 'linear' }}
+                  >
                     <Chip
-                      key={index}
-                      label={<Typography variant="caption2">{item.title}</Typography>}
+                      label={item.title}
                       variant="outlined"
                       icon={<GraphicsImage image={item.image} sx={{ width: 16, height: 16 }} />}
-                      sx={{ height: 32, px: 1, bgcolor: 'grey.100', '& .MuiChip-label': { py: 0.75, px: 1 } }}
+                      slotProps={{ label: { sx: { py: 0.75, px: 1, typography: 'caption2' } } }}
+                      sx={{ height: 32, px: 1, bgcolor: 'grey.100' }}
                     />
-                  ))}
-                </Stack>
-              </motion.div>
+                  </motion.div>
+                ))}
+              </Stack>
             </Stack>
           </Box>
           <motion.div
-            initial={{ opacity: 0, y: 0 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{
-              duration: 0.5,
-              delay: 0.5
-            }}
+            initial={{ opacity: 0, scale: 0.6 }}
+            whileInView={{ opacity: 1, scale: 0.9 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.9, delay: 0.3 }}
             style={{ scale }}
           >
             <GraphicsCard sx={{ border: '5px solid', borderColor: 'grey.300' }}>

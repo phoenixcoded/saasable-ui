@@ -1,0 +1,28 @@
+name: npm Build
+
+# Controls when the action will run.
+on:
+  # Triggers the workflow on push or pull request events but only for the master branch
+  push:
+    branches: [stage*]
+
+jobs:
+  SFTP-deploy:
+    name: 🪛 Build
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: 🚚 Get latest code
+        uses: actions/checkout@v4
+
+      - name: Use Node.js 22
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: 🔨 Build Vite Admin - npm
+        run: |
+          cd admin
+          cd vite
+          npm i
+          npm run build

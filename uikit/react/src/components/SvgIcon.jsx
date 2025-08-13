@@ -17,7 +17,7 @@ const spritePaths = {
 export default function SvgIcon({ name, size = 24, type = IconType.STROKE, color, stroke, twoToneColor }) {
   const theme = useTheme();
 
-  const fillColor = type !== IconType.STROKE ? twoToneColor || theme.palette.primary.light : undefined;
+  const fillColor = type !== IconType.STROKE ? twoToneColor || theme.palette.primary.lighter : undefined;
   const strokeColor =
     type !== IconType.FILL ? color || (type === IconType.CUSTOM ? theme.palette.text.primary : theme.palette.primary.main) : undefined;
 
@@ -32,7 +32,7 @@ export default function SvgIcon({ name, size = 24, type = IconType.STROKE, color
           verticalAlign: 'middle',
           display: 'block',
           color: color || (type === IconType.CUSTOM ? 'text.primary' : 'primary.main'),
-          '& [data-two-tone="true"]': { color: twoToneColor || theme.palette.primary.light }
+          '& [data-two-tone="true"]': { color: twoToneColor || theme.palette.primary.lighter }
         }
       }}
     >

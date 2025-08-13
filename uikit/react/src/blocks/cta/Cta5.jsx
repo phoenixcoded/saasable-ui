@@ -2,7 +2,6 @@
 import PropTypes from 'prop-types';
 
 // @mui
-import { useTheme } from '@mui/material/styles';
 import Button from '@mui/material/Button';
 import Chip from '@mui/material/Chip';
 import Divider from '@mui/material/Divider';
@@ -13,7 +12,7 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 
 // @third-party
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 
 // @project
 import ButtonAnimationWrapper from '@/components/ButtonAnimationWrapper';
@@ -30,9 +29,16 @@ import Wave from '@/images/graphics/Wave';
 
 /***************************  CALL TO ACTION - 5  ***************************/
 
-export default function Cta5({ heading, caption, label, input = false, primaryBtn, secondaryBtn, description, saleData, profileGroups }) {
-  const theme = useTheme();
+/**
+ *
+ * Demos:
+ * - [CTA5](https://www.saasable.io/blocks/cta/cta5)
+ *
+ * API:
+ * - [CTA5 API](https://phoenixcoded.gitbook.io/saasable/ui-kit/development/components/cta/cta5#props-details)
+ */
 
+export default function Cta5({ heading, caption, label, input = false, primaryBtn, secondaryBtn, description, saleData, profileGroups }) {
   return (
     <ContainerWrapper sx={{ py: SECTION_COMMON_PY }}>
       <motion.div
@@ -46,84 +52,88 @@ export default function Cta5({ heading, caption, label, input = false, primaryBt
       >
         <Grid container spacing={1.5}>
           <Grid size={{ xs: 12, sm: 8, md: 9 }}>
-            <GraphicsCard sx={{ position: 'relative' }}>
-              <Stack
-                sx={{ alignItems: 'flex-start', gap: { xs: 5.75, sm: 10 }, p: { xs: 3, sm: 4, md: 8 }, position: 'relative', zIndex: 1 }}
-              >
-                <Stack sx={{ gap: 5 }}>
-                  <Stack direction="row" sx={{ alignItems: 'center', gap: 1 }}>
-                    <Chip
-                      label={
-                        <Typography variant="caption" sx={{ color: 'secondary.main' }}>
-                          {label}
+            <motion.div initial={{ opacity: 0, y: -100 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.6 }}>
+              <GraphicsCard sx={{ position: 'relative' }}>
+                <Stack
+                  sx={{ alignItems: 'flex-start', gap: { xs: 5.75, sm: 10 }, p: { xs: 3, sm: 4, md: 8 }, position: 'relative', zIndex: 1 }}
+                >
+                  <Stack sx={{ gap: 5 }}>
+                    <Stack direction="row" sx={{ alignItems: 'center', gap: 1 }}>
+                      <Chip
+                        label={label}
+                        variant="outlined"
+                        slotProps={{ label: { sx: { py: 0.75, px: 2, typography: 'caption', color: 'secondary.main' } } }}
+                        sx={{ borderColor: 'grey.600' }}
+                      />
+                      <Divider sx={{ width: 63, borderBottomWidth: 2 }} />
+                    </Stack>
+                    <Typeset {...{ heading, caption, captionProps: { sx: { maxWidth: 478 } } }} />
+                  </Stack>
+                  {input && typeof input === 'object' && (
+                    <Stack sx={{ gap: 0.75, width: { sm: '100%', md: 'unset' } }}>
+                      <OutlinedInput
+                        placeholder={input.placeholder || 'Enter your email address'}
+                        endAdornment={
+                          <Button
+                            color="primary"
+                            variant="contained"
+                            sx={{ px: 4, minWidth: { xs: 110, md: 120 } }}
+                            {...input.adornmentBtn}
+                          />
+                        }
+                        slotProps={{
+                          input: { 'aria-label': 'Email address', sx: { px: 2.5, py: 0.75 } },
+                          notchedOutline: { sx: { borderRadius: 25 } }
+                        }}
+                        sx={{ typography: 'caption2', color: 'secondary.main', p: 0.5, whiteSpace: 'nowrap' }}
+                      />
+                      {input.helpertext && (
+                        <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+                          {input.helpertext}
                         </Typography>
-                      }
-                      variant="outlined"
-                      sx={{ borderColor: 'grey.600', '& .MuiChip-label': { py: 0.75, px: 2 } }}
-                    />
-                    <Divider sx={{ width: 63, borderBottomWidth: 2 }} />
-                  </Stack>
-                  <Typeset {...{ heading, caption, captionProps: { sx: { maxWidth: 478 } } }} />
+                      )}
+                    </Stack>
+                  )}
+                  {(primaryBtn || secondaryBtn || description) && (
+                    <Stack sx={{ alignItems: 'flex-start', gap: 1.5, width: { sm: '100%', md: '60%' }, ...(input && { mt: -6 }) }}>
+                      {(primaryBtn || secondaryBtn) && (
+                        <Stack direction="row" spacing={1.5} sx={{ alignItems: 'flex-start', justifyContent: 'center' }}>
+                          {secondaryBtn && (
+                            <ButtonAnimationWrapper>
+                              <Button variant="outlined" sx={{ minWidth: { sm: 170 } }} {...secondaryBtn} />
+                            </ButtonAnimationWrapper>
+                          )}
+                          {primaryBtn && (
+                            <motion.div
+                              initial={{ opacity: 0, y: 30 }}
+                              animate={{ opacity: 1, y: 0 }}
+                              transition={{ duration: 0.3, ease: 'easeInOut' }}
+                              whileHover={{ scale: 1.06 }}
+                            >
+                              <ButtonAnimationWrapper>
+                                <Button variant="contained" sx={{ minWidth: { sm: 170 } }} {...primaryBtn} />
+                              </ButtonAnimationWrapper>
+                            </motion.div>
+                          )}
+                        </Stack>
+                      )}
+                      {description && typeof description === 'string' ? (
+                        <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+                          {description}
+                        </Typography>
+                      ) : (
+                        description
+                      )}
+                    </Stack>
+                  )}
                 </Stack>
-                {input && typeof input === 'object' && (
-                  <Stack sx={{ gap: 0.75, width: { sm: '100%', md: 'unset' } }}>
-                    <OutlinedInput
-                      placeholder={input.placeholder || 'Enter your email address'}
-                      endAdornment={
-                        <Button
-                          color="primary"
-                          variant="contained"
-                          sx={{ px: 4, minWidth: { xs: 110, md: 120 } }}
-                          {...input.adornmentBtn}
-                        />
-                      }
-                      slotProps={{ input: { 'aria-label': 'Email address' } }}
-                      sx={{
-                        ...theme.typography.caption2,
-                        color: 'secondary.main',
-                        p: 0.5,
-                        whiteSpace: 'nowrap',
-                        '& .MuiOutlinedInput-input': { p: '6px 20px' },
-                        '& .MuiOutlinedInput-notchedOutline': { borderRadius: 25 }
-                      }}
-                    />
-                    {input.helpertext && (
-                      <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                        {input.helpertext}
-                      </Typography>
-                    )}
-                  </Stack>
-                )}
-                {(primaryBtn || secondaryBtn || description) && (
-                  <Stack sx={{ alignItems: 'flex-start', gap: 1.5, width: { sm: '100%', md: '60%' }, ...(input && { mt: -6 }) }}>
-                    {(primaryBtn || secondaryBtn) && (
-                      <Stack direction="row" spacing={1.5} sx={{ alignItems: 'flex-start', justifyContent: 'center' }}>
-                        {secondaryBtn && (
-                          <ButtonAnimationWrapper>
-                            <Button variant="outlined" sx={{ minWidth: { sm: 170 } }} {...secondaryBtn} />
-                          </ButtonAnimationWrapper>
-                        )}
-                        {primaryBtn && (
-                          <ButtonAnimationWrapper>
-                            <Button variant="contained" sx={{ minWidth: { sm: 170 } }} {...primaryBtn} />
-                          </ButtonAnimationWrapper>
-                        )}
-                      </Stack>
-                    )}
-                    {description && typeof description === 'string' ? (
-                      <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                        {description}
-                      </Typography>
-                    ) : (
-                      description
-                    )}
-                  </Stack>
-                )}
-              </Stack>
-              <Box sx={{ position: 'absolute', right: -160, bottom: -160, display: { xs: 'none', md: 'block' }, transform: 'scaleX(-1)' }}>
-                <LogoWatermark />
-              </Box>
-            </GraphicsCard>
+                <Box
+                  sx={{ position: 'absolute', right: -160, bottom: -160, display: { xs: 'none', md: 'block' }, transform: 'scaleX(-1)' }}
+                >
+                  <LogoWatermark />
+                </Box>
+              </GraphicsCard>
+            </motion.div>
           </Grid>
           <Grid size={{ xs: 12, sm: 4, md: 3 }}>
             <Grid container sx={{ height: 1, position: 'relative' }}>
@@ -181,10 +191,10 @@ Cta5.propTypes = {
   heading: PropTypes.string,
   caption: PropTypes.string,
   label: PropTypes.string,
-  input: PropTypes.oneOfType([PropTypes.any, PropTypes.bool]),
+  input: PropTypes.oneOfType([PropTypes.bool, PropTypes.any]),
   primaryBtn: PropTypes.any,
   secondaryBtn: PropTypes.any,
-  description: PropTypes.oneOfType([PropTypes.node, PropTypes.string]),
+  description: PropTypes.oneOfType([PropTypes.string, PropTypes.node]),
   saleData: PropTypes.any,
   profileGroups: PropTypes.object
 };

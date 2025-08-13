@@ -19,6 +19,7 @@ import Box from '@mui/material/Box';
 import { motion } from 'framer-motion';
 
 // @project
+import branding from '@/branding.json';
 import ContainerWrapper from '@/components/ContainerWrapper';
 import { GraphicsCard } from '@/components/cards';
 import SectionHero from '@/components/SectionHero';
@@ -55,70 +56,70 @@ const sections = [
   },
   {
     title: 'Hero',
-    subTitle: '17 Different Variants',
+    subTitle: '19 Different Variants',
     image: `${imagePrefix}/hero-light.svg`,
     link: PAGE_PATH.hero,
     category: SectionCategory.MARKETING
   },
   {
     title: 'Clientele',
-    subTitle: '7 Different Variants',
+    subTitle: '8 Different Variants',
     image: `${imagePrefix}/clientele-light.svg`,
     link: PAGE_PATH.clientele,
     category: SectionCategory.MARKETING
   },
   {
-    title: 'Benefits',
-    subTitle: '9 Different Variants',
-    image: `${imagePrefix}/benefits-light.svg`,
-    link: PAGE_PATH.benefit,
+    title: 'Metrics',
+    subTitle: '10 Different Variants',
+    image: `${imagePrefix}/metrics-light.svg`,
+    link: PAGE_PATH.metrics,
     category: SectionCategory.FEATURE
   },
   {
-    title: 'Feature',
-    subTitle: '23 Different Variants',
+    title: 'Features',
+    subTitle: '27 Different Variants',
     image: `${imagePrefix}/feature-light.svg`,
     link: PAGE_PATH.feature,
     category: SectionCategory.FEATURE
   },
   {
     title: 'Process',
-    subTitle: '7 Different Variants',
+    subTitle: '8 Different Variants',
     image: `${imagePrefix}/process-light.svg`,
     link: PAGE_PATH.process,
     category: SectionCategory.FEATURE
   },
   {
     title: 'Integration',
-    subTitle: '8 Different Variants',
+    subTitle: '9 Different Variants',
     image: `${imagePrefix}/integration-light.svg`,
     link: PAGE_PATH.integration,
     category: SectionCategory.FEATURE
   },
   {
     title: 'Testimonial',
-    subTitle: '11 Different Variants',
+    subTitle: '13 Different Variants',
     image: `${imagePrefix}/testimonial-light.svg`,
     link: PAGE_PATH.testimonial,
     category: SectionCategory.MARKETING
   },
   {
     title: 'Call-To-Action',
-    subTitle: '12 Different Variants',
+    subTitle: '14 Different Variants',
     image: `${imagePrefix}/cta-light.svg`,
     link: PAGE_PATH.cta,
     category: SectionCategory.MARKETING
   },
   {
     title: 'Blog',
-    subTitle: '6 Different Variants',
+    subTitle: '10 Different Variants',
     image: `${imagePrefix}/blog-light.svg`,
     link: PAGE_PATH.blog,
     category: SectionCategory.MARKETING
   },
   {
     title: 'FAQs',
-    subTitle: '7 Different Variants',
+    subTitle: '8 Different Variants',
     image: `${imagePrefix}/faqs-light.svg`,
     link: PAGE_PATH.faq,
     category: SectionCategory.ESSENTIAL
@@ -160,21 +161,21 @@ const sections = [
   },
   {
     title: 'Register',
-    subTitle: '1 Variants',
+    subTitle: '1 Variant',
     image: `${imagePrefix}/sign-up-light.svg`,
     link: PAGE_PATH.register,
     category: SectionCategory.ESSENTIAL
   },
   {
     title: 'Pricing',
-    subTitle: '9 Different Variants',
+    subTitle: '10 Different Variants',
     image: `${imagePrefix}/pricing-light.svg`,
     link: PAGE_PATH.pricing,
     category: SectionCategory.FEATURE
   },
   {
     title: 'Small Hero',
-    subTitle: '7 Different Variants',
+    subTitle: '8 Different Variants',
     image: `${imagePrefix}/small-hero-light.svg`,
     link: PAGE_PATH.smallHero,
     category: SectionCategory.MARKETING
@@ -195,7 +196,7 @@ const sections = [
   },
   {
     title: 'Mega Menu',
-    subTitle: '4 Different Variants',
+    subTitle: '5 Different Variants',
     image: `${imagePrefix}/mega-menu-light.svg`,
     link: PAGE_PATH.megaMenu,
     category: SectionCategory.ESSENTIAL
@@ -209,21 +210,21 @@ const sections = [
   },
   {
     title: 'Forgot Password',
-    subTitle: '1 Variants',
+    subTitle: '1 Variant',
     image: `${imagePrefix}/forgot-pass-light.svg`,
     link: PAGE_PATH.forgotPassword,
     category: SectionCategory.ESSENTIAL
   },
   {
     title: 'Create New Password',
-    subTitle: '1 Variants',
+    subTitle: '1 Variant',
     image: `${imagePrefix}/new-pass-light.svg`,
     link: PAGE_PATH.newPassword,
     category: SectionCategory.ESSENTIAL
   },
   {
     title: 'OTP Verification',
-    subTitle: '1 Variants',
+    subTitle: '1 Variant',
     image: `${imagePrefix}/otp-gen-light.svg`,
     link: PAGE_PATH.otpVerification,
     category: SectionCategory.ESSENTIAL
@@ -281,7 +282,7 @@ const sections = [
   },
   {
     title: 'Privacy Policy',
-    subTitle: '1 Variant',
+    subTitle: '2 Different Variants',
     image: `${imagePrefix}/privacy-policy-light.svg`,
     link: PAGE_PATH.privacyPolicy,
     category: SectionCategory.ESSENTIAL
@@ -292,6 +293,13 @@ const sections = [
     image: `${imagePrefix}/privacy-policy-light.svg`,
     link: PAGE_PATH.termsCondition,
     category: SectionCategory.ESSENTIAL
+  },
+  {
+    title: 'Blog Details',
+    subTitle: '1 Variant',
+    image: `${imagePrefix}/blog-detail-light.svg`,
+    link: PAGE_PATH.blogDetails,
+    category: SectionCategory.MARKETING
   },
   {
     title: 'Typography',
@@ -352,7 +360,7 @@ export default function Sections() {
 
   return (
     <>
-      <SectionHero heading="Craft Stunning Design with SaasAble Blocks" search={false} offer />
+      <SectionHero heading={`Craft Stunning Design with ${branding.brandName} Blocks`} search={false} offer />
       <ContainerWrapper>
         <Stack sx={{ py: 6, gap: { xs: 3, sm: 4, md: 5 } }}>
           <Stack
@@ -361,8 +369,8 @@ export default function Sections() {
           >
             <OutlinedInput
               placeholder="Search for blocks... (e.g., Hero, Testimonial, Pricing)"
-              slotProps={{ input: { 'aria-label': 'Search blocks' } }}
-              sx={{ '.MuiOutlinedInput-input': { pl: 1.5 }, width: { sm: 456, xs: 1 } }}
+              slotProps={{ input: { 'aria-label': 'Search blocks', sx: { pl: 1.5 } } }}
+              sx={{ width: { sm: 456, xs: 1 } }}
               startAdornment={<SvgIcon name="tabler-search" color="grey.700" />}
               onChange={handleSearchValue}
             />
@@ -372,11 +380,7 @@ export default function Sections() {
                   key={index}
                   variant={filterBy === item.value ? 'contained' : 'outlined'}
                   size="small"
-                  sx={{
-                    ...theme.typography.subtitle2,
-                    whiteSpace: 'nowrap',
-                    [theme.breakpoints.down('sm')]: { px: 1.5, py: 1 }
-                  }}
+                  sx={{ typography: 'subtitle2', whiteSpace: 'nowrap', [theme.breakpoints.down('sm')]: { px: 1.5, py: 1 } }}
                   onClick={() => {
                     setFilterBy(item.value);
                     setFilterSections(item.value === '' ? sections : sections.filter((section) => section.category === item.value));
@@ -390,7 +394,7 @@ export default function Sections() {
           <Grid container spacing={1.5}>
             {filterSections.map((item, index) => (
               <Grid key={index} size={{ xs: 6, sm: 4, md: 4 }}>
-                <GraphicsCard sx={{ overflow: 'hidden', WebkitTapHighlightColor: 'transparent' }}>
+                <GraphicsCard sx={{ overflow: 'hidden' }}>
                   <motion.div
                     whileHover={{ scale: 1.02 }}
                     initial={{ opacity: 0, y: 25 }}

@@ -133,7 +133,7 @@ export const SEO_CONTENT = {
     description: `${branding.brandName} about sections are designed to display essential content about your product, mission, or team, helping users understand your brand and its purpose at a glance.`
   },
 
-  benefit: {
+  metrics: {
     title: 'Benefits Sections',
     description: `The benefits sections in ${branding.brandName} showcase the key advantages and features of your product or service, helping users quickly grasp the value proposition and how it addresses their needs.`
   },

@@ -92,6 +92,15 @@ const sectionsData = [
       figmaLink: FIGMA_LINK.integration.variant.integration8
     },
     src: PRIVIEW_PATH.proPage
+  },
+  {
+    typeset: {
+      heading: 'Default integration section 09',
+      caption:
+        'Use this default example with an announcement badge, heading, CTA buttons, and customer logos to showcase what your website offers.',
+      figmaLink: FIGMA_LINK.integration.variant.integration9
+    },
+    src: PRIVIEW_PATH.proPage
   }
 ];
 

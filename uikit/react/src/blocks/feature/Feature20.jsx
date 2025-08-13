@@ -12,7 +12,7 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 
 // @third-party
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 
 // @project
 import ButtonAnimationWrapper from '@/components/ButtonAnimationWrapper';
@@ -27,6 +27,15 @@ import { SECTION_COMMON_PY } from '@/utils/constant';
 import Star from '@/images/graphics/Star';
 
 /***************************  FEATURE - 20  ***************************/
+
+/**
+ *
+ * Demos:
+ * - [Feature20](https://www.saasable.io/blocks/feature/feature20)
+ *
+ * API
+ * - [Feature20 API](https://phoenixcoded.gitbook.io/saasable/ui-kit/development/components/feature/feature20#props-details)
+ */
 
 export default function Feature20({ heading, caption, image, features, actionBtn, secondaryBtn }) {
   const theme = useTheme();
@@ -126,11 +135,32 @@ export default function Feature20({ heading, caption, image, features, actionBtn
                   >
                     <Stack sx={{ gap: { xs: 3, sm: 4 }, height: 1, py: { xs: 1.5, sm: 3, md: 4 }, px: { xs: 0, sm: 3, md: 4 } }}>
                       <Avatar sx={{ width: 60, height: 60, bgcolor: 'grey.300' }}>
-                        <SvgIcon {...(typeof item.icon === 'string' ? { name: item.icon } : { ...item.icon })} />
+                        <motion.div
+                          initial={{ opacity: 0, scale: 0.6 }}
+                          whileInView={{ opacity: 1, scale: 1 }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 2, delay: index * 0.1 }}
+                        >
+                          <SvgIcon {...(typeof item.icon === 'string' ? { name: item.icon } : { ...item.icon })} />
+                        </motion.div>
                       </Avatar>
                       <Stack sx={{ gap: { xs: 0.5, md: 1 } }}>
-                        {item.title && <Typography variant="h4">{item.title}</Typography>}
-                        {item.content && <Typography sx={{ color: 'text.secondary' }}>{item.content}</Typography>}
+                        <motion.div
+                          initial={{ opacity: 0, y: 25 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 0.5, delay: index * 0.2 }}
+                        >
+                          {item.title && <Typography variant="h4">{item.title}</Typography>}
+                        </motion.div>
+                        <motion.div
+                          initial={{ opacity: 0, y: 25 }}
+                          whileInView={{ opacity: 1, y: 0 }}
+                          viewport={{ once: true }}
+                          transition={{ duration: 0.5, delay: index * 0.3 }}
+                        >
+                          {item.content && <Typography sx={{ color: 'text.secondary' }}>{item.content}</Typography>}
+                        </motion.div>
                       </Stack>
                     </Stack>
                     {index < indexOfFirstElementInLastRow && !indicesOfLastElements.includes(index) && (
@@ -169,19 +199,33 @@ export default function Feature20({ heading, caption, image, features, actionBtn
           >
             <Stack direction="row" sx={{ alignItems: 'center', justifyContent: 'center', gap: 1.5 }}>
               {secondaryBtn && (
-                <ButtonAnimationWrapper>
-                  <Button variant="outlined" {...secondaryBtn} />
-                </ButtonAnimationWrapper>
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3, ease: 'easeInOut' }}
+                  whileHover={{ scale: 1.06 }}
+                >
+                  <ButtonAnimationWrapper>
+                    <Button variant="outlined" {...secondaryBtn} />
+                  </ButtonAnimationWrapper>
+                </motion.div>
               )}
               {actionBtn && (
-                <ButtonAnimationWrapper>
-                  <Button
-                    variant="contained"
-                    color="primary"
-                    startIcon={<SvgIcon name="tabler-sparkles" size={16} stroke={3} color="background.default" />}
-                    {...actionBtn}
-                  />
-                </ButtonAnimationWrapper>
+                <motion.div
+                  initial={{ opacity: 0, y: 30 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.3, ease: 'easeInOut' }}
+                  whileHover={{ scale: 1.06 }}
+                >
+                  <ButtonAnimationWrapper>
+                    <Button
+                      variant="contained"
+                      color="primary"
+                      startIcon={<SvgIcon name="tabler-sparkles" size={16} stroke={3} color="background.default" />}
+                      {...actionBtn}
+                    />
+                  </ButtonAnimationWrapper>
+                </motion.div>
               )}
             </Stack>
           </motion.div>

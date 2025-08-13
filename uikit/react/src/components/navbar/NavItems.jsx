@@ -26,6 +26,7 @@ import SvgIcon from '@/components/SvgIcon';
 import { MegaMenuType } from '@/enum';
 
 const navItemSX = { py: 1.5, borderRadius: { xs: 0, sm: 4 } };
+const footerSX = { px: 2, mx: 0 };
 
 /***************************  MENU - EXPANDED  ***************************/
 
@@ -57,10 +58,10 @@ function ExpanedList({ item, menuTextColor }) {
       <Collapse in={open}>
         <Box sx={{ mb: 0.5 }}>
           {item.megaMenu && item.megaMenu.type === MegaMenuType.MEGAMENU4 && (
-            <MegaMenu4 {...{ ...{ ...item.megaMenu, footerData: item.megaMenu.footerData }, footerSX: { px: 5, ml: -2.5, mr: -5 } }} />
+            <MegaMenu4 {...{ ...{ ...item.megaMenu, footerData: item.megaMenu.footerData }, footerSX }} />
           )}
           {item.megaMenu && item.megaMenu.type === MegaMenuType.MEGAMENU5 && (
-            <MegaMenu5 {...{ ...{ ...item.megaMenu, bannerData: item.megaMenu.bannerData }, footerSX: { px: 5, ml: -2.5, mr: -5 } }} />
+            <MegaMenu5 {...{ ...{ ...item.megaMenu, bannerData: item.megaMenu.bannerData }, footerSX }} />
           )}
         </Box>
       </Collapse>
@@ -94,7 +95,7 @@ function NavList({ item, menuTextColor }) {
   const downMD = useMediaQuery(theme.breakpoints.down('md'));
 
   const currentPath = usePathname(); // Get the current path
-  const toggleProps = { color: menuTextColor || 'text.primary', py: 1.5, ...theme.typography.caption2, pl: { md: 2.25, lg: 3 } };
+  const toggleProps = { color: menuTextColor || 'text.primary', py: 1.5, typography: 'caption2', pl: { md: 2.25, lg: 3 } };
   const buttonProps = {
     sx: {
       ...toggleProps,

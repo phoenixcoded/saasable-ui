@@ -45,7 +45,7 @@ export default function FaqDetails({ answer }) {
                       <SvgIcon name="tabler-check" color="primary.main" size={16} />
                     </Stack>
                   </ListItemAvatar>
-                  <ListItemText primary={item.primary} primaryTypographyProps={{ color: 'text.secondary' }} sx={{ m: 0 }} />
+                  <ListItemText primary={item.primary} slotProps={{ primary: { sx: { color: 'text.secondary' } } }} sx={{ m: 0 }} />
                 </ListItem>
               ))}
             </List>
@@ -55,4 +55,4 @@ export default function FaqDetails({ answer }) {
   }
 }
 
-FaqDetails.propTypes = { answer: PropTypes.oneOfType([PropTypes.any, PropTypes.string]) };
+FaqDetails.propTypes = { answer: PropTypes.oneOfType([PropTypes.string, PropTypes.any]) };

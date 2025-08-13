@@ -17,7 +17,7 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 
 // @third-party
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 
 // @project
 import ButtonAnimationWrapper from '@/components/ButtonAnimationWrapper';
@@ -31,6 +31,15 @@ import { SECTION_COMMON_PY } from '@/utils/constant';
 
 /***************************  PRICING - 9  ***************************/
 
+/**
+ *
+ * Demos:
+ * - [Pricing9](https://www.saasable.io/blocks/pricing/pricing9)
+ *
+ * API
+ * - [Pricing9 API](https://phoenixcoded.gitbook.io/saasable/ui-kit/development/components/pricing/pricing9#props-details)
+ */
+
 export default function Pricing9({ heading, caption, features, plans }) {
   const theme = useTheme();
 
@@ -42,10 +51,7 @@ export default function Pricing9({ heading, caption, features, plans }) {
             initial={{ opacity: 0, y: 10 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{
-              duration: 0.5,
-              delay: 0.4
-            }}
+            transition={{ duration: 0.5, delay: 0.4 }}
           >
             <Typeset {...{ heading, caption, stackProps: { sx: { textAlign: 'center' } } }} />
           </motion.div>
@@ -54,10 +60,11 @@ export default function Pricing9({ heading, caption, features, plans }) {
           {plans.map((plan, index) => (
             <Grid key={index} size={{ xs: 12, sm: 6, md: 4 }}>
               <motion.div
-                initial={{ y: 25, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
+                key={index}
+                initial={{ opacity: 0, x: index === 0 ? -60 : index === 2 ? 60 : 0, y: 0, scale: index === 1 ? 0.9 : 1 }}
+                whileInView={{ opacity: 1, x: 0, y: 0, scale: 1 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: plan.animationDelay }}
+                transition={{ duration: 0.4, ease: 'easeInOut', delay: plan.animationDelay }}
                 style={{ height: '100%' }}
               >
                 <GraphicsCard sx={{ height: 1, ...(plan.active && { border: '1px solid', borderColor: 'primary.main' }) }}>
@@ -84,41 +91,30 @@ export default function Pricing9({ heading, caption, features, plans }) {
                         <Stack sx={{ gap: 5 }}>
                           <Divider>
                             <Chip
-                              label={
-                                <Typography variant="caption" sx={{ color: 'text.secondary' }}>
-                                  {plan.featureTitle}
-                                </Typography>
-                              }
+                              label={plan.featureTitle}
                               size="small"
-                              sx={{ bgcolor: 'grey.200', '.MuiChip-label': { py: 0.25, px: 1.5 } }}
+                              slotProps={{ label: { sx: { py: 0.5, px: 1.5, typography: 'caption', color: 'text.secondary' } } }}
+                              sx={{ bgcolor: 'grey.200' }}
                             />
                           </Divider>
                           <Stack sx={{ gap: { xs: 0.75, md: 1 } }}>
-                            {features.map((item) => {
-                              const isFreePlanExclusive = item.label === '1 Demo Landing' || item.label === '25 Components Blocks';
-                              const isProPlanExclusive = item.label === '7 Demo Landing' || item.label === '193+ Component Blocks';
-                              const shouldShow =
-                                (plan.title === 'Free' && isFreePlanExclusive) ||
-                                (plan.title === 'Pro' && isProPlanExclusive) ||
-                                (!isFreePlanExclusive && !isProPlanExclusive);
-
-                              if (!shouldShow) return null;
-
+                            {features.map((item, index) => {
+                              const active = plan.featuresID.includes(item.id);
                               return (
-                                <Stack key={item.id} direction="row" sx={{ gap: 1.25, alignItems: 'center' }}>
+                                <Stack key={index} direction="row" sx={{ gap: 1.25, alignItems: 'center' }}>
                                   <Avatar sx={{ bgcolor: 'grey.100', width: 24, height: 24 }}>
                                     <SvgIcon
-                                      name={plan.featuresID.includes(item.id) ? 'tabler-check' : 'tabler-x'}
+                                      name={active ? 'tabler-check' : 'tabler-x'}
                                       type={IconType.STROKE}
                                       size={16}
                                       twoToneColor={theme.palette.grey[100]}
-                                      color={plan.featuresID.includes(item.id) ? 'secondary.darker' : 'text.secondary'}
+                                      color={active ? 'secondary.darker' : 'text.secondary'}
                                       stroke={2}
                                     />
                                   </Avatar>
                                   <Typography
-                                    variant={plan.featuresID.includes(item.id) ? 'subtitle1' : 'body1'}
-                                    sx={{ color: plan.featuresID.includes(item.id) ? 'secondary.darker' : 'text.secondary' }}
+                                    variant={active ? 'subtitle1' : 'body1'}
+                                    sx={{ color: active ? 'secondary.darker' : 'text.secondary' }}
                                   >
                                     {item.label}
                                   </Typography>
@@ -134,14 +130,27 @@ export default function Pricing9({ heading, caption, features, plans }) {
                               <Link component={NextLink} color="primary.main" sx={{ textDecoration: 'underline' }} {...plan.contentLink} />
                             </Typography>
                           )}
-                          <ButtonAnimationWrapper>
-                            <Button
-                              variant={plan.active ? 'contained' : 'outlined'}
-                              sx={{ ...(!plan.link && { mb: { sm: 3.25, md: 3.75 } }) }}
-                              fullWidth
-                              {...plan.exploreLink}
-                            />
-                          </ButtonAnimationWrapper>
+
+                          <motion.div
+                            initial={{ scale: 0.9 }}
+                            animate={{ scale: plan.active ? [1, 1.04, 1] : 1 }}
+                            transition={{
+                              duration: plan.active ? 0.9 : 1,
+                              delay: 0.1,
+                              ease: 'easeInOut',
+                              ...(plan.active && { repeat: Infinity, repeatType: 'loop' })
+                            }}
+                            whileHover={{ scale: 1.01, transition: { duration: 0.3 } }}
+                          >
+                            <ButtonAnimationWrapper>
+                              <Button
+                                variant={plan.active ? 'contained' : 'outlined'}
+                                sx={{ ...(!plan.link && { mb: { sm: 3.25, md: 3.75 } }) }}
+                                fullWidth
+                                {...plan.exploreLink}
+                              />
+                            </ButtonAnimationWrapper>
+                          </motion.div>
                           {plan.link && (
                             <Typography variant="subtitle1" sx={{ textAlign: 'center', color: 'text.secondary' }}>
                               or

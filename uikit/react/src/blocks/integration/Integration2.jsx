@@ -8,7 +8,7 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
 // @third-party
-import { motion } from 'framer-motion';
+import { motion } from 'motion/react';
 
 // @project
 import ButtonAnimationWrapper from '@/components/ButtonAnimationWrapper';
@@ -24,16 +24,14 @@ function IntegrationTag({ label, icon }) {
 
   return (
     <Chip
-      label={<Typography variant="h5">{label}</Typography>}
-      {...(icon && {
-        icon: <SvgIcon {...(typeof icon === 'string' ? { name: icon } : { ...icon })} stroke={1} color="inherit" />
-      })}
+      label={label}
+      {...(icon && { icon: <SvgIcon {...(typeof icon === 'string' ? { name: icon } : { ...icon })} stroke={1} color="inherit" /> })}
+      slotProps={{ label: { sx: { p: 0, ...(icon && { pl: 1.25 }), typography: 'h5' } } }}
       sx={{
         px: { xs: 2.25, md: 3 },
         py: icon ? { xs: 1.25, md: 1.75 } : { xs: 1.875, md: 2.5 },
         m: 0.5,
         bgcolor: 'background.default',
-        '& .MuiChip-label': { p: 0, ...(icon && { pl: 1.25 }) },
         '& svg': { width: iconSize, height: iconSize }
       }}
     />
@@ -41,6 +39,15 @@ function IntegrationTag({ label, icon }) {
 }
 
 /***************************  INTEGRATION - 2  ***************************/
+
+/**
+ *
+ * Demos:
+ * - [Integration2](https://www.saasable.io/blocks/integration/integration2)
+ *
+ * API:
+ * - [Integration2 API](https://phoenixcoded.gitbook.io/saasable/ui-kit/development/components/integration/integration2#props-details)
+ */
 
 export default function Integration2({ headLine, captionLine, primaryBtn, tagList }) {
   return (
@@ -57,26 +64,48 @@ export default function Integration2({ headLine, captionLine, primaryBtn, tagLis
         <GraphicsCard>
           <Stack sx={{ alignItems: 'center', p: { xs: 3, sm: 4, md: 5 } }}>
             <Stack sx={{ alignItems: 'center', gap: { xs: 1, sm: 1.5 } }}>
-              {headLine && (
-                <Typography align="center" variant="h2">
-                  {headLine}
-                </Typography>
-              )}
-              {captionLine && (
-                <Typography align="center" variant="h6" sx={{ color: 'text.secondary' }}>
-                  {captionLine}
-                </Typography>
-              )}
+              <motion.div
+                initial={{ opacity: 0, y: 25 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.4, ease: [0.215, 0.61, 0.355, 1] }}
+              >
+                {headLine && (
+                  <Typography align="center" variant="h2">
+                    {headLine}
+                  </Typography>
+                )}
+                {captionLine && (
+                  <Typography align="center" variant="h6" sx={{ color: 'text.secondary' }}>
+                    {captionLine}
+                  </Typography>
+                )}
+              </motion.div>
             </Stack>
             <Stack direction="row" sx={{ py: { xs: 4, sm: 5, md: 6 }, justifyContent: 'center', alignItems: 'center', flexWrap: 'wrap' }}>
               {tagList.map((integration, index) => (
-                <IntegrationTag key={index} {...integration} />
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, scale: 0.7 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, ease: 'easeOut', delay: Math.random() * 0.6 }}
+                >
+                  <IntegrationTag {...integration} />
+                </motion.div>
               ))}
             </Stack>
             {primaryBtn && (
-              <ButtonAnimationWrapper>
-                <Button variant="contained" size="large" {...primaryBtn} />
-              </ButtonAnimationWrapper>
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3, ease: 'easeInOut' }}
+                whileHover={{ scale: 1.06 }}
+              >
+                <ButtonAnimationWrapper>
+                  <Button variant="contained" size="large" {...primaryBtn} />
+                </ButtonAnimationWrapper>
+              </motion.div>
             )}
           </Stack>
         </GraphicsCard>

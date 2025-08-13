@@ -7,26 +7,25 @@ import AppBar from '@mui/material/AppBar';
 import Toolbar from '@mui/material/Toolbar';
 
 // @project
+import ElevationScroll from './ElevationScroll';
 import ContainerWrapper from '@/components/ContainerWrapper';
+
+export const navbar10Height = { xs: 64, sm: 72, md: 84 };
 
 // override media queries injected by theme.mixins.toolbar
 const StyledToolbar = styled(Toolbar)(({ theme }) => ({
   '@media all': {
-    minHeight: 84,
+    minHeight: navbar10Height.md,
     paddingLeft: 0,
     paddingRight: 0
   },
   paddingTop: theme.spacing(2),
   paddingBottom: theme.spacing(2),
   [theme.breakpoints.down('md')]: {
-    '@media all': {
-      minHeight: 72
-    }
+    '@media all': { minHeight: navbar10Height.sm }
   },
   [theme.breakpoints.down('sm')]: {
-    '@media all': {
-      minHeight: 64
-    },
+    '@media all': { minHeight: navbar10Height.xs },
     paddingTop: theme.spacing(1.5),
     paddingBottom: theme.spacing(1.5)
   }
@@ -34,14 +33,28 @@ const StyledToolbar = styled(Toolbar)(({ theme }) => ({
 
 /***************************  NAVBAR - 10  ***************************/
 
-export default function Navbar10({ children }) {
+/**
+ *
+ * Demos:
+ * - [Navbar10](https://www.saasable.io/blocks/navbar/navbar10)
+ *
+ * API:
+ * - [Navbar10 API](https://phoenixcoded.gitbook.io/saasable/ui-kit/development/components/navbar/navbar10#props-details)
+ */
+
+export default function Navbar10({ children, isFixed = true, ...props }) {
   return (
-    <ContainerWrapper>
-      <AppBar position="static" color="inherit" elevation={0} sx={{ background: 'transparent' }}>
-        <StyledToolbar>{children}</StyledToolbar>
-      </AppBar>
-    </ContainerWrapper>
+    <>
+      <ElevationScroll isFixed={isFixed} {...props}>
+        <AppBar {...(!isFixed && { position: 'static', elevation: 0 })} component="nav" color="inherit" sx={{ background: 'transparent' }}>
+          <StyledToolbar>
+            <ContainerWrapper>{children}</ContainerWrapper>
+          </StyledToolbar>
+        </AppBar>
+      </ElevationScroll>
+      {isFixed && <StyledToolbar />}
+    </>
   );
 }
 
-Navbar10.propTypes = { children: PropTypes.any };
+Navbar10.propTypes = { children: PropTypes.any, isFixed: PropTypes.bool, props: PropTypes.any };
