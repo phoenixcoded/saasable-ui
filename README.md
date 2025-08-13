@@ -41,12 +41,16 @@ npm install
 
 3. Run project
 
-For React
-
 ```
 For React
 
 npm run dev
+```
+
+```
+For Vite Admin
+
+npm run start
 ```
 
 ```
@@ -139,6 +143,7 @@ Looking for even more features? Check out SaasAble's [premium version](https://m
 
 - React 19
 - Next js
+- Vite
 - TypeScript
 - Material UI v7
 - JavaScript
