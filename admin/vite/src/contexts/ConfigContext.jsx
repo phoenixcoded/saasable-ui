@@ -14,7 +14,7 @@ const initialState = { ...defaultConfig };
 const ConfigContext = createContext(initialState);
 
 function ConfigProvider({ children }) {
-  const [config] = useLocalStorage('sass-able-react-mui-admin-vitefree', initialState);
+  const [config] = useLocalStorage('sass-able-react-mui-admin-vite', initialState);
 
   return <ConfigContext value={{ ...config }}>{children}</ConfigContext>;
 }
