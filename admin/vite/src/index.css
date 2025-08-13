@@ -1,0 +1,4 @@
+/* Tap highlight */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
