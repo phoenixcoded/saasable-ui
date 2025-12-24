@@ -1,12 +1,13 @@
-// @mui
-import { alpha } from '@mui/material/styles';
-
 // @project
 import { ChipIconPosition } from '@/enum';
+import { withAlpha } from '@/utils/colorUtils';
 import { generateFocusStyle } from '@/utils/generateFocusStyle';
 
 // @assets
 import { IconX } from '@tabler/icons-react';
+
+const validPaletteKeys = ['primary', 'secondary', 'error', 'warning', 'info', 'success'];
+const isValidPaletteKey = (value) => validPaletteKeys.includes(value);
 
 /***************************  OVERRIDES - CHIP  ***************************/
 
@@ -21,18 +22,16 @@ export default function Chip(theme) {
         root: {
           height: '100%',
           '&.Mui-focusVisible': {
-            ...generateFocusStyle(theme.palette.primary.main)
+            ...generateFocusStyle(theme.vars.palette.primary.main)
           },
           variants: [
             {
               props: { variant: 'text' }, // Variant for text Chip
               style: ({ ownerState }) => {
-                const paletteColor = theme.palette[ownerState.color];
+                const paletteColor = isValidPaletteKey(ownerState.color) ? theme.vars.palette[ownerState.color] : undefined;
                 return {
                   backgroundColor: 'transparent', // Transparent background for text variant
-                  ...(paletteColor && {
-                    color: paletteColor.main
-                  }),
+                  ...(paletteColor && { color: paletteColor.main }),
                   '& .MuiChip-label': {
                     padding: 0
                   },
@@ -64,12 +63,11 @@ export default function Chip(theme) {
             {
               props: { variant: 'light' }, // Variant for light Chip
               style: ({ ownerState }) => {
-                const paletteColor = theme.palette[ownerState.color];
+                const paletteColor = isValidPaletteKey(ownerState.color) ? theme.vars.palette[ownerState.color] : undefined;
                 return {
                   ...(paletteColor && {
                     color: paletteColor.main,
-                    backgroundColor: paletteColor.lighter,
-                    ...theme.applyStyles('dark', { backgroundColor: alpha(paletteColor.lighter, 0.4) })
+                    backgroundColor: paletteColor.lighter
                   }),
                   '& .MuiChip-label': {
                     padding: '2px 8px' // Padding for the label
@@ -83,8 +81,7 @@ export default function Chip(theme) {
                     marginRight: -4,
                     ...(paletteColor && {
                       color: paletteColor.lighter,
-                      backgroundColor: paletteColor.main,
-                      ...theme.applyStyles('dark', { color: paletteColor.main, backgroundColor: paletteColor.lighter })
+                      backgroundColor: paletteColor.main
                     })
                   },
                   '& .MuiChip-deleteIcon': {
@@ -93,8 +90,7 @@ export default function Chip(theme) {
                     ...(paletteColor && {
                       color: paletteColor.main,
                       backgroundColor: paletteColor.lighter,
-                      '&:hover': { color: paletteColor.dark },
-                      ...theme.applyStyles('dark', { backgroundColor: 'transparent', '&:hover': { color: paletteColor.darker } })
+                      '&:hover': { color: paletteColor.dark }
                     })
                   },
                   '&.Mui-focusVisible': {
@@ -106,9 +102,8 @@ export default function Chip(theme) {
             {
               props: { variant: 'filled' }, // Variant for filled Chip
               style: ({ ownerState }) => {
-                const paletteColor = theme.palette[ownerState.color];
+                const paletteColor = isValidPaletteKey(ownerState.color) ? theme.vars.palette[ownerState.color] : undefined;
                 return {
-                  ...theme.applyStyles('dark', { ...(paletteColor && { backgroundColor: paletteColor.light }) }),
                   '& .MuiChip-label': {
                     padding: '2px 8px' // Padding for the label
                   },
@@ -121,8 +116,7 @@ export default function Chip(theme) {
                     marginRight: -4,
                     ...(paletteColor && {
                       color: paletteColor.main,
-                      backgroundColor: paletteColor.lighter,
-                      ...theme.applyStyles('dark', { color: paletteColor.darker })
+                      backgroundColor: paletteColor.lighter
                     })
                   }
                 };
@@ -131,15 +125,8 @@ export default function Chip(theme) {
             {
               props: { variant: 'outlined' }, // Variant for outlined Chip
               style: ({ ownerState }) => {
-                const paletteColor = theme.palette[ownerState.color];
+                const paletteColor = isValidPaletteKey(ownerState.color) ? theme.vars.palette[ownerState.color] : undefined;
                 return {
-                  ...theme.applyStyles('dark', {
-                    ...(paletteColor && {
-                      color: paletteColor.light,
-                      borderColor: paletteColor.light,
-                      '& .MuiChip-deleteIcon': { color: paletteColor.light }
-                    })
-                  }),
                   '& .MuiChip-label': {
                     padding: '1px 7px' // Padding for the label
                   },
@@ -154,8 +141,7 @@ export default function Chip(theme) {
                     marginRight: -4,
                     ...(paletteColor && {
                       color: paletteColor.main,
-                      backgroundColor: paletteColor.lighter,
-                      ...theme.applyStyles('dark', { color: theme.palette.background.default, backgroundColor: paletteColor.light })
+                      backgroundColor: paletteColor.lighter
                     })
                   }
                 };
@@ -179,24 +165,23 @@ export default function Chip(theme) {
             {
               props: { variant: 'tag' }, // Variant for tag Chip
               style: ({ ownerState }) => {
-                const paletteColor = theme.palette[ownerState.color];
+                const paletteColor = isValidPaletteKey(ownerState.color) ? theme.vars.palette[ownerState.color] : undefined;
 
                 return {
                   backgroundColor: 'transparent',
                   borderRadius: 6,
-                  border: `1px solid ${theme.palette.grey[200]}`,
+                  border: `1px solid ${theme.vars.palette.grey[200]}`,
                   '&:active': {
                     boxShadow: 'none'
                   },
                   ...(paletteColor === undefined && {
-                    color: theme.palette.text.secondary,
-                    '&:hover': { backgroundColor: theme.palette.grey[50] }
+                    color: theme.vars.palette.text.secondary,
+                    '&:hover': { backgroundColor: theme.vars.palette.grey[50] }
                   }),
                   ...(paletteColor && {
                     borderColor: paletteColor.lighter,
                     color: paletteColor.main,
-                    ...theme.applyStyles('dark', { color: paletteColor.light }),
-                    '&:hover': { backgroundColor: alpha(paletteColor.lighter, 0.2) }
+                    '&:hover': { backgroundColor: withAlpha(paletteColor.lighter, 0.2) }
                   }),
                   '& .MuiChip-label': {
                     fontWeight: 400,
@@ -209,13 +194,12 @@ export default function Chip(theme) {
                       padding: '3px 6px'
                     },
                     ...(paletteColor === undefined && {
-                      color: theme.palette.text.secondary,
-                      backgroundColor: theme.palette.grey[300]
+                      color: theme.vars.palette.text.secondary,
+                      backgroundColor: theme.vars.palette.grey[300]
                     }),
                     ...(paletteColor && {
                       color: paletteColor.dark,
-                      backgroundColor: paletteColor.light,
-                      ...theme.applyStyles('dark', { color: theme.palette.background.default })
+                      backgroundColor: paletteColor.light
                     })
                   },
                   '&.MuiChip-deletable': {
@@ -226,10 +210,9 @@ export default function Chip(theme) {
                   '& .MuiChip-deleteIcon': {
                     marginRight: 2,
                     marginLeft: -2,
-                    ...(paletteColor === undefined && { color: alpha(theme.palette.text.secondary, 0.8) }),
+                    ...(paletteColor === undefined && { color: withAlpha(theme.vars.palette.text.secondary, 0.8) }),
                     ...(paletteColor && {
-                      color: alpha(paletteColor.main, 0.8),
-                      ...theme.applyStyles('dark', { color: paletteColor.light }),
+                      color: withAlpha(paletteColor.main, 0.8),
                       '&:hover': { color: paletteColor.dark }
                     })
                   },

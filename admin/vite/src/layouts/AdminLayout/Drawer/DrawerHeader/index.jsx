@@ -1,4 +1,6 @@
 import PropTypes from 'prop-types';
+import { Activity } from 'react';
+
 // @mui
 import IconButton from '@mui/material/IconButton';
 import Stack from '@mui/material/Stack';
@@ -20,7 +22,9 @@ export default function DrawerHeader({ open }) {
   return (
     <Box sx={{ width: 1, px: 2, py: { xs: 2, md: 2.5 } }}>
       <Stack direction="row" sx={{ alignItems: 'center', justifyContent: open ? 'space-between' : 'center', height: 36 }}>
-        {open && <Logo />}
+        <Activity mode={open ? 'visible' : 'hidden'}>
+          <Logo />
+        </Activity>
         <IconButton
           aria-label="open drawer"
           onClick={() => handlerDrawerOpen(!drawerOpen)}

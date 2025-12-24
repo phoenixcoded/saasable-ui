@@ -5,6 +5,8 @@ export const APP_DEFAULT_PATH = '/dashboard';
 export const DRAWER_WIDTH = 254;
 export const MINI_DRAWER_WIDTH = 76 + 1; // 1px - for right-side border
 
+export const CSS_VAR_PREFIX = '';
+
 /***************************  THEME ENUM  ***************************/
 
 export let Themes;
@@ -40,11 +42,12 @@ export let ThemeFonts;
   ThemeFonts['FONT_ARCHIVO'] = "'Archivo', sans-serif";
 })(ThemeFonts || (ThemeFonts = {}));
 
+export const DEFAULT_THEME_MODE = ThemeMode.LIGHT;
+
 /***************************  CONFIG  ***************************/
 
 const config = {
   currentTheme: Themes.THEME_HOSTING,
-  mode: ThemeMode.LIGHT,
   themeDirection: ThemeDirection.LTR,
   miniDrawer: false,
   i18n: ThemeI18n.EN

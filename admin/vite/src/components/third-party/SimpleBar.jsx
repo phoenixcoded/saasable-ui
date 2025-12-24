@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 // @mui
-import { alpha, styled, useTheme } from '@mui/material/styles';
+import { styled, useTheme } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 
 // @third-party
@@ -9,7 +9,8 @@ import MainSimpleBar from 'simplebar-react';
 import { BrowserView, MobileView } from 'react-device-detect';
 
 // @project
-import { ThemeDirection, ThemeMode } from '@/config';
+import { ThemeDirection } from '@/config';
+import { withAlpha } from '@/utils/colorUtils';
 
 // root style
 const RootStyle = styled(BrowserView)({ flexGrow: 1, height: '100%', overflow: 'hidden' });
@@ -18,7 +19,9 @@ const RootStyle = styled(BrowserView)({ flexGrow: 1, height: '100%', overflow: '
 const SimpleBarStyle = styled(MainSimpleBar)(({ theme }) => ({
   maxHeight: '100%',
   '& .simplebar-scrollbar': {
-    '&:before': { background: alpha(theme.palette.grey[theme.palette.mode === ThemeMode.DARK ? 200 : 500], 0.48) },
+    '&:before': {
+      background: withAlpha(theme.vars.palette.grey[500], 0.48)
+    },
     '&.simplebar-visible:before': { opacity: 1 }
   },
   '& .simplebar-track.simplebar-vertical': { width: 10 },

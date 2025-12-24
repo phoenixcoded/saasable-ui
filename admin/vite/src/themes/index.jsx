@@ -1,4 +1,3 @@
-'use client';
 import PropTypes from 'prop-types';
 
 import { useMemo } from 'react';
@@ -8,9 +7,10 @@ import { createTheme, ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 
 // @project
-import palette from './palette';
+import { CSS_VAR_PREFIX, DEFAULT_THEME_MODE } from '@/config';
+import CustomShadows from './custom-shadows';
+import { buildPalette } from './palette';
 import componentsOverride from './overrides';
-import Shadows from './shadow';
 import typography from './typography';
 
 import useConfig from '@/hooks/useConfig';
@@ -18,11 +18,13 @@ import useConfig from '@/hooks/useConfig';
 /*************************** DEFAULT THEME - MAIN ***************************/
 
 export default function ThemeCustomization({ children }) {
-  const { mode, themeDirection } = useConfig();
+  const {
+    state: { themeDirection }
+  } = useConfig();
 
-  const themePalette = useMemo(() => palette(mode), [mode]);
+  const palette = useMemo(() => buildPalette(), []);
 
-  const themeDefault = createTheme({
+  const theme = createTheme({
     breakpoints: {
       values: {
         xs: 0,
@@ -33,21 +35,23 @@ export default function ThemeCustomization({ children }) {
       }
     },
     direction: themeDirection,
-    palette: themePalette,
-    customShadows: {}
-  });
-
-  // create duplicate theme due to responsive typography and fontFamily
-  const theme = createTheme({
-    ...themeDefault,
-    typography: typography(themeDefault),
-    customShadows: Shadows(themeDefault)
+    colorSchemes: {
+      light: {
+        palette: palette.light,
+        customShadows: CustomShadows(palette.light)
+      }
+    },
+    cssVariables: {
+      cssVarPrefix: CSS_VAR_PREFIX,
+      colorSchemeSelector: 'data-color-scheme'
+    },
+    typography: typography()
   });
 
   theme.components = componentsOverride(theme);
 
   return (
-    <ThemeProvider {...{ theme }}>
+    <ThemeProvider disableTransitionOnChange theme={theme} modeStorageKey="theme-mode" defaultMode={DEFAULT_THEME_MODE}>
       <CssBaseline enableColorScheme />
       {children}
     </ThemeProvider>

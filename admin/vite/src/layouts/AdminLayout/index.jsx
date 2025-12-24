@@ -30,7 +30,7 @@ export default function DashboardLayout() {
   if (menuMasterLoading) return <Loader />;
 
   return (
-    <Stack direction="row" width={1}>
+    <Stack direction="row" sx={{ width: 1 }}>
       <Header />
       <Drawer />
       <Box component="main" sx={{ width: `calc(100% - ${DRAWER_WIDTH}px)`, flexGrow: 1, p: { xs: 2, sm: 3 } }}>

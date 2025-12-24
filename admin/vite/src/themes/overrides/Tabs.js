@@ -1,8 +1,6 @@
-// @mui
-import { alpha } from '@mui/material/styles';
-
 // @project
 import { TabsType } from '@/enum';
+import { withAlpha } from '@/utils/colorUtils';
 
 const segmentedBorderRadius = 8;
 
@@ -38,12 +36,12 @@ export default function Tabs(theme) {
                 },
                 '& .MuiTab-root': {
                   ...theme.typography.body2,
-                  color: theme.palette.text.secondary,
+                  color: theme.vars.palette.text.secondary,
                   textTransform: 'none',
                   minHeight: 38,
                   padding: '9px 12px',
                   borderRadius: 0,
-                  border: `1px solid ${theme.palette.grey[200]}`,
+                  border: `1px solid ${theme.vars.palette.grey[200]}`,
                   '&:first-of-type': {
                     borderTopLeftRadius: segmentedBorderRadius,
                     borderBottomLeftRadius: segmentedBorderRadius
@@ -56,22 +54,22 @@ export default function Tabs(theme) {
                     borderLeft: 'none' // Prevent double border between tab
                   },
                   '&.Mui-selected': {
-                    backgroundColor: theme.palette.grey[100],
+                    backgroundColor: theme.vars.palette.grey[100],
                     '&:hover': {
-                      backgroundColor: theme.palette.grey[200]
+                      backgroundColor: theme.vars.palette.grey[200]
                     }
                   },
                   '&:hover': {
-                    backgroundColor: alpha(theme.palette.grey[200], 0.25)
+                    backgroundColor: withAlpha(theme.vars.palette.grey[200], 0.25)
                   },
                   '&.Mui-disabled': {
-                    color: theme.palette.action.disabled
+                    color: theme.vars.palette.action.disabled
                   }
                 },
                 '& .Mui-focusVisible': {
-                  backgroundColor: alpha(theme.palette.grey[500], 0.25),
+                  backgroundColor: withAlpha(theme.vars.palette.grey[500], 0.25),
                   '&.Mui-selected': {
-                    backgroundColor: alpha(theme.palette.secondary.light, 0.5)
+                    backgroundColor: withAlpha(theme.vars.palette.secondary.light, 0.5)
                   }
                 }
               }
@@ -80,7 +78,7 @@ export default function Tabs(theme) {
         },
         indicator: ({ ownerState }) => ({
           ...(ownerState.indicatorColor === 'secondary' && {
-            backgroundColor: theme.palette.text.primary
+            backgroundColor: theme.vars.palette.text.primary
           })
         })
       }
