@@ -55,5 +55,6 @@
     "prettier": "3.7.4",
     "vite": "7.3.0"
   },
-  "resolutions": {}
+  "resolutions": {},
+  "packageManager": "yarn@4.12.0"
 }
