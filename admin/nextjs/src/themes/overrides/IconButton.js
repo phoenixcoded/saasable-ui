@@ -1,7 +1,5 @@
-// @mui
-import { alpha } from '@mui/material/styles';
-
 // @project
+import { withAlpha } from '@/utils/colorUtils';
 import { generateFocusStyle } from '@/utils/generateFocusStyle';
 
 const colors = ['primary', 'secondary', 'success', 'error', 'warning', 'info'];
@@ -9,9 +7,8 @@ const colors = ['primary', 'secondary', 'success', 'error', 'warning', 'info'];
 /***************************  COMPONENT - ICON BUTTON  ***************************/
 
 export default function IconButton(theme) {
-  const createColorVariant = (color, variant, styleFn) => {
-    const paletteColor = theme.palette[color];
-
+  const createColorVariant = (color, variant, styleFn, theme) => {
+    const paletteColor = theme.vars.palette[color];
     return {
       props: { variant, color },
       style: styleFn(paletteColor)
@@ -20,39 +17,58 @@ export default function IconButton(theme) {
 
   const commonDisabledStyles = {
     '&.Mui-disabled': {
-      color: theme.palette.action.disabled,
-      backgroundColor: theme.palette.action.disabledBackground
+      backgroundColor: theme.vars.palette.action.disabledBackground
+    },
+    '&.Mui-disabled:not(.MuiIconButton-loading)': {
+      color: theme.vars.palette.action.disabled
     }
   };
 
   const colorTextVariants = colors.map((color) =>
-    createColorVariant(color, undefined, (paletteColor) => ({
-      color: paletteColor.main
-    }))
+    createColorVariant(
+      color,
+      undefined,
+      (paletteColor) => ({
+        color: paletteColor.main
+      }),
+      theme
+    )
   );
 
   const colorContainedVariants = colors.map((color) =>
-    createColorVariant(color, 'contained', (paletteColor) => ({
-      color: paletteColor.contrastText,
-      backgroundColor: paletteColor.main,
-      '&:hover': {
-        backgroundColor: paletteColor.dark
-      },
-      ...commonDisabledStyles
-    }))
+    createColorVariant(
+      color,
+      'contained',
+      (paletteColor) => ({
+        color: paletteColor.contrastText,
+        backgroundColor: paletteColor.main,
+        '&:hover': {
+          backgroundColor: paletteColor.dark
+        },
+        ...commonDisabledStyles
+      }),
+      theme
+    )
   );
 
   const colorOutlinedVariants = colors.map((color) =>
-    createColorVariant(color, 'outlined', (paletteColor) => ({
-      color: paletteColor.main,
-      border: `1px solid ${paletteColor.lighter}`,
-      ...(color === 'secondary' && { color: theme.palette.text.primary, borderColor: theme.palette.divider }),
-      '&.Mui-disabled': {
-        color: theme.palette.action.disabled,
-        backgroundColor: alpha(theme.palette.grey[700], 0.04),
-        borderColor: theme.palette.action.disabledBackground
-      }
-    }))
+    createColorVariant(
+      color,
+      'outlined',
+      (paletteColor) => ({
+        color: paletteColor.main,
+        border: `1px solid ${paletteColor.lighter}`,
+        ...(color === 'secondary' && { color: theme.vars.palette.text.primary, borderColor: theme.vars.palette.divider }),
+        '&.Mui-disabled': {
+          backgroundColor: withAlpha(theme.vars.palette.grey[700], 0.04),
+          borderColor: theme.vars.palette.action.disabledBackground
+        },
+        '&.Mui-disabled:not(.MuiIconButton-loading)': {
+          color: theme.vars.palette.action.disabled
+        }
+      }),
+      theme
+    )
   );
 
   return {
@@ -72,7 +88,7 @@ export default function IconButton(theme) {
             cursor: 'not-allowed'
           },
           '&:focus-visible': {
-            ...generateFocusStyle(theme.palette.primary.main)
+            ...generateFocusStyle(theme.vars.palette.primary.main)
           },
           variants: [...colorTextVariants, ...colorContainedVariants, ...colorOutlinedVariants]
         },

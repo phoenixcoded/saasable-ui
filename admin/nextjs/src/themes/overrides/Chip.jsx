@@ -1,10 +1,11 @@
-// @mui
-
 // @project
 import { generateFocusStyle } from '@/utils/generateFocusStyle';
 
 // @assets
 import { IconX } from '@tabler/icons-react';
+
+const validPaletteKeys = ['primary', 'secondary', 'error', 'warning', 'info', 'success'];
+const isValidPaletteKey = (value) => validPaletteKeys.includes(value);
 
 /***************************  OVERRIDES - CHIP  ***************************/
 
@@ -19,13 +20,13 @@ export default function Chip(theme) {
         root: {
           height: '100%',
           '&.Mui-focusVisible': {
-            ...generateFocusStyle(theme.palette.primary.main)
+            ...generateFocusStyle(theme.vars.palette.primary.main)
           },
           variants: [
             {
               props: { variant: 'text' }, // Variant for text Chip
               style: ({ ownerState }) => {
-                const paletteColor = theme.palette[ownerState.color];
+                const paletteColor = isValidPaletteKey(ownerState.color) ? theme.vars.palette[ownerState.color] : undefined;
                 return {
                   backgroundColor: 'transparent', // Transparent background for text variant
                   ...(paletteColor && {

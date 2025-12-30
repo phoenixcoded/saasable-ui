@@ -7,7 +7,7 @@ import { useTheme } from '@mui/material/styles';
 
 export default function Error5001() {
   const theme = useTheme();
-  const primaryColor = theme.palette.primary.dark;
+  const primaryColor = theme.vars.palette.primary.dark;
 
   return (
     <svg viewBox="0 0 1207 399" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ width: '100%', height: 'auto' }}>

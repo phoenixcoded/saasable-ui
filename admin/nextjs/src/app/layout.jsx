@@ -26,10 +26,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <head>
-        <script src="https://fomo.codedthemes.com/pixel/gkPddwTcjNYydfr7v3FcZuToUb9ZAevo" defer data-nscript="lazyOnload"></script>
-      </head>
+    <html lang="en" suppressHydrationWarning>
       <body>
         <AppRouterCacheProvider options={{ enableCssLayer: true }}>
           <ProviderWrapper>{children}</ProviderWrapper>

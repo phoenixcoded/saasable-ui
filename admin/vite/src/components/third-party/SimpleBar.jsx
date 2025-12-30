@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 
 // @mui
-import { styled, useTheme } from '@mui/material/styles';
+import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 
 // @third-party
@@ -9,7 +9,6 @@ import MainSimpleBar from 'simplebar-react';
 import { BrowserView, MobileView } from 'react-device-detect';
 
 // @project
-import { ThemeDirection } from '@/config';
 import { withAlpha } from '@/utils/colorUtils';
 
 // root style
@@ -32,17 +31,10 @@ const SimpleBarStyle = styled(MainSimpleBar)(({ theme }) => ({
 /***************************  SIMPLE SCROLL BAR   ***************************/
 
 export default function SimpleBar({ children, sx, ...other }) {
-  const theme = useTheme();
-
   return (
     <>
       <RootStyle>
-        <SimpleBarStyle
-          clickOnTrack={false}
-          sx={sx}
-          data-simplebar-direction={theme.direction === ThemeDirection.RTL ? 'rtl' : 'ltr'}
-          {...other}
-        >
+        <SimpleBarStyle clickOnTrack={false} sx={sx} data-simplebar-direction="ltr" {...other}>
           {children}
         </SimpleBarStyle>
       </RootStyle>

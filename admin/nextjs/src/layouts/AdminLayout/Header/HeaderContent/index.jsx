@@ -7,6 +7,7 @@ import Notification from './Notification';
 import Profile from './Profile';
 import SearchBar from './SearchBar';
 import Breadcrumbs from '@/components/Breadcrumbs';
+import ThemeModeSwitcher from './ThemeModeSwitcher';
 
 /***************************  HEADER CONTENT  ***************************/
 
@@ -19,6 +20,7 @@ export default function HeaderContent() {
         </Box>
         <Stack direction="row" sx={{ alignItems: 'center', gap: { xs: 1, sm: 1.5 } }}>
           <SearchBar />
+          <ThemeModeSwitcher />
           <Notification />
           <Profile />
         </Stack>

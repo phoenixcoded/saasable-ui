@@ -23,11 +23,6 @@ const authButtons = [
     label: 'Facebook',
     icon: '/assets/images/social/facebook.svg',
     title: 'Sign in with Facebook'
-  },
-  {
-    label: 'Apple',
-    icon: { light: '/assets/images/social/apple-light.svg', dark: '/assets/images/social/apple-dark.svg' },
-    title: 'Sign in with Apple'
   }
 ];
 

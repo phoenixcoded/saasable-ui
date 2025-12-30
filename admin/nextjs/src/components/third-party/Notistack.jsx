@@ -20,22 +20,22 @@ import { IconAlertTriangle, IconBug, IconChecks, IconInfoCircle, IconSpeakerphon
 // custom styles
 const StyledSnackbarProvider = styled(SnackbarProvider)(({ theme }) => ({
   '&.notistack-MuiContent': {
-    color: theme.palette.background.default
+    color: theme.vars.palette.background.default
   },
   '&.notistack-MuiContent-default': {
-    backgroundColor: theme.palette.primary.main
+    backgroundColor: theme.vars.palette.primary.main
   },
   '&.notistack-MuiContent-error': {
-    backgroundColor: theme.palette.error.main
+    backgroundColor: theme.vars.palette.error.main
   },
   '&.notistack-MuiContent-success': {
-    backgroundColor: theme.palette.success.main
+    backgroundColor: theme.vars.palette.success.main
   },
   '&.notistack-MuiContent-info': {
-    backgroundColor: theme.palette.info.main
+    backgroundColor: theme.vars.palette.info.main
   },
   '&.notistack-MuiContent-warning': {
-    backgroundColor: theme.palette.warning.main
+    backgroundColor: theme.vars.palette.warning.main
   },
   '& #notistack-snackbar': {
     gap: 8

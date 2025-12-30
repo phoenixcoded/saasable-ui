@@ -54,7 +54,7 @@ export default function Header() {
     position: 'fixed',
     elevation: 0,
     sx: {
-      borderBottom: `1px solid ${theme.palette.grey[300]}`,
+      borderBottom: `1px solid ${theme.vars.palette.grey[300]}`,
       zIndex: 1200,
       width: { xs: '100%', lg: drawerOpen ? `calc(100% - ${DRAWER_WIDTH}px)` : 1 }
     }

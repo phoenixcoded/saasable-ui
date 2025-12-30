@@ -196,14 +196,14 @@ export default function Chart1() {
     {
       id: 'page_views',
       data: dataMap[view].pageViewData,
-      color: theme.palette.primary.light,
+      color: theme.vars.palette.primary.light,
       visible: visibilityOption['page_views'],
       label: 'Page View'
     },
     {
       id: 'unique_visitor',
       data: dataMap[view].uniqueVisitorData,
-      color: theme.palette.primary.main,
+      color: theme.vars.palette.primary.main,
       visible: visibilityOption['unique_visitor'],
       label: 'Unique Visitor'
     }

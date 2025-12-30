@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { useEffect } from 'react';
+import { Activity, useEffect } from 'react';
 
 // @next
 import Link from 'next/link';
@@ -33,7 +33,7 @@ export default function NavItem({ item, level = 0 }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [pathname]);
 
-  const iconcolor = theme.palette.text.primary;
+  const iconcolor = theme.vars.palette.text.primary;
 
   const itemHandler = () => {
     if (downMD) handlerDrawerOpen(false);
@@ -62,11 +62,11 @@ export default function NavItem({ item, level = 0 }) {
         })
       }}
     >
-      {level === 0 && (
+      <Activity mode={level === 0 ? 'visible' : 'hidden'}>
         <ListItemIcon>
           <DynamicIcon name={item.icon} color={iconcolor} size={18} stroke={1.5} />
         </ListItemIcon>
-      )}
+      </Activity>
       <ListItemText primary={item.title} sx={{ mb: '-1px' }} />
     </ListItemButton>
   );

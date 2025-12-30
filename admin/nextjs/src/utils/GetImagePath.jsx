@@ -1,7 +1,7 @@
 'use client';
 
 // @mui
-import { useTheme } from '@mui/material/styles';
+import { useColorScheme } from '@mui/material/styles';
 
 /***************************  IMAGE - TYPE IDENTIFY ***************************/
 
@@ -12,7 +12,7 @@ function isImageComponentProps(value) {
 /***************************  COMMON - IMAGE PATH  ***************************/
 
 export default function GetImagePath(image) {
-  const theme = useTheme();
+  const { colorScheme } = useColorScheme();
 
-  return isImageComponentProps(image) ? image[theme.palette.mode] : image;
+  return isImageComponentProps(image) ? image[colorScheme || 'light'] : image;
 }

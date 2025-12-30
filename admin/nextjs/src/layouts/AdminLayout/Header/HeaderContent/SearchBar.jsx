@@ -140,7 +140,7 @@ export default function SearchBar() {
         onClick={handleActionClick}
         onKeyDown={handleKeyDown}
         onChange={handleInputChange}
-        sx={{ minWidth: { xs: 200, sm: 240 } }}
+        sx={{ minWidth: { xs: 170, sm: 240 } }}
       />
       <Popper
         placement="bottom"
@@ -157,7 +157,7 @@ export default function SearchBar() {
             <MainCard
               sx={{
                 borderRadius: 2,
-                boxShadow: theme.customShadows.tooltip,
+                boxShadow: theme.vars.customShadows.tooltip,
                 width: 1,
                 minWidth: { xs: 352, sm: 240 },
                 maxWidth: { xs: 352, md: 420 },

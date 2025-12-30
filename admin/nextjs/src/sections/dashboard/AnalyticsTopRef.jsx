@@ -171,7 +171,7 @@ export default function TopReferrers() {
 
   return (
     <>
-      <Grid container sx={{ borderRadius: 4, boxShadow: theme.customShadows.section, ...applyBorderWithRadius(16, theme) }}>
+      <Grid container sx={{ borderRadius: 4, boxShadow: theme.vars.customShadows.section, ...applyBorderWithRadius(16, theme) }}>
         <Grid size={{ xs: 12, sm: 6, md: 4 }}>
           <Stack sx={{ gap: 2.5, p: 3 }}>
             <Typography variant="subtitle1">Top HTTP Referrers</Typography>
