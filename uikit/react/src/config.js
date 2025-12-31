@@ -15,6 +15,8 @@ export let Themes;
   Themes['THEME_LMS'] = 'lms';
 })(Themes || (Themes = {}));
 
+export const CSS_VAR_PREFIX = '';
+
 /***************************  CONFIG  ***************************/
 
 const config = {

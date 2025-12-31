@@ -1,13 +1,11 @@
 import PropTypes from 'prop-types';
-// @next
-import NextLink from 'next/link';
-
 // @mui
 import Button from '@mui/material/Button';
 import CardMedia from '@mui/material/CardMedia';
 import Stack from '@mui/material/Stack';
 
 // @project
+import { NextLink } from './routes';
 import SvgIcon from './SvgIcon';
 import Typeset from './Typeset';
 

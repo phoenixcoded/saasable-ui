@@ -13,7 +13,7 @@ export default function IconButton(theme) {
         root: {
           borderRadius: 8,
           padding: 8,
-          '&:focus-visible': generateFocusVisibleStyles(theme.palette.primary.main)
+          '&:focus-visible': generateFocusVisibleStyles(theme.vars.palette.primary.main)
         }
       }
     }

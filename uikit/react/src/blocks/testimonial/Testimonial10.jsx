@@ -2,13 +2,10 @@
 import PropTypes from 'prop-types';
 
 // @mui
-import { alpha, useTheme } from '@mui/material/styles';
+import { useTheme } from '@mui/material/styles';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import Masonry from '@mui/lab/Masonry';
-
-// @third-party
-import { motion } from 'motion/react';
 
 // @project
 import { GraphicsCard } from '@/components/cards';
@@ -16,6 +13,7 @@ import ContainerWrapper from '@/components/ContainerWrapper';
 import Rating from '@/components/Rating';
 import Typeset from '@/components/Typeset';
 
+import { withAlpha } from '@/utils/colorUtils';
 import { SECTION_COMMON_PY } from '@/utils/constant';
 
 /***************************  TESTIMONIAL - 10  ***************************/
@@ -32,8 +30,8 @@ import { SECTION_COMMON_PY } from '@/utils/constant';
 export default function Testimonial10({ heading, caption, testimonials }) {
   const theme = useTheme();
 
-  const gc = theme.palette.background.default;
-  const gradient = `radial-gradient(146.46% 68.12% at 50% 29.86%, ${alpha(gc, 0)} 0%, ${gc} 100%)`;
+  const gc = theme.vars.palette.background.default;
+  const gradient = `radial-gradient(146.46% 68.12% at 50% 29.86%, ${withAlpha(gc, 0)} 0%, ${gc} 100%)`;
 
   return (
     <ContainerWrapper sx={{ py: SECTION_COMMON_PY }}>
@@ -48,29 +46,21 @@ export default function Testimonial10({ heading, caption, testimonials }) {
           }}
         >
           {testimonials.map((testimonial, index) => (
-            <motion.div
-              key={index}
-              initial={{ opacity: 0, scale: 0.5 }}
-              whileInView={{ opacity: 1, scale: 1 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.4, ease: 'easeOut', delay: index * 0.1 }}
-            >
-              <GraphicsCard key={index} sx={{ borderRadius: { xs: 4, md: 6 } }}>
-                <Stack sx={{ justifyContent: 'space-between', height: 1, gap: 3, p: { xs: 1.5, md: 2 } }}>
-                  <Rating {...{ rate: testimonial.ratings, starSize: 16 }} />
-                  <Stack sx={{ gap: 1 }}>
-                    <Typography variant="subtitle1">{testimonial.title}</Typography>
-                    <Typography sx={{ color: 'text.secondary' }}>{testimonial.review}</Typography>
-                  </Stack>
-                  <Stack sx={{ gap: 0.5 }}>
-                    <Typography variant="subtitle1">{testimonial.profile.name}</Typography>
-                    <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                      {testimonial.profile.role}
-                    </Typography>
-                  </Stack>
+            <GraphicsCard key={index} sx={{ borderRadius: { xs: 4, md: 6 } }}>
+              <Stack sx={{ justifyContent: 'space-between', height: 1, gap: 3, p: { xs: 1.5, md: 2 } }}>
+                <Rating {...{ rate: testimonial.ratings, starSize: 16 }} />
+                <Stack sx={{ gap: 1 }}>
+                  <Typography variant="subtitle1">{testimonial.title}</Typography>
+                  <Typography sx={{ color: 'text.secondary' }}>{testimonial.review}</Typography>
                 </Stack>
-              </GraphicsCard>
-            </motion.div>
+                <Stack sx={{ gap: 0.5 }}>
+                  <Typography variant="subtitle1">{testimonial.profile.name}</Typography>
+                  <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+                    {testimonial.profile.role}
+                  </Typography>
+                </Stack>
+              </Stack>
+            </GraphicsCard>
           ))}
         </Masonry>
       </Stack>

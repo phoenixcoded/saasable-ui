@@ -1,7 +1,8 @@
 'use client';
 
 // @project
-import Error500Page from '@/blocks/maintenance/Error500';
+import { Error500Page } from '@/blocks/maintenance';
+import ThemeProviders from '@/components/ThemeProvider';
 
 /***************************  ERROR 500 - DATA  ***************************/
 
@@ -13,5 +14,9 @@ const data = {
 /***************************  ERROR - 500  ***************************/
 
 export default function InternalServerError() {
-  return <Error500Page {...data} />;
+  return (
+    <ThemeProviders>
+      <Error500Page {...data} />
+    </ThemeProviders>
+  );
 }

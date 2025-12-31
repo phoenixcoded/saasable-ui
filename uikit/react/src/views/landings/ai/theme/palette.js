@@ -1,6 +1,9 @@
+// @project
+import { extendPaletteWithChannels } from '@/utils/colorUtils';
+
 /***************************  DEFAULT / AI THEME - PALETTE  ***************************/
 
-export default function palette() {
+export function buildPalette() {
   const textPrimary = '#1A1C1E'; // AI/neutral/10 - on surface
   const textSecondary = '#42474E'; // AI/neutral variant/30 - on surface variant
   const divider = '#C2C7CE'; // AI/neutral variant/80 - outline variant
@@ -43,7 +46,16 @@ export default function palette() {
     }
   };
 
+  const commonColor = { common: { black: '#000', white: '#fff' } };
+
+  const extendedLight = extendPaletteWithChannels(lightPalette);
+  const extendedCommon = extendPaletteWithChannels(commonColor);
+
   return {
-    ...lightPalette
+    light: {
+      mode: 'light',
+      ...extendedCommon,
+      ...extendedLight
+    }
   };
 }

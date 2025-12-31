@@ -16,7 +16,6 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
 // @third-party
-import { motion } from 'motion/react';
 import Slider from 'react-slick';
 
 // @project
@@ -72,85 +71,61 @@ export default function Faq6({ heading, caption, defaultExpanded, faqList, getIn
     <ContainerWrapper sx={{ py: SECTION_COMMON_PY }}>
       <Stack sx={{ gap: { xs: 3, sm: 4 } }}>
         {heading && (
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-          >
-            <Stack direction={{ sm: 'row' }} sx={{ gap: 4, justifyContent: 'space-between', alignItems: { xs: 'flex-start', sm: 'end' } }}>
-              <Typeset {...{ heading, caption }} />
-              {getInTouch?.link && (
-                <motion.div
-                  initial={{ opacity: 0, y: 30 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.3, ease: 'easeInOut' }}
-                  whileHover={{ scale: 1.06 }}
-                >
-                  <ButtonAnimationWrapper>
-                    <Button
-                      variant="contained"
-                      size="large"
-                      {...getInTouch.link}
-                      {...(getInTouch.link && getInTouch.link.href && { component: NextLink })}
-                      sx={{ minWidth: 215, ...getInTouch.link.sx }}
-                    />
-                  </ButtonAnimationWrapper>
-                </motion.div>
-              )}
-            </Stack>
-          </motion.div>
+          <Stack direction={{ sm: 'row' }} sx={{ gap: 4, justifyContent: 'space-between', alignItems: { xs: 'flex-start', sm: 'end' } }}>
+            <Typeset {...{ heading, caption }} />
+            {getInTouch?.link && (
+              <ButtonAnimationWrapper>
+                <Button
+                  variant="contained"
+                  size="large"
+                  {...getInTouch.link}
+                  {...(getInTouch.link && getInTouch.link.href && { component: NextLink })}
+                  sx={{ minWidth: 215, ...getInTouch.link.sx }}
+                />
+              </ButtonAnimationWrapper>
+            )}
+          </Stack>
         )}
         <Stack sx={{ gap: 2 }}>
-          <motion.div
-            initial={{ opacity: 0, y: 10 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{
-              duration: 0.5,
-              delay: 0.4
-            }}
-          >
-            <Stack sx={slickStyle}>
-              <Slider {...settings}>
+          <Stack sx={slickStyle}>
+            <Slider {...settings}>
+              <Button
+                sx={{
+                  minHeight: { xs: 40, sm: 48 },
+                  color: 'text.primary',
+                  borderColor: 'divider',
+                  bgcolor: activeTopic === '' ? 'grey.100' : 'inherit',
+                  '&.MuiButton-root:hover': { bgcolor: 'grey.100', borderColor: 'divider' }
+                }}
+                variant="outlined"
+                onClick={() => {
+                  setActiveTopic('');
+                  setFilterFaqList(faqList);
+                }}
+              >
+                All
+              </Button>
+              {categories.map((item, index) => (
                 <Button
+                  key={index}
                   sx={{
                     minHeight: { xs: 40, sm: 48 },
                     color: 'text.primary',
                     borderColor: 'divider',
-                    bgcolor: activeTopic === '' ? 'grey.100' : 'inherit',
+                    bgcolor: activeTopic === item ? 'grey.100' : 'inherit',
                     '&.MuiButton-root:hover': { bgcolor: 'grey.100', borderColor: 'divider' }
                   }}
                   variant="outlined"
                   onClick={() => {
-                    setActiveTopic('');
-                    setFilterFaqList(faqList);
+                    setActiveTopic(item);
+                    setFilterFaqList(faqList.filter((list) => list.category === item));
                   }}
                 >
-                  All
+                  {item}
                 </Button>
-                {categories.map((item, index) => (
-                  <Button
-                    key={index}
-                    sx={{
-                      minHeight: { xs: 40, sm: 48 },
-                      color: 'text.primary',
-                      borderColor: 'divider',
-                      bgcolor: activeTopic === item ? 'grey.100' : 'inherit',
-                      '&.MuiButton-root:hover': { bgcolor: 'grey.100', borderColor: 'divider' }
-                    }}
-                    variant="outlined"
-                    onClick={() => {
-                      setActiveTopic(item);
-                      setFilterFaqList(faqList.filter((list) => list.category === item));
-                    }}
-                  >
-                    {item}
-                  </Button>
-                ))}
-              </Slider>
-            </Stack>
-          </motion.div>
+              ))}
+            </Slider>
+          </Stack>
           <Stack
             sx={{
               gap: 1.5,
@@ -159,40 +134,31 @@ export default function Faq6({ heading, caption, defaultExpanded, faqList, getIn
             }}
           >
             {filterFaqList.map((item, index) => (
-              <motion.div
+              <Accordion
                 key={index}
-                initial={{ y: 20, opacity: 0 }}
-                whileInView={{ y: 0, opacity: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.2, delay: index * 0.2 }}
+                expanded={expanded === `panel${index}`}
+                onChange={handleChange(`panel${index}`)}
+                sx={{
+                  borderRadius: cardRadius,
+                  backgroundColor: 'grey.100',
+                  ...(isFocusWithin && { '&:focus-within': generateFocusVisibleStyles(theme.vars.palette.primary.main) })
+                }}
               >
-                <Accordion
-                  key={index}
-                  expanded={expanded === `panel${index}`}
-                  onChange={handleChange(`panel${index}`)}
+                <AccordionSummary
+                  expandIcon={<SvgIcon name={expanded === `panel${index}` ? 'tabler-minus' : 'tabler-plus'} {...iconProps} size={20} />}
                   sx={{
-                    borderRadius: cardRadius,
-                    backgroundColor: 'grey.100',
-                    ...(isFocusWithin && { '&:focus-within': generateFocusVisibleStyles(theme.palette.primary.main) })
+                    p: accordionPX,
+                    '&.Mui-focusVisible': { bgcolor: 'transparent' },
+                    '&:hover, &:hover svg': { color: 'primary.dark' }
                   }}
+                  slotProps={{ content: { sx: { my: 0 } } }}
                 >
-                  <AccordionSummary
-                    expandIcon={<SvgIcon name={expanded === `panel${index}` ? 'tabler-minus' : 'tabler-plus'} {...iconProps} size={20} />}
-                    sx={{
-                      p: accordionPX,
-                      '& .MuiAccordionSummary-expandIconWrapper': { color: 'text.primary' },
-                      '& .MuiAccordionSummary-content': { my: 0 },
-                      '&.Mui-focusVisible': { bgcolor: 'transparent' },
-                      '&:hover, &:hover svg': { color: 'primary.dark' }
-                    }}
-                  >
-                    <Typography variant="h4">{item.question}</Typography>
-                  </AccordionSummary>
-                  <AccordionDetails sx={{ px: accordionPX, pt: 0, pb: accordionPX }} key={index}>
-                    <FaqDetails answer={item.answer} />
-                  </AccordionDetails>
-                </Accordion>
-              </motion.div>
+                  <Typography variant="h4">{item.question}</Typography>
+                </AccordionSummary>
+                <AccordionDetails sx={{ px: accordionPX, pt: 0, pb: accordionPX }} key={index}>
+                  <FaqDetails answer={item.answer} />
+                </AccordionDetails>
+              </Accordion>
             ))}
           </Stack>
         </Stack>

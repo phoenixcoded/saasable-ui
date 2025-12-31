@@ -11,9 +11,6 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 
-// @third-party
-import { motion } from 'motion/react';
-
 // @project
 import ButtonAnimationWrapper from '@/components/ButtonAnimationWrapper';
 import ContainerWrapper from '@/components/ContainerWrapper';
@@ -41,148 +38,122 @@ import Wave from '@/images/graphics/Wave';
 export default function Cta5({ heading, caption, label, input = false, primaryBtn, secondaryBtn, description, saleData, profileGroups }) {
   return (
     <ContainerWrapper sx={{ py: SECTION_COMMON_PY }}>
-      <motion.div
-        initial={{ opacity: 0, y: 20 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        transition={{
-          duration: 0.5,
-          delay: 0.4
-        }}
-      >
-        <Grid container spacing={1.5}>
-          <Grid size={{ xs: 12, sm: 8, md: 9 }}>
-            <motion.div initial={{ opacity: 0, y: -100 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.8, delay: 0.6 }}>
-              <GraphicsCard sx={{ position: 'relative' }}>
-                <Stack
-                  sx={{ alignItems: 'flex-start', gap: { xs: 5.75, sm: 10 }, p: { xs: 3, sm: 4, md: 8 }, position: 'relative', zIndex: 1 }}
-                >
-                  <Stack sx={{ gap: 5 }}>
-                    <Stack direction="row" sx={{ alignItems: 'center', gap: 1 }}>
-                      <Chip
-                        label={label}
-                        variant="outlined"
-                        slotProps={{ label: { sx: { py: 0.75, px: 2, typography: 'caption', color: 'secondary.main' } } }}
-                        sx={{ borderColor: 'grey.600' }}
-                      />
-                      <Divider sx={{ width: 63, borderBottomWidth: 2 }} />
-                    </Stack>
-                    <Typeset {...{ heading, caption, captionProps: { sx: { maxWidth: 478 } } }} />
-                  </Stack>
-                  {input && typeof input === 'object' && (
-                    <Stack sx={{ gap: 0.75, width: { sm: '100%', md: 'unset' } }}>
-                      <OutlinedInput
-                        placeholder={input.placeholder || 'Enter your email address'}
-                        endAdornment={
-                          <Button
-                            color="primary"
-                            variant="contained"
-                            sx={{ px: 4, minWidth: { xs: 110, md: 120 } }}
-                            {...input.adornmentBtn}
-                          />
-                        }
-                        slotProps={{
-                          input: { 'aria-label': 'Email address', sx: { px: 2.5, py: 0.75 } },
-                          notchedOutline: { sx: { borderRadius: 25 } }
-                        }}
-                        sx={{ typography: 'caption2', color: 'secondary.main', p: 0.5, whiteSpace: 'nowrap' }}
-                      />
-                      {input.helpertext && (
-                        <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                          {input.helpertext}
-                        </Typography>
-                      )}
-                    </Stack>
-                  )}
-                  {(primaryBtn || secondaryBtn || description) && (
-                    <Stack sx={{ alignItems: 'flex-start', gap: 1.5, width: { sm: '100%', md: '60%' }, ...(input && { mt: -6 }) }}>
-                      {(primaryBtn || secondaryBtn) && (
-                        <Stack direction="row" spacing={1.5} sx={{ alignItems: 'flex-start', justifyContent: 'center' }}>
-                          {secondaryBtn && (
-                            <ButtonAnimationWrapper>
-                              <Button variant="outlined" sx={{ minWidth: { sm: 170 } }} {...secondaryBtn} />
-                            </ButtonAnimationWrapper>
-                          )}
-                          {primaryBtn && (
-                            <motion.div
-                              initial={{ opacity: 0, y: 30 }}
-                              animate={{ opacity: 1, y: 0 }}
-                              transition={{ duration: 0.3, ease: 'easeInOut' }}
-                              whileHover={{ scale: 1.06 }}
-                            >
-                              <ButtonAnimationWrapper>
-                                <Button variant="contained" sx={{ minWidth: { sm: 170 } }} {...primaryBtn} />
-                              </ButtonAnimationWrapper>
-                            </motion.div>
-                          )}
-                        </Stack>
-                      )}
-                      {description && typeof description === 'string' ? (
-                        <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-                          {description}
-                        </Typography>
-                      ) : (
-                        description
-                      )}
-                    </Stack>
+      <Grid container spacing={1.5}>
+        <Grid size={{ xs: 12, sm: 8, md: 9 }}>
+          <GraphicsCard sx={{ position: 'relative' }}>
+            <Stack
+              sx={{ alignItems: 'flex-start', gap: { xs: 5.75, sm: 10 }, p: { xs: 3, sm: 4, md: 8 }, position: 'relative', zIndex: 1 }}
+            >
+              <Stack sx={{ gap: 5 }}>
+                <Stack direction="row" sx={{ alignItems: 'center', gap: 1 }}>
+                  <Chip
+                    label={label}
+                    variant="outlined"
+                    slotProps={{ label: { sx: { py: 0.75, px: 2, typography: 'caption', color: 'secondary.main' } } }}
+                    sx={{ borderColor: 'grey.600' }}
+                  />
+                  <Divider sx={{ width: 63, borderBottomWidth: 2 }} />
+                </Stack>
+                <Typeset {...{ heading, caption, captionProps: { sx: { maxWidth: 478 } } }} />
+              </Stack>
+              {input && typeof input === 'object' && (
+                <Stack sx={{ gap: 0.75, width: { sm: '100%', md: 'unset' } }}>
+                  <OutlinedInput
+                    placeholder={input.placeholder || 'Enter your email address'}
+                    endAdornment={
+                      <Button color="primary" variant="contained" sx={{ px: 4, minWidth: { xs: 110, md: 120 } }} {...input.adornmentBtn} />
+                    }
+                    slotProps={{
+                      input: { 'aria-label': 'Email address', sx: { px: 2.5, py: 0.75 } },
+                      notchedOutline: { sx: { borderRadius: 25 } }
+                    }}
+                    sx={{ typography: 'caption2', color: 'secondary.main', p: 0.5, whiteSpace: 'nowrap' }}
+                  />
+                  {input.helpertext && (
+                    <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+                      {input.helpertext}
+                    </Typography>
                   )}
                 </Stack>
-                <Box
-                  sx={{ position: 'absolute', right: -160, bottom: -160, display: { xs: 'none', md: 'block' }, transform: 'scaleX(-1)' }}
-                >
-                  <LogoWatermark />
-                </Box>
-              </GraphicsCard>
-            </motion.div>
-          </Grid>
-          <Grid size={{ xs: 12, sm: 4, md: 3 }}>
-            <Grid container sx={{ height: 1, position: 'relative' }}>
-              <Grid size={{ xs: 6, sm: 12 }} sx={{ minHeight: { sm: '50%' } }}>
-                <GraphicsCard sx={{ height: 1 }}>
-                  <Stack sx={{ alignItems: 'center', gap: 1, py: { xs: 2, sm: 6, md: 7.5 }, px: { xs: 2, sm: 3.5 }, textAlign: 'center' }}>
-                    <Typography component="div" variant="h1">
-                      {saleData.count}
-                      <Typography variant="h2" component="span" sx={{ color: 'text.secondary' }}>
-                        {saleData.defaultUnit}
-                      </Typography>
+              )}
+              {(primaryBtn || secondaryBtn || description) && (
+                <Stack sx={{ alignItems: 'flex-start', gap: 1.5, width: { sm: '100%', md: '60%' }, ...(input && { mt: -6 }) }}>
+                  {(primaryBtn || secondaryBtn) && (
+                    <Stack direction="row" sx={{ alignItems: 'flex-start', justifyContent: 'center' }}>
+                      {secondaryBtn && (
+                        <ButtonAnimationWrapper>
+                          <Button variant="outlined" sx={{ minWidth: { sm: 170 } }} {...secondaryBtn} />
+                        </ButtonAnimationWrapper>
+                      )}
+                      {primaryBtn && (
+                        <ButtonAnimationWrapper>
+                          <Button variant="contained" sx={{ minWidth: { sm: 170 } }} {...primaryBtn} />
+                        </ButtonAnimationWrapper>
+                      )}
+                    </Stack>
+                  )}
+                  {description && typeof description === 'string' ? (
+                    <Typography variant="body2" sx={{ color: 'text.secondary' }}>
+                      {description}
                     </Typography>
-                    <Typography sx={{ color: 'text.secondary' }}>{saleData.caption}</Typography>
-                  </Stack>
-                </GraphicsCard>
-              </Grid>
-              <Box
-                sx={{
-                  position: 'absolute',
-                  left: '50%',
-                  top: '50%',
-                  transform: { xs: 'translate(-50%,-50%) rotate(90deg)', sm: 'translate(-50%,-50%)' },
-                  '& .wave svg': { width: { xs: 70, sm: 122 } }
-                }}
-              >
-                <Wave />
-              </Box>
-              <Grid size={{ xs: 6, sm: 12 }} sx={{ minHeight: { sm: '50%' } }}>
-                <GraphicsCard sx={{ height: 1 }}>
-                  <ProfileGroup
-                    {...profileGroups}
-                    sx={{
-                      py: { xs: 2, sm: 4, md: 6.75 },
-                      px: { xs: 2, sm: 1.5 },
-                      height: 1,
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                      textAlign: 'center',
-                      '& .MuiAvatarGroup-root': { mb: 0.5 },
-                      '& .MuiAvatar-root': { width: { xs: 40, sm: 58 }, height: { xs: 40, sm: 58 } },
-                      '& .wave': { display: 'none' }
-                    }}
-                  />
-                </GraphicsCard>
-              </Grid>
+                  ) : (
+                    description
+                  )}
+                </Stack>
+              )}
+            </Stack>
+            <Box sx={{ position: 'absolute', right: -160, bottom: -160, display: { xs: 'none', md: 'block' }, transform: 'scaleX(-1)' }}>
+              <LogoWatermark />
+            </Box>
+          </GraphicsCard>
+        </Grid>
+        <Grid size={{ xs: 12, sm: 4, md: 3 }}>
+          <Grid container sx={{ height: 1, position: 'relative' }}>
+            <Grid size={{ xs: 6, sm: 12 }} sx={{ minHeight: { sm: '50%' } }}>
+              <GraphicsCard sx={{ height: 1 }}>
+                <Stack sx={{ alignItems: 'center', gap: 1, py: { xs: 2, sm: 6, md: 7.5 }, px: { xs: 2, sm: 3.5 }, textAlign: 'center' }}>
+                  <Typography component="div" variant="h1">
+                    {saleData.count}
+                    <Typography variant="h2" component="span" sx={{ color: 'text.secondary' }}>
+                      {saleData.defaultUnit}
+                    </Typography>
+                  </Typography>
+                  <Typography sx={{ color: 'text.secondary' }}>{saleData.caption}</Typography>
+                </Stack>
+              </GraphicsCard>
+            </Grid>
+            <Box
+              sx={{
+                position: 'absolute',
+                left: '50%',
+                top: '50%',
+                transform: { xs: 'translate(-50%,-50%) rotate(90deg)', sm: 'translate(-50%,-50%)' },
+                '& .wave svg': { width: { xs: 70, sm: 122 } }
+              }}
+            >
+              <Wave />
+            </Box>
+            <Grid size={{ xs: 6, sm: 12 }} sx={{ minHeight: { sm: '50%' } }}>
+              <GraphicsCard sx={{ height: 1 }}>
+                <ProfileGroup
+                  {...profileGroups}
+                  sx={{
+                    py: { xs: 2, sm: 4, md: 6.75 },
+                    px: { xs: 2, sm: 1.5 },
+                    height: 1,
+                    alignItems: 'center',
+                    justifyContent: 'center',
+                    textAlign: 'center',
+                    '& .MuiAvatarGroup-root': { mb: 0.5 },
+                    '& .MuiAvatar-root': { width: { xs: 40, sm: 58 }, height: { xs: 40, sm: 58 } },
+                    '& .wave': { display: 'none' }
+                  }}
+                />
+              </GraphicsCard>
             </Grid>
           </Grid>
         </Grid>
-      </motion.div>
+      </Grid>
     </ContainerWrapper>
   );
 }

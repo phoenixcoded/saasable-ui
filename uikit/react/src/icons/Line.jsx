@@ -17,8 +17,8 @@ export default function Line({ size = 24, color }) {
       <path d="M1 1.19458H496" stroke={`url(#${uniqueId})`} strokeLinecap="round" strokeDasharray="5 5" />
       <defs>
         <linearGradient id={uniqueId} x1="-366.492" y1="1" x2="-365.628" y2="-26.9618" gradientUnits="userSpaceOnUse">
-          <stop stopColor={color || theme.palette.primary.main} stopOpacity="0" />
-          <stop offset="1" stopColor={color || theme.palette.primary.main} />
+          <stop stopColor={color || theme.vars.palette.primary.main} stopOpacity="0" />
+          <stop offset="1" stopColor={color || theme.vars.palette.primary.main} />
         </linearGradient>
       </defs>
     </svg>

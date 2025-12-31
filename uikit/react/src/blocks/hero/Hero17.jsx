@@ -4,15 +4,12 @@ import PropTypes from 'prop-types';
 import { useEffect, useRef, useState } from 'react';
 
 // @mui
-import { useTheme, alpha } from '@mui/material/styles';
+import { useTheme } from '@mui/material/styles';
 import Button from '@mui/material/Button';
 import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
-
-// @third-party
-import { motion, useScroll, useTransform } from 'motion/react';
 
 // @project
 import ButtonAnimationWrapper from '@/components/ButtonAnimationWrapper';
@@ -45,13 +42,6 @@ export default function Hero17({ chip, headLine, captionLine, primaryBtn, videoS
   const boxRadius = { xs: 24, sm: 32, md: 40 };
 
   const containerRef = useRef(null);
-
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ['start start', 'end start']
-  });
-
-  const scale = useTransform(scrollYProgress, [0, 0.1, 0.2, 0.4, 0.6], [0.9, 0.92, 0.94, 0.96, 1]);
 
   const videoRef = useRef(null);
   const [isPlaying, setIsPlaying] = useState(false);
@@ -106,7 +96,7 @@ export default function Hero17({ chip, headLine, captionLine, primaryBtn, videoS
           zIndex: -1,
           borderBottomLeftRadius: boxRadius,
           borderBottomRightRadius: boxRadius,
-          background: getBackgroundDots(theme.palette.grey[300], 60, 35),
+          ...getBackgroundDots(theme.vars.palette.grey[300], 2, 35),
           bgcolor: 'grey.100'
         }}
       />
@@ -114,124 +104,69 @@ export default function Hero17({ chip, headLine, captionLine, primaryBtn, videoS
         <Box ref={containerRef}>
           <Box sx={{ pb: { xs: 3, sm: 4, md: 5 } }}>
             <Stack sx={{ alignItems: 'center', gap: 1.5 }}>
-              <motion.div
-                initial={{ opacity: 0, scale: 0.6 }}
-                whileInView={{ opacity: 1, scale: [0.6, 1.15, 0.95, 1] }}
-                animate={{
-                  boxShadow: [
-                    `0 0 0px ${alpha(theme.palette.primary.dark, 0)}`,
-                    `0 0 20px ${alpha(theme.palette.primary.main, 0.8)}`,
-                    `0 0 0px ${alpha(theme.palette.primary.dark, 0)}`
-                  ],
-                  borderRadius: '74px'
+              <Chip
+                variant="outlined"
+                label={chip.label}
+                slotProps={{
+                  label: {
+                    sx: { py: 0.5, px: 1.5, ...(typeof chip.label === 'string' && { typography: 'caption', color: 'text.secondary' }) }
+                  }
                 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.8, ease: 'linear' }}
-              >
-                <Chip
-                  variant="outlined"
-                  label={chip.label}
-                  slotProps={{
-                    label: {
-                      sx: { py: 0.5, px: 1.5, ...(typeof chip.label === 'string' && { typography: 'caption', color: 'text.secondary' }) }
-                    }
-                  }}
-                  sx={{ bgcolor: 'grey.100' }}
-                />
-              </motion.div>
+                sx={{ bgcolor: 'grey.100' }}
+              />
 
-              <motion.div
-                initial={{ opacity: 0, scale: 0.6 }}
-                whileInView={{ opacity: 1, scale: 1 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: 0.2, ease: 'linear' }}
-              >
-                <Typography variant="h1" align="center" sx={{ maxWidth: 800 }}>
-                  {headLine}
-                </Typography>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 1, delay: 0.2, ease: [0.215, 0.61, 0.355, 1] }}
-              >
-                <Box sx={{ pt: 0.5, pb: 0.75 }}>
-                  <Wave />
-                </Box>
-              </motion.div>
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 1, delay: 0.3, ease: [0.215, 0.61, 0.355, 1] }}
-              >
-                <Typography variant="h6" align="center" sx={{ color: 'text.secondary', maxWidth: 650 }}>
-                  {captionLine}
-                </Typography>
-              </motion.div>
+              <Typography variant="h1" align="center" sx={{ maxWidth: 800 }}>
+                {headLine}
+              </Typography>
+
+              <Box sx={{ pt: 0.5, pb: 0.75 }}>
+                <Wave />
+              </Box>
+
+              <Typography variant="h6" align="center" sx={{ color: 'text.secondary', maxWidth: 650 }}>
+                {captionLine}
+              </Typography>
             </Stack>
             <Stack sx={{ alignItems: 'center', gap: 2, mt: { xs: 3, sm: 4, md: 5 } }}>
-              <motion.div
-                initial={{ opacity: 0, y: 30 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.3, ease: 'easeInOut' }}
-                whileHover={{ scale: 1.06 }}
-              >
-                <ButtonAnimationWrapper>
-                  <Button
-                    color="primary"
-                    variant="contained"
-                    startIcon={<SvgIcon name="tabler-sparkles" size={16} stroke={3} color="background.default" />}
-                    {...primaryBtn}
-                  />
-                </ButtonAnimationWrapper>
-              </motion.div>
+              <ButtonAnimationWrapper>
+                <Button
+                  color="primary"
+                  variant="contained"
+                  startIcon={<SvgIcon name="tabler-sparkles" size={16} stroke={3} color="background.default" />}
+                  {...primaryBtn}
+                />
+              </ButtonAnimationWrapper>
               <Stack direction="row" sx={{ gap: 1, flexWrap: 'wrap', justifyContent: 'center' }}>
                 {listData.map((item, index) => (
-                  <motion.div
+                  <Chip
                     key={index}
-                    initial={{ opacity: 0, scale: 0.6 }}
-                    whileInView={{ opacity: 1, scale: 1 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.9, delay: index * 0.08, ease: 'linear' }}
-                  >
-                    <Chip
-                      label={item.title}
-                      variant="outlined"
-                      icon={<GraphicsImage image={item.image} sx={{ width: 16, height: 16 }} />}
-                      slotProps={{ label: { sx: { py: 0.75, px: 1, typography: 'caption2' } } }}
-                      sx={{ height: 32, px: 1, bgcolor: 'grey.100' }}
-                    />
-                  </motion.div>
+                    label={item.title}
+                    variant="outlined"
+                    icon={<GraphicsImage image={item.image} sx={{ width: 16, height: 16 }} />}
+                    slotProps={{ label: { sx: { py: 0.75, px: 1, typography: 'caption2' } } }}
+                    sx={{ height: 32, px: 1, bgcolor: 'grey.100' }}
+                  />
                 ))}
               </Stack>
             </Stack>
           </Box>
-          <motion.div
-            initial={{ opacity: 0, scale: 0.6 }}
-            whileInView={{ opacity: 1, scale: 0.9 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.9, delay: 0.3 }}
-            style={{ scale }}
-          >
-            <GraphicsCard sx={{ border: '5px solid', borderColor: 'grey.300' }}>
-              <video
-                playsInline
-                ref={videoRef}
-                width="100%"
-                height="100%"
-                style={{ display: 'flex', objectFit: 'cover' }}
-                preload="metadata"
-                autoPlay={false}
-                loop={true}
-                muted={true}
-                poster={videoThumbnail}
-              >
-                <source src={videoSrc} type="video/mp4" />
-              </video>
-            </GraphicsCard>
-          </motion.div>
+
+          <GraphicsCard sx={{ border: '5px solid', borderColor: 'grey.300' }}>
+            <video
+              playsInline
+              ref={videoRef}
+              width="100%"
+              height="100%"
+              style={{ display: 'flex', objectFit: 'cover' }}
+              preload="metadata"
+              autoPlay={false}
+              loop={true}
+              muted={true}
+              poster={videoThumbnail}
+            >
+              <source src={videoSrc} type="video/mp4" />
+            </video>
+          </GraphicsCard>
         </Box>
       </ContainerWrapper>
     </>

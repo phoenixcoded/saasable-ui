@@ -2,13 +2,10 @@
 import PropTypes from 'prop-types';
 
 // @mui
-import { useTheme, alpha } from '@mui/material/styles';
+import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
-
-// @third-party
-import { motion } from 'motion/react';
 
 // @project
 import { navbar10Height } from '../Navbar10';
@@ -29,7 +26,7 @@ import SvgIcon from '@/components/SvgIcon';
  * - [NavbarContent10 API](https://phoenixcoded.gitbook.io/saasable/ui-kit/development/components/navbar/navbar-content/navbarcontent10#props-details)
  */
 
-export default function NavbarContent10({ landingBaseUrl, navItems, primaryBtn, secondaryBtn, customization, selectedTheme, animated }) {
+export default function NavbarContent10({ landingBaseUrl, navItems, primaryBtn, secondaryBtn, animated }) {
   const theme = useTheme();
 
   const downMD = useMediaQuery(theme.breakpoints.down('md'));
@@ -48,24 +45,7 @@ export default function NavbarContent10({ landingBaseUrl, navItems, primaryBtn, 
           <>
             <NavSecondaryButton {...secondaryBtn} />
             <ButtonAnimationWrapper>
-              {animated ? (
-                <motion.div
-                  initial={{ borderRadius: '50px' }}
-                  animate={{
-                    boxShadow: [
-                      `0px 0px 0px 0px ${alpha(theme.palette.primary.main, 0.7)}`,
-                      `0px 0px 0px 8px ${alpha(theme.palette.primary.main, 0)}`,
-                      `0px 0px 0px 0px ${alpha(theme.palette.primary.main, 0)}`
-                    ],
-                    borderRadius: '50px'
-                  }}
-                  transition={{ duration: 1.2, repeat: Infinity, ease: 'linear' }}
-                >
-                  <NavPrimaryButton {...primaryBtn} />
-                </motion.div>
-              ) : (
-                <NavPrimaryButton {...primaryBtn} />
-              )}
+              {animated ? <NavPrimaryButton {...primaryBtn} /> : <NavPrimaryButton {...primaryBtn} />}
             </ButtonAnimationWrapper>
           </>
         )}

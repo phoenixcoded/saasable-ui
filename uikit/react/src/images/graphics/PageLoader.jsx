@@ -32,6 +32,8 @@ export default function PageLoader() {
       <CircularProgress
         {...commonProps}
         value={100}
+        rel="noopener noreferrer"
+        aria-label="loading"
         sx={{
           position: 'absolute',
           zIndex: 1,
@@ -42,6 +44,8 @@ export default function PageLoader() {
       <CircularProgress
         {...commonProps}
         value={60}
+        rel="noopener noreferrer"
+        aria-label="loading"
         sx={{
           position: 'absolute',
           zIndex: 1,

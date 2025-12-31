@@ -17,35 +17,35 @@ export default function CloseEye({ size = 24, color, stroke = 1.5 }) {
       <g clipPath={`url(#${uniqueId})`}>
         <path
           d="M3 20.9992L5.5 17.1992"
-          stroke={color || theme.palette.primary.main}
+          stroke={color || theme.vars.palette.primary.main}
           strokeWidth={stroke}
           strokeLinecap="round"
           strokeLinejoin="round"
         />
         <path
           d="M20.9998 20.9752L18.5078 17.1992"
-          stroke={color || theme.palette.primary.main}
+          stroke={color || theme.vars.palette.primary.main}
           strokeWidth={stroke}
           strokeLinecap="round"
           strokeLinejoin="round"
         />
         <path
           d="M9 23L9.5 19"
-          stroke={color || theme.palette.primary.main}
+          stroke={color || theme.vars.palette.primary.main}
           strokeWidth={stroke}
           strokeLinecap="round"
           strokeLinejoin="round"
         />
         <path
           d="M15 23L14.5 19"
-          stroke={color || theme.palette.primary.main}
+          stroke={color || theme.vars.palette.primary.main}
           strokeWidth={stroke}
           strokeLinecap="round"
           strokeLinejoin="round"
         />
         <path
           d="M21 13C18.6 17 15.6 19 12 19C8.4 19 5.4 17 3 13"
-          stroke={color || theme.palette.primary.main}
+          stroke={color || theme.vars.palette.primary.main}
           strokeWidth={stroke}
           strokeLinecap="round"
           strokeLinejoin="round"

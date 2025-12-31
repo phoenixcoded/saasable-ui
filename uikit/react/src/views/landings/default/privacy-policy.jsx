@@ -1,5 +1,5 @@
 // @project
-import PrivacyPolicyPage from '@/blocks/privacy-policy/PrivacyPolicy1';
+import { PrivacyPolicy1 } from '@/blocks/privacy-policy';
 import { SmallHero3 } from '@/blocks/small-hero';
 
 // @data
@@ -10,11 +10,8 @@ import { smallHero } from './data';
 export default function PrivacyPolicy() {
   return (
     <>
-      {/* small hero section */}
       <SmallHero3 {...smallHero} />
-
-      {/* privacy policy section */}
-      <PrivacyPolicyPage />
+      <PrivacyPolicy1 />
     </>
   );
 }

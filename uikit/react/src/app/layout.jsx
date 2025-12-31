@@ -5,7 +5,7 @@ import Script from 'next/script';
 import './globals.css';
 
 // @mui
-import { AppRouterCacheProvider } from '@mui/material-nextjs/v14-appRouter';
+import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
 
 // @project
 import ProviderWrapper from './ProviderWrapper';
@@ -22,7 +22,7 @@ export const metadata = { ...mainMetadata };
 // Root layout component that wraps the entire application
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <head>
         {/* Preconnect and DNS Prefetch */}
         <link rel="preconnect" href="https://www.googletagmanager.com" />

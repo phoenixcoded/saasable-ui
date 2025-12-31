@@ -1,23 +1,29 @@
 'use client';
-import PropTypes from 'prop-types';
-
-import { useMemo } from 'react';
 
 // @mui
-import { createTheme, ThemeProvider } from '@mui/material/styles';
-import CssBaseline from '@mui/material/CssBaseline';
+import { createTheme } from '@mui/material/styles';
 
 // @project
-import palette from './palette';
+import { buildPalette } from './palette';
 import componentsOverride from './overrides';
 import typography from './typography';
+import { CSS_VAR_PREFIX } from '@/config';
+import useConfig from '@/hooks/useConfig';
 
-/*************************** DEFAULT / AI THEME - MAIN ***************************/
+export const colorSchemeSelector = 'data-ai-color-scheme';
 
-export default function ThemeCustomization({ children }) {
-  const themePalette = useMemo(() => palette(), []);
+/*************************** AI THEME - MAIN ***************************/
 
-  let themeDefault = createTheme({
+export default function ThemeCustomization(selector) {
+  const {
+    state: { themeDirection }
+  } = useConfig();
+
+  const palette = buildPalette();
+  const muiTheme = createTheme();
+
+  // create duplicate theme due to responsive typography and fontFamily
+  const theme = createTheme({
     breakpoints: {
       values: {
         xs: 0,
@@ -27,24 +33,19 @@ export default function ThemeCustomization({ children }) {
         xl: 1440
       }
     },
-    direction: 'ltr',
-    palette: themePalette
-  });
-
-  // create duplicate theme due to responsive typography and fontFamily
-  let theme = createTheme({
-    ...themeDefault,
-    typography: typography(themeDefault)
+    direction: themeDirection,
+    colorSchemes: {
+      light: { palette: palette.light },
+      dark: { palette: palette.dark }
+    },
+    cssVariables: {
+      cssVarPrefix: CSS_VAR_PREFIX,
+      colorSchemeSelector: selector || colorSchemeSelector
+    },
+    typography: typography(muiTheme)
   });
 
   theme.components = componentsOverride(theme);
 
-  return (
-    <ThemeProvider {...{ theme }}>
-      <CssBaseline enableColorScheme />
-      {children}
-    </ThemeProvider>
-  );
+  return theme;
 }
-
-ThemeCustomization.propTypes = { children: PropTypes.any };

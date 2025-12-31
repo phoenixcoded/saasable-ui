@@ -1,7 +1,7 @@
 'use client';
 
 // @mui
-import { alpha, useTheme } from '@mui/material/styles';
+import { useTheme } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
 import Skeleton from '@mui/material/Skeleton';
 import Stack from '@mui/material/Stack';
@@ -10,6 +10,7 @@ import Stack from '@mui/material/Stack';
 import ContainerWrapper from '@/components/ContainerWrapper';
 import { SECTION_COMMON_PY } from '@/utils/constant';
 import { GraphicsCard } from '@/components/cards';
+import { withAlpha } from '@/utils/colorUtils';
 
 /***************************  OTHER - 2  ***************************/
 
@@ -24,7 +25,7 @@ import { GraphicsCard } from '@/components/cards';
 
 export default function Other2() {
   const theme = useTheme();
-  const lightColor = theme.palette.secondary.light;
+  const lightColor = theme.vars.palette.secondary.light;
 
   return (
     <ContainerWrapper sx={{ py: SECTION_COMMON_PY }}>
@@ -32,7 +33,7 @@ export default function Other2() {
         <Stack sx={{ alignItems: 'center', gap: { xs: 2.5, sm: 3 } }}>
           <Skeleton
             variant="rounded"
-            sx={{ borderRadius: 5, bgcolor: `${alpha(theme.palette.secondary.lighter, 0.4)}` }}
+            sx={{ borderRadius: 5, bgcolor: `${withAlpha(theme.vars.palette.secondary.lighter, 0.4)}` }}
             width="30%"
             height={32}
             animation={false}
@@ -40,14 +41,14 @@ export default function Other2() {
           <Stack sx={{ alignItems: 'center', gap: 1.5, width: 1, height: 1 }}>
             <Skeleton
               variant="rounded"
-              sx={{ borderRadius: 2.5, bgcolor: `${alpha(lightColor, 0.4)}` }}
+              sx={{ borderRadius: 2.5, bgcolor: `${withAlpha(lightColor, 0.4)}` }}
               width="70%"
               height={57}
               animation={false}
             />
             <Skeleton
               variant="rounded"
-              sx={{ borderRadius: 2.5, bgcolor: `${alpha(lightColor, 0.4)}` }}
+              sx={{ borderRadius: 2.5, bgcolor: `${withAlpha(lightColor, 0.4)}` }}
               width="60%"
               height={57}
               animation={false}
@@ -56,14 +57,14 @@ export default function Other2() {
           <Stack sx={{ alignItems: 'center', gap: 1, width: 1, height: 1 }}>
             <Skeleton
               variant="rounded"
-              sx={{ borderRadius: 1.5, bgcolor: `${alpha(lightColor, 0.3)}` }}
+              sx={{ borderRadius: 1.5, bgcolor: `${withAlpha(lightColor, 0.3)}` }}
               width="36%"
               height={24}
               animation={false}
             />
             <Skeleton
               variant="rounded"
-              sx={{ borderRadius: 1.5, bgcolor: `${alpha(lightColor, 0.3)}` }}
+              sx={{ borderRadius: 1.5, bgcolor: `${withAlpha(lightColor, 0.3)}` }}
               width="30%"
               height={24}
               animation={false}
@@ -72,14 +73,14 @@ export default function Other2() {
           <Stack direction="row" sx={{ padding: 1.25, gap: 1.5, width: 1, justifyContent: 'center' }}>
             <Skeleton
               variant="rounded"
-              sx={{ borderRadius: 5, bgcolor: `${alpha(lightColor, 0.3)}` }}
+              sx={{ borderRadius: 5, bgcolor: `${withAlpha(lightColor, 0.3)}` }}
               width={183}
               height={52}
               animation={false}
             />
             <Skeleton
               variant="rounded"
-              sx={{ borderRadius: 5, bgcolor: `${alpha(lightColor, 0.6)}` }}
+              sx={{ borderRadius: 5, bgcolor: `${withAlpha(lightColor, 0.6)}` }}
               width={183}
               height={52}
               animation={false}
@@ -92,7 +93,7 @@ export default function Other2() {
               <Grid size={8}>
                 <Skeleton
                   variant="rounded"
-                  sx={{ borderRadius: 5, height: { xs: 280, sm: 380 }, bgcolor: `${alpha(lightColor, 0.4)}` }}
+                  sx={{ borderRadius: 5, height: { xs: 280, sm: 380 }, bgcolor: `${withAlpha(lightColor, 0.4)}` }}
                   animation={false}
                 />
               </Grid>
@@ -102,7 +103,7 @@ export default function Other2() {
                   sx={{
                     fontSize: '1rem',
                     borderRadius: 5,
-                    bgcolor: `${alpha(theme.palette.background.default, 0.4)}`,
+                    bgcolor: `${withAlpha(theme.vars.palette.background.default, 0.4)}`,
                     position: 'absolute',
                     top: '40%',
                     left: '35%'
@@ -122,21 +123,21 @@ export default function Other2() {
                 <Stack sx={{ gap: 1.5 }}>
                   <Skeleton
                     variant="rounded"
-                    sx={{ borderRadius: 3, bgcolor: `${alpha(lightColor, 0.4)}` }}
+                    sx={{ borderRadius: 3, bgcolor: `${withAlpha(lightColor, 0.4)}` }}
                     width="80%"
                     height={36}
                     animation={false}
                   />
                   <Skeleton
                     variant="rounded"
-                    sx={{ borderRadius: 1.5, bgcolor: `${alpha(lightColor, 0.25)}` }}
+                    sx={{ borderRadius: 1.5, bgcolor: `${withAlpha(lightColor, 0.25)}` }}
                     width="100%"
                     height={16}
                     animation={false}
                   />
                   <Skeleton
                     variant="rounded"
-                    sx={{ borderRadius: 1.5, bgcolor: `${alpha(lightColor, 0.25)}` }}
+                    sx={{ borderRadius: 1.5, bgcolor: `${withAlpha(lightColor, 0.25)}` }}
                     width="32%"
                     height={16}
                     animation={false}

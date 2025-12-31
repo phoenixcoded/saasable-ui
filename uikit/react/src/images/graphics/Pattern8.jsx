@@ -17,8 +17,8 @@ export default function Pattern8() {
       />
       <defs>
         <linearGradient id="paint0_linear_1357_81760" x1="320.359" y1="96.2523" x2="-28.9671" y2="79.5362" gradientUnits="userSpaceOnUse">
-          <stop stopColor={theme.palette.primary.main} />
-          <stop offset="1" stopColor={theme.palette.primary.main} stopOpacity="0" />
+          <stop stopColor={theme.vars.palette.primary.main} />
+          <stop offset="1" stopColor={theme.vars.palette.primary.main} stopOpacity="0" />
         </linearGradient>
       </defs>
     </svg>

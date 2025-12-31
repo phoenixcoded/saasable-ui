@@ -59,7 +59,7 @@ export default function Switch(theme) {
     MuiSwitch: {
       styleOverrides: {
         root: {
-          color: theme.palette.text.primary,
+          color: theme.vars.palette.text.primary,
           padding: 0,
           display: 'flex',
           ...switchStyle('medium'),
@@ -67,7 +67,7 @@ export default function Switch(theme) {
         },
         track: {
           opacity: 1,
-          backgroundColor: theme.palette.secondary.lighter,
+          backgroundColor: theme.vars.palette.secondary.lighter,
           boxSizing: 'border-box'
         },
         thumb: {
@@ -78,19 +78,19 @@ export default function Switch(theme) {
         },
         switchBase: {
           '&.Mui-checked': {
-            color: theme.palette.background.default,
+            color: theme.vars.palette.background.default,
             '& ~ .MuiSwitch-track': {
               opacity: 1
             },
             '&.Mui-disabled': {
-              color: theme.palette.background.paper,
+              color: theme.vars.palette.background.paper,
               '~.MuiSwitch-track': {
                 opacity: 0.1
               }
             }
           },
           '&.Mui-disabled': {
-            color: theme.palette.background.paper,
+            color: theme.vars.palette.background.paper,
             '~.MuiSwitch-track': {
               opacity: 0.3
             },

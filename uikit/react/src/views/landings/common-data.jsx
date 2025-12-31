@@ -7,33 +7,30 @@ import Typography from '@mui/material/Typography';
 
 // @project
 import branding from '@/branding.json';
-import { Themes } from '@/config';
 import { MegaMenuType } from '@/enum';
 import { ADMIN_PATH, BUY_NOW_URL, DOCS_URL, PAGE_PATH, PRIVIEW_PATH } from '@/path';
+import { Themes } from '@/config';
 
 const linkProps = { target: '_blank', rel: 'noopener noreferrer' };
 
 /***************************  MEGAMENU 4 - FOOTER  ***************************/
 
-function footerData() {
+function FooterData() {
   return (
     <Stack direction={{ sm: 'row' }} sx={{ gap: 1.5, justifyContent: 'space-between', alignItems: { xs: 'flex-start', sm: 'center' } }}>
       <Stack sx={{ gap: 1 }}>
         <Stack direction="row" sx={{ alignItems: 'center', gap: 1 }}>
-          <Typography variant="h5">New landing demos are coming soon!</Typography>
+          <Typography variant="h5">Explore our range of landing demos tailored to suit your needs</Typography>
           <Chip
-            label={<Typography variant="caption">Coming Soon</Typography>}
+            label="Featured"
             size="small"
-            sx={{
-              bgcolor: 'background.default',
-              '& .MuiChip-label': { px: 1.5, py: 0.5 },
-              display: { xs: 'none', sm: 'inline-flex' }
-            }}
+            slotProps={{ label: { sx: { pl: 1.25, pr: 1.5, py: 0.5, typography: 'caption', my: 0.2 } } }}
+            sx={{ bgcolor: 'background.default', display: { xs: 'none', sm: 'inline-flex' } }}
             icon={
               <CardMedia
                 component="img"
                 image="/assets/images/shared/celebration.svg"
-                sx={{ width: 16, height: 16 }}
+                sx={{ width: 16, height: 16, pl: 0.5 }}
                 alt="celebration"
                 loading="lazy"
               />
@@ -41,8 +38,8 @@ function footerData() {
           />
         </Stack>
         <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-          SaasAble offers 200+ customizable blocks, empowering you to effortlessly design and build landing pages tailored to your product
-          or service needs.
+          {branding.brandName} offers 200+ customizable blocks, empowering you to effortlessly design and build landing pages tailored to
+          your product or service needs.
         </Typography>
       </Stack>
       <Button
@@ -111,19 +108,19 @@ export const landingMegamenu = {
         status: 'Pro'
       }
     ],
-    footerData: footerData()
+    footerData: FooterData()
   }
 };
 
 /***************************  MEGAMENU 5 - BANNER  ***************************/
 
-function bannerData() {
+function BannerData() {
   return (
     <Stack sx={{ alignItems: 'flex-start', gap: 3, height: 1, justifyContent: 'center' }}>
       <Stack sx={{ gap: 1 }}>
         <Stack sx={{ alignItems: 'flex-start', gap: 1.5 }}>
           <Chip
-            label={<Typography variant="subtitle2">SaasAble Admin Template</Typography>}
+            label={`${branding.brandName} Admin Template`}
             icon={
               <CardMedia
                 component="img"
@@ -134,9 +131,10 @@ function bannerData() {
               />
             }
             size="small"
-            sx={{ bgcolor: 'background.default', '& .MuiChip-label': { px: 1.5, py: 0.5 }, '& .MuiChip-icon': { ml: 1.25 } }}
+            slotProps={{ label: { sx: { px: 1.5, py: 0.5, typography: 'subtitle2' } } }}
+            sx={{ bgcolor: 'background.default', '& .MuiChip-icon': { ml: 1.25 } }}
           />
-          <Typography variant="h5">Exciting Dashboard on the Way!</Typography>
+          <Typography variant="h5">Stunning dashboards designed to meet your needs.</Typography>
         </Stack>
         <Typography variant="body2" sx={{ color: 'text.secondary' }}>
           Effortlessly manage your app’s backend with customizable admin dashboards that enhance productivity.
@@ -193,6 +191,6 @@ export const pagesMegamenu = {
         ]
       }
     ],
-    bannerData: bannerData()
+    bannerData: <BannerData />
   }
 };
