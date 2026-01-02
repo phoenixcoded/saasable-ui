@@ -15,8 +15,6 @@ import useConfig from '@/hooks/useConfig';
 
 import aiTheme from '@/views/landings/ai/theme';
 
-const modeStorageKey = 'theme-mode';
-
 // Theme Map
 const themeMap = {
   [Themes.THEME_AI]: aiTheme
@@ -44,12 +42,12 @@ export default function ThemeProvider({ children }) {
 
   return (
     <>
-      <InitColorSchemeScript modeStorageKey={modeStorageKey} attribute="data-color-scheme" defaultMode="light" />
+      <InitColorSchemeScript attribute="data-color-scheme" defaultMode="light" />
       <Suspense fallback={<Loader />}>
         {loader ? (
           <Loader />
         ) : (
-          <MuiThemeProvider disableTransitionOnChange theme={selectedTheme} modeStorageKey={modeStorageKey} defaultMode="light">
+          <MuiThemeProvider disableTransitionOnChange theme={selectedTheme} defaultMode="light">
             <CssBaseline enableColorScheme />
             {children}
           </MuiThemeProvider>

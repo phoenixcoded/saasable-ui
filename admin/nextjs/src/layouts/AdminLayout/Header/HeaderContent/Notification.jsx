@@ -183,133 +183,131 @@ export default function Notification() {
           <IconBell size={16} />
         </Badge>
       </IconButton>
-      <Activity mode={open ? 'visible' : 'hidden'}>
-        <Popper
-          placement="bottom-end"
-          id={id}
-          open={open}
-          anchorEl={anchorEl}
-          popperOptions={{
-            modifiers: [{ name: 'offset', options: { offset: [0, 8] } }]
-          }}
-          transition
-        >
-          {({ TransitionProps }) => (
-            <Fade in={open} {...TransitionProps}>
-              <MainCard
-                sx={{
-                  borderRadius: 2,
-                  boxShadow: theme.vars.customShadows.tooltip,
-                  width: 1,
-                  minWidth: { xs: 352, sm: 240 },
-                  maxWidth: { xs: 352, md: 420 },
-                  p: 0
-                }}
-              >
-                <ClickAwayListener onClickAway={() => setAnchorEl(null)}>
-                  <Box>
-                    <CardHeader
-                      sx={{ p: 1 }}
-                      title={
-                        <Stack direction="row" sx={{ gap: 1, justifyContent: 'space-between' }}>
-                          <Button
-                            color="secondary"
-                            size="small"
-                            sx={{ typography: 'h6' }}
-                            endIcon={<IconChevronDown size={16} />}
-                            onClick={handleInnerActionClick}
-                          >
-                            All Notification
+      <Popper
+        placement="bottom-end"
+        id={id}
+        open={open}
+        anchorEl={anchorEl}
+        popperOptions={{
+          modifiers: [{ name: 'offset', options: { offset: [0, 8] } }]
+        }}
+        transition
+      >
+        {({ TransitionProps }) => (
+          <Fade in={open} {...TransitionProps}>
+            <MainCard
+              sx={{
+                borderRadius: 2,
+                boxShadow: theme.vars.customShadows.tooltip,
+                width: 1,
+                minWidth: { xs: 352, sm: 240 },
+                maxWidth: { xs: 352, md: 420 },
+                p: 0
+              }}
+            >
+              <ClickAwayListener onClickAway={() => setAnchorEl(null)}>
+                <Box>
+                  <CardHeader
+                    sx={{ p: 1 }}
+                    title={
+                      <Stack direction="row" sx={{ gap: 1, justifyContent: 'space-between' }}>
+                        <Button
+                          color="secondary"
+                          size="small"
+                          sx={{ typography: 'h6' }}
+                          endIcon={<IconChevronDown size={16} />}
+                          onClick={handleInnerActionClick}
+                        >
+                          All Notification
+                        </Button>
+                        <Popper
+                          placement="bottom-start"
+                          id={innerId}
+                          open={innerOpen}
+                          anchorEl={innerAnchorEl}
+                          transition
+                          popperOptions={{ modifiers: [{ name: 'preventOverflow', options: { boundary: 'clippingParents' } }] }}
+                        >
+                          {({ TransitionProps }) => (
+                            <Fade in={innerOpen} {...TransitionProps}>
+                              <MainCard sx={{ borderRadius: 2, boxShadow: theme.vars.customShadows.tooltip, minWidth: 156, p: 0.5 }}>
+                                <ClickAwayListener onClickAway={() => setInnerAnchorEl(null)}>
+                                  <List disablePadding>
+                                    {listcontent.map((item, index) => (
+                                      <ListItemButton key={index} sx={buttonStyle} onClick={handleInnerActionClick}>
+                                        <ListItemText>{item}</ListItemText>
+                                      </ListItemButton>
+                                    ))}
+                                  </List>
+                                </ClickAwayListener>
+                              </MainCard>
+                            </Fade>
+                          )}
+                        </Popper>
+                        <Activity mode={!showEmpty ? 'visible' : 'hidden'}>
+                          <Button color="primary" size="small" onClick={handleMarkAllAsRead} disabled={allRead}>
+                            Mark All as Read
                           </Button>
-                          <Popper
-                            placement="bottom-start"
-                            id={innerId}
-                            open={innerOpen}
-                            anchorEl={innerAnchorEl}
-                            transition
-                            popperOptions={{ modifiers: [{ name: 'preventOverflow', options: { boundary: 'clippingParents' } }] }}
-                          >
-                            {({ TransitionProps }) => (
-                              <Fade in={innerOpen} {...TransitionProps}>
-                                <MainCard sx={{ borderRadius: 2, boxShadow: theme.vars.customShadows.tooltip, minWidth: 156, p: 0.5 }}>
-                                  <ClickAwayListener onClickAway={() => setInnerAnchorEl(null)}>
-                                    <List disablePadding>
-                                      {listcontent.map((item, index) => (
-                                        <ListItemButton key={index} sx={buttonStyle} onClick={handleInnerActionClick}>
-                                          <ListItemText>{item}</ListItemText>
-                                        </ListItemButton>
-                                      ))}
-                                    </List>
-                                  </ClickAwayListener>
-                                </MainCard>
-                              </Fade>
-                            )}
-                          </Popper>
-                          <Activity mode={!showEmpty ? 'visible' : 'hidden'}>
-                            <Button color="primary" size="small" onClick={handleMarkAllAsRead} disabled={allRead}>
-                              Mark All as Read
-                            </Button>
-                          </Activity>
-                        </Stack>
-                      }
-                    />
-                    {showEmpty ? (
-                      <EmptyNotification />
-                    ) : (
-                      <Fragment>
-                        <CardContent sx={{ px: 0.5, py: 2, '&:last-child': { pb: 2 } }}>
-                          <SimpleBar sx={{ maxHeight: 405, height: 1 }}>
-                            <List disablePadding>
-                              <ListSubheader disableSticky sx={{ color: 'text.disabled', typography: 'caption', py: 0.5, px: 1, mb: 0.5 }}>
-                                Last 7 Days
-                              </ListSubheader>
-                              {notifications.map((notification, index) => (
-                                <ListItemButton key={index} sx={buttonStyle}>
-                                  <NotificationItem
-                                    avatar={notification.avatar}
-                                    {...(notification.badge && { badgeAvatar: { children: notification.badge } })}
-                                    title={notification.title}
-                                    subTitle={notification.subTitle}
-                                    dateTime={notification.dateTime}
-                                    isSeen={notification.isSeen}
-                                  />
-                                </ListItemButton>
-                              ))}
-                              <ListSubheader
-                                disableSticky
-                                sx={{ color: 'text.disabled', typography: 'caption', py: 0.5, px: 1, mb: 0.5, mt: 1.5 }}
-                              >
-                                Older
-                              </ListSubheader>
-                              {notifications2.map((notification, index) => (
-                                <ListItemButton key={index} sx={buttonStyle}>
-                                  <NotificationItem
-                                    avatar={notification.avatar}
-                                    {...(notification.badge && { badgeAvatar: { children: notification.badge } })}
-                                    title={notification.title}
-                                    subTitle={notification.subTitle}
-                                    dateTime={notification.dateTime}
-                                    isSeen={notification.isSeen}
-                                  />
-                                </ListItemButton>
-                              ))}
-                            </List>
-                          </SimpleBar>
-                        </CardContent>
-                        <CardActions sx={{ p: 1 }}>
-                          <Button fullWidth color="error" onClick={handleClearAll}>
-                            Clear all
-                          </Button>
-                        </CardActions>
-                      </Fragment>
-                    )}
-                  </Box>
-                </ClickAwayListener>
-              </MainCard>
-            </Fade>
-          )}
-        </Popper>
-      </Activity>
+                        </Activity>
+                      </Stack>
+                    }
+                  />
+                  {showEmpty ? (
+                    <EmptyNotification />
+                  ) : (
+                    <Fragment>
+                      <CardContent sx={{ px: 0.5, py: 2, '&:last-child': { pb: 2 } }}>
+                        <SimpleBar sx={{ maxHeight: 405, height: 1 }}>
+                          <List disablePadding>
+                            <ListSubheader disableSticky sx={{ color: 'text.disabled', typography: 'caption', py: 0.5, px: 1, mb: 0.5 }}>
+                              Last 7 Days
+                            </ListSubheader>
+                            {notifications.map((notification, index) => (
+                              <ListItemButton key={index} sx={buttonStyle}>
+                                <NotificationItem
+                                  avatar={notification.avatar}
+                                  {...(notification.badge && { badgeAvatar: { children: notification.badge } })}
+                                  title={notification.title}
+                                  subTitle={notification.subTitle}
+                                  dateTime={notification.dateTime}
+                                  isSeen={notification.isSeen}
+                                />
+                              </ListItemButton>
+                            ))}
+                            <ListSubheader
+                              disableSticky
+                              sx={{ color: 'text.disabled', typography: 'caption', py: 0.5, px: 1, mb: 0.5, mt: 1.5 }}
+                            >
+                              Older
+                            </ListSubheader>
+                            {notifications2.map((notification, index) => (
+                              <ListItemButton key={index} sx={buttonStyle}>
+                                <NotificationItem
+                                  avatar={notification.avatar}
+                                  {...(notification.badge && { badgeAvatar: { children: notification.badge } })}
+                                  title={notification.title}
+                                  subTitle={notification.subTitle}
+                                  dateTime={notification.dateTime}
+                                  isSeen={notification.isSeen}
+                                />
+                              </ListItemButton>
+                            ))}
+                          </List>
+                        </SimpleBar>
+                      </CardContent>
+                      <CardActions sx={{ p: 1 }}>
+                        <Button fullWidth color="error" onClick={handleClearAll}>
+                          Clear all
+                        </Button>
+                      </CardActions>
+                    </Fragment>
+                  )}
+                </Box>
+              </ClickAwayListener>
+            </MainCard>
+          </Fade>
+        )}
+      </Popper>
     </>
   );
 }

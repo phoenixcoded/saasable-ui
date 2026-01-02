@@ -15,7 +15,7 @@ import ThemeCustomization from '@/themes';
 export default function ProviderWrapper({ children }) {
   return (
     <>
-      <InitColorSchemeScript modeStorageKey="theme-mode" attribute="data-color-scheme" defaultMode="light" />
+      <InitColorSchemeScript attribute="data-color-scheme" defaultMode="light" />
       <ConfigProvider>
         <ThemeCustomization>
           <Notistack>{children}</Notistack>

@@ -42,7 +42,7 @@ export default function Copyright() {
       <Box sx={{ textAlign: 'center', display: { xs: 'block', sm: 'none' } }}>
         <Divider sx={{ marginBottom: 1 }} />
         <Typography variant="caption" color="text.secondary">
-          © 2024 {branding.brandName}
+          © 2026 {branding.brandName}
         </Typography>
       </Box>
     </Stack>

@@ -52,7 +52,7 @@ export default function ThemeCustomization({ children }) {
   theme.components = componentsOverride(theme);
 
   return (
-    <ThemeProvider disableTransitionOnChange theme={theme} modeStorageKey="theme-mode" defaultMode="light">
+    <ThemeProvider disableTransitionOnChange theme={theme} defaultMode="light">
       <CssBaseline enableColorScheme />
       {children}
     </ThemeProvider>

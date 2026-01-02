@@ -98,7 +98,7 @@ const data = [
       },
       {
         label: 'About',
-        link: { href: '/about', ...linkProps }
+        link: { href: 'https://saasable.io/about', ...linkProps }
       },
       {
         label: 'Contact Us',
