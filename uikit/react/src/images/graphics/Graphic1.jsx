@@ -24,8 +24,8 @@ export default function Graphic1() {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(316.233 200.591) rotate(90) scale(675.854 648.851)"
         >
-          <stop stopColor={theme.palette.primary.main} />
-          <stop offset="1" stopColor={theme.palette.primary.main} stopOpacity="0" />
+          <stop stopColor={theme.vars.palette.primary.main} />
+          <stop offset="1" stopColor={theme.vars.palette.primary.main} stopOpacity="0" />
         </radialGradient>
       </defs>
     </svg>

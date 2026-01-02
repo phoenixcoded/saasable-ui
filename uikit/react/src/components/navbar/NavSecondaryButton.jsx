@@ -1,9 +1,9 @@
 import PropTypes from 'prop-types';
-// @next
-import NextLink from 'next/link';
-
 // @mui
 import Button from '@mui/material/Button';
+
+// @project
+import { NextLink } from 'src/components/routes';
 
 /***************************  NAVBAR - SECONDARY BUTTON  ***************************/
 

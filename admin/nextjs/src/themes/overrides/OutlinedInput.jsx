@@ -12,27 +12,27 @@ export default function OutlinedInput(theme) {
       styleOverrides: {
         root: {
           borderRadius: 8,
-          boxShadow: theme.customShadows.button,
-          background: theme.palette.background.default,
+          boxShadow: theme.vars.customShadows.button,
+          background: theme.vars.palette.background.default,
           paddingLeft: 10,
           paddingRight: 10,
           '&.MuiInputBase-colorPrimary': {
             '&:not(.Mui-error):not(.Mui-disabled):not(.Mui-focused):hover': {
-              '& .MuiOutlinedInput-notchedOutline': { borderColor: theme.palette.primary.main }
+              '& .MuiOutlinedInput-notchedOutline': { borderColor: theme.vars.palette.primary.main }
             },
             '&:not(.Mui-error).Mui-focused': {
-              '& .MuiOutlinedInput-notchedOutline': { borderWidth: '1px', boxShadow: theme.customShadows.focus }
+              '& .MuiOutlinedInput-notchedOutline': { borderWidth: '1px', boxShadow: theme.vars.customShadows.focus }
             }
           },
           '&.Mui-disabled': {
             cursor: 'not-allowed',
             input: { cursor: 'not-allowed' },
-            '& .MuiOutlinedInput-notchedOutline': { borderColor: theme.palette.divider },
-            '& .MuiInputAdornment-root': { color: theme.palette.secondary.main, opacity: 0.6 }
+            '& .MuiOutlinedInput-notchedOutline': { borderColor: theme.vars.palette.divider },
+            '& .MuiInputAdornment-root': { color: theme.vars.palette.secondary.main, opacity: 0.6 }
           },
           '&.Mui-error': {
             '&.Mui-focused': {
-              '& .MuiOutlinedInput-notchedOutline': { ...generateFocusStyle(theme.palette.error.main), borderWidth: '1px' }
+              '& .MuiOutlinedInput-notchedOutline': { ...generateFocusStyle(theme.vars.palette.error.main), borderWidth: '1px' }
             }
           },
           variants: [
@@ -42,16 +42,16 @@ export default function OutlinedInput(theme) {
             }
           ]
         },
-        notchedOutline: { borderColor: theme.palette.divider },
+        notchedOutline: { borderColor: theme.vars.palette.divider },
         colorSecondary: {
           '&:not(.Mui-error):not(.Mui-disabled):not(.Mui-focused):hover': {
-            '& .MuiOutlinedInput-notchedOutline': { borderColor: theme.palette.grey[600] }
+            '& .MuiOutlinedInput-notchedOutline': { borderColor: theme.vars.palette.grey[600] }
           },
           '&:not(.Mui-error).Mui-focused': {
             '& .MuiOutlinedInput-notchedOutline': {
               border: '1px solid',
-              borderColor: theme.palette.grey[600],
-              boxShadow: theme.customShadows.focus
+              borderColor: theme.vars.palette.grey[600],
+              boxShadow: theme.vars.customShadows.focus
             }
           }
         },

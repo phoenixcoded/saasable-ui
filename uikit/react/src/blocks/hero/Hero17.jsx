@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { useEffect, useRef, useState } from 'react';
 
 // @mui
-import { useTheme, alpha } from '@mui/material/styles';
+import { useTheme } from '@mui/material/styles';
 import Button from '@mui/material/Button';
 import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
@@ -22,6 +22,7 @@ import GraphicsImage from '@/components/GraphicsImage';
 import SvgIcon from '@/components/SvgIcon';
 import { SECTION_COMMON_PY } from '@/utils/constant';
 import { getBackgroundDots } from '@/utils/getBackgroundDots';
+import { withAlpha } from '@/utils/colorUtils';
 
 // @assets
 import Wave from '@/images/graphics/Wave';
@@ -106,7 +107,7 @@ export default function Hero17({ chip, headLine, captionLine, primaryBtn, videoS
           zIndex: -1,
           borderBottomLeftRadius: boxRadius,
           borderBottomRightRadius: boxRadius,
-          background: getBackgroundDots(theme.palette.grey[300], 60, 35),
+          ...getBackgroundDots(theme.vars.palette.grey[300], 2, 35),
           bgcolor: 'grey.100'
         }}
       />
@@ -119,9 +120,9 @@ export default function Hero17({ chip, headLine, captionLine, primaryBtn, videoS
                 whileInView={{ opacity: 1, scale: [0.6, 1.15, 0.95, 1] }}
                 animate={{
                   boxShadow: [
-                    `0 0 0px ${alpha(theme.palette.primary.dark, 0)}`,
-                    `0 0 20px ${alpha(theme.palette.primary.main, 0.8)}`,
-                    `0 0 0px ${alpha(theme.palette.primary.dark, 0)}`
+                    `0 0 0px ${withAlpha(theme.vars.palette.primary.dark, 0)}`,
+                    `0 0 20px ${withAlpha(theme.vars.palette.primary.main, 0.8)}`,
+                    `0 0 0px ${withAlpha(theme.vars.palette.primary.dark, 0)}`
                   ],
                   borderRadius: '74px'
                 }}

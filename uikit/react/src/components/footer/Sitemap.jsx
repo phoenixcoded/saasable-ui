@@ -106,7 +106,7 @@ export default function Sitemap({ list, isMenuDesign }) {
     px: 0,
     minHeight: { xs: 36, sm: 40 },
     '&:hover': { color: 'primary.main', bgcolor: 'transparent' },
-    '&.Mui-focusVisible': { bgcolor: 'transparent', ...generateFocusVisibleStyles(theme.palette.primary.main) }
+    '&.Mui-focusVisible': { bgcolor: 'transparent', ...generateFocusVisibleStyles(theme.vars.palette.primary.main) }
   };
 
   return (

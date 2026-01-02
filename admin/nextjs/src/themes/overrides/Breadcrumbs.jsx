@@ -5,7 +5,7 @@ export default function Breadcrumbs(theme) {
     MuiBreadcrumbs: {
       styleOverrides: {
         separator: {
-          color: theme.palette.text.secondary,
+          color: theme.vars.palette.text.secondary,
           marginLeft: 4,
           marginRight: 4
         }

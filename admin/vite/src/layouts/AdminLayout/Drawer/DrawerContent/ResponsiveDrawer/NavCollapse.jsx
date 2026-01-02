@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { useState } from 'react';
+import { Activity, useState } from 'react';
 
 // @mui
 import { useTheme } from '@mui/material/styles';
@@ -68,7 +68,7 @@ export default function NavCollapse({ item, level = 0 }) {
     setOpen(!open);
   };
 
-  const iconcolor = theme.palette.text.primary;
+  const iconcolor = theme.vars.palette.text.primary;
 
   return (
     <>
@@ -78,18 +78,15 @@ export default function NavCollapse({ item, level = 0 }) {
         sx={{
           my: 0.25,
           color: 'text.primary',
-          '&.Mui-selected': {
-            color: 'text.primary',
-            '&.Mui-focusVisible': { bgcolor: 'primary.light' }
-          }
+          '&.Mui-selected': { color: 'text.primary', '&.Mui-focusVisible': { bgcolor: 'primary.light' } }
         }}
         onClick={handleClick}
       >
-        {level === 0 && (
+        <Activity mode={level === 0 ? 'visible' : 'hidden'}>
           <ListItemIcon>
             <DynamicIcon name={item.icon} color={iconcolor} size={18} stroke={1.5} />
           </ListItemIcon>
-        )}
+        </Activity>
         <ListItemText primary={item.title} sx={{ mb: '-1px' }} />
         {open ? <IconChevronUp size={18} stroke={1.5} /> : <IconChevronDown size={18} stroke={1.5} />}
       </ListItemButton>

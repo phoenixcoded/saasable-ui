@@ -1,51 +1,45 @@
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useCallback } from 'react';
 
 /***************************  HOOKS - LOCAL STORAGE  ***************************/
 
-/**
- * Custom hook to manage localStorage with React state synchronization.
- *
- * This hook provides a convenient way to:
- * - Read an initial value from localStorage (or use a default value if none exists).
- * - Synchronize the value with localStorage whenever it changes.
- * - Listen for changes to the same key in localStorage from other browser tabs or windows.
- *
- * @template ValueType - The type of the stored value.
- * @param {string} key - The key used to store the value in localStorage.
- * @param {ValueType} defaultValue - The default value used if no value exists in localStorage.
- * @returns {[ValueType, (newValue: ValueType | ((currentValue: ValueType) => ValueType)) => void]}
- *   An array with the current value and a function to update it.
- */
-
 export default function useLocalStorage(key, defaultValue) {
-  const [value, setValue] = useState(() => {
-    const storedValue = typeof window !== 'undefined' ? localStorage.getItem(key) : null;
-    return storedValue === null ? defaultValue : JSON.parse(storedValue);
-  });
+  // Load initial state from localStorage or fallback to default
+  const readValue = () => {
+    if (typeof window === 'undefined') return defaultValue;
 
-  useEffect(() => {
-    // Define a listener to update the state when the same key in localStorage changes
-    const listener = (e) => {
-      if (typeof window !== 'undefined' && e.storageArea === localStorage && e.key === key) {
-        setValue(e.newValue ? JSON.parse(e.newValue) : e.newValue);
-      }
-    };
-    window.addEventListener('storage', listener);
-
-    return () => {
-      window.removeEventListener('storage', listener);
-    };
-  }, [key, defaultValue]);
-
-  // Function to update both the local state and localStorage
-  const setValueInLocalStorage = (newValue) => {
-    setValue((currentValue) => {
-      const result = typeof newValue === 'function' ? newValue(currentValue) : newValue;
-      if (typeof window !== 'undefined') localStorage.setItem(key, JSON.stringify(result));
-      return result;
-    });
+    try {
+      const item = localStorage.getItem(key);
+      return item ? JSON.parse(item) : defaultValue;
+    } catch (err) {
+      console.warn(`Error reading localStorage key “${key}”:`, err);
+      return defaultValue;
+    }
   };
 
-  // Return the current value and the function to update it
-  return [value, setValueInLocalStorage];
+  const [state, setState] = useState(readValue);
+
+  // Sync to localStorage whenever state changes
+  useEffect(() => {
+    try {
+      localStorage.setItem(key, JSON.stringify(state));
+    } catch (err) {
+      console.warn(`Error setting localStorage key “${key}”:`, err);
+    }
+  }, [key, state]);
+
+  // Update single field
+  const setField = useCallback((key, value) => {
+    setState((prev) => ({
+      ...prev,
+      [key]: value
+    }));
+  }, []);
+
+  // Reset to defaults
+  const resetState = useCallback(() => {
+    setState(defaultValue);
+    localStorage.setItem(key, JSON.stringify(defaultValue));
+  }, [defaultValue, key]);
+
+  return { state, setState, setField, resetState };
 }

@@ -1,10 +1,9 @@
 'use client';
 
-import { Fragment, useState } from 'react';
+import { Activity, Fragment, useState } from 'react';
 
 // @mui
 import { keyframes, useTheme } from '@mui/material/styles';
-import useMediaQuery from '@mui/material/useMediaQuery';
 import Badge from '@mui/material/Badge';
 import Button from '@mui/material/Button';
 import CardHeader from '@mui/material/CardHeader';
@@ -52,7 +51,6 @@ const swing = keyframes`
 
 export default function Notification() {
   const theme = useTheme();
-  const downSM = useMediaQuery(theme.breakpoints.down('sm'));
 
   const [anchorEl, setAnchorEl] = useState(null);
   const [innerAnchorEl, setInnerAnchorEl] = useState(null);
@@ -70,7 +68,7 @@ export default function Notification() {
   const [notifications, setNotifications] = useState([
     {
       avatar: { alt: 'Travis Howard', src: '/assets/images/users/avatar-1.png' },
-      badge: <IconCode size={14} color={theme.palette.text.primary} />,
+      badge: <IconCode size={14} />,
       title: 'New Feature Deployed · Code Review Needed',
       subTitle: 'Brenda Skiles',
       dateTime: 'Jul 9'
@@ -90,7 +88,7 @@ export default function Notification() {
     },
     {
       avatar: { alt: 'Travis Howard', src: '/assets/images/users/avatar-4.png' },
-      badge: <IconNote size={14} color={theme.palette.text.primary} />,
+      badge: <IconNote size={14} />,
       title: 'Admin Approval · Document Submission Accepted',
       subTitle: 'Salvatore Bogan',
       dateTime: 'Jul 15',
@@ -108,7 +106,7 @@ export default function Notification() {
   const [notifications2, setNotifications2] = useState([
     {
       avatar: { alt: 'Travis Howard', src: '/assets/images/users/avatar-1.png' },
-      badge: <IconCode size={14} color={theme.palette.text.primary} />,
+      badge: <IconCode size={14} />,
       title: 'Code Review Requested · Feature Deployment',
       subTitle: 'Brenda Skiles',
       dateTime: 'Jul 9'
@@ -122,7 +120,7 @@ export default function Notification() {
     },
     {
       avatar: { alt: 'Alice Smith', src: '/assets/images/users/avatar-5.png' },
-      badge: <IconNote size={14} color={theme.palette.text.primary} />,
+      badge: <IconNote size={14} />,
       title: 'Document Submission Approval Received',
       subTitle: 'Salvatore Bogan',
       dateTime: 'Aug 12',
@@ -130,7 +128,7 @@ export default function Notification() {
     },
     {
       avatar: { alt: 'Travis Howard', src: '/assets/images/users/avatar-1.png' },
-      badge: <IconCode size={14} color={theme.palette.text.primary} />,
+      badge: <IconCode size={14} />,
       title: 'New Commit Pushed · Review Changes',
       subTitle: 'Brenda Skiles',
       dateTime: 'Jul 9'
@@ -179,7 +177,7 @@ export default function Notification() {
           variant="dot"
           invisible={allRead || notifications.length === 0}
           slotProps={{
-            badge: { sx: { height: 6, minWidth: 6, top: 4, right: 4, border: `1px solid ${theme.palette.background.default}` } }
+            badge: { sx: { height: 6, minWidth: 6, top: 4, right: 4, border: `1px solid ${theme.vars.palette.background.default}` } }
           }}
         >
           <IconBell size={16} />
@@ -191,7 +189,7 @@ export default function Notification() {
         open={open}
         anchorEl={anchorEl}
         popperOptions={{
-          modifiers: [{ name: 'offset', options: { offset: [downSM ? 45 : 0, 8] } }]
+          modifiers: [{ name: 'offset', options: { offset: [0, 8] } }]
         }}
         transition
       >
@@ -200,7 +198,7 @@ export default function Notification() {
             <MainCard
               sx={{
                 borderRadius: 2,
-                boxShadow: theme.customShadows.tooltip,
+                boxShadow: theme.vars.customShadows.tooltip,
                 width: 1,
                 minWidth: { xs: 352, sm: 240 },
                 maxWidth: { xs: 352, md: 420 },
@@ -232,7 +230,7 @@ export default function Notification() {
                         >
                           {({ TransitionProps }) => (
                             <Fade in={innerOpen} {...TransitionProps}>
-                              <MainCard sx={{ borderRadius: 2, boxShadow: theme.customShadows.tooltip, minWidth: 156, p: 0.5 }}>
+                              <MainCard sx={{ borderRadius: 2, boxShadow: theme.vars.customShadows.tooltip, minWidth: 156, p: 0.5 }}>
                                 <ClickAwayListener onClickAway={() => setInnerAnchorEl(null)}>
                                   <List disablePadding>
                                     {listcontent.map((item, index) => (
@@ -246,11 +244,11 @@ export default function Notification() {
                             </Fade>
                           )}
                         </Popper>
-                        {!showEmpty && (
+                        <Activity mode={!showEmpty ? 'visible' : 'hidden'}>
                           <Button color="primary" size="small" onClick={handleMarkAllAsRead} disabled={allRead}>
                             Mark All as Read
                           </Button>
-                        )}
+                        </Activity>
                       </Stack>
                     }
                   />

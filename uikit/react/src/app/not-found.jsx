@@ -2,6 +2,7 @@
 
 // @project
 import { Error404Page } from '@/blocks/maintenance';
+import ThemeProviders from '@/components/ThemeProvider';
 
 /***************************  ERROR 404 - DATA  ***************************/
 
@@ -13,5 +14,9 @@ const data = {
 /***************************  ERROR - 404  ***************************/
 
 export default function notfound() {
-  return <Error404Page {...data} />;
+  return (
+    <ThemeProviders>
+      <Error404Page {...data} />
+    </ThemeProviders>
+  );
 }

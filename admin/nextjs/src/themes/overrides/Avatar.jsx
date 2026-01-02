@@ -49,7 +49,7 @@ export default function Avatar(theme) {
   };
 
   const colorVariants = colors.map((color) => {
-    const paletteColor = theme.palette[color];
+    const paletteColor = theme.vars.palette[color];
 
     return {
       props: { color },
@@ -73,12 +73,18 @@ export default function Avatar(theme) {
             {
               props: { color: 'default' },
               style: {
-                color: theme.palette.primary.darker,
-                backgroundColor: theme.palette.primary.lighter
+                color: theme.vars.palette.primary.darker,
+                backgroundColor: theme.vars.palette.primary.lighter
               }
             },
             ...colorVariants,
-            ...sizeVariants(theme)
+            ...sizeVariants(theme),
+            {
+              props: { variant: 'rounded' },
+              style: {
+                borderRadius: 8
+              }
+            }
           ]
         }
       }

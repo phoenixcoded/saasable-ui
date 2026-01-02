@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useState } from 'react';
+import { Activity, useEffect, useState } from 'react';
 
 // @next
 import Link from 'next/link';
@@ -92,18 +92,18 @@ export default function Breadcrumbs() {
               color: 'grey.700',
               textDecoration: 'none',
               ...(item.url && { cursor: 'pointer', ':hover': { color: 'primary.main' } }),
-              ':focus-visible': { outline: 'none', borderRadius: 0.25, ...generateFocusStyle(theme.palette.primary.main) }
+              ':focus-visible': { outline: 'none', borderRadius: 0.25, ...generateFocusStyle(theme.vars.palette.primary.main) }
             }}
             key={index}
           >
             {item.title}
           </Typography>
         ))}
-      {activeItem && (
+      <Activity mode={activeItem ? 'visible' : 'hidden'}>
         <Typography variant="body2" sx={{ p: 0.5 }}>
-          {activeItem.title}
+          {activeItem?.title}
         </Typography>
-      )}
+      </Activity>
     </MuiBreadcrumbs>
   );
 }

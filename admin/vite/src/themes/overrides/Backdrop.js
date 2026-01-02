@@ -1,5 +1,5 @@
-// @mui
-import { alpha } from '@mui/material/styles';
+// @project
+import { withAlpha } from '@/utils/colorUtils';
 
 /***************************  OVERRIDES - BACKDROP  ***************************/
 
@@ -8,7 +8,7 @@ export default function Backdrop(theme) {
     MuiBackdrop: {
       styleOverrides: {
         root: {
-          backgroundColor: alpha(theme.palette.grey[900], 0.2)
+          backgroundColor: withAlpha(theme.vars.palette.grey[900], 0.2)
         }
       }
     }

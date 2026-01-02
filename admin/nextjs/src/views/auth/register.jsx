@@ -1,6 +1,3 @@
-// @next
-import NextLink from 'next/link';
-
 // @mui
 import Divider from '@mui/material/Divider';
 import Link from '@mui/material/Link';
@@ -10,6 +7,7 @@ import Box from '@mui/material/Box';
 
 // @project
 import { SocialTypes } from '@/enum';
+import { NextLink } from '@/components/routes';
 import AuthRegister from '@/sections/auth/AuthRegister';
 import AuthSocial from '@/sections/auth/AuthSocial';
 import Copyright from '@/sections/auth/Copyright';

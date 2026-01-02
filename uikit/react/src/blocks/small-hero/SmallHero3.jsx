@@ -1,7 +1,4 @@
 import PropTypes from 'prop-types';
-// @next
-import NextLink from 'next/link';
-
 // @mui
 import Button from '@mui/material/Button';
 import Chip from '@mui/material/Chip';
@@ -11,6 +8,7 @@ import Typography from '@mui/material/Typography';
 
 // @project
 import ContainerWrapper from '@/components/ContainerWrapper';
+import { NextLink } from '@/components/routes';
 import { SECTION_COMMON_PY } from '@/utils/constant';
 
 /***************************  SMALL HERO - 3  ***************************/

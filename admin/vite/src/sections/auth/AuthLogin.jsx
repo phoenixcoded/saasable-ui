@@ -66,7 +66,7 @@ export default function AuthLogin({ inputSx }) {
     router.push(APP_DEFAULT_PATH);
   };
 
-  const commonIconProps = { size: 16, color: theme.palette.grey[700] };
+  const commonIconProps = { size: 16, color: theme.vars.palette.grey[700] };
 
   return (
     <>
@@ -86,7 +86,7 @@ export default function AuthLogin({ inputSx }) {
         ))}
       </Stack>
       <form onSubmit={handleSubmit(onSubmit)}>
-        <Stack gap={2}>
+        <Stack sx={{ gap: 2 }}>
           <Box>
             <InputLabel>Email</InputLabel>
             <OutlinedInput
@@ -114,7 +114,7 @@ export default function AuthLogin({ inputSx }) {
               }
               sx={inputSx}
             />
-            <Stack direction="row" alignItems="center" justifyContent={errors.password ? 'space-between' : 'flex-end'} width={1}>
+            <Stack direction="row" sx={{ alignItems: 'center', justifyContent: errors.password ? 'space-between' : 'flex-end', width: 1 }}>
               {errors.password?.message && <FormHelperText error>{errors.password.message}</FormHelperText>}
               <Link
                 component={RouterLink}

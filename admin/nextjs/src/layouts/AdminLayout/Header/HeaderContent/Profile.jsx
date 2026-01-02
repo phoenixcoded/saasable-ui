@@ -31,7 +31,7 @@ import { AvatarSize, ChipIconPosition } from '@/enum';
 import useConfig from '@/hooks/useConfig';
 
 // @assets
-import { IconChevronRight, IconLanguage, IconLogout, IconSettings, IconSunMoon, IconTextDirectionLtr } from '@tabler/icons-react';
+import { IconChevronRight, IconLanguage, IconLogout, IconSettings, IconTextDirectionLtr } from '@tabler/icons-react';
 
 /***************************  HEADER - PROFILE DATA  ***************************/
 
@@ -52,7 +52,9 @@ const languageList = [
 
 export default function ProfileSection() {
   const theme = useTheme();
-  const { i18n } = useConfig();
+  const {
+    state: { i18n }
+  } = useConfig();
 
   const [anchorEl, setAnchorEl] = useState(null);
   const [innerAnchorEl, setInnerAnchorEl] = useState(null);
@@ -100,7 +102,7 @@ export default function ProfileSection() {
       >
         {({ TransitionProps }) => (
           <Fade in={open} {...TransitionProps}>
-            <MainCard sx={{ borderRadius: 2, boxShadow: theme.customShadows.tooltip, minWidth: 220, p: 0.5 }}>
+            <MainCard sx={{ borderRadius: 2, boxShadow: theme.vars.customShadows.tooltip, minWidth: 220, p: 0.5 }}>
               <ClickAwayListener onClickAway={() => setAnchorEl(null)}>
                 <Stack sx={{ px: 0.5, py: 0.75 }}>
                   <Profile
@@ -116,18 +118,7 @@ export default function ProfileSection() {
                   <Divider sx={{ my: 1 }} />
                   <List disablePadding>
                     <ListItem
-                      secondaryAction={
-                        <Switch size="small" checked={false} onChange={() => enqueueSnackbar('Upgrade to pro for dark theme')} />
-                      }
-                      sx={{ py: 0.5, pl: 1, '& .MuiListItemSecondaryAction-root': { right: 8 } }}
-                    >
-                      <ListItemIcon>
-                        <IconSunMoon size={16} />
-                      </ListItemIcon>
-                      <ListItemText primary="Dark Theme" />
-                    </ListItem>
-                    <ListItem
-                      secondaryAction={<Switch size="small" checked={false} onChange={() => enqueueSnackbar('Upgrade to pro for RTL')} />}
+                      secondaryAction={<Switch size="small" onChange={() => enqueueSnackbar('Upgrade to pro for RTL')} />}
                       sx={{ py: 1, pl: 1, '& .MuiListItemSecondaryAction-root': { right: 8 } }}
                     >
                       <ListItemIcon>
@@ -169,7 +160,7 @@ export default function ProfileSection() {
                       >
                         {({ TransitionProps }) => (
                           <Fade in={innerOpen} {...TransitionProps}>
-                            <MainCard sx={{ borderRadius: 2, boxShadow: theme.customShadows.tooltip, minWidth: 150, p: 0.5 }}>
+                            <MainCard sx={{ borderRadius: 2, boxShadow: theme.vars.customShadows.tooltip, minWidth: 150, p: 0.5 }}>
                               <ClickAwayListener onClickAway={() => setInnerAnchorEl(null)}>
                                 <List disablePadding>
                                   {languageList.map((item, index) => (

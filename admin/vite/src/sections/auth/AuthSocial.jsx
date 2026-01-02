@@ -7,32 +7,18 @@ import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
 // @project
-import GetImagePath from '@/utils/GetImagePath';
 import { SocialTypes } from '@/enum';
+import GetImagePath from '@/utils/GetImagePath';
 
 // @assets
 import googleIcon from '@/assets/images/social/google.svg';
 import facebookIcon from '@/assets/images/social/facebook.svg';
-import appleLightIcon from '@/assets/images/social/apple-light.svg';
 
 /***************************  SOCIAL BUTTON - DATA  ***************************/
 
 const authButtons = [
-  {
-    label: 'Google',
-    icon: googleIcon,
-    title: 'Sign in with Google'
-  },
-  {
-    label: 'Facebook',
-    icon: facebookIcon,
-    title: 'Sign in with Facebook'
-  },
-  {
-    label: 'Apple',
-    icon: appleLightIcon,
-    title: 'Sign in with Apple'
-  }
+  { label: 'Google', icon: googleIcon, title: 'Sign in with Google' },
+  { label: 'Facebook', icon: facebookIcon, title: 'Sign in with Facebook' }
 ];
 
 /***************************  AUTH - SOCIAL  ***************************/

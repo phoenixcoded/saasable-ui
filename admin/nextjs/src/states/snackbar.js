@@ -15,9 +15,9 @@ const initialState = {
     vertical: 'bottom',
     horizontal: 'right'
   },
+  severity: 'success',
   variant: 'default',
   alert: {
-    color: 'primary',
     variant: 'filled'
   },
   transition: 'Zoom',
@@ -44,7 +44,7 @@ export function useGetSnackbar() {
 export function openSnackbar(snackbar) {
   // to update local state based on key
 
-  const { action, open, message, anchorOrigin, variant, alert, transition, close, actionButton } = snackbar;
+  const { action, open, message, anchorOrigin, variant, alert, transition, close, actionButton, severity } = snackbar;
 
   mutate(
     endpoints.key,
@@ -57,10 +57,8 @@ export function openSnackbar(snackbar) {
         message: message || initialState.message,
         anchorOrigin: anchorOrigin || initialState.anchorOrigin,
         variant: variant || initialState.variant,
-        alert: {
-          color: alert?.color || initialState.alert.color,
-          variant: alert?.variant || initialState.alert.variant
-        },
+        alert: { variant: alert?.variant || initialState.alert.variant },
+        severity: severity || initialState.severity,
         transition: transition || initialState.transition,
         close: close || initialState.close,
         actionButton: actionButton || initialState.actionButton

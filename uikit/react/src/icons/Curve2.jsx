@@ -22,8 +22,8 @@ export default function Curve2({ size = 24, color }) {
       />
       <defs>
         <linearGradient id={uniqueId} x1="20.6899" y1="-23.4912" x2="76.2662" y2="33.7388" gradientUnits="userSpaceOnUse">
-          <stop stopColor={color || theme.palette.primary.main} stopOpacity="0" />
-          <stop offset="1" stopColor={color || theme.palette.primary.main} />
+          <stop stopColor={color || theme.vars.palette.primary.main} stopOpacity="0" />
+          <stop offset="1" stopColor={color || theme.vars.palette.primary.main} />
         </linearGradient>
       </defs>
     </svg>

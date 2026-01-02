@@ -5,7 +5,7 @@ export default function BarLabel(theme) {
     MuiBarLabel: {
       styleOverrides: {
         root: {
-          fill: theme.palette.text.secondary
+          fill: theme.vars.palette.text.secondary
         }
       }
     }

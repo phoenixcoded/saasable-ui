@@ -2,7 +2,7 @@
 import PropTypes from 'prop-types';
 
 // @mui
-import { useTheme } from '@mui/material/styles';
+import { useColorScheme, useTheme } from '@mui/material/styles';
 import Grid from '@mui/material/Grid';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
@@ -67,161 +67,169 @@ function ColorPalette({ title, palette }) {
 
 export default function UtilsColor() {
   const theme = useTheme();
+  const { colorScheme } = useColorScheme();
 
-  const { currentTheme } = useConfig();
+  const {
+    state: { currentTheme }
+  } = useConfig();
   const colorString = getColorString(currentTheme);
+
+  const scheme = colorScheme ?? 'light';
+  const schemeTheme = theme.colorSchemes?.[scheme];
+
+  const currentPalette = schemeTheme ? schemeTheme.palette : theme.palette;
 
   const primaryPalette = [
     {
-      value: theme.palette.primary.lighter,
+      value: currentPalette.primary.lighter,
       color: 'primary.darker',
       muiLabel: 'primary.lighter',
       figmaLabel: 'Primary Container / Primary Fixed',
-      figmaValue: `${colorString}/primary/${getColorCode(currentTheme, 0)}` // setup swr and use function for dynamic value
+      figmaValue: `${colorString}/primary/${getColorCode(currentTheme, 0, colorScheme)}` // setup swr and use function for dynamic value
     },
     {
-      value: theme.palette.primary.light,
+      value: currentPalette.primary.light,
       color: 'primary.dark',
       muiLabel: 'primary.light',
       figmaLabel: 'Primary Fixed Dim',
-      figmaValue: `${colorString}/primary/${getColorCode(currentTheme, 1)}`
+      figmaValue: `${colorString}/primary/${getColorCode(currentTheme, 1, colorScheme)}`
     },
     {
-      value: theme.palette.primary.main,
+      value: currentPalette.primary.main,
       color: 'background.default',
       muiLabel: 'primary.main',
       figmaLabel: 'Primary',
       main: true,
-      figmaValue: `${colorString}/primary/${getColorCode(currentTheme, 2)}`
+      figmaValue: `${colorString}/primary/${getColorCode(currentTheme, 2, colorScheme)}`
     },
     {
-      value: theme.palette.primary.dark,
+      value: currentPalette.primary.dark,
       color: 'primary.light',
       muiLabel: 'primary.dark',
       figmaLabel: 'On Primary Fixed Variant',
-      figmaValue: `${colorString}/primary/${getColorCode(currentTheme, 3)}`
+      figmaValue: `${colorString}/primary/${getColorCode(currentTheme, 3, colorScheme)}`
     },
     {
-      value: theme.palette.primary.darker,
+      value: currentPalette.primary.darker,
       color: 'primary.lighter',
       muiLabel: 'primary.darker',
       figmaLabel: 'On Primary Container / On Primary Fixed',
-      figmaValue: `${colorString}/primary/${getColorCode(currentTheme, 4)}`
+      figmaValue: `${colorString}/primary/${getColorCode(currentTheme, 4, colorScheme)}`
     }
   ];
 
   const secondaryPalette = [
     {
-      value: theme.palette.secondary.lighter,
+      value: currentPalette.secondary.lighter,
       color: 'secondary.darker',
       muiLabel: 'secondary.lighter',
       figmaLabel: 'Secondary Container / Secondary Fixed',
-      figmaValue: `${colorString}/secondary/${getColorCode(currentTheme, 0)}`
+      figmaValue: `${colorString}/secondary/${getColorCode(currentTheme, 0, colorScheme)}`
     },
     {
-      value: theme.palette.secondary.light,
+      value: currentPalette.secondary.light,
       color: 'secondary.dark',
       muiLabel: 'secondary.light',
       figmaLabel: 'Secondary Fixed Dim',
-      figmaValue: `${colorString}/secondary/${getColorCode(currentTheme, 1)}`
+      figmaValue: `${colorString}/secondary/${getColorCode(currentTheme, 1, colorScheme)}`
     },
     {
-      value: theme.palette.secondary.main,
+      value: currentPalette.secondary.main,
       color: 'background.default',
       muiLabel: 'secondary.main',
       figmaLabel: 'Secondary',
       main: true,
-      figmaValue: `${colorString}/secondary/${getColorCode(currentTheme, 2)}`
+      figmaValue: `${colorString}/secondary/${getColorCode(currentTheme, 2, colorScheme)}`
     },
     {
-      value: theme.palette.secondary.dark,
+      value: currentPalette.secondary.dark,
       color: 'secondary.light',
       muiLabel: 'secondary.dark',
       figmaLabel: 'On Secondary Fixed Variant',
-      figmaValue: `${colorString}/secondary/${getColorCode(currentTheme, 3)}`
+      figmaValue: `${colorString}/secondary/${getColorCode(currentTheme, 3, colorScheme)}`
     },
     {
-      value: theme.palette.secondary.darker,
+      value: currentPalette.secondary.darker,
       color: 'secondary.lighter',
       muiLabel: 'secondary.darker',
       figmaLabel: 'On Secondary Container / On Secondary Fixed',
-      figmaValue: `${colorString}/secondary/${getColorCode(currentTheme, 4)}`
+      figmaValue: `${colorString}/secondary/${getColorCode(currentTheme, 4, colorScheme)}`
     }
   ];
 
   const greyPalette = [
     {
-      value: theme.palette.grey[50],
+      value: currentPalette.grey[50],
       color: 'grey.900',
       muiLabel: 'grey.50',
       figmaLabel: 'Surface / Surface Bright',
-      figmaValue: `${colorString}/neutral/${getGreyCode(currentTheme, 0)}`
+      figmaValue: `${colorString}/neutral/${getGreyCode(currentTheme, 0, colorScheme)}`
     },
     {
-      value: theme.palette.grey[100],
+      value: currentPalette.grey[100],
       color: 'grey.900',
       muiLabel: 'grey.100',
       figmaLabel: 'Surface Container Low',
-      figmaValue: `${colorString}/neutral/${getGreyCode(currentTheme, 1)}`
+      figmaValue: `${colorString}/neutral/${getGreyCode(currentTheme, 1, colorScheme)}`
     },
     {
-      value: theme.palette.grey[200],
+      value: currentPalette.grey[200],
       color: 'grey.900',
       muiLabel: 'grey.200',
       figmaLabel: 'Surface Container',
-      figmaValue: `${colorString}/neutral/${getGreyCode(currentTheme, 2)}`
+      figmaValue: `${colorString}/neutral/${getGreyCode(currentTheme, 2, colorScheme)}`
     },
     {
-      value: theme.palette.grey[300],
+      value: currentPalette.grey[300],
       color: 'grey.900',
       muiLabel: 'grey.300',
       figmaLabel: 'Surface Container High',
-      figmaValue: `${colorString}/neutral/${getGreyCode(currentTheme, 3)}`
+      figmaValue: `${colorString}/neutral/${getGreyCode(currentTheme, 3, colorScheme)}`
     },
     {
-      value: theme.palette.grey[400],
+      value: currentPalette.grey[400],
       color: 'grey.900',
       muiLabel: 'grey.400',
       figmaLabel: 'Surface Container Highest',
-      figmaValue: `${colorString}/neutral/${getGreyCode(currentTheme, 4)}`
+      figmaValue: `${colorString}/neutral/${getGreyCode(currentTheme, 4, colorScheme)}`
     },
     {
-      value: theme.palette.grey[500],
+      value: currentPalette.grey[500],
       color: 'grey.900',
       muiLabel: 'grey.500',
       figmaLabel: 'Surface Container Highest',
-      figmaValue: `${colorString}/neutral/${getGreyCode(currentTheme, 5)}`
+      figmaValue: `${colorString}/neutral/${getGreyCode(currentTheme, 5, colorScheme)}`
     },
     {
-      value: theme.palette.grey[600],
+      value: currentPalette.grey[600],
       color: 'grey.800',
       muiLabel: 'divider/grey.600',
       figmaLabel: 'Outline Variant',
-      figmaValue: `${colorString}/neutral variant/${getGreyCode(currentTheme, 6)}`
+      figmaValue: `${colorString}/neutral variant/${getGreyCode(currentTheme, 6, colorScheme)}`
     },
     {
-      value: theme.palette.grey[700],
+      value: currentPalette.grey[700],
       color: 'grey.600',
       muiLabel: 'grey.700',
       figmaLabel: 'Outline',
-      figmaValue: `${colorString}/neutral variant/${getGreyCode(currentTheme, 7)}`
+      figmaValue: `${colorString}/neutral variant/${getGreyCode(currentTheme, 7, colorScheme)}`
     },
     {
-      value: theme.palette.grey[800],
+      value: currentPalette.grey[800],
       color: 'grey.600',
       muiLabel: 'text.secondary/grey.800',
       figmaLabel: 'On Surface Variant',
-      figmaValue: `${colorString}/neutral variant/${getGreyCode(currentTheme, 8)}`
+      figmaValue: `${colorString}/neutral variant/${getGreyCode(currentTheme, 8, colorScheme)}`
     },
     {
-      value: theme.palette.grey[900],
+      value: currentPalette.grey[900],
       color: 'grey.50',
       muiLabel: 'text.primary/grey.900',
       figmaLabel: 'On Surface',
-      figmaValue: `${colorString}/neutral/${getGreyCode(currentTheme, 9)}`
+      figmaValue: `${colorString}/neutral/${getGreyCode(currentTheme, 9, colorScheme)}`
     },
     {
-      value: theme.palette.background.default,
+      value: currentPalette.background.default,
       color: 'text.priamry',
       muiLabel: 'background.default',
       figmaLabel: 'On Priamry/Secondary',
@@ -231,153 +239,153 @@ export default function UtilsColor() {
 
   const errorPalette = [
     {
-      value: theme.palette.error.lighter,
+      value: currentPalette.error.lighter,
       color: 'error.darker',
       muiLabel: 'error.lighter',
       figmaLabel: 'On Error / Error Container Low',
-      figmaValue: `error/${getColorCode(currentTheme, 0)}`
+      figmaValue: `error/${getColorCode(currentTheme, 0, colorScheme)}`
     },
     {
-      value: theme.palette.error.light,
+      value: currentPalette.error.light,
       color: 'error.dark',
       muiLabel: 'error.light',
       figmaLabel: 'Error Container High / Outline',
-      figmaValue: `error/${getColorCode(currentTheme, 1)}`
+      figmaValue: `error/${getColorCode(currentTheme, 1, colorScheme)}`
     },
     {
-      value: theme.palette.error.main,
+      value: currentPalette.error.main,
       color: 'background.default',
       muiLabel: 'error.main',
       figmaLabel: 'Error',
-      figmaValue: `error/${getColorCode(currentTheme, 2)}`
+      figmaValue: `error/${getColorCode(currentTheme, 2, colorScheme)}`
     },
     {
-      value: theme.palette.error.dark,
+      value: currentPalette.error.dark,
       color: 'error.light',
       muiLabel: 'error.dark',
       figmaLabel: 'On Container/ Error Container',
-      figmaValue: `error/${getColorCode(currentTheme, 3)}`
+      figmaValue: `error/${getColorCode(currentTheme, 3, colorScheme)}`
     },
     {
-      value: theme.palette.error.darker,
+      value: currentPalette.error.darker,
       color: 'error.lighter',
       muiLabel: 'error.darker',
       figmaLabel: 'On Container Low / Container High',
-      figmaValue: `error/${getColorCode(currentTheme, 4)}`
+      figmaValue: `error/${getColorCode(currentTheme, 4, colorScheme)}`
     }
   ];
 
   const warningPalette = [
     {
-      value: theme.palette.warning.lighter,
+      value: currentPalette.warning.lighter,
       color: 'warning.darker',
       muiLabel: 'warning.lighter',
       figmaLabel: 'On Warning / Warning Container Low',
-      figmaValue: `warning/${getColorCode(currentTheme, 0)}`
+      figmaValue: `warning/${getColorCode(currentTheme, 0, colorScheme)}`
     },
     {
-      value: theme.palette.warning.light,
+      value: currentPalette.warning.light,
       color: 'warning.dark',
       muiLabel: 'warning.light',
       figmaLabel: 'Warning Container High / Outline',
-      figmaValue: `warning/${getColorCode(currentTheme, 1)}`
+      figmaValue: `warning/${getColorCode(currentTheme, 1, colorScheme)}`
     },
     {
-      value: theme.palette.warning.main,
+      value: currentPalette.warning.main,
       color: 'background.default',
       muiLabel: 'warning.main',
       figmaLabel: 'Warning',
-      figmaValue: `warning/${getColorCode(currentTheme, 2)}`
+      figmaValue: `warning/${getColorCode(currentTheme, 2, colorScheme)}`
     },
     {
-      value: theme.palette.warning.dark,
+      value: currentPalette.warning.dark,
       color: 'warning.light',
       muiLabel: 'warning.dark',
       figmaLabel: 'On Container/ Warning Container',
-      figmaValue: `warning/${getColorCode(currentTheme, 3)}`
+      figmaValue: `warning/${getColorCode(currentTheme, 3, colorScheme)}`
     },
     {
-      value: theme.palette.warning.darker,
+      value: currentPalette.warning.darker,
       color: 'warning.lighter',
       muiLabel: 'warning.darker',
       figmaLabel: 'On Container Low / Container High',
-      figmaValue: `warning/${getColorCode(currentTheme, 4)}`
+      figmaValue: `warning/${getColorCode(currentTheme, 4, colorScheme)}`
     }
   ];
 
   const infoPalette = [
     {
-      value: theme.palette.info.lighter,
+      value: currentPalette.info.lighter,
       color: 'info.darker',
       muiLabel: 'info.lighter',
       figmaLabel: 'On Info / Info Container Low',
-      figmaValue: `info/${getColorCode(currentTheme, 0)}`
+      figmaValue: `info/${getColorCode(currentTheme, 0, colorScheme)}`
     },
     {
-      value: theme.palette.info.light,
+      value: currentPalette.info.light,
       color: 'info.dark',
       muiLabel: 'info.light',
       figmaLabel: 'Info Container High / Outline',
-      figmaValue: `info/${getColorCode(currentTheme, 1)}`
+      figmaValue: `info/${getColorCode(currentTheme, 1, colorScheme)}`
     },
     {
-      value: theme.palette.info.main,
+      value: currentPalette.info.main,
       color: 'background.default',
       muiLabel: 'info.main',
       figmaLabel: 'Info',
-      figmaValue: `info/${getColorCode(currentTheme, 2)}`
+      figmaValue: `info/${getColorCode(currentTheme, 2, colorScheme)}`
     },
     {
-      value: theme.palette.info.dark,
+      value: currentPalette.info.dark,
       color: 'info.light',
       muiLabel: 'info.dark',
       figmaLabel: 'On Container/ Info Container',
-      figmaValue: `info/${getColorCode(currentTheme, 3)}`
+      figmaValue: `info/${getColorCode(currentTheme, 3, colorScheme)}`
     },
     {
-      value: theme.palette.info.darker,
+      value: currentPalette.info.darker,
       color: 'info.lighter',
       muiLabel: 'info.darker',
       figmaLabel: 'On Container Low / Container High',
-      figmaValue: `info/${getColorCode(currentTheme, 4)}`
+      figmaValue: `info/${getColorCode(currentTheme, 4, colorScheme)}`
     }
   ];
 
   const successPalette = [
     {
-      value: theme.palette.success.lighter,
+      value: currentPalette.success.lighter,
       color: 'success.darker',
       muiLabel: 'success.lighter',
       figmaLabel: 'On Success / Success Container Low',
-      figmaValue: `success/${getColorCode(currentTheme, 0)}`
+      figmaValue: `success/${getColorCode(currentTheme, 0, colorScheme)}`
     },
     {
-      value: theme.palette.success.light,
+      value: currentPalette.success.light,
       color: 'success.dark',
       muiLabel: 'success.light',
       figmaLabel: 'Success Container High / Outline',
-      figmaValue: `success/${getColorCode(currentTheme, 1)}`
+      figmaValue: `success/${getColorCode(currentTheme, 1, colorScheme)}`
     },
     {
-      value: theme.palette.success.main,
+      value: currentPalette.success.main,
       color: 'background.default',
       muiLabel: 'success.main',
       figmaLabel: 'Success',
-      figmaValue: `success/${getColorCode(currentTheme, 2)}`
+      figmaValue: `success/${getColorCode(currentTheme, 2, colorScheme)}`
     },
     {
-      value: theme.palette.success.dark,
+      value: currentPalette.success.dark,
       color: 'success.light',
       muiLabel: 'success.dark',
       figmaLabel: 'On Container/ Success Container',
-      figmaValue: `success/${getColorCode(currentTheme, 3)}`
+      figmaValue: `success/${getColorCode(currentTheme, 3, colorScheme)}`
     },
     {
-      value: theme.palette.success.darker,
+      value: currentPalette.success.darker,
       color: 'success.lighter',
       muiLabel: 'success.darker',
       figmaLabel: 'On Container Low / Container High',
-      figmaValue: `success/${getColorCode(currentTheme, 4)}`
+      figmaValue: `success/${getColorCode(currentTheme, 4, colorScheme)}`
     }
   ];
 

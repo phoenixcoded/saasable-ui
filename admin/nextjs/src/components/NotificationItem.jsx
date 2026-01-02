@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import { isValidElement } from 'react';
 
 // @mui
-import { useTheme } from '@mui/material/styles';
 import Avatar from '@mui/material/Avatar';
 import Badge from '@mui/material/Badge';
 import Stack from '@mui/material/Stack';
@@ -17,10 +16,9 @@ import { AvatarSize } from '@/enum';
 /***************************  NOTIFICATION - LIST  ***************************/
 
 export default function NotificationItem({ avatar, badgeAvatar, title, subTitle, dateTime, isSeen = false }) {
-  const theme = useTheme();
   const ellipsis = { textOverflow: 'ellipsis', overflow: 'hidden', whiteSpace: 'nowrap' };
 
-  const avatarContent = isValidElement(avatar) ? <Avatar>{avatar}</Avatar> : <Avatar {...avatar} />;
+  const avatarContent = isValidElement(avatar) ? <Avatar color="default">{avatar}</Avatar> : <Avatar {...avatar} />;
 
   return (
     <Stack direction="row" sx={{ width: 1, alignItems: 'center', justifyContent: 'space-between', gap: 1 }}>
@@ -31,7 +29,14 @@ export default function NotificationItem({ avatar, badgeAvatar, title, subTitle,
             <Badge
               overlap="circular"
               anchorOrigin={{ vertical: 'bottom', horizontal: 'right' }}
-              badgeContent={<Avatar size={AvatarSize.BADGE} sx={{ border: `1px solid ${theme.palette.common.white}` }} {...badgeAvatar} />}
+              badgeContent={
+                <Avatar
+                  color="default"
+                  size={AvatarSize.BADGE}
+                  sx={{ border: `1px solid`, borderColor: 'common.white' }}
+                  {...badgeAvatar}
+                />
+              }
               slotProps={{ badge: { sx: { bottom: '22%' } } }}
             >
               {avatarContent}

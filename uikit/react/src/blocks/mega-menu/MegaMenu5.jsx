@@ -2,7 +2,7 @@
 import PropTypes from 'prop-types';
 
 // @mui
-import { useTheme, alpha } from '@mui/material/styles';
+import { useTheme } from '@mui/material/styles';
 import Chip from '@mui/material/Chip';
 import Grid from '@mui/material/Grid';
 import List from '@mui/material/List';
@@ -17,6 +17,7 @@ import { motion } from 'motion/react';
 
 // @project
 import SvgIcon from '@/components/SvgIcon';
+import { withAlpha } from '@/utils/colorUtils';
 
 /***************************  MEGA MENU - 5  ***************************/
 
@@ -77,7 +78,7 @@ export default function MegaMenu5({ menuItems, bannerData, popperWidth = 750 }) 
                         }}
                         TouchRippleProps={{
                           style: {
-                            color: alpha(theme.palette.primary.main, 0.3)
+                            color: withAlpha(theme.vars.palette.primary.main, 0.3)
                           }
                         }}
                       >
@@ -92,7 +93,7 @@ export default function MegaMenu5({ menuItems, bannerData, popperWidth = 750 }) 
                           }}
                         />
                         {item && item?.link && item?.link !== undefined && item?.link?.target === '_blank' ? (
-                          <SvgIcon name="tabler-arrow-up-right" size={16} stroke={2} color={theme.palette.grey[800]} />
+                          <SvgIcon name="tabler-arrow-up-right" size={16} stroke={2} color={theme.vars.palette.grey[800]} />
                         ) : (
                           <Chip
                             label={

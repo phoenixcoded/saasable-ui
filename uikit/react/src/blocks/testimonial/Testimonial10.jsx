@@ -2,7 +2,7 @@
 import PropTypes from 'prop-types';
 
 // @mui
-import { alpha, useTheme } from '@mui/material/styles';
+import { useTheme } from '@mui/material/styles';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 import Masonry from '@mui/lab/Masonry';
@@ -16,6 +16,7 @@ import ContainerWrapper from '@/components/ContainerWrapper';
 import Rating from '@/components/Rating';
 import Typeset from '@/components/Typeset';
 
+import { withAlpha } from '@/utils/colorUtils';
 import { SECTION_COMMON_PY } from '@/utils/constant';
 
 /***************************  TESTIMONIAL - 10  ***************************/
@@ -32,8 +33,8 @@ import { SECTION_COMMON_PY } from '@/utils/constant';
 export default function Testimonial10({ heading, caption, testimonials }) {
   const theme = useTheme();
 
-  const gc = theme.palette.background.default;
-  const gradient = `radial-gradient(146.46% 68.12% at 50% 29.86%, ${alpha(gc, 0)} 0%, ${gc} 100%)`;
+  const gc = theme.vars.palette.background.default;
+  const gradient = `radial-gradient(146.46% 68.12% at 50% 29.86%, ${withAlpha(gc, 0)} 0%, ${gc} 100%)`;
 
   return (
     <ContainerWrapper sx={{ py: SECTION_COMMON_PY }}>

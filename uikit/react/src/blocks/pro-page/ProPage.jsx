@@ -1,6 +1,4 @@
 import PropTypes from 'prop-types';
-// @next
-import NextLink from 'next/link';
 
 // @mui
 import Button from '@mui/material/Button';
@@ -16,6 +14,7 @@ import { SECTION_COMMON_PY } from '@/utils/constant';
 import ContainerWrapper from '@/components/ContainerWrapper';
 import GraphicsImage from '@/components/GraphicsImage';
 import SvgIcon from '@/components/SvgIcon';
+import { NextLink } from '@/components/routes';
 
 export default function ProPage({ image }) {
   return (

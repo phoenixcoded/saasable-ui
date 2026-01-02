@@ -1,8 +1,10 @@
-// @mui
-import { alpha } from '@mui/material/styles';
+// @project
+import { withAlpha } from '@/utils/colorUtils';
 
 /***************************  COMMON - FOCUS STYLE  ***************************/
 
-export const generateFocusStyle = (color) => ({
-  boxShadow: `0px 0px 0px 3px ${alpha(color, 0.2)}`
-});
+export function generateFocusStyle(color) {
+  return {
+    boxShadow: `0px 0px 0px 3px ${withAlpha(color, 0.2)}`
+  };
+}

@@ -12,7 +12,7 @@ import SimpleBar from '@/components/third-party/SimpleBar';
 /***************************  DRAWER - CONTENT  ***************************/
 
 export default function DrawerContent() {
-  const upMD = useMediaQuery((theme) => theme.breakpoints.up('lg'));
+  const upLG = useMediaQuery((theme) => theme.breakpoints.up('lg'));
 
   const { menuMaster } = useGetMenuMaster();
   const drawerOpen = menuMaster.isDashboardDrawerOpened;
@@ -21,7 +21,7 @@ export default function DrawerContent() {
 
   return (
     <SimpleBar sx={{ height: contentHeight }}>
-      <Stack sx={{ minHeight: contentHeight, px: !drawerOpen && upMD ? 0 : 2, justifyContent: 'space-between' }}>
+      <Stack sx={{ minHeight: contentHeight, px: !drawerOpen && upLG ? 0 : 2, justifyContent: 'space-between' }}>
         <ResponsiveDrawer />
         <NavCard />
       </Stack>

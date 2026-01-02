@@ -39,7 +39,7 @@ export default function Copyright({ type = CopyrightType.TYPE1, textProps, isDiv
       sx={{ alignItems: 'center', justifyContent: { xs: 'center', md: 'flex-end' }, gap: { xs: 1.5, sm: isDivider ? 1.5 : 3 } }}
     >
       <Typography variant="caption2" {...textProps} sx={{ color: 'text.secondary', ...textProps?.sx }}>
-        Copyright © 2025
+        Copyright © 2026
         <Link {...linkProps} href={branding.company.url} sx={{ ...linkProps.sx, ml: 0.5 }}>
           {branding.company.name}
         </Link>

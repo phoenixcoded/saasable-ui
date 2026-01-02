@@ -173,18 +173,17 @@ export default function Faq6({ heading, caption, defaultExpanded, faqList, getIn
                   sx={{
                     borderRadius: cardRadius,
                     backgroundColor: 'grey.100',
-                    ...(isFocusWithin && { '&:focus-within': generateFocusVisibleStyles(theme.palette.primary.main) })
+                    ...(isFocusWithin && { '&:focus-within': generateFocusVisibleStyles(theme.vars.palette.primary.main) })
                   }}
                 >
                   <AccordionSummary
                     expandIcon={<SvgIcon name={expanded === `panel${index}` ? 'tabler-minus' : 'tabler-plus'} {...iconProps} size={20} />}
                     sx={{
                       p: accordionPX,
-                      '& .MuiAccordionSummary-expandIconWrapper': { color: 'text.primary' },
-                      '& .MuiAccordionSummary-content': { my: 0 },
                       '&.Mui-focusVisible': { bgcolor: 'transparent' },
                       '&:hover, &:hover svg': { color: 'primary.dark' }
                     }}
+                    slotProps={{ content: { sx: { my: 0 } } }}
                   >
                     <Typography variant="h4">{item.question}</Typography>
                   </AccordionSummary>

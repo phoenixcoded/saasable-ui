@@ -6,10 +6,10 @@ export default function ChartsAxis(theme) {
       styleOverrides: {
         root: {
           '& .MuiChartsAxis-tickLabel': {
-            fill: theme.palette.text.secondary
+            fill: theme.vars.palette.text.secondary
           },
           '& .MuiChartsAxis-line': {
-            stroke: theme.palette.divider
+            stroke: theme.vars.palette.divider
           }
         }
       }

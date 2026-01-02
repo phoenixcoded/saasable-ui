@@ -156,21 +156,21 @@ export default function TopReferrers() {
   const [sources, setSources] = useState('affiliate');
 
   // Separate handleChange functions
-  const handleHTTPReferrers = (event, newValue) => {
+  const handleHTTPReferrers = (_event, newValue) => {
     setHttpReferrers(newValue);
   };
 
-  const handlePages = (event, newValue) => {
+  const handlePages = (_event, newValue) => {
     setPages(newValue);
   };
 
-  const handleSources = (event, newValue) => {
+  const handleSources = (_event, newValue) => {
     setSources(newValue);
   };
 
   return (
     <>
-      <Grid container sx={{ borderRadius: 4, boxShadow: theme.customShadows.section, ...applyBorderWithRadius(16, theme) }}>
+      <Grid container sx={{ borderRadius: 4, boxShadow: theme.vars.customShadows.section, ...applyBorderWithRadius(16, theme) }}>
         <Grid size={{ xs: 12, sm: 6, md: 4 }}>
           <Stack sx={{ gap: 2.5, p: 3 }}>
             <Typography variant="subtitle1">Top HTTP Referrers</Typography>

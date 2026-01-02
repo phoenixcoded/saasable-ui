@@ -17,7 +17,7 @@ export default function LogoSection({ isIcon, sx, to }) {
 
   return (
     <RouterLink to={!to ? APP_DEFAULT_PATH : to}>
-      <ButtonBase disableRipple sx={{ ...sx, '&:focus-visible': generateFocusStyle(theme.palette.primary.main) }} aria-label="logo">
+      <ButtonBase disableRipple sx={{ ...sx, '&:focus-visible': generateFocusStyle(theme.vars.palette.primary.main) }} aria-label="logo">
         {isIcon ? <LogoIcon /> : <LogoMain />}
       </ButtonBase>
     </RouterLink>

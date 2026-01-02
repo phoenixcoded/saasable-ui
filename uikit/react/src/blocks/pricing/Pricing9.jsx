@@ -107,7 +107,7 @@ export default function Pricing9({ heading, caption, features, plans }) {
                                       name={active ? 'tabler-check' : 'tabler-x'}
                                       type={IconType.STROKE}
                                       size={16}
-                                      twoToneColor={theme.palette.grey[100]}
+                                      twoToneColor={theme.vars.palette.grey[100]}
                                       color={active ? 'secondary.darker' : 'text.secondary'}
                                       stroke={2}
                                     />

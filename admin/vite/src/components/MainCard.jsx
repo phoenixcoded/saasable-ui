@@ -7,9 +7,9 @@ import Card from '@mui/material/Card';
 export default function MainCard({ children, sx = {}, ref, ...others }) {
   const defaultSx = (theme) => ({
     p: { xs: 1.75, sm: 2.25, md: 3 },
-    border: `1px solid ${theme.palette.divider}`,
+    border: `1px solid ${theme.vars.palette.divider}`,
     borderRadius: 4,
-    boxShadow: theme.customShadows.section
+    boxShadow: theme.vars.customShadows.section
   });
 
   const combinedSx = (theme) => ({

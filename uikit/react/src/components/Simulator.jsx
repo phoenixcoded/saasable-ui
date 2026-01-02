@@ -7,7 +7,7 @@ import { Fragment, useCallback, useEffect, useId, useRef, useState } from 'react
 // import NextLink from 'next/link';
 
 // @mui
-import { alpha, useTheme } from '@mui/material/styles';
+import { useTheme } from '@mui/material/styles';
 import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import NoSsr from '@mui/material/NoSsr';
@@ -16,7 +16,7 @@ import Box from '@mui/material/Box';
 
 // @project
 import SvgIcon from './SvgIcon';
-
+import { withAlpha } from '@/utils/colorUtils';
 import { getBackgroundDots } from '@/utils/getBackgroundDots';
 import Loader from '@/utils/Loader';
 
@@ -159,8 +159,8 @@ export default function Simulator({ src, defaultHeight }) {
         borderColor: 'grey.300',
         borderRadius: boxRadius,
         ...(screenSize != 'desktop' && {
-          background: getBackgroundDots(theme.palette.grey[400], 60, 20),
-          bgcolor: alpha(theme.palette.grey[50], 0.5)
+          background: getBackgroundDots(theme.vars.palette.grey[400], 60, 20),
+          bgcolor: withAlpha(theme.vars.palette.grey[50], 0.5)
         })
       }}
     >
@@ -213,7 +213,7 @@ export default function Simulator({ src, defaultHeight }) {
               width: 1,
               height: 1,
               ...(screenSize != 'desktop' && {
-                boxShadow: `5px 0 4px -4px ${theme.palette.grey[300]}, -5px 0 4px -4px ${theme.palette.grey[300]}`
+                boxShadow: `5px 0 4px -4px ${theme.vars.palette.grey[300]}, -5px 0 4px -4px ${theme.vars.palette.grey[300]}`
               })
             }}
           >

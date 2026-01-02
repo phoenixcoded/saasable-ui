@@ -8,8 +8,8 @@ export default function ListItemButton(theme) {
           padding: '10px 8px',
           borderRadius: 4,
           '&.Mui-selected': {
-            backgroundColor: theme.palette.primary.lighter,
-            '&:hover': { backgroundColor: theme.palette.primary.light }
+            backgroundColor: theme.vars.palette.primary.lighter,
+            '&:hover': { backgroundColor: theme.vars.palette.primary.light }
           }
         }
       }
