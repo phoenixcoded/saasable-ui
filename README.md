@@ -59,6 +59,7 @@ For Tailwind
 
 gulp
 ```
+
 ## Download
 
 | Product              | Preview                                               | Download                                                                                                                            |
@@ -148,7 +149,7 @@ Looking for even more features? Check out SaasAble's [premium version](https://m
 ## Technology Stack
 
 - React 19
-- Next js
+- Next 16
 - Vite
 - TypeScript
 - Material UI v7
