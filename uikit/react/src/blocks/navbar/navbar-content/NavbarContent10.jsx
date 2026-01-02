@@ -7,6 +7,9 @@ import useMediaQuery from '@mui/material/useMediaQuery';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
 
+// @third-party
+import { motion } from 'motion/react';
+
 // @project
 import { navbar10Height } from '../Navbar10';
 import ButtonAnimationWrapper from '@/components/ButtonAnimationWrapper';
@@ -14,6 +17,7 @@ import ContainerWrapper from '@/components/ContainerWrapper';
 import Logo from '@/components/logo';
 import { MenuPopper, NavMenu, NavMenuDrawer, NavPrimaryButton, NavSecondaryButton } from '@/components/navbar';
 import SvgIcon from '@/components/SvgIcon';
+import { withAlpha } from '@/utils/colorUtils';
 
 /***************************  NAVBAR - CONTENT 10  ***************************/
 
@@ -45,7 +49,24 @@ export default function NavbarContent10({ landingBaseUrl, navItems, primaryBtn, 
           <>
             <NavSecondaryButton {...secondaryBtn} />
             <ButtonAnimationWrapper>
-              {animated ? <NavPrimaryButton {...primaryBtn} /> : <NavPrimaryButton {...primaryBtn} />}
+              {animated ? (
+                <motion.div
+                  initial={{ borderRadius: '50px' }}
+                  animate={{
+                    boxShadow: [
+                      `0px 0px 0px 0px ${withAlpha(theme.vars.palette.primary.main, 0.7)}`,
+                      `0px 0px 0px 8px ${withAlpha(theme.vars.palette.primary.main, 0)}`,
+                      `0px 0px 0px 0px ${withAlpha(theme.vars.palette.primary.main, 0)}`
+                    ],
+                    borderRadius: '50px'
+                  }}
+                  transition={{ duration: 1.2, repeat: Infinity, ease: 'linear' }}
+                >
+                  <NavPrimaryButton {...primaryBtn} />
+                </motion.div>
+              ) : (
+                <NavPrimaryButton {...primaryBtn} />
+              )}
             </ButtonAnimationWrapper>
           </>
         )}

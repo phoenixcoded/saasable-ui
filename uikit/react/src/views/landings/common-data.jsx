@@ -106,6 +106,12 @@ export const landingMegamenu = {
         theme: Themes.THEME_PLUGIN,
         image: '/assets/images/mega-menu/plugin-light.svg',
         status: 'Pro'
+      },
+      {
+        title: 'LMS',
+        theme: Themes.THEME_LMS,
+        image: '/assets/images/mega-menu/lms-light.svg',
+        status: 'Pro'
       }
     ],
     footerData: FooterData()

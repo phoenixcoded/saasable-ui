@@ -7,6 +7,9 @@ import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
 
+// @third-party
+import { motion } from 'motion/react';
+
 // @project
 import ButtonAnimationWrapper from '@/components/ButtonAnimationWrapper';
 import { GraphicsCard } from '@/components/cards';
@@ -49,32 +52,64 @@ function IntegrationTag({ label, icon }) {
 export default function Integration2({ headLine, captionLine, primaryBtn, tagList }) {
   return (
     <ContainerWrapper sx={{ py: SECTION_COMMON_PY }}>
-      <GraphicsCard>
-        <Stack sx={{ alignItems: 'center', p: { xs: 3, sm: 4, md: 5 } }}>
-          <Stack sx={{ alignItems: 'center', gap: { xs: 1, sm: 1.5 } }}>
-            {headLine && (
-              <Typography align="center" variant="h2">
-                {headLine}
-              </Typography>
-            )}
-            {captionLine && (
-              <Typography align="center" variant="h6" sx={{ color: 'text.secondary' }}>
-                {captionLine}
-              </Typography>
+      <motion.div
+        initial={{ opacity: 0, y: 10 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{
+          duration: 0.5,
+          delay: 0.4
+        }}
+      >
+        <GraphicsCard>
+          <Stack sx={{ alignItems: 'center', p: { xs: 3, sm: 4, md: 5 } }}>
+            <Stack sx={{ alignItems: 'center', gap: { xs: 1, sm: 1.5 } }}>
+              <motion.div
+                initial={{ opacity: 0, y: 25 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.5, delay: 0.4, ease: [0.215, 0.61, 0.355, 1] }}
+              >
+                {headLine && (
+                  <Typography align="center" variant="h2">
+                    {headLine}
+                  </Typography>
+                )}
+                {captionLine && (
+                  <Typography align="center" variant="h6" sx={{ color: 'text.secondary' }}>
+                    {captionLine}
+                  </Typography>
+                )}
+              </motion.div>
+            </Stack>
+            <Stack direction="row" sx={{ py: { xs: 4, sm: 5, md: 6 }, justifyContent: 'center', alignItems: 'center', flexWrap: 'wrap' }}>
+              {tagList.map((integration, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, scale: 0.7 }}
+                  whileInView={{ opacity: 1, scale: 1 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, ease: 'easeOut', delay: Math.random() * 0.6 }}
+                >
+                  <IntegrationTag {...integration} />
+                </motion.div>
+              ))}
+            </Stack>
+            {primaryBtn && (
+              <motion.div
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.3, ease: 'easeInOut' }}
+                whileHover={{ scale: 1.06 }}
+              >
+                <ButtonAnimationWrapper>
+                  <Button variant="contained" size="large" {...primaryBtn} />
+                </ButtonAnimationWrapper>
+              </motion.div>
             )}
           </Stack>
-          <Stack direction="row" sx={{ py: { xs: 4, sm: 5, md: 6 }, justifyContent: 'center', alignItems: 'center', flexWrap: 'wrap' }}>
-            {tagList.map((integration, index) => (
-              <IntegrationTag {...integration} />
-            ))}
-          </Stack>
-          {primaryBtn && (
-            <ButtonAnimationWrapper>
-              <Button variant="contained" size="large" {...primaryBtn} />
-            </ButtonAnimationWrapper>
-          )}
-        </Stack>
-      </GraphicsCard>
+        </GraphicsCard>
+      </motion.div>
     </ContainerWrapper>
   );
 }
