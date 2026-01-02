@@ -2,11 +2,12 @@
 import PropTypes from 'prop-types';
 
 // @mui
-import { alpha, useTheme } from '@mui/material/styles';
+import { useTheme } from '@mui/material/styles';
 import Card from '@mui/material/Card';
 import Box from '@mui/material/Box';
 
 // @project
+import { withAlpha } from '@/utils/colorUtils';
 import GetImagePath from '@/utils/GetImagePath';
 
 /***************************  GRAPHICS CARD  ***************************/
@@ -38,7 +39,7 @@ export default function GraphicsCard({ sx, children, overLay = false, bgImage, .
             height: 1,
             top: 0,
             left: 0,
-            background: typeof overLay === 'string' ? overLay : alpha(theme.palette.grey[100], 0.75)
+            background: typeof overLay === 'string' ? overLay : withAlpha(theme.vars.palette.grey[100], 0.75)
           }
         }),
         ...sx

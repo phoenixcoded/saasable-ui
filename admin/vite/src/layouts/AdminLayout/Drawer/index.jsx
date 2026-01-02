@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { useMemo } from 'react';
+import { Activity, useMemo } from 'react';
 
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Divider from '@mui/material/Divider';
@@ -55,13 +55,13 @@ export default function MainDrawer({ window }) {
       </Drawer>
 
       {/* Permanent mini-drawer for large media */}
-      {!downLG && (
+      <Activity mode={!downLG ? 'visible' : 'hidden'}>
         <MiniDrawerStyled variant="permanent" open={drawerOpen}>
           {drawerHeader}
           <Divider sx={{ mx: 2 }} />
           {drawerContent}
         </MiniDrawerStyled>
-      )}
+      </Activity>
     </Box>
   );
 }

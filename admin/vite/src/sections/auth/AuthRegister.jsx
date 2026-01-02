@@ -56,7 +56,7 @@ export default function AuthRegister({ inputSx }) {
     router.push('/auth/login');
   };
 
-  const commonIconProps = { size: 16, color: theme.palette.grey[700] };
+  const commonIconProps = { size: 16, color: theme.vars.palette.grey[700] };
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} autoComplete="off">

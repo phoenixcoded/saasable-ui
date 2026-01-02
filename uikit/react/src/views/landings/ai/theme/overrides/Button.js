@@ -17,7 +17,7 @@ export default function Button(theme) {
           letterSpacing: 0.1,
           borderRadius: 100,
           boxShadow: 'none',
-          '&:focus-visible': generateFocusVisibleStyles(theme.palette.primary.main)
+          '&:focus-visible': generateFocusVisibleStyles(theme.vars.palette.primary.main)
         },
         sizeSmall: {
           padding: '10px 24px',

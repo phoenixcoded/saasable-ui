@@ -3,7 +3,7 @@ import { FONT_ARCHIVO } from '@/config';
 
 /***************************  DEFAULT - TYPOGRAPHY  ***************************/
 
-export default function typography(theme) {
+export default function typography() {
   return {
     fontFamily: FONT_ARCHIVO,
     letterSpacing: 0,

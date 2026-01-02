@@ -17,11 +17,13 @@ import LogoIcon from './LogoIcon';
 
 export default function LogoSection({ isIcon, sx, to }) {
   const theme = useTheme();
+  const palette = theme?.vars ? theme.vars.palette : theme.palette;
+
   return (
     <NextLink href={!to ? process.env.NEXT_PUBLIC_BASE_NAME || '/' : to} passHref>
       <ButtonBase
         disableRipple
-        sx={{ ...sx, display: 'block', '&:focus-visible': generateFocusVisibleStyles(theme.palette.primary.main) }}
+        sx={{ ...sx, display: 'block', '&:focus-visible': generateFocusVisibleStyles(palette.primary.main) }}
         aria-label="logo"
       >
         {isIcon ? <LogoIcon /> : <LogoMain />}

@@ -2,7 +2,7 @@
 import PropTypes from 'prop-types';
 
 // @mui
-import { alpha, useTheme } from '@mui/material/styles';
+import { useTheme } from '@mui/material/styles';
 import Chip from '@mui/material/Chip';
 import Stack from '@mui/material/Stack';
 import Typography from '@mui/material/Typography';
@@ -16,6 +16,7 @@ import Slider from 'react-slick';
 import ContainerWrapper from '@/components/ContainerWrapper';
 import GraphicsImage from '@/components/GraphicsImage';
 
+import { withAlpha } from '@/utils/colorUtils';
 import { SECTION_COMMON_PY } from '@/utils/constant';
 
 /***************************  CLIENTELE - 3  ***************************/
@@ -60,7 +61,7 @@ export default function Clientele3({ title, clienteleList }) {
     width: { sm: 60, xs: 40 },
     height: 1,
     top: 0,
-    background: `linear-gradient(90deg, ${theme.palette.background.default} -8.54%, ${alpha(theme.palette.background.default, 0)} 100%)`,
+    background: `linear-gradient(90deg, ${theme.vars.palette.background.default} -8.54%, ${withAlpha(theme.vars.palette.background.default, 0)} 100%)`,
     transform: null
   };
 

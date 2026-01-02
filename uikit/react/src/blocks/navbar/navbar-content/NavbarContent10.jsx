@@ -2,7 +2,7 @@
 import PropTypes from 'prop-types';
 
 // @mui
-import { useTheme, alpha } from '@mui/material/styles';
+import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Stack from '@mui/material/Stack';
 import Box from '@mui/material/Box';
@@ -17,6 +17,7 @@ import ContainerWrapper from '@/components/ContainerWrapper';
 import Logo from '@/components/logo';
 import { MenuPopper, NavMenu, NavMenuDrawer, NavPrimaryButton, NavSecondaryButton } from '@/components/navbar';
 import SvgIcon from '@/components/SvgIcon';
+import { withAlpha } from '@/utils/colorUtils';
 
 /***************************  NAVBAR - CONTENT 10  ***************************/
 
@@ -29,7 +30,7 @@ import SvgIcon from '@/components/SvgIcon';
  * - [NavbarContent10 API](https://phoenixcoded.gitbook.io/saasable/ui-kit/development/components/navbar/navbar-content/navbarcontent10#props-details)
  */
 
-export default function NavbarContent10({ landingBaseUrl, navItems, primaryBtn, secondaryBtn, customization, selectedTheme, animated }) {
+export default function NavbarContent10({ landingBaseUrl, navItems, primaryBtn, secondaryBtn, animated }) {
   const theme = useTheme();
 
   const downMD = useMediaQuery(theme.breakpoints.down('md'));
@@ -53,9 +54,9 @@ export default function NavbarContent10({ landingBaseUrl, navItems, primaryBtn, 
                   initial={{ borderRadius: '50px' }}
                   animate={{
                     boxShadow: [
-                      `0px 0px 0px 0px ${alpha(theme.palette.primary.main, 0.7)}`,
-                      `0px 0px 0px 8px ${alpha(theme.palette.primary.main, 0)}`,
-                      `0px 0px 0px 0px ${alpha(theme.palette.primary.main, 0)}`
+                      `0px 0px 0px 0px ${withAlpha(theme.vars.palette.primary.main, 0.7)}`,
+                      `0px 0px 0px 8px ${withAlpha(theme.vars.palette.primary.main, 0)}`,
+                      `0px 0px 0px 0px ${withAlpha(theme.vars.palette.primary.main, 0)}`
                     ],
                     borderRadius: '50px'
                   }}

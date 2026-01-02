@@ -34,29 +34,29 @@ export default function Circles() {
       </g>
       <defs>
         <linearGradient id="paint0_linear_7116_27007" x1="419.501" y1="-119.141" x2="419.501" y2="719.861" gradientUnits="userSpaceOnUse">
-          <stop stopColor={theme.palette.grey[400]} stopOpacity="0" />
-          <stop offset="0.495" stopColor={theme.palette.grey[400]} />
-          <stop offset="1" stopColor={theme.palette.grey[400]} stopOpacity="0" />
+          <stop stopColor={theme.vars.palette.grey[400]} stopOpacity="0" />
+          <stop offset="0.495" stopColor={theme.vars.palette.grey[400]} />
+          <stop offset="1" stopColor={theme.vars.palette.grey[400]} stopOpacity="0" />
         </linearGradient>
         <linearGradient id="paint1_linear_7116_27007" x1="419.503" y1="-35.2407" x2="419.503" y2="635.961" gradientUnits="userSpaceOnUse">
-          <stop stopColor={theme.palette.grey[400]} stopOpacity="0" />
-          <stop offset="0.495" stopColor={theme.palette.grey[400]} />
-          <stop offset="1" stopColor={theme.palette.grey[400]} stopOpacity="0" />
+          <stop stopColor={theme.vars.palette.grey[400]} stopOpacity="0" />
+          <stop offset="0.495" stopColor={theme.vars.palette.grey[400]} />
+          <stop offset="1" stopColor={theme.vars.palette.grey[400]} stopOpacity="0" />
         </linearGradient>
         <linearGradient id="paint2_linear_7116_27007" x1="419.501" y1="33.1822" x2="419.501" y2="543.664" gradientUnits="userSpaceOnUse">
-          <stop stopColor={theme.palette.grey[400]} stopOpacity="0" />
-          <stop offset="0.495" stopColor={theme.palette.grey[400]} />
-          <stop offset="1" stopColor={theme.palette.grey[400]} stopOpacity="0" />
+          <stop stopColor={theme.vars.palette.grey[400]} stopOpacity="0" />
+          <stop offset="0.495" stopColor={theme.vars.palette.grey[400]} />
+          <stop offset="1" stopColor={theme.vars.palette.grey[400]} stopOpacity="0" />
         </linearGradient>
         <linearGradient id="paint3_linear_7116_27007" x1="419.499" y1="115.517" x2="419.499" y2="497.555" gradientUnits="userSpaceOnUse">
-          <stop stopColor={theme.palette.grey[400]} stopOpacity="0" />
-          <stop offset="0.495" stopColor={theme.palette.grey[400]} />
-          <stop offset="1" stopColor={theme.palette.grey[400]} stopOpacity="0" />
+          <stop stopColor={theme.vars.palette.grey[400]} stopOpacity="0" />
+          <stop offset="0.495" stopColor={theme.vars.palette.grey[400]} />
+          <stop offset="1" stopColor={theme.vars.palette.grey[400]} stopOpacity="0" />
         </linearGradient>
         <linearGradient id="paint4_linear_7116_27007" x1="419.502" y1="182.209" x2="419.502" y2="419.748" gradientUnits="userSpaceOnUse">
-          <stop stopColor={theme.palette.grey[400]} stopOpacity="0" />
-          <stop offset="0.495" stopColor={theme.palette.grey[400]} />
-          <stop offset="1" stopColor={theme.palette.grey[400]} stopOpacity="0" />
+          <stop stopColor={theme.vars.palette.grey[400]} stopOpacity="0" />
+          <stop offset="0.495" stopColor={theme.vars.palette.grey[400]} />
+          <stop offset="1" stopColor={theme.vars.palette.grey[400]} stopOpacity="0" />
         </linearGradient>
         <clipPath id="clip0_7116_27007">
           <rect width="839" height="601" fill="white" />

@@ -1,10 +1,10 @@
-// @next
-import NextLink from 'next/link';
-
 // @mui
 import branding from '@/branding.json';
 import Link from '@mui/material/Link';
 import Typography from '@mui/material/Typography';
+
+// @project
+import { NextLink } from '@/components/routes';
 
 export const cta4 = {
   headLine: 'Why Trust Phoenixcoded for Your Dashboard Template Needs?',

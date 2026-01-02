@@ -7,7 +7,7 @@ import { DRAWER_WIDTH } from '@/config';
 
 // Mixin for common ) (open/closed) drawer state0....
 const commonDrawerStyles = (theme) => ({
-  borderRight: `1px solid ${theme.palette.grey[300]}`,
+  borderRight: `1px solid ${theme.vars.palette.grey[300]}`,
   overflowX: 'hidden'
 });
 

@@ -66,7 +66,8 @@ export default function Feature18({ heading, caption, topics }) {
               <Box sx={{ p: 0.25 }}>
                 <TabList
                   onChange={handleChange}
-                  sx={{ '& .MuiTabs-indicator': { display: 'none' }, minHeight: 'unset', p: 0.25 }}
+                  sx={{ minHeight: 'unset', p: 0.25 }}
+                  slotProps={{ indicator: { sx: { display: 'none' } } }}
                   variant="scrollable"
                 >
                   {topics.map((item, index) => (

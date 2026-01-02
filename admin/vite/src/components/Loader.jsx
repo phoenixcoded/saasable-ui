@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { Activity, useEffect, useState } from 'react';
 
 // @mui
 import LinearProgress from '@mui/material/LinearProgress';
@@ -14,12 +14,10 @@ export default function Loader() {
   }, []);
 
   return (
-    <>
-      {isClient && (
-        <Box sx={{ position: 'fixed', top: 0, left: 0, zIndex: 2001, width: '100%' }}>
-          <LinearProgress variant="indeterminate" color="primary" />
-        </Box>
-      )}
-    </>
+    <Activity mode={isClient ? 'visible' : 'hidden'}>
+      <Box sx={{ position: 'fixed', top: 0, left: 0, zIndex: 2001, width: '100%' }}>
+        <LinearProgress variant="indeterminate" color="primary" />
+      </Box>
+    </Activity>
   );
 }

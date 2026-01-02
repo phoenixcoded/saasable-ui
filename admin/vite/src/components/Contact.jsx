@@ -135,7 +135,7 @@ export default function Contact({
               >
                 {({ TransitionProps }) => (
                   <Fade in={open} {...TransitionProps}>
-                    <Card elevation={0} sx={{ border: '1px solid', borderColor: theme.palette.divider, borderRadius: 2 }}>
+                    <Card elevation={0} sx={{ border: '1px solid', borderColor: theme.vars.palette.divider, borderRadius: 2 }}>
                       <ClickAwayListener onClickAway={() => setAnchorEl(null)}>
                         <Box sx={{ p: 0.5 }}>
                           <List disablePadding>

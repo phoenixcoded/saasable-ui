@@ -6,7 +6,7 @@ import NextLink from 'next/link';
 import { useRouter } from 'next/navigation';
 
 // @mui
-import { alpha, useTheme } from '@mui/material/styles';
+import { useTheme } from '@mui/material/styles';
 import Autocomplete from '@mui/material/Autocomplete';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import CardMedia from '@mui/material/CardMedia';
@@ -22,6 +22,7 @@ import Box from '@mui/material/Box';
 import ContainerWrapper from './ContainerWrapper';
 import SvgIcon from './SvgIcon';
 
+import { withAlpha } from '@/utils/colorUtils';
 import { getBackgroundDots } from '@/utils/getBackgroundDots';
 import { PAGE_PATH } from '@/path';
 
@@ -80,7 +81,9 @@ export default function SectionHero({ heading, search = true, offer = false, bre
 
   const handleSelect = (event, value) => {
     if (typeof value === 'object' && value !== null) {
-      value.path && router.push(value.path);
+      if (value.path) {
+        router.push(value.path);
+      }
     }
   };
 
@@ -89,10 +92,10 @@ export default function SectionHero({ heading, search = true, offer = false, bre
       sx={{
         overflow: 'hidden',
         py: { xs: 3, sm: 5, md: 8 },
-        background: getBackgroundDots(theme.palette.grey[300], 60, 30),
         bgcolor: 'grey.100',
         borderBottomLeftRadius: boxRadius,
-        borderBottomRightRadius: boxRadius
+        borderBottomRightRadius: boxRadius,
+        ...getBackgroundDots(theme.vars.palette.grey[300])
       }}
     >
       <ContainerWrapper>
@@ -196,7 +199,7 @@ export default function SectionHero({ heading, search = true, offer = false, bre
                     pr: 0.75,
                     py: 1.25,
                     borderRadius: 4,
-                    boxShadow: `0px 16px 10px 0px ${alpha(theme.palette.grey[900], 0.06)}`
+                    boxShadow: `0px 16px 10px 0px ${withAlpha(theme.vars.palette.grey[900], 0.06)}`
                   }
                 },
                 listbox: {

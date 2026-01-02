@@ -1,9 +1,9 @@
-// @mui
-import { alpha } from '@mui/material/styles';
+// @project
+import { extendPaletteWithChannels, withAlpha } from '@/utils/colorUtils';
 
 /***************************  DEFAULT - PALETTE  ***************************/
 
-export default function palette(mode) {
+export function buildPalette() {
   const textPrimary = '#1B1B1F'; // Hosting/neutral/10 - on surface
   const textSecondary = '#46464F'; // Hosting/neutral variant/30 - on surface variant
 
@@ -80,14 +80,22 @@ export default function palette(mode) {
       default: background
     },
     action: {
-      hover: alpha(secondaryMain, 0.05),
-      disabled: alpha(disabled, 0.6),
-      disabledBackground: alpha(disabledBackground, 0.9)
+      hover: withAlpha(secondaryMain, 0.05),
+      disabled: withAlpha(disabled, 0.6),
+      disabledBackground: withAlpha(disabledBackground, 0.9)
     }
   };
 
+  const commonColor = { common: { black: '#000', white: '#fff' } };
+
+  const extendedLight = extendPaletteWithChannels(lightPalette);
+  const extendedCommon = extendPaletteWithChannels(commonColor);
+
   return {
-    mode,
-    ...lightPalette
+    light: {
+      mode: 'light',
+      ...extendedCommon,
+      ...extendedLight
+    }
   };
 }

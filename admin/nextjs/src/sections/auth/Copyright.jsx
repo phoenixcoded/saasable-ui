@@ -1,6 +1,3 @@
-// @next
-import NextLink from 'next/link';
-
 // @mui
 import Divider from '@mui/material/Divider';
 import Link from '@mui/material/Link';
@@ -10,6 +7,7 @@ import Box from '@mui/material/Box';
 
 // @project
 import branding from '@/branding.json';
+import { NextLink } from '@/components/routes';
 
 /***************************  AUTH - COPYRIGHT  ***************************/
 
@@ -44,7 +42,7 @@ export default function Copyright() {
       <Box sx={{ textAlign: 'center', display: { xs: 'block', sm: 'none' } }}>
         <Divider sx={{ marginBottom: 1 }} />
         <Typography variant="caption" color="text.secondary">
-          © 2024 {branding.brandName}
+          © 2026 {branding.brandName}
         </Typography>
       </Box>
     </Stack>

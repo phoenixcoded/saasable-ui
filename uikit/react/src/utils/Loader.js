@@ -18,7 +18,7 @@ export default function Loader() {
       }
       .progress-bar-container {
         width: 100%;
-        background-color: ${theme.palette.primary.lighter}; /* This is the background for the progress bar */
+        background-color: ${theme.vars.palette.primary.lighter}; /* This is the background for the progress bar */
         border-radius: 4px;
         overflow: hidden;
       }
@@ -26,7 +26,7 @@ export default function Loader() {
       .progress-bar {
         height: 4px; /* Thickness of the progress bar */
         width: 0; /* Set this to 0 initially */
-        background-color: ${theme.palette.primary.main};
+        background-color: ${theme.vars.palette.primary.main};
         animation: load 1.5s linear infinite;
       }
 

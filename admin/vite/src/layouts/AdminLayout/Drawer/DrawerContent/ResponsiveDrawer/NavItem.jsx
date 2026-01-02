@@ -1,5 +1,5 @@
 import PropTypes from 'prop-types';
-import { useEffect } from 'react';
+import { Activity, useEffect } from 'react';
 
 // @mui
 import { useTheme } from '@mui/material/styles';
@@ -60,11 +60,11 @@ export default function NavItem({ item, level = 0 }) {
         })
       }}
     >
-      {level === 0 && (
+      <Activity mode={level === 0 ? 'visible' : 'hidden'}>
         <ListItemIcon>
           <DynamicIcon name={item.icon} color={iconcolor} size={18} stroke={1.5} />
         </ListItemIcon>
-      )}
+      </Activity>
       <ListItemText primary={item.title} sx={{ mb: '-1px' }} />
     </ListItemButton>
   );

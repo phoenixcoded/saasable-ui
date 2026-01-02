@@ -36,7 +36,7 @@ import Tooltip from './Tooltip';
 
 export default function ComponentsOverrides(theme) {
   return merge(
-    Alert(),
+    Alert(theme),
     Avatar(theme),
     AvatarGroup(),
     Backdrop(theme),

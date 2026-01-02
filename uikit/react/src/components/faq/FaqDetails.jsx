@@ -16,8 +16,8 @@ import SvgIcon from '../SvgIcon';
 export default function FaqDetails({ answer }) {
   const theme = useTheme();
   const colorData = {
-    white: theme.palette.background.default,
-    primary: theme.palette.grey[100]
+    white: theme.vars.palette.background.default,
+    primary: theme.vars.palette.grey[100]
   };
 
   if (typeof answer !== 'object') {

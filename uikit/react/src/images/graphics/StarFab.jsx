@@ -24,12 +24,12 @@ export default function StarFab({ size }) {
         />
         <defs>
           <linearGradient id="paint0_linear_5005_3474" x1="82" y1="42" x2="2" y2="42" gradientUnits="userSpaceOnUse">
-            <stop stopColor={theme.palette.secondary.lighter} />
-            <stop offset="1" stopColor={theme.palette.grey[100]} />
+            <stop stopColor={theme.vars.palette.secondary.lighter} />
+            <stop offset="1" stopColor={theme.vars.palette.grey[100]} />
           </linearGradient>
           <linearGradient id="paint1_linear_5005_3474" x1="84.8571" y1="42.7143" x2="-3" y2="42.7143" gradientUnits="userSpaceOnUse">
-            <stop stopColor={theme.palette.grey[50]} />
-            <stop offset="1" stopColor={theme.palette.secondary.lighter} />
+            <stop stopColor={theme.vars.palette.grey[50]} />
+            <stop offset="1" stopColor={theme.vars.palette.secondary.lighter} />
           </linearGradient>
         </defs>
       </svg>

@@ -6,6 +6,7 @@ import Box from '@mui/material/Box';
 import Notification from './Notification';
 import Profile from './Profile';
 import SearchBar from './SearchBar';
+import ThemeModeSwitcher from './ThemeModeSwitcher';
 import Breadcrumbs from '@/components/Breadcrumbs';
 
 /***************************  HEADER CONTENT  ***************************/
@@ -19,6 +20,7 @@ export default function HeaderContent() {
         </Box>
         <Stack direction="row" sx={{ alignItems: 'center', gap: { xs: 1, sm: 1.5 } }}>
           <SearchBar />
+          <ThemeModeSwitcher />
           <Notification />
           <Profile />
         </Stack>

@@ -1,9 +1,11 @@
+import { fixupConfigRules } from '@eslint/compat';
 import prettier from 'eslint-plugin-prettier';
-import typescriptEslint from '@typescript-eslint/eslint-plugin';
-import tsParser from '@typescript-eslint/parser';
+import react from 'eslint-plugin-react';
+import reactHooks from 'eslint-plugin-react-hooks';
+import jsxA11y from 'eslint-plugin-jsx-a11y';
+import js from '@eslint/js';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import js from '@eslint/js';
 import { FlatCompat } from '@eslint/eslintrc';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -15,36 +17,29 @@ const compat = new FlatCompat({
 });
 
 export default [
-  {
-    ignores: ['**/node_modules/*', '**/.next/*']
-  },
-  ...compat.extends('next/core-web-vitals', 'prettier'),
+  ...fixupConfigRules(compat.extends('prettier')),
+
   {
     plugins: {
       prettier,
-      '@typescript-eslint': typescriptEslint
+      react,
+      'react-hooks': reactHooks,
+      'jsx-a11y': jsxA11y
     },
 
     languageOptions: {
-      parser: tsParser,
-      ecmaVersion: 5,
+      ecmaVersion: 2020,
       sourceType: 'module',
-
       parserOptions: {
-        project: './jsconfig.json',
-        createDefaultProgram: true
+        ecmaFeatures: {
+          jsx: true
+        }
       }
     },
 
     settings: {
-      'import/resolver': {
-        node: {
-          moduleDirectory: ['node_modules', 'src/']
-        },
-
-        typescript: {
-          alwaysTryTypes: true
-        }
+      react: {
+        version: 'detect'
       }
     },
 
@@ -59,19 +54,15 @@ export default [
       'import/order': 'off',
       'no-console': 'off',
       'no-shadow': 'off',
-      '@typescript-eslint/naming-convention': 'off',
-      '@typescript-eslint/no-explicit-any': 'warn',
       'import/no-cycle': 'off',
-      'prefer-destructuring': 'off',
       'import/no-extraneous-dependencies': 'off',
-      'react/display-name': 'off',
-
-      'import/no-unresolved': [
-        'off',
-        {
-          caseSensitive: false
-        }
-      ],
+      'jsx-a11y/label-has-associated-control': 'off',
+      'jsx-a11y/no-autofocus': 'off',
+      'react/jsx-uses-react': 'off',
+      'react/jsx-uses-vars': 'error',
+      'react-hooks/rules-of-hooks': 'error',
+      'react-hooks/exhaustive-deps': 'warn',
+      'no-unused-vars': 'off',
 
       'no-restricted-imports': [
         'error',
@@ -80,7 +71,7 @@ export default [
         }
       ],
 
-      '@typescript-eslint/no-unused-vars': [
+      'no-unused-vars': [
         'error',
         {
           vars: 'all',
@@ -88,17 +79,11 @@ export default [
         }
       ],
 
-      'prettier/prettier': [
-        'warn',
-        {
-          bracketSpacing: true,
-          printWidth: 140,
-          singleQuote: true,
-          trailingComma: 'none',
-          tabWidth: 2,
-          useTabs: false
-        }
-      ]
+      'prettier/prettier': 'warn'
     }
+  },
+  {
+    ignores: ['node_modules/**'],
+    files: ['src/**/*.{js,jsx}']
   }
 ];

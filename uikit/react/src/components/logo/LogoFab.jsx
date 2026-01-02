@@ -37,12 +37,12 @@ export default function LogoFab({ size = 24 }) {
       </g>
       <defs>
         <linearGradient id="paint0_linear_1276_81272" x1="89" y1="12.647" x2="-6.43223" y2="102.064" gradientUnits="userSpaceOnUse">
-          <stop stopColor={theme.palette.primary.main} />
-          <stop offset="1" stopColor={theme.palette.primary.light} stopOpacity="0" />
+          <stop stopColor={theme.vars.palette.primary.main} />
+          <stop offset="1" stopColor={theme.vars.palette.primary.light} stopOpacity="0" />
         </linearGradient>
         <linearGradient id="paint1_linear_1276_81272" x1="-14.8889" y1="110.899" x2="125.136" y2="-10.1282" gradientUnits="userSpaceOnUse">
-          <stop stopColor={theme.palette.primary.main} />
-          <stop offset="1" stopColor={theme.palette.primary.lighter} stopOpacity="1" />
+          <stop stopColor={theme.vars.palette.primary.main} />
+          <stop offset="1" stopColor={theme.vars.palette.primary.lighter} stopOpacity="1" />
         </linearGradient>
         <clipPath id="clip0_1276_81272">
           <rect width="40" height="36.6667" fill="white" transform="translate(29 29.8557)" />

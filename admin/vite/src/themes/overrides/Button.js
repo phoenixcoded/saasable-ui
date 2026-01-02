@@ -8,32 +8,39 @@ const colors = ['primary', 'secondary', 'success', 'error', 'warning', 'info'];
 
 export default function Button(theme) {
   const boxShadow = {
-    boxShadow: theme.customShadows.button,
+    boxShadow: theme.vars.customShadows.button,
     '&:hover': {
-      boxShadow: theme.customShadows.button
+      boxShadow: theme.vars.customShadows.button
     }
   };
 
   const textColorVariants = colors.map((color) => {
-    const paletteColor = theme.palette[color];
+    if (color === 'secondary')
+      return {
+        props: { variant: 'text', color: 'secondary' },
+        style: {
+          color: theme.vars.palette.text.primary
+        }
+      };
+
     return {
-      props: { variant: 'text', color },
-      style: {
-        ...theme.applyStyles('dark', { color: paletteColor.light })
-      }
+      props: { variant: 'text', color }
     };
   });
 
   const outlinedColorVariants = colors.map((color) => {
-    const paletteColor = theme.palette[color];
+    const paletteColor = theme.vars.palette[color];
+    const isSecondary = color === 'secondary';
+
     return {
       props: { variant: 'outlined', color },
       style: {
         ...boxShadow,
         borderColor: paletteColor.lighter,
-        ...(color === 'secondary' && {
-          borderColor: theme.palette.divider,
-          color: theme.palette.text.primary
+
+        ...(isSecondary && {
+          borderColor: theme.vars.palette.divider,
+          color: theme.vars.palette.text.primary
         })
       }
     };
@@ -53,12 +60,12 @@ export default function Button(theme) {
             '&:hover': {
               backgroundColor: 'transparent',
               '&.MuiButton-contained': {
-                backgroundColor: theme.palette.action.disabledBackground
+                backgroundColor: theme.vars.palette.action.disabledBackground
               }
             }
           },
           '&:focus-visible': {
-            ...generateFocusStyle(theme.palette.primary.main)
+            ...generateFocusStyle(theme.vars.palette.primary.main)
           },
           // loading styles
           '&.MuiButton-loading': {
@@ -76,16 +83,7 @@ export default function Button(theme) {
               '.MuiButton-startIcon': { display: 'none' }
             }
           },
-          variants: [
-            ...textColorVariants,
-            ...outlinedColorVariants,
-            {
-              props: { variant: 'text', color: 'secondary' },
-              style: {
-                color: theme.palette.text.primary
-              }
-            }
-          ]
+          variants: [...textColorVariants, ...outlinedColorVariants]
         },
         contained: { ...boxShadow },
         startIcon: {

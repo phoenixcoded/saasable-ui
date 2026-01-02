@@ -1,24 +1,22 @@
 import PropTypes from 'prop-types';
-
-import { createContext } from 'react';
+import { createContext, useMemo } from 'react';
 
 // @project
-import defaultConfig from '@/config';
+import config from '@/config';
 import useLocalStorage from '@/hooks/useLocalStorage';
 
-// @initial
-const initialState = { ...defaultConfig };
+/***************************  CONFIG CONTEXT  ***************************/
 
-/***************************  CONFIG - CONTEXT & PROVIDER  ***************************/
+export const ConfigContext = createContext(undefined);
 
-const ConfigContext = createContext(initialState);
+/***************************  CONFIG PROVIDER  ***************************/
 
-function ConfigProvider({ children }) {
-  const [config] = useLocalStorage('sass-able-react-mui-admin-vite', initialState);
+export function ConfigProvider({ children }) {
+  const { state, setState, setField, resetState } = useLocalStorage('saas-able-react-mui-admin-vite-free', config);
 
-  return <ConfigContext value={{ ...config }}>{children}</ConfigContext>;
+  const memoizedValue = useMemo(() => ({ state, setState, setField, resetState }), [state, setField, setState, resetState]);
+
+  return <ConfigContext.Provider value={memoizedValue}>{children}</ConfigContext.Provider>;
 }
-
-export { ConfigProvider, ConfigContext };
 
 ConfigProvider.propTypes = { children: PropTypes.any };

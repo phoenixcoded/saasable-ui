@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import NextLink from 'next/link';
 
 // @mui
-import { alpha, useTheme } from '@mui/material/styles';
+import { useTheme } from '@mui/material/styles';
 import Button from '@mui/material/Button';
 import CardMedia from '@mui/material/CardMedia';
 import Link from '@mui/material/Link';
@@ -24,6 +24,7 @@ import Typeset from '@/components/Typeset';
 import { GraphicsCard } from '@/components/cards';
 
 import useFocusWithin from '@/hooks/useFocusWithin';
+import { withAlpha } from '@/utils/colorUtils';
 import { generateFocusVisibleStyles } from '@/utils/CommonFocusStyle';
 import { SECTION_COMMON_PY } from '@/utils/constant';
 import GetImagePath from '@/utils/GetImagePath';
@@ -80,7 +81,7 @@ export default function Other1({ heading, description, primaryBtn, sections }) {
                       height: { xs: 240, sm: 324, md: 380 },
                       position: 'relative',
                       overflow: 'hidden',
-                      ...(isFocusWithin && { '&:focus-within': generateFocusVisibleStyles(theme.palette.primary.main) })
+                      ...(isFocusWithin && { '&:focus-within': generateFocusVisibleStyles(theme.vars.palette.primary.main) })
                     }}
                   >
                     <Link
@@ -117,7 +118,7 @@ export default function Other1({ heading, description, primaryBtn, sections }) {
                         textAlign: 'center',
                         gap: { xs: 0.25, md: 0.5, sm: 1 },
                         p: 3,
-                        background: `linear-gradient(180deg, ${alpha(theme.palette.grey[100], 0)} 0%, ${theme.palette.grey[100]} 100%)`
+                        background: `linear-gradient(180deg, ${withAlpha(theme.vars.palette.grey[100], 0)} 0%, ${theme.vars.palette.grey[100]} 100%)`
                       }}
                     >
                       <motion.div

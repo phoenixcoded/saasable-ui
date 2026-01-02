@@ -25,7 +25,7 @@ function ShadowBox({ label, value }) {
   const theme = useTheme();
 
   return (
-    <MainCard sx={{ p: 0.25, boxShadow: theme.customShadows[value], bgcolor: 'grey.50', width: 1, border: 'none' }}>
+    <MainCard sx={{ p: 0.25, boxShadow: theme.vars.customShadows[value], bgcolor: 'grey.50', width: 1, border: 'none' }}>
       <Stack sx={{ alignItems: 'center', justifyContent: 'center', height: 180 }}>
         <Stack sx={{ gap: 1, alignItems: 'center' }}>
           <Typography variant="h6">{`customShadows.${value}`}</Typography>

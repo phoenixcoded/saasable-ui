@@ -18,7 +18,7 @@ export default function Circle({ size = 24, color }) {
       <defs>
         <linearGradient id={uniqueId} x1="396" y1="-211.607" x2="396" y2="662.785" gradientUnits="userSpaceOnUse">
           <stop stopColor="white" />
-          <stop offset="0.45" stopColor={color || theme.palette.primary.main} />
+          <stop offset="0.45" stopColor={color || theme.vars.palette.primary.main} />
           <stop offset="1" stopColor="white" />
         </linearGradient>
       </defs>

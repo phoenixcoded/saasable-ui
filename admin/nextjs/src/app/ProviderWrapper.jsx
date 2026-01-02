@@ -1,5 +1,8 @@
 'use client';
 
+// @mui
+import InitColorSchemeScript from '@mui/material/InitColorSchemeScript';
+
 import PropTypes from 'prop-types';
 
 // @project
@@ -11,11 +14,14 @@ import ThemeCustomization from '@/themes';
 
 export default function ProviderWrapper({ children }) {
   return (
-    <ConfigProvider>
-      <ThemeCustomization>
-        <Notistack>{children}</Notistack>
-      </ThemeCustomization>
-    </ConfigProvider>
+    <>
+      <InitColorSchemeScript attribute="data-color-scheme" defaultMode="light" />
+      <ConfigProvider>
+        <ThemeCustomization>
+          <Notistack>{children}</Notistack>
+        </ThemeCustomization>
+      </ConfigProvider>
+    </>
   );
 }
 

@@ -12,7 +12,7 @@ export default function Link(theme) {
       styleOverrides: {
         root: {
           position: 'relative',
-          '&:focus-visible': generateFocusVisibleStyles(theme.palette.primary.main)
+          '&:focus-visible': generateFocusVisibleStyles(theme.vars.palette.primary.main)
         }
       }
     }

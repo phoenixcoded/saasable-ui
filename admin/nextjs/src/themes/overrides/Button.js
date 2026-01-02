@@ -8,22 +8,22 @@ const colors = ['primary', 'secondary', 'success', 'error', 'warning', 'info'];
 
 export default function Button(theme) {
   const boxShadow = {
-    boxShadow: theme.customShadows.button,
+    boxShadow: theme.vars.customShadows.button,
     '&:hover': {
-      boxShadow: theme.customShadows.button
+      boxShadow: theme.vars.customShadows.button
     }
   };
 
   const outlinedColorVariants = colors.map((color) => {
-    const paletteColor = theme.palette[color];
+    const paletteColor = theme.vars.palette[color];
     return {
       props: { variant: 'outlined', color },
       style: {
         ...boxShadow,
         borderColor: paletteColor.lighter,
         ...(color === 'secondary' && {
-          borderColor: theme.palette.divider,
-          color: theme.palette.text.primary
+          borderColor: theme.vars.palette.divider,
+          color: theme.vars.palette.text.primary
         })
       }
     };
@@ -43,19 +43,19 @@ export default function Button(theme) {
             '&:hover': {
               backgroundColor: 'transparent',
               '&.MuiButton-contained': {
-                backgroundColor: theme.palette.action.disabledBackground
+                backgroundColor: theme.vars.palette.action.disabledBackground
               }
             }
           },
           '&:focus-visible': {
-            ...generateFocusStyle(theme.palette.primary.main)
+            ...generateFocusStyle(theme.vars.palette.primary.main)
           },
           variants: [
             ...outlinedColorVariants,
             {
               props: { variant: 'text', color: 'secondary' },
               style: {
-                color: theme.palette.text.primary
+                color: theme.vars.palette.text.primary
               }
             }
           ]
@@ -81,6 +81,13 @@ export default function Button(theme) {
           lineHeight: '18px',
           letterSpacing: 0,
           padding: 12
+        },
+        sizeLarge: {
+          height: 48,
+          fontSize: 16,
+          lineHeight: '20px',
+          letterSpacing: 0,
+          padding: '16px 18px'
         }
       }
     }

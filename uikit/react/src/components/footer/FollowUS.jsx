@@ -1,7 +1,4 @@
 import PropTypes from 'prop-types';
-// @next
-import NextLink from 'next/link';
-
 // @mui
 import Avatar from '@mui/material/Avatar';
 import Link from '@mui/material/Link';
@@ -9,6 +6,7 @@ import Stack from '@mui/material/Stack';
 
 // @project
 import branding from '@/branding.json';
+import { NextLink } from '../routes';
 import SvgIcon from '@/components/SvgIcon';
 import Typeset from '@/components/Typeset';
 import { IconType } from '@/enum';

@@ -2,7 +2,7 @@
 import PropTypes from 'prop-types';
 
 // @mui
-import { alpha, useTheme } from '@mui/material/styles';
+import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Avatar from '@mui/material/Avatar';
 import Button from '@mui/material/Button';
@@ -21,6 +21,7 @@ import { GraphicsCard } from '@/components/cards';
 import GraphicsImage from '@/components/GraphicsImage';
 import SvgIcon from '@/components/SvgIcon';
 import Typeset from '@/components/Typeset';
+import { withAlpha } from '@/utils/colorUtils';
 import { SECTION_COMMON_PY } from '@/utils/constant';
 
 // @assets
@@ -77,7 +78,7 @@ export default function Feature20({ heading, caption, image, features, actionBtn
   };
 
   const indicesOfLastElements = calculateIndexOfLastElementOfEachRow(features, columns);
-  const gc = theme.palette.background.default;
+  const gc = theme.vars.palette.background.default;
 
   return (
     <ContainerWrapper sx={{ py: SECTION_COMMON_PY }}>
@@ -117,7 +118,9 @@ export default function Feature20({ heading, caption, image, features, actionBtn
                 }}
               >
                 <GraphicsImage sx={{ height: 1, backgroundPositionX: 'right', backgroundPositionY: 'top' }} image={image}>
-                  <Box sx={{ width: 1, height: 1, background: `linear-gradient(180deg, ${alpha(gc, 0)} 0%, ${alpha(gc, 0.6)} 100%)` }} />
+                  <Box
+                    sx={{ width: 1, height: 1, background: `linear-gradient(180deg, ${withAlpha(gc, 0)} 0%, ${withAlpha(gc, 0.6)} 100%)` }}
+                  />
                 </GraphicsImage>
               </GraphicsCard>
             )}
@@ -129,8 +132,8 @@ export default function Feature20({ heading, caption, image, features, actionBtn
                     size={{ xs: 12 / partitionInExtraSmall, sm: 12 / partitionInSmall, md: 12 / partitionInLarge }}
                     sx={{
                       position: 'relative',
-                      ...(index < indexOfFirstElementInLastRow && { borderBottom: `1px solid ${theme.palette.grey[300]}` }),
-                      ...(!indicesOfLastElements.includes(index) && { borderRight: `1px solid ${theme.palette.grey[300]}` })
+                      ...(index < indexOfFirstElementInLastRow && { borderBottom: `1px solid ${theme.vars.palette.grey[300]}` }),
+                      ...(!indicesOfLastElements.includes(index) && { borderRight: `1px solid ${theme.vars.palette.grey[300]}` })
                     }}
                   >
                     <Stack sx={{ gap: { xs: 3, sm: 4 }, height: 1, py: { xs: 1.5, sm: 3, md: 4 }, px: { xs: 0, sm: 3, md: 4 } }}>

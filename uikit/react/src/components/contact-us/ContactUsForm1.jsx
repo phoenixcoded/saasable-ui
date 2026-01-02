@@ -180,7 +180,7 @@ export default function ContactUsForm1() {
                       >
                         {({ TransitionProps }) => (
                           <Fade in={open} {...TransitionProps}>
-                            <Card elevation={0} sx={{ border: '1px solid', borderColor: theme.palette.divider, borderRadius: 4 }}>
+                            <Card elevation={0} sx={{ border: '1px solid', borderColor: theme.vars.palette.divider, borderRadius: 4 }}>
                               <ClickAwayListener onClickAway={() => setAnchorEl(null)}>
                                 <Box sx={{ p: 1, pr: 0.5 }}>
                                   <List disablePadding>

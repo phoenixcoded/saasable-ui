@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 import { useEffect, useRef, useState } from 'react';
 
 // @mui
-import { alpha, useTheme } from '@mui/material/styles';
+import { useTheme } from '@mui/material/styles';
 import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
 import ClickAwayListener from '@mui/material/ClickAwayListener';
@@ -14,6 +14,7 @@ import Box from '@mui/material/Box';
 
 // @project
 import SvgIcon from '@/components/SvgIcon';
+import { withAlpha } from '@/utils/colorUtils';
 
 /***************************  MENU - POPPER  ***************************/
 
@@ -38,7 +39,9 @@ export default function MenuPopper({
   };
 
   useEffect(() => {
-    defaultOpen && setAnchorEl(anchorRef.current);
+    if (defaultOpen) {
+      setAnchorEl(anchorRef.current);
+    }
   }, [defaultOpen]);
 
   const open = Boolean(anchorEl);
@@ -95,11 +98,11 @@ export default function MenuPopper({
             <Card
               sx={{
                 borderRadius: 4,
-                boxShadow: `0px 16px 10px 0px ${alpha(theme.palette.grey[900], 0.06)}`,
+                boxShadow: `0px 16px 10px 0px ${withAlpha(theme.vars.palette.grey[900], 0.06)}`,
                 width: { xs: 1, md: popperWidth },
                 ...(border && {
                   border: '1px solid',
-                  borderColor: theme.palette.grey[200]
+                  borderColor: theme.vars.palette.grey[200]
                 }),
                 [theme.breakpoints.down('md')]: {
                   borderTop: 'none',
