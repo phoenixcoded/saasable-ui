@@ -48,7 +48,7 @@ gulp
 
 | Product              | Preview                                                | Download                                                                                                                            |
 | -------------------- | ------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------- |
-| Admin Free           | [**Live Preview**](https://free.admin.saasable.io/)    | [**Download**](https://github.com/phoenixcoded/saasable-ui)</span>                                                                  |
+| Admin Free           | [**Live Preview**](https://tailwind.saasable.io/free)    | [**Download**](https://github.com/phoenixcoded/saasable-ui)</span>                                                                  |
 | Admin Pro            | [**Live Preview**](https://admin.saasable.io/)         | [**Download**](https://mui.com/store/items/saasable-multipurpose-ui-kit-and-dashboard/)</span>                                      |
 
 
