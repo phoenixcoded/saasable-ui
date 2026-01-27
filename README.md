@@ -69,7 +69,7 @@ gulp
 | Ui Kit React Free    | [**Live Preview**](https://free.saasable.io/)         | [**Download**](https://github.com/phoenixcoded/saasable-ui/)</span>                                                                 |
 | Ui Kit React Pro     | [**Live Preview**](https://saasable.io/)              | [**Download**](https://mui.com/store/items/saasable-multipurpose-ui-kit-and-dashboard/)</span>                                      |
 | Ui Kit Tailwind Free | [**Live Preview**](https://tailwind.saasable.io/free) | [**Download**](https://github.com/phoenixcoded/saasable-ui)</span>                                                                  |
-| Ui Kit Tailwind Pro  | [**Live Preview**](https://tailwind.saasable.io/)     | [**Download**](https://themeforest.net/item/saasable-tailwind-multipurpose-ui-kit-for-saas-startup-agency/58488275?s_rank=1)</span> |
+| Ui Kit Tailwind Pro  | [**Live Preview**](https://tailwind.saasable.io/)     | [**Download**](https://codedthemes.com/item/saasable-tailwind-ui-kit/)</span> |
 
 ## Deploy your own
 
