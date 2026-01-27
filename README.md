@@ -126,7 +126,7 @@ Looking for even more features? Check out SaasAble's [premium version](https://m
 | -                                                                              | ✓ [More components](https://admin.saasable.io/data-display/avatar) |
 | ✓ [MIT License](https://github.com/phoenixcoded/saasable-ui/blob/main/LICENSE) | ✓ [Pro License](https://mui.com/store/license/)                    |
 
-| [SaasAble Ui kit Tailwind Free](https://free.tailwind.saasable.io/)            | [SaasAble Ui kit Tailwind Pro](https://tailwind.saasable.io)       |
+| [SaasAble Ui kit Tailwind Free](https://tailwind.saasable.io/free)            | [SaasAble Ui kit Tailwind Pro](https://tailwind.saasable.io)       |
 | ------------------------------------------------------------------------------ | :----------------------------------------------------------------- |
 | **1** Demo Landing                                                             | **7+** Demo Landing                                                |
 | **25** Component Blocks                                                        | **200+** Component blocks                                          |
