@@ -8,7 +8,7 @@ SaasAble offers both a full version and a seed version. The seed version contain
 
 ## Documentation
 
-To know about directory structure, routing, setup, theming, and many more, detailed documentation is available here: [Documentation](https://phoenixcoded.gitbook.io/saasable).
+To know about directory structure, routing, setup, theming, and many more, detailed documentation is available here: [Documentation](https://phoenixcoded.gitbook.io/saasable/admin).
 
 ## Supports
 
