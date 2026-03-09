@@ -85,7 +85,7 @@ Looking for even more features? Check out SaasAble's [premium version](https://m
 
 ## Documentation
 
-[SaasAble Documentation](https://phoenixcoded.gitbook.io/saasable) helps you with installation, deployment, and troubleshooting.
+[SaasAble Documentation](https://phoenixcoded.gitbook.io/saasable/admin) helps you with installation, deployment, and troubleshooting.
 
 ## Browser support
 
