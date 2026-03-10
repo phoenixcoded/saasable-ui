@@ -43,7 +43,7 @@ function CardContent({ title, description, icon }) {
           startIcon={icon}
           variant="contained"
           component={RouterLink}
-          to="https://mui.com/store/items/saasable-multipurpose-ui-kit-and-dashboard/"
+          to={import.meta.env.VITE_APP_BUY_URL}
           target="_blank"
           sx={{ mt: 0.5 }}
         >

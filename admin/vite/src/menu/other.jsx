@@ -18,7 +18,7 @@ const other = {
       id: 'documentation',
       title: 'Documentation',
       type: 'item',
-      url: 'https://phoenixcoded.gitbook.io/saasable',
+      url: 'https://phoenixcoded.gitbook.io/saasable/admin',
       target: true,
       icon: 'IconNotes'
     },

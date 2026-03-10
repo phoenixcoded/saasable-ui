@@ -12,6 +12,7 @@ import branding from '@/branding.json';
 
 export default function Copyright() {
   const copyrightSX = { display: { xs: 'none', sm: 'flex' } };
+  const currentYear = new Date().getFullYear();
 
   const linkProps = {
     variant: 'caption',
@@ -25,7 +26,7 @@ export default function Copyright() {
     <Stack sx={{ gap: 1, width: 'fit-content', mx: 'auto' }}>
       <Stack direction="row" sx={{ justifyContent: 'center', gap: { xs: 1, sm: 1.5 }, textAlign: 'center' }}>
         <Typography variant="caption" color="text.secondary" sx={copyrightSX}>
-          © 2024 {branding.brandName}
+          © {currentYear} {branding.brandName}
         </Typography>
         <Divider orientation="vertical" flexItem sx={copyrightSX} />
         <Link {...linkProps} href="https://saasable.io/privacy-policy">
@@ -40,7 +41,7 @@ export default function Copyright() {
       <Box sx={{ textAlign: 'center', display: { xs: 'block', sm: 'none' } }}>
         <Divider sx={{ marginBottom: 1 }} />
         <Typography variant="caption" color="text.secondary">
-          © 2024 {branding.brandName}
+          © {currentYear} {branding.brandName}
         </Typography>
       </Box>
     </Stack>
