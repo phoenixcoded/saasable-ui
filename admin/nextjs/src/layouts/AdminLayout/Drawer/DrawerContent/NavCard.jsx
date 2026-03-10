@@ -45,7 +45,7 @@ function CardContent({ title, description, icon }) {
           startIcon={icon}
           variant="contained"
           component={Link}
-          href="https://mui.com/store/items/saasable-multipurpose-ui-kit-and-dashboard/"
+          href={process.env.NEXT_PUBLIC_BUY_URL}
           target="_blank"
           sx={{ mt: 0.5 }}
         >

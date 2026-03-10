@@ -1,4 +1,4 @@
-import { Activity, Fragment, useState } from 'react';
+import { Fragment, useState } from 'react';
 
 // @mui
 import { keyframes, useTheme } from '@mui/material/styles';
@@ -248,11 +248,9 @@ export default function Notification() {
                             </Fade>
                           )}
                         </Popper>
-                        <Activity mode={!showEmpty ? 'visible' : 'hidden'}>
-                          <Button color="primary" size="small" onClick={handleMarkAllAsRead} disabled={allRead}>
-                            Mark All as Read
-                          </Button>
-                        </Activity>
+                        <Button color="primary" size="small" onClick={handleMarkAllAsRead} disabled={allRead}>
+                          Mark All as Read
+                        </Button>
                       </Stack>
                     }
                   />
