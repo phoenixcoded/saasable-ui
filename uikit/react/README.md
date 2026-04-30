@@ -1,9 +1,11 @@
-# SaasAble Free React Material UI, UI-Kit
+# SaasAble Free React Material UI UI-Kit
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Price](https://img.shields.io/badge/price-FREE-0098f7.svg)](https://github.com/phoenixcoded/saasable-ui/blob/main/LICENSE)
 
-SaasAble is a complete solution for building SaaS products as well as non-SaaS products. Whether you’re creating a user-friendly front-end or a powerful admin dashboard, SaasAble has all the tools you need. It’s also flexible — perfect not just for SaaS but also for agencies, digital products, CRMs, blogs, AI platforms, project management, learning systems, and more.
+SaasAble is a complete UI kit for building modern React applications, focused on creating clean and user-friendly interfaces. It provides everything you need to design and develop consistent, scalable UIs efficiently.
+
+It’s highly flexible making it a great fit for SaaS products, agencies, digital platforms, CRMs, blogs, AI tools, project management systems, learning platforms, and more.
 
 ✨ Support us! If you like this theme, click the ⭐ (Top right) and let it shine
 
