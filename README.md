@@ -67,14 +67,14 @@ What truly sets SaasAble apart is its flexibility. It’s not just built for Saa
 
 ## Download
 
-| Product              | Preview                                               | Download                                                                                                                            |
-| -------------------- | ----------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------- |
-| Admin Free           | [**Live Preview**](https://free.admin.saasable.io/)   | [**Download**](https://github.com/phoenixcoded/saasable-ui)                                                                  |
-| Admin Pro            | [**Live Preview**](https://admin.saasable.io/)        | [**Download**](https://mui.com/store/items/saasable-multipurpose-ui-kit-and-dashboard/)                                      |
-| Ui Kit React Free    | [**Live Preview**](https://free.saasable.io/)         | [**Download**](https://github.com/phoenixcoded/saasable-ui/)                                                                 |
-| Ui Kit React Pro     | [**Live Preview**](https://saasable.io/)              | [**Download**](https://mui.com/store/items/saasable-multipurpose-ui-kit-and-dashboard/)                                      |
-| Ui Kit Tailwind Free | [**Live Preview**](https://tailwind.saasable.io/free) | [**Download**](https://github.com/phoenixcoded/saasable-ui)                                                                  |
-| Ui Kit Tailwind Pro  | [**Live Preview**](https://tailwind.saasable.io/)     | [**Download**](https://codedthemes.com/item/saasable-tailwind-ui-kit/) |
+| Product | Preview | Download |
+| ------- | ------- | -------- |
+| Free React Admin     | [**Live Preview**](https://free.admin.saasable.io/)   | [**Download**](https://github.com/phoenixcoded/saasable-ui)                                                                  |
+| Pro React Admin      | [**Live Preview**](https://admin.saasable.io/)        | [**Download**](https://mui.com/store/items/saasable-multipurpose-ui-kit-and-dashboard/)                                      |
+| Free React Ui Kit    | [**Live Preview**](https://free.saasable.io/)         | [**Download**](https://github.com/phoenixcoded/saasable-ui/)                                                                 |
+| Pro React Ui Kit     | [**Live Preview**](https://saasable.io/)              | [**Download**](https://mui.com/store/items/saasable-multipurpose-ui-kit-and-dashboard/)                                      |
+| Free Tailwind Ui Kit | [**Live Preview**](https://tailwind.saasable.io/free) | [**Download**](https://github.com/phoenixcoded/saasable-ui)                                                                  |
+| Pro Tailwind Ui Kit  | [**Live Preview**](https://tailwind.saasable.io/)     | [**Download**](https://codedthemes.com/item/saasable-tailwind-ui-kit/) |
 
 ## Deploy your own
 
@@ -132,15 +132,15 @@ Looking for even more features? Check out SaasAble's premium version, which offe
 
 [SaasAble Ui Kit Tailwind Documentation](https://phoenixcoded.gitbook.io/saasable-tailwind) helps you with installation, deployment, and troubleshooting.
 
-## Browser support
+## "Browser support"
 
-<div style="display: flex; gap: 10px;">
-  <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/chrome.png" width="45" height="45" alt="Chrome" />
-  <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/edge.png" width="45" height="45" alt="Edge" />
-  <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/safari.png" width="45" height="45" alt="Safari" />
-  <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/firefox.png" width="45" height="45" alt="Firefox" />
-  <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/opera.png" width="45" height="45" alt="Opera" />
-</div>
+<p>
+  <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/chrome.png" width="45" alt="Chrome" style="margin-right: 10px;"/>
+  <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/edge.png" width="45" alt="Edge" style="margin-right: 10px;"/>
+  <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/safari.png" width="45" alt="Safari" style="margin-right: 10px;"/>
+  <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/firefox.png" width="45" alt="Firefox" style="margin-right: 10px;"/>
+  <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/opera.png" width="45" alt="Opera" />
+</p>
 
 ## SaasAble Figma UI Kit
 
@@ -151,10 +151,10 @@ Looking for even more features? Check out SaasAble's premium version, which offe
 
 ## More products from Phoenixcoded
 
-| Dashboard                                                                                                                                                         | FREE                                                                               | PRO                                              |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ------------------------------------------------ |
-| <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/Light+Able+with+name.png"  height="30" style="display:inline-block; vertical-align:middle;"> | -                                                                                  | <a href="https://codedthemes.com/item/light-able/" target="_blank" rel="dofollow">**Pro**</a> |
-| <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/Ablepro_with_name.png" height="30" style="display:inline-block; vertical-align:middle;">     | [**Free**](https://github.com/phoenixcoded/able-pro-free-admin-dashboard-template) | <a href="https://codedthemes.com/item/able-pro-dashboard-templates/" target="_blank">**Pro**</a> |
+| Dashboard | FREE | PRO |
+|-----------|------|-----|
+| <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/Light+Able+with+name.png" height="30" style="vertical-align: middle;" /> | — | [**Pro**](https://codedthemes.com/item/light-able/) |
+| <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/Ablepro_with_name.png" height="30" style="vertical-align: middle;" /> | [**Free**](https://github.com/phoenixcoded/able-pro-free-admin-dashboard-template) | [**Pro**](https://codedthemes.com/item/able-pro-dashboard-templates/) |
 
 ## Issues
 
