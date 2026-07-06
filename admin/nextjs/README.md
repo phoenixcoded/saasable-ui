@@ -1,13 +1,15 @@
-# SaasAble Free React Material UI,Admin Dashboard Template
+# SaasAble Free React Material UI NextJS Dashboard Template
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Price](https://img.shields.io/badge/price-FREE-0098f7.svg)](https://github.com/phoenixcoded/saasable-ui/blob/main/LICENSE)
 
-SaasAble is a complete solution for building SaaS products as well as non-SaaS products. Whether you’re creating a user-friendly front-end or a powerful admin dashboard, SaasAble has all the tools you need. It’s also flexible — perfect not just for SaaS but also for agencies, digital products, CRMs, blogs, AI platforms, project management, learning systems, and more.
+SaasAble is a complete solution for building modern Next.js applications. It helps you create clean, user-friendly interfaces without overcomplicating things, so you can build faster and keep your project organized as it grows.
+
+It’s flexible enough to work across all kinds of projects. Not just SaaS, but also agency websites, digital platforms, CRMs, blogs, AI tools, project management apps, learning systems, and more.
 
 ✨ Support us! If you like this theme, click the ⭐ (Top right) and let it shine.
 
-![SaasAble Free React UI kit and Dashboard Template](https://ableproadmin.com/adv-banner-saasable/adv-github.png)
+![SaasAble Free React Material UI NextJS Dashboard Template](https://ableproadmin.com/adv-banner-saasable/adv-github.png)
 
 ## Table of contents
 
@@ -19,7 +21,7 @@ SaasAble is a complete solution for building SaaS products as well as non-SaaS p
 - [Browser support](#browser-support)
 - [Technology Stack](#technology-stack)
 - [SaasAble Figma Admin](#saasable-figma-admin)
-- [More products from PhoenixCoded](#more-products-from-phoenixcoded)
+- [More products from Phoenixcoded](#more-products-from-phoenixcoded)
 - [Issues?](#issues)
 - [License](#license)
 - [Contributor](#contributor)
@@ -27,23 +29,27 @@ SaasAble is a complete solution for building SaaS products as well as non-SaaS p
 
 ## Getting Started
 
-1. Clone from Github
+1. **Clone the repository**
+    ```sh
+    git clone https://github.com/phoenixcoded/saasable-ui.git
+    ```
 
-```
-git clone https://github.com/phoenixcoded/saasable-ui.git
-```
+2. **Navigate to the Next.js admin directory**
+    ```sh
+    cd admin/nextjs
+    ```
 
-2. Goto `admin` directory and Install Packages
+3. **Install dependencies**
+    ```sh
+    npm install
+    ```
 
-```
-npm install
-```
+4. **Run the project**
+    ```sh
+    npm run dev
+    ```
 
-3. Run project
-
-```
-npm run dev
-```
+5. **Open the local server URL shown in your terminal to view the app.**
 
 ## Download
 
@@ -115,7 +121,7 @@ Looking for even more features? Check out SaasAble's [premium version](https://m
   </a>
 </div>
 
-## More products from PhoenixCoded
+## More products from Phoenixcoded
 
 | Dashboard                                                                                                                                                         | FREE                                                                               | PRO                                              |
 | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ------------------------------------------------ |
@@ -132,7 +138,7 @@ To report a bug, please submit an [issue](https://github.com/phoenixcoded/saasab
 
 ## Contributor
 
-**PhoenixCoded Team**
+**Phoenixcoded Team**
 
 - https://github.com/phoenixcoded
 
