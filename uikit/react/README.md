@@ -21,68 +21,62 @@ It’s highly flexible making it a great fit for SaaS products, agencies, digita
 - [Browser support](#browser-support)
 - [Technology Stack](#technology-stack)
 - [SaasAble Figma UI Kit](#saasable-figma-ui-kit)
-- [More products from PhoenixCoded](#more-products-from-phoenixcoded)
+- [More products from Phoenixcoded](#more-products-from-phoenixcoded)
 - [Issues?](#issues)
 - [License](#license)
 - [Contributor](#contributor)
-- [Follow us](#follow-us)
 
 ## Getting Started
 
-1. Clone from Github
+1. **Clone the repository**
+    ```sh
+    git clone https://github.com/phoenixcoded/saasable-ui.git
+    ```
 
-```
-git clone https://github.com/phoenixcoded/saasable-ui.git
-```
+2. **Navigate to the React UI Kit directory**
+    ```sh
+    cd uikit/react
+    ```
 
-2. Goto `uikit/react` directory and Install Packages
+3. **Install dependencies**
+    ```sh
+    npm install
+    ```
 
-```
-npm install
-```
+4. **Run the project**
+    ```sh
+    npm run dev
+    ```
 
-3. Run project
-
-```
-npm run dev
-```
+5. **Open the local server URL shown in your terminal to view the app.**
 
 ## Download
 
-| Product              | Preview                                                | Download                                                                                                                            |
-| -------------------- | ------------------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------- |
-| Ui Kit React Free    | [**Live Preview**](https://free.saasable.io/)          | [**Download**](https://github.com/phoenixcoded/saasable-ui/)</span>                                                                 |
-| Ui Kit React Pro     | [**Live Preview**](https://saasable.io/)               | [**Download**](https://mui.com/store/items/saasable-multipurpose-ui-kit-and-dashboard/)</span>                                      |
+| Product | Preview | Download |
+| ------- | ------- | -------- |
+| Free React Ui Kit    | [**Live Preview**](https://free.saasable.io/)          | [**Download**](https://github.com/phoenixcoded/saasable-ui/)                                                                 |
+| Pro React Ui Kit     | [**Live Preview**](https://saasable.io/)               | [**Download**](https://mui.com/store/items/saasable-multipurpose-ui-kit-and-dashboard/)                                      |
 
 
 ## Why SaasAble?
 
-The SaasAble theme is a modern, responsive, and highly customizable solution for SaaS applications, dashboards, and admin panels. It comes with pre-built components, dark and light modes, and is optimized for performance and scalability. With regular updates. It saves development time while ensuring a professional and polished UI.
+SaasAble is a complete UI kit built for modern React apps using Material UI and Next.js. It’s designed to help you create clean, user-friendly interfaces without overcomplicating things, so you can move faster and keep your codebase scalable.
 
-- Modern & Responsive Design
-- Pre-Built Components & Layouts
-- Fully Responsive, all modern browser supported
-- Customizable & Scalable
-- Dark & Light Modes
-- Performance Optimized
-- Integration Ready
-- Easy Documentation Guide
+What makes SaasAble stand out is its flexibility. It’s not just for SaaS products but you can easily use it for agency projects, digital platforms, CRMs, blogs, AI tools, project management apps, learning systems, and more.
 
 ## What's included in Premium Version?
 
-Looking for even more features? Check out SaasAble's [premium version](https://mui.com/store/items/saasable-multipurpose-ui-kit-and-dashboard/), which offers a complete UI solution that includes both Front End UI components (like Hero sections, CTAs, and Footers) and Admin Interface components (such as Roles & Permissions pages, Analytics dashboards, and Billing systems).
+Looking for more UI components? Check out SaasAble’s premium version, which expands the UI kit with a complete set of front-end elements like hero sections, CTAs, footers, and more. Helping you build polished interfaces faster and with greater consistency.
 
-| [SaasAble Ui Kit React Free](https://free.saasable.io/)                        | [SaasAble Ui Kit React Pro](https://www.saasable.io/) |
+| [SaasAble Free React Ui Kit](https://free.saasable.io/)                        | [SaasAble Pro React Ui Kit](https://www.saasable.io/) |
 | ------------------------------------------------------------------------------ | :---------------------------------------------------- |
-| **1** Demo Landing                                                             | **7+** Demo Landing                                   |
-| **25** Component Blocks                                                        | **200+** Component blocks                             |
+| **1** Demo Landing                                                             | Demo Landing (7+)                                  |
+| **25** Component Blocks                                                        | [Component blocks](https://saasable.io/sections) (200+)                             |
 | -                                                                              | ✓ Dark/Light Mode 🌓                                  |
 | -                                                                              | ✓ TypeScript version                                  |
 | -                                                                              | ✓ Design files (Figma)                                |
 | -                                                                              | ✓ Multiple color options                              |
 | -                                                                              | ✓ RTL                                                 |
-| -                                                                              | ✓ Supabase authentication                             |
-| -                                                                              | ✓ [More components](https://saasable.io/sections)     |
 | ✓ [MIT License](https://github.com/phoenixcoded/saasable-ui/blob/main/LICENSE) | ✓ [Pro License](https://mui.com/store/license/)       |
 
 ## Documentation
@@ -91,38 +85,50 @@ Looking for even more features? Check out SaasAble's [premium version](https://m
 
 ## Browser support
 
-<img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/chrome.png" width="45" height="45" > <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/edge.png" width="45" height="45" > <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/safari.png" width="45" height="45" > <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/firefox.png" width="45" height="45" > <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/opera.png" width="45" height="45" >
+<p>
+  <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/chrome.png" width="45" alt="Chrome" style="margin-right: 10px;"/>
+  <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/edge.png" width="45" alt="Edge" style="margin-right: 10px;"/>
+  <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/safari.png" width="45" alt="Safari" style="margin-right: 10px;"/>
+  <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/firefox.png" width="45" alt="Firefox" style="margin-right: 10px;"/>
+  <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/opera.png" width="45" alt="Opera" />
+</p>
 
 ## Technology Stack
 
 - React 19
-- Next js
-- TypeScript
+- Next.js 16
 - Material UI v7
 - JavaScript
 - Material 3
-- Figma
 - npm/yarn package installer
 
 ## SaasAble Figma UI Kit
 
-
-
-<div>
-  <a href="https://codedthemes.com/item/mantis-free-figma-ui-kit/">
-   <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/Banners/Figma_Free_SaasAble.png" width="450" alt="Figma Free">
-  </a>&nbsp;&nbsp;&nbsp;&nbsp;
-  <a href="https://codedthemes.com/item/mantis-figma-ui-kit/">
-  <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/Banners/Figma_Pro_SaasAble.png" width="450" alt="Figma Pro">
+<p>
+  <a href="https://www.figma.com/community/file/1425095061180549847/saasable-free-figma-ui-kit-and-design-system" target="_blank">
+    <img
+      src="https://org-public-assets.s3.us-west-2.amazonaws.com/Banners/Figma_Free_SaasAble.png"
+      alt="Figma Free"
+      width="45%"
+      style="max-width: 450px; margin-right: 12px;"
+    />
   </a>
-</div>
+  <a href="https://codedthemes.com/item/saasable-figma-ui-kit/" target="_blank">
+    <img
+      src="https://org-public-assets.s3.us-west-2.amazonaws.com/Banners/Figma_Pro_SaasAble.png"
+      alt="Figma Pro"
+      width="45%"
+      style="max-width: 450px;"
+    />
+  </a>
+</p>
 
-## More products from PhoenixCoded
+## More products from Phoenixcoded
 
-| Dashboard                                                                                                                                                         | FREE                                                                               | PRO                                              |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- | ------------------------------------------------ |
-| <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/Light+Able+with+name.png"  height="30" style="display:inline-block; vertical-align:middle;"> | -                                                                                  | [**Pro**](https://1.envato.market/EKD9M4)</span> |
-| <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/Ablepro_with_name.png" height="30" style="display:inline-block; vertical-align:middle;">     | [**Free**](https://github.com/phoenixcoded/able-pro-free-admin-dashboard-template) | [**Pro**](https://1.envato.market/zNkqj6)</span> |
+| Dashboard | FREE | PRO |
+|-----------|------|-----|
+| <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/Light+Able+with+name.png" height="30" style="vertical-align: middle;" /> | — | [**Pro**](https://codedthemes.com/item/light-able/) |
+| <img src="https://org-public-assets.s3.us-west-2.amazonaws.com/logos/Ablepro_with_name.png" height="30" style="vertical-align: middle;" /> | [**Free**](https://github.com/phoenixcoded/able-pro-free-admin-dashboard-template) | [**Pro**](https://codedthemes.com/item/able-pro-dashboard-templates/) |
 
 ## Issues
 
@@ -134,15 +140,10 @@ To report a bug, please submit an [issue](https://github.com/phoenixcoded/saasab
 
 ## Contributor
 
-**PhoenixCoded Team**
+**Phoenixcoded Team**
 
 - https://github.com/phoenixcoded
 
 **Brijesh Dobariya**
 
 - https://x.com/dobaria_brijesh
-
-## Follow us
-
-- [Github](https://github.com/phoenixcoded)
-- [Phoenixcoded](https://themeforest.net/user/phoenixcoded)
