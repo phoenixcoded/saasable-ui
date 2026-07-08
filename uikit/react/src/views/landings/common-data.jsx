@@ -8,7 +8,7 @@ import Typography from '@mui/material/Typography';
 // @project
 import branding from '@/branding.json';
 import { MegaMenuType } from '@/enum';
-import { ADMIN_PATH, BUY_NOW_URL, DOCS_URL, PAGE_PATH, PRIVIEW_PATH } from '@/path';
+import { BUY_NOW_URL, DOCS_URL, PAGE_PATH, PRIVIEW_PATH } from '@/path';
 import { Themes } from '@/config';
 
 const linkProps = { target: '_blank', rel: 'noopener noreferrer' };
@@ -126,7 +126,7 @@ function BannerData() {
       <Stack sx={{ gap: 1 }}>
         <Stack sx={{ alignItems: 'flex-start', gap: 1.5 }}>
           <Chip
-            label={`${branding.brandName} Admin Template`}
+            label={`${branding.brandName} - Read the story`}
             icon={
               <CardMedia
                 component="img"
@@ -140,14 +140,20 @@ function BannerData() {
             slotProps={{ label: { sx: { px: 1.5, py: 0.5, typography: 'subtitle2' } } }}
             sx={{ bgcolor: 'background.default', '& .MuiChip-icon': { ml: 1.25 } }}
           />
-          <Typography variant="h5">Stunning dashboards designed to meet your needs.</Typography>
+          <Typography variant="h5">Behind the scenes of {branding.brandName}</Typography>
         </Stack>
         <Typography variant="body2" sx={{ color: 'text.secondary' }}>
-          Effortlessly manage your app’s backend with customizable admin dashboards that enhance productivity.
+          Read how our team approaches theming, layout, performance tuning, and SaaS page design.
         </Typography>
       </Stack>
-      <Button href={ADMIN_PATH} variant="contained" sx={{ minWidth: 92, px: { xs: 2 }, py: 1.25 }}>
-        View Dashboard
+      <Button
+        href="https://blog.saasable.io/"
+        target="_blank"
+        rel="noopener noreferrer"
+        variant="contained"
+        sx={{ minWidth: 92, px: { xs: 2 }, py: 1.25 }}
+      >
+        Visit Blog
       </Button>
     </Stack>
   );

@@ -7,7 +7,7 @@ import Typography from '@mui/material/Typography';
 import { NextLink } from '@/components/routes';
 
 export const cta4 = {
-  headLine: 'Why Trust Phoenixcoded for Your Dashboard Template Needs?',
+  headLine: 'Why trust Phoenixcoded for your landing & template needs?',
   primaryBtn: {
     children: 'Read Our story',
     href: 'https://blog.saasable.io/a-decade-of-expertise-the-phoenixcoded-story-and-why-you-should-trust-us',
@@ -75,7 +75,7 @@ export const cta10 = {
   caption: 'No worries – we encourage you to apply anyway! Your unique skills and talents might be just what we need.',
   primaryBtn: { children: 'Send Your Resume', href: '#' },
   secondaryBtn: { children: 'Contact Us', href: '#' },
-  image: '/assets/images/graphics/ai/graphics15-light.svg',
+  image: '/assets/images/crypto/graphics/graphics15-light.svg',
   profileGroups: {
     avatarGroups: [
       { avatar: '/assets/images/user/avatar1.png' },

@@ -41,7 +41,7 @@ const options = { root: null, rootMargin: '0px', threshold: 0.6 };
  * - [Hero17 API](https://phoenixcoded.gitbook.io/saasable/ui-kit/development/components/hero/hero17#props-details)
  */
 
-export default function Hero17({ chip, headLine, captionLine, primaryBtn, videoSrc, videoThumbnail, listData }) {
+export default function Hero17({ chip, headLine, captionLine, primaryBtn, videoSrc, videoThumbnail, listData, showDots = true, sxProps }) {
   const theme = useTheme();
   const boxRadius = { xs: 24, sm: 32, md: 40 };
 
@@ -96,7 +96,7 @@ export default function Hero17({ chip, headLine, captionLine, primaryBtn, videoS
   }, [isPlaying]);
 
   return (
-    <>
+    <Box sx={{ position: 'relative', ...sxProps }}>
       <Box
         sx={{
           height: { xs: 592, sm: 738, md: 878 },
@@ -235,7 +235,7 @@ export default function Hero17({ chip, headLine, captionLine, primaryBtn, videoS
           </motion.div>
         </Box>
       </ContainerWrapper>
-    </>
+    </Box>
   );
 }
 

@@ -6,7 +6,7 @@ import branding from '@/branding.json';
 import Typography from '@/blocks/Typography';
 import ContainerWrapper from '@/components/ContainerWrapper';
 import SectionHero from '@/components/SectionHero';
-import SimulatorTypeset from '@/components/SimulatorTypeset';
+import SimulatorTypeset from '@/components/simulator/SimulatorTypeset';
 import { SECTION_PATH } from '@/path';
 import { FIGMA_LINK } from '@/utils/constant';
 

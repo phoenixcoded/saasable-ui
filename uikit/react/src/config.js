@@ -16,6 +16,7 @@ export let Themes;
 })(Themes || (Themes = {}));
 
 export const CSS_VAR_PREFIX = '';
+export const AUTH_USER_KEY = 'saasable-user';
 
 /***************************  CONFIG  ***************************/
 

@@ -2,7 +2,7 @@
 
 // @project
 import { Feature20 } from '@/blocks/feature';
-import { Hero17 } from '@/blocks/hero';
+import { Hero17, Hero20 } from '@/blocks/hero';
 import LazySection from '@/components/LazySection';
 
 // @data
@@ -14,8 +14,8 @@ import {
   faq,
   feature20,
   feature21,
-  feature18,
   hero,
+  hero20Data,
   integration,
   other,
   pricing,
@@ -25,10 +25,25 @@ import {
 /***************************  PAGE - MAIN  ***************************/
 
 export default function Main() {
+  const [suggestedChips, setSuggestedChips] = useState([]);
 
+  useEffect(() => {
+    const fetchChipsData = async () => {
+      try {
+        const response = await axiosMockServices.get('/api/hero/prebuild-prompts');
+        setSuggestedChips(response.data.prebuildPrompts);
+      } catch (error) {
+        console.error('Error fetching hero chips data:', error);
+      }
+    };
+
+    fetchChipsData();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
   return (
     <>
-      <Hero17 {...hero} />
+      <Hero20 {...hero20Data} suggestedChips={suggestedChips} sxProps={{ pt: { xs: 8, sm: 9, md: 10.5 } }} />
+      <Hero17 {...hero} showDots={false} />
       <Feature20 {...feature20} />
 
       <LazySection
@@ -42,7 +57,6 @@ export default function Main() {
 
       <LazySection
         sections={[
-          { importFunc: () => import('@/blocks/feature').then((module) => ({ default: module.Feature18 })), props: feature18 },
           { importFunc: () => import('@/blocks/feature').then((module) => ({ default: module.Feature21 })), props: feature21 },
           { importFunc: () => import('@/blocks/cta').then((module) => ({ default: module.Cta4 })), props: cta4 }
         ]}
