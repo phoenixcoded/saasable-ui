@@ -11,6 +11,7 @@ import { Navbar10 } from '@/blocks/navbar';
 import { NavbarContent10 } from '@/blocks/navbar/navbar-content';
 import SSOTokenHandler from '@/components/SSOTokenHandler';
 import ThemeProviders from '@/components/ThemeProvider';
+import { Themes } from '@/config';
 import { withAlpha } from '@/utils/colorUtils';
 
 // @data
@@ -39,7 +40,7 @@ function Header({ children }) {
 
 export default function MainLayout({ children }) {
   return (
-    <ThemeProviders>
+    <ThemeProviders overrideTheme={Themes.THEME_CRYPTO} modeStorageKey="theme-mode-landing">
       <SSOTokenHandler>
         {/* header section */}
         <Box sx={{ ...headerColor, position: 'absolute', top: 0, left: 0, right: 0, zIndex: 10 }}>

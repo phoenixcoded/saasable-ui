@@ -7,7 +7,6 @@ import Box from '@mui/material/Box';
 /***************************  LAYOUT - BLOCKS  ***************************/
 
 export default function Blocks({ children }) {
-
   return <Box sx={{ '& :focus-visible': { outline: 'none' } }}>{children}</Box>;
 }
 

@@ -5,8 +5,8 @@ import Stack from '@mui/material/Stack';
 import branding from '@/branding.json';
 import ContainerWrapper from '@/components/ContainerWrapper';
 import SectionHero from '@/components/SectionHero';
-import Simulator from '@/components/simulator';
-import SimulatorTypeset from '@/components/simulator/SimulatorTypeset';
+import Simulator from '@/components/Simulator';
+import SimulatorTypeset from '@/components/SimulatorTypeset';
 
 import { PRIVIEW_PATH, SECTION_PATH } from '@/path';
 import { FIGMA_LINK } from '@/utils/constant';

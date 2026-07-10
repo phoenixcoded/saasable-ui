@@ -1,5 +1,5 @@
 // @next
-import { Archivo, Figtree, Roboto } from 'next/font/google';
+import { Archivo, Figtree, Roboto, Urbanist, Plus_Jakarta_Sans } from 'next/font/google';
 
 export let Themes;
 
@@ -31,7 +31,11 @@ export default config;
 const fontRobot = Roboto({ subsets: ['latin'], weight: ['100', '300', '400', '500', '700', '900'] });
 const fontArchivo = Archivo({ subsets: ['latin'], weight: ['400', '500', '600', '700'] });
 const fontFigtree = Figtree({ subsets: ['latin'], weight: ['400', '500', '600', '700'] });
+const fontUrbanist = Urbanist({ subsets: ['latin'], weight: ['400', '500', '600', '700'] });
+const fontPlusJakarta = Plus_Jakarta_Sans({ subsets: ['latin'], weight: ['400', '500', '600', '700'] });
 
 export const FONT_ROBOTO = fontRobot.style.fontFamily;
 export const FONT_ARCHIVO = fontArchivo.style.fontFamily;
 export const FONT_FIGTREE = fontFigtree.style.fontFamily;
+export const FONT_URBANIST = fontUrbanist.style.fontFamily;
+export const FONT_PLUS_JAKARTA = fontPlusJakarta.style.fontFamily;

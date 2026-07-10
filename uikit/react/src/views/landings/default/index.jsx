@@ -1,9 +1,12 @@
 'use client';
 
+import { useEffect, useState } from 'react';
+
 // @project
 import { Feature20 } from '@/blocks/feature';
 import { Hero17, Hero20 } from '@/blocks/hero';
 import LazySection from '@/components/LazySection';
+import { axiosMockServices } from '@/utils/axios';
 
 // @data
 import {
@@ -38,7 +41,6 @@ export default function Main() {
     };
 
     fetchChipsData();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
   return (
     <>

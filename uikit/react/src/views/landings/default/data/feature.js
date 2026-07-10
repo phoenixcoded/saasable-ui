@@ -6,7 +6,7 @@ import { SECTION_PATH, BUY_NOW_URL } from '@/path';
 const linkProps = { target: '_blank', rel: 'noopener noreferrer' };
 
 export const feature2 = {
-  heading: 'Culture of Innovation',
+  heading: 'Culture of innovation',
   caption:
     'Join a team that embraces forward-thinking ideas, fosters innovation, and cultivates an environment where your creativity can flourish.',
   features: [
@@ -48,12 +48,12 @@ export const feature5 = {
   features2: [
     {
       icon: 'tabler-briefcase',
-      title: 'Automated Scaling',
+      title: 'Automated scaling',
       content: 'Embrace a flexible work environment, allowing you to balance work.'
     },
     {
       icon: 'tabler-users',
-      title: 'Real-Time',
+      title: 'Real-time',
       content: 'Support your family commitments with family-friendly policies and benefits.'
     }
   ],
@@ -68,52 +68,52 @@ export const feature5 = {
     review: '10k+ Reviews (4.5 out of 5)'
   },
   content: 'Explore diverse career paths within the company through our internal mobility programs.',
-  actionBtn: { children: 'Explore all Features', href: '#' }
+  actionBtn: { children: 'Explore all Features', href: '#', sx: { textTransform: 'none' } }
 };
 
 export const feature20 = {
-  heading: 'Comprehensive UI Kit Tailored to your Need',
+  heading: 'Comprehensive UI Kit tailored to your need',
   caption: 'Ready to transform your SaaS designs with one powerful UI Kit?',
   actionBtn: { children: 'Buy Now', href: BUY_NOW_URL, ...linkProps },
   secondaryBtn: { children: 'Explore Blocks', href: SECTION_PATH },
   features: [
     {
       icon: 'tabler-accessible',
-      title: 'WCAG Compliant',
+      title: 'WCAG complaints',
       content: 'Ensure accessibility with WCAG compliant design for browsing.'
     },
     {
       icon: 'tabler-brand-google',
-      title: 'SEO Friendly',
+      title: 'SEO friendly',
       content: 'Boost visibility with SEO-friendly features for better search rankings.'
     },
     {
       icon: 'tabler-stack-2',
-      title: 'MUI Components',
+      title: 'MUI components',
       content: 'Customize Material 3 design MUI components for enhanced aesthetics.'
     },
     {
       icon: 'tabler-rocket',
-      title: 'High Performance UI',
+      title: 'High performance UI',
       content: 'Adjust content layout for visual coherence on various screen sizes.'
     },
     {
       icon: 'tabler-help',
-      title: 'Detailed Documentation',
+      title: 'Detailed documentation',
       content: 'Access comprehensive documentation for easy guidance on platform usage.'
     },
     {
       icon: 'tabler-refresh',
-      title: 'Regular Updates',
+      title: 'Regular updates',
       content: 'Receive consistent updates to keep the platform secure and up-to-date with the latest features.'
     }
   ]
 };
 
 export const feature21 = {
-  heading: `Design Faster, Smarter with ${branding.brandName} Figma`,
+  heading: `Design faster, Smarter with ${branding.brandName} Figma`,
   caption: 'Unlock Figma’s advanced tools for streamlined, scalable, and responsive SaaS UI design.',
-  image: '/assets/images/graphics/ai/desktop1-light.svg',
+  image: '/assets/images/graphics/default/saasable-figma.png',
   primaryBtn: { children: 'Free Figma', href: 'https://www.figma.com/community/file/1425095061180549847', ...linkProps },
   secondaryBtn: {
     children: 'Preview Pro Figma',
@@ -124,48 +124,48 @@ export const feature21 = {
     {
       animationDelay: 0.1,
       icon: 'tabler-components',
-      title: 'Component Architecture'
+      title: 'Component architecture'
     },
     {
       animationDelay: 0.2,
       icon: 'tabler-moon',
-      title: 'Dark Mode'
+      title: 'Dark mode'
     },
     {
       animationDelay: 0.3,
-      icon: 'tabler-brightness-auto',
-      title: 'Auto Layout'
+      icon: 'tabler-rosette-discount-check',
+      title: 'Auto layout'
     },
     {
       animationDelay: 0.4,
-      icon: 'tabler-accessible',
-      title: 'WCAG Compliant'
+      icon: 'tabler-code',
+      title: 'WCAG compliant'
     },
     {
       animationDelay: 0.1,
-      icon: 'tabler-icons',
-      title: 'Custom Icons'
+      icon: { name: 'custom-locked', type: IconType.CUSTOM },
+      title: 'Custom icons'
     },
     {
       animationDelay: 0.2,
-      icon: 'tabler-file-stack',
-      title: 'Page Demos'
+      icon: 'tabler-git-branch',
+      title: 'Page demos'
     },
     {
       animationDelay: 0.3,
-      icon: 'tabler-brand-matrix',
-      title: 'Material 3 Guideline'
+      icon: { name: 'custom-material', type: IconType.CUSTOM },
+      title: 'Material 3 guideline'
     },
     {
       animationDelay: 0.4,
-      icon: 'tabler-click',
-      title: 'Quick Customization'
+      icon: 'tabler-bolt',
+      title: 'Quick customization'
     }
   ]
 };
 
 export const feature = {
-  heading: `What’s Inside of ${branding.brandName} Plus Version`,
+  heading: `What’s inside of ${branding.brandName} plus version`,
   features: [
     {
       image: '/assets/images/shared/react.svg',
@@ -193,7 +193,7 @@ export const feature = {
       content: 'Boost visibility with SEO-friendly features for better search rankings.'
     },
     {
-      title: 'Check Out Our Pricing Plan',
+      title: 'Check out our pricing plan',
       content: 'Choose the plan that aligns with your SaaS product requirements.',
       actionBtn: { children: 'Pricing Plan', href: BUY_NOW_URL, ...linkProps }
     }
@@ -201,7 +201,7 @@ export const feature = {
 };
 
 export const feature7 = {
-  heading: 'Real-Time Performance Insights',
+  heading: 'Real-time performance insights',
   caption: 'Gain a competitive edge with real-time performance monitoring.',
   testimonials: [
     {
@@ -209,7 +209,7 @@ export const feature7 = {
       features: [
         {
           icon: 'tabler-star',
-          title: 'Core Value',
+          title: 'Core value',
           content: 'Unlock growth potential through continuous monitoring, enabling proactive strategies in a competitive landscape.'
         }
       ]
@@ -219,7 +219,7 @@ export const feature7 = {
       features: [
         {
           icon: 'tabler-route',
-          title: 'Multi-Cloud Orchestration',
+          title: 'Multi-cloud orchestration',
           content: 'Enhances flexibility and resilience in a multi-cloud environment.'
         }
       ]
@@ -239,7 +239,7 @@ export const feature7 = {
 };
 
 export const feature23 = {
-  heading: 'Culture of Innovation',
+  heading: 'Culture of innovation',
   caption:
     'Join a team that embraces forward-thinking ideas, fosters innovation, and cultivates an environment where your creativity can flourish.',
   heading2: 'Growth',
