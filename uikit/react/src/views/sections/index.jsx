@@ -56,7 +56,7 @@ const sections = [
   },
   {
     title: 'Hero',
-    subTitle: '19 Different Variants',
+    subTitle: '20 Different Variants',
     image: `${imagePrefix}/hero-light.svg`,
     link: PAGE_PATH.hero,
     category: SectionCategory.MARKETING

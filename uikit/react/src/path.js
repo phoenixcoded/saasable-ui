@@ -223,7 +223,8 @@ export const PRIVIEW_PATH = {
     hero16: path([BLOCK_PATH, 'hero', 'hero16']),
     hero17: path([BLOCK_PATH, 'hero', 'hero17']),
     hero18: path([BLOCK_PATH, 'hero', 'hero18']),
-    hero19: path([BLOCK_PATH, 'hero', 'hero19'])
+    hero19: path([BLOCK_PATH, 'hero', 'hero19']),
+    hero20: path([BLOCK_PATH, 'hero', 'hero20'])
   },
   integration: {
     integration1: path([BLOCK_PATH, 'integration', 'integration1']),

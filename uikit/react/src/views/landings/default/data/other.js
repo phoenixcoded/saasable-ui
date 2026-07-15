@@ -15,7 +15,7 @@ export const other = {
     {
       animationDelay: 0.2,
       title: 'Hero',
-      subTitle: '19 Different Variants',
+      subTitle: '20 Different Variants',
       image: `${imagePrefix}/hero-landing-light.svg`,
       link: PAGE_PATH.hero
     },

@@ -191,6 +191,15 @@ const sectionsData = [
       figmaLink: FIGMA_LINK.hero.variant.hero19
     },
     src: PRIVIEW_PATH.proPage
+  },
+  {
+    typeset: {
+      heading: 'Default hero section 20',
+      caption:
+        'Use this default example with an announcement badge, heading, CTA buttons, and customer logos to showcase what your website offers.',
+      figmaLink: FIGMA_LINK.hero.variant.hero20
+    },
+    src: PRIVIEW_PATH.proPage
   }
 ];
 

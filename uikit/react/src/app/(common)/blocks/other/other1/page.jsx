@@ -14,7 +14,7 @@ const data = {
   sections: [
     {
       title: 'Hero',
-      subTitle: '17 Different Variants',
+      subTitle: '20 Different Variants',
       image: `${imagePrefix}/hero-light.svg`,
       link: PAGE_PATH.hero
     },
