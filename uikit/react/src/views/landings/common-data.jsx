@@ -172,7 +172,7 @@ export const pagesMegamenu = {
       {
         title: 'General',
         itemsList: [
-          { title: 'About', link: { href: 'https://stage.saasable.io/about', ...linkProps } },
+          { title: 'About', status: 'Pro' },
           { title: 'Career', status: 'Pro' },
           { title: 'Privacy Policy', link: { href: PAGE_PATH.privacyPolicyPage, ...linkProps } },
           { title: 'Contact Us', status: 'Pro' },

@@ -9,8 +9,7 @@ const cspHeader = `
     base-uri 'self';
     form-action 'self';
     media-src 'self' https://*.cloudfront.net;
-    connect-src 'self' https://www.googletagmanager.com https://raw.githubusercontent.com https://fomo.codedthemes.com https://*.clarity.ms https://*.azurewebsites.net https://mock-data-api-nextjs.vercel.app https://ai.saasable.io;
-`;
+    connect-src 'self' https://www.googletagmanager.com https://raw.githubusercontent.com https://fomo.codedthemes.com https://*.clarity.ms https://*.azurewebsites.net https://mock-data-api-nextjs.vercel.app https://ai.saasable.io https://axe.deque.com;`;
 
 const nextConfig = {
   modularizeImports: {
