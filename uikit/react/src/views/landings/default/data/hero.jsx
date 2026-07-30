@@ -31,8 +31,8 @@ export const hero = {
       </>
     )
   },
-  headLine: 'Multipurpose UI Kit and Dashboard Template',
-  captionLine: 'Design marketing pages and powerful admin dashboards with ease using our UI Kit, built following Material 3 guidelines.',
+  headLine: 'Multipurpose UI Kit and Polished Landing',
+  captionLine: 'Design marketing pages and beautiful landings with ease using our UI Kit, built following Material 3 guidelines.',
   primaryBtn: { children: 'Explore Blocks', href: SECTION_PATH },
   videoSrc: 'https://d2elhhoq00m1pj.cloudfront.net/saasable-intro.mp4',
   videoThumbnail: '/assets/videos/thumbnails/intro-thumbnail.png',
@@ -45,4 +45,14 @@ export const hero = {
     { image: '/assets/images/shared/m3.svg', title: 'Material 3' },
     { image: '/assets/images/shared/figma.svg', title: 'Figma' }
   ]
+};
+
+export const hero20 = {
+  headLine: {
+    normalText: 'What do you need to ',
+    highlightedText: 'Build?'
+  },
+  captionLine:
+    'Tell SaasAble AI what you want to build, make changes instantly, and get guidance whenever you need it, all in one conversation.',
+  placeholder: 'Ask me anything...'
 };

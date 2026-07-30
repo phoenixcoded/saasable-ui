@@ -3,10 +3,9 @@ function path(urlChunks) {
 }
 
 export const SECTION_PATH = '/sections';
-export const ADMIN_PATH = 'https://free.admin.saasable.io/';
 export const BUY_NOW_URL = 'https://mui.com/store/items/saasable-multipurpose-ui-kit-and-dashboard-template';
 export const FREEBIES_URL = 'https://github.com/phoenixcoded/saasable-ui';
-export const DOCS_URL = 'https://phoenixcoded.gitbook.io/saasable ';
+export const DOCS_URL = 'https://phoenixcoded.gitbook.io/saasable/ui-kit';
 const BLOCK_PATH = '/blocks';
 const AUTH_PATH = 'auth';
 
@@ -224,7 +223,8 @@ export const PRIVIEW_PATH = {
     hero16: path([BLOCK_PATH, 'hero', 'hero16']),
     hero17: path([BLOCK_PATH, 'hero', 'hero17']),
     hero18: path([BLOCK_PATH, 'hero', 'hero18']),
-    hero19: path([BLOCK_PATH, 'hero', 'hero19'])
+    hero19: path([BLOCK_PATH, 'hero', 'hero19']),
+    hero20: path([BLOCK_PATH, 'hero', 'hero20'])
   },
   integration: {
     integration1: path([BLOCK_PATH, 'integration', 'integration1']),

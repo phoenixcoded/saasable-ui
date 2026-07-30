@@ -14,20 +14,23 @@ import { Themes } from '@/config';
 import useConfig from '@/hooks/useConfig';
 
 import aiTheme from '@/views/landings/ai/theme';
+import cryptoTheme from '@/views/landings/crypto/theme';
 
 // Theme Map
 const themeMap = {
-  [Themes.THEME_AI]: aiTheme
+  [Themes.THEME_AI]: aiTheme,
+  [Themes.THEME_CRYPTO]: cryptoTheme
 };
 
 /***************************  COMMON - THEME PROVIDER  ***************************/
 
-export default function ThemeProvider({ children }) {
+export default function ThemeProviders({ children, overrideTheme, defaultMode = 'light', modeStorageKey = 'theme-mode' }) {
   const { state } = useConfig();
 
   const [loader, setLoader] = useState(true);
 
-  const selectedTheme = themeMap[state.currentTheme]?.('data-color-scheme') || aiTheme('data-color-scheme');
+  const activeTheme = overrideTheme || state.currentTheme;
+  const selectedTheme = themeMap[activeTheme]?.('data-color-scheme') || aiTheme('data-color-scheme');
 
   useEffect(() => {
     setLoader(false);
@@ -42,12 +45,12 @@ export default function ThemeProvider({ children }) {
 
   return (
     <>
-      <InitColorSchemeScript attribute="data-color-scheme" defaultMode="light" />
+      <InitColorSchemeScript modeStorageKey={modeStorageKey} attribute="data-color-scheme" defaultMode={defaultMode} />
       <Suspense fallback={<Loader />}>
         {loader ? (
           <Loader />
         ) : (
-          <MuiThemeProvider disableTransitionOnChange theme={selectedTheme} defaultMode="light">
+          <MuiThemeProvider disableTransitionOnChange theme={selectedTheme} modeStorageKey={modeStorageKey} defaultMode={defaultMode}>
             <CssBaseline enableColorScheme />
             {children}
           </MuiThemeProvider>
@@ -57,4 +60,9 @@ export default function ThemeProvider({ children }) {
   );
 }
 
-ThemeProvider.propTypes = { children: PropTypes.any };
+ThemeProviders.propTypes = {
+  children: PropTypes.any,
+  overrideTheme: PropTypes.any,
+  defaultMode: PropTypes.any,
+  modeStorageKey: PropTypes.string
+};

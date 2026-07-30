@@ -73,7 +73,7 @@ const options = [
 
 /***************************  SECTION HERO  ***************************/
 
-export default function SectionHero({ heading, search = true, offer = false, breadcrumbs }) {
+export default function SectionHero({ heading, search = true, offer = false, breadcrumbs, sxProps }) {
   const theme = useTheme();
   const router = useRouter();
 
@@ -95,7 +95,8 @@ export default function SectionHero({ heading, search = true, offer = false, bre
         bgcolor: 'grey.100',
         borderBottomLeftRadius: boxRadius,
         borderBottomRightRadius: boxRadius,
-        ...getBackgroundDots(theme.vars.palette.grey[300])
+        ...getBackgroundDots(theme.vars.palette.grey[300]),
+        ...sxProps
       }}
     >
       <ContainerWrapper>
@@ -220,4 +221,10 @@ export default function SectionHero({ heading, search = true, offer = false, bre
   );
 }
 
-SectionHero.propTypes = { heading: PropTypes.string, search: PropTypes.bool, offer: PropTypes.bool, breadcrumbs: PropTypes.array };
+SectionHero.propTypes = {
+  heading: PropTypes.string,
+  search: PropTypes.bool,
+  offer: PropTypes.bool,
+  breadcrumbs: PropTypes.array,
+  sxProps: PropTypes.object
+};

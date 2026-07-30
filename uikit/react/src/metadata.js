@@ -5,7 +5,7 @@ import { PAGE_PATH, SECTION_PATH } from '@/path';
 /***************************  SEO METADATA - MAIN LAYOUT  ***************************/
 
 const title = `${branding.brandName} ${branding.title}`;
-const description = `The multipurpose ${branding.brandName} UI Kit built with React and Material UI is designed for businesses of all sizes to streamline customer management, sales tracking, and marketing optimization. Create stunning SaaS landing and admin with just few clicks!`;
+const description = `The multipurpose ${branding.brandName} UI Kit built with React and Material UI is designed for businesses of all sizes to streamline customer management, sales tracking, and marketing optimization. Create stunning SaaS landing and pages with just few clicks!`;
 
 const ogCommonMetadata = {
   locale: 'en_US',
@@ -46,12 +46,12 @@ export const mainMetadata = {
 
 const sectionCommonMeta = {
   title: 'Blocks',
-  description: `Explore ${branding.brandName} extensive library of 200+ customizable UI blocks, designed to build cohesive SaaS applications effortlessly. From hero sections to pricing tables and admin components, find everything you need to create stunning, functional interfaces.`
+  description: `Explore ${branding.brandName} extensive library of 200+ customizable UI blocks, designed to build cohesive SaaS applications effortlessly. From hero sections to pricing tables and landing components, find everything you need to create stunning, functional interfaces.`
 };
 
 const aboutPageCommonMeta = {
   title: 'About',
-  description: `${branding.brandName} is a complete SaaS UI kit designed to streamline front-end and admin interface design with 200+ customizable blocks, saving time and ensuring consistent, cohesive user experiences across your application.`
+  description: `${branding.brandName} is a complete SaaS UI kit designed to streamline front-end design with 200+ customizable blocks, saving time and ensuring consistent, cohesive user experiences across your landing page.`
 };
 
 const careerPageCommonMeta = {

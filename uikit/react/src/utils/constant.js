@@ -215,7 +215,8 @@ export const FIGMA_LINK = {
       hero16: BUY_NOW_URL,
       hero17: BUY_NOW_URL,
       hero18: BUY_NOW_URL,
-      hero19: BUY_NOW_URL
+      hero19: BUY_NOW_URL,
+      hero20: BUY_NOW_URL
     }
   },
   icon: {

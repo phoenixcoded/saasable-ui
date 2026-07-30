@@ -15,43 +15,43 @@ export const other = {
     {
       animationDelay: 0.2,
       title: 'Hero',
-      subTitle: '19 Different Variants',
-      image: `${imagePrefix}/hero-light.svg`,
+      subTitle: '20 Different Variants',
+      image: `${imagePrefix}/hero-landing-light.svg`,
       link: PAGE_PATH.hero
     },
     {
       animationDelay: 0.3,
       title: 'Call to Action',
       subTitle: '14 Different Variants',
-      image: `${imagePrefix}/cta-light.svg`,
+      image: `${imagePrefix}/cta-landing-light.svg`,
       link: PAGE_PATH.cta
     },
     {
       animationDelay: 0.4,
       title: 'Features',
       subTitle: '27 Different Variants',
-      image: `${imagePrefix}/feature-light.svg`,
+      image: `${imagePrefix}/feature-landing-light.svg`,
       link: PAGE_PATH.feature
     },
     {
       animationDelay: 0.2,
       title: 'Metrics',
       subTitle: '10 Different Variants',
-      image: `${imagePrefix}/metrics-light.svg`,
+      image: `${imagePrefix}/metrics-landing-light.svg`,
       link: PAGE_PATH.metrics
     },
     {
       animationDelay: 0.3,
       title: 'Process',
       subTitle: '8 Different Variants',
-      image: `${imagePrefix}/process-light.svg`,
+      image: `${imagePrefix}/process-landing-light.svg`,
       link: PAGE_PATH.process
     },
     {
       animationDelay: 0.4,
       title: 'Integration',
       subTitle: '9 Different Variants',
-      image: `${imagePrefix}/integration-light.svg`,
+      image: `${imagePrefix}/integration-landing-light.svg`,
       link: PAGE_PATH.integration
     }
   ]

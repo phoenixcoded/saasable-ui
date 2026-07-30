@@ -32,5 +32,5 @@ export const smallHero4 = {
   heading: `Build Your Future with ✦ ${branding.brandName}`,
   caption: 'Embark on a rewarding journey with us. Find opportunities to grow, learn and make a lasting impact.',
   exploreBtn: { children: 'See Open Position', href: '#' },
-  image: '/assets/images/graphics/ai/desktop1-light.svg'
+  image: '/assets/images/crypto/graphics/graphics13-light.svg'
 };

@@ -10,7 +10,6 @@ const SectionsLayout = dynamic(() => import('@/views/sections/layout'));
 /***************************  LAYOUT - SECTIONS  ***************************/
 
 export default function Sections({ children }) {
-
   return (
     <SectionsLayout>
       <>

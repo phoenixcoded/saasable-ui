@@ -17,6 +17,7 @@ import { CopyrightType } from '@/enum';
 /***************************  FOOTER - COPYRIGHT  ***************************/
 
 export default function Copyright({ type = CopyrightType.TYPE1, textProps, isDivider = true }) {
+  const currentYear = new Date().getFullYear();
   const downSM = useMediaQuery((theme) => theme.breakpoints.down('sm'));
 
   const dividerProps = { ...(!downSM && { orientation: 'vertical' }), ...(downSM && { variant: 'middle' }), flexItem: true };
@@ -39,7 +40,7 @@ export default function Copyright({ type = CopyrightType.TYPE1, textProps, isDiv
       sx={{ alignItems: 'center', justifyContent: { xs: 'center', md: 'flex-end' }, gap: { xs: 1.5, sm: isDivider ? 1.5 : 3 } }}
     >
       <Typography variant="caption2" {...textProps} sx={{ color: 'text.secondary', ...textProps?.sx }}>
-        Copyright © 2026
+        Copyright © {currentYear}
         <Link {...linkProps} href={branding.company.url} sx={{ ...linkProps.sx, ml: 0.5 }}>
           {branding.company.name}
         </Link>

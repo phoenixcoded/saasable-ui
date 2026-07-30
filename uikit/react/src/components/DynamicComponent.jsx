@@ -1,5 +1,7 @@
 import PropTypes from 'prop-types';
-import dynamic from 'next/dynamic';
+import { useEffect, useState } from 'react';
+
+// @project
 import { DynamicComponentType } from '@/enum';
 
 /***************************  DYNAMIC - IMPORT  ***************************/
@@ -15,6 +17,29 @@ function loadComponent(component, type) {
   }
 }
 
+// Cache both the promise (for loading) and the resolved component (for synchronous retrieval)
+const componentCache = new Map();
+const promiseCache = new Map();
+
+function getComponent(component, type) {
+  const key = `${type}:${component}`;
+  return componentCache.get(key) || null;
+}
+
+function loadComponentAndCache(component, type) {
+  const key = `${type}:${component}`;
+  let promise = promiseCache.get(key);
+  if (!promise) {
+    promise = loadComponent(component, type).then((module) => {
+      const Comp = module.default;
+      componentCache.set(key, Comp);
+      return Comp;
+    });
+    promiseCache.set(key, promise);
+  }
+  return promise;
+}
+
 /***************************  DYNAMIC COMPONENT  ***************************/
 
 /**
@@ -24,12 +49,39 @@ function loadComponent(component, type) {
  * @param props: any = Used to set dynamic props, such as sx, size, and color.
  * @returns = Import the component dynamically and pass the rendering component.
  */
-
-// eslint-disable-next-line
 function DynamicComponent({ component, type, props }) {
-  const ImportedComponent = dynamic(() => loadComponent(component, type), { ssr: false });
+  const [Comp, setComp] = useState(null);
+  const [isMounted, setIsMounted] = useState(false);
 
-  return <ImportedComponent {...props} />;
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  useEffect(() => {
+    if (!isMounted) return;
+
+    let active = true;
+
+    const cached = getComponent(component, type);
+    if (cached) {
+      setComp(() => cached);
+    } else {
+      setComp(null);
+      loadComponentAndCache(component, type).then((resolvedComp) => {
+        if (active) {
+          setComp(() => resolvedComp);
+        }
+      });
+    }
+
+    return () => {
+      active = false;
+    };
+  }, [component, type, isMounted]);
+
+  if (!isMounted || !Comp) return null;
+
+  return <Comp {...props} />;
 }
 
 export default DynamicComponent;

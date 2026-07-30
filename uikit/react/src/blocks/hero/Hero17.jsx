@@ -96,7 +96,7 @@ export default function Hero17({ chip, headLine, captionLine, primaryBtn, videoS
   }, [isPlaying]);
 
   return (
-    <>
+    <Box sx={{ position: 'relative' }}>
       <Box
         sx={{
           height: { xs: 592, sm: 738, md: 878 },
@@ -235,7 +235,7 @@ export default function Hero17({ chip, headLine, captionLine, primaryBtn, videoS
           </motion.div>
         </Box>
       </ContainerWrapper>
-    </>
+    </Box>
   );
 }
 

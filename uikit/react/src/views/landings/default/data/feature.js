@@ -1,12 +1,12 @@
 // @project
 import branding from '@/branding.json';
 import { IconType } from '@/enum';
-import { SECTION_PATH, BUY_NOW_URL, ADMIN_PATH, DOCS_URL } from '@/path';
+import { SECTION_PATH, BUY_NOW_URL } from '@/path';
 
 const linkProps = { target: '_blank', rel: 'noopener noreferrer' };
 
 export const feature2 = {
-  heading: 'Culture of Innovation',
+  heading: 'Culture of innovation',
   caption:
     'Join a team that embraces forward-thinking ideas, fosters innovation, and cultivates an environment where your creativity can flourish.',
   features: [
@@ -31,8 +31,8 @@ export const feature2 = {
 export const feature5 = {
   heading: 'Beyond the 9-to-5',
   caption: 'Our benefits go beyond the standard, ensuring your life outside of work is just as fulfilling.',
-  image1: '/assets/images/graphics/ai/graphics3-light.svg',
-  image2: '/assets/images/graphics/ai/graphics2-light.svg',
+  image1: '/assets/images/crypto/graphics/graphics12-light.svg',
+  image2: '/assets/images/crypto/graphics/graphics14-light.svg',
   features: [
     {
       icon: 'tabler-coin',
@@ -48,12 +48,12 @@ export const feature5 = {
   features2: [
     {
       icon: 'tabler-briefcase',
-      title: 'Automated Scaling',
+      title: 'Automated scaling',
       content: 'Embrace a flexible work environment, allowing you to balance work.'
     },
     {
       icon: 'tabler-users',
-      title: 'Real-Time',
+      title: 'Real-time',
       content: 'Support your family commitments with family-friendly policies and benefits.'
     }
   ],
@@ -68,52 +68,52 @@ export const feature5 = {
     review: '10k+ Reviews (4.5 out of 5)'
   },
   content: 'Explore diverse career paths within the company through our internal mobility programs.',
-  actionBtn: { children: 'Explore all Features', href: '#' }
+  actionBtn: { children: 'Explore all Features', href: '#', sx: { textTransform: 'none' } }
 };
 
 export const feature20 = {
-  heading: 'Comprehensive UI Kit Tailored to your Need',
+  heading: 'Comprehensive UI Kit tailored to your need',
   caption: 'Ready to transform your SaaS designs with one powerful UI Kit?',
   actionBtn: { children: 'Buy Now', href: BUY_NOW_URL, ...linkProps },
   secondaryBtn: { children: 'Explore Blocks', href: SECTION_PATH },
   features: [
     {
       icon: 'tabler-accessible',
-      title: 'WCAG Compliant',
+      title: 'WCAG complaints',
       content: 'Ensure accessibility with WCAG compliant design for browsing.'
     },
     {
       icon: 'tabler-brand-google',
-      title: 'SEO Friendly',
+      title: 'SEO friendly',
       content: 'Boost visibility with SEO-friendly features for better search rankings.'
     },
     {
       icon: 'tabler-stack-2',
-      title: 'MUI Components',
+      title: 'MUI components',
       content: 'Customize Material 3 design MUI components for enhanced aesthetics.'
     },
     {
       icon: 'tabler-rocket',
-      title: 'High Performance UI',
+      title: 'High performance UI',
       content: 'Adjust content layout for visual coherence on various screen sizes.'
     },
     {
       icon: 'tabler-help',
-      title: 'Detailed Documentation',
+      title: 'Detailed documentation',
       content: 'Access comprehensive documentation for easy guidance on platform usage.'
     },
     {
       icon: 'tabler-refresh',
-      title: 'Regular Updates',
+      title: 'Regular updates',
       content: 'Receive consistent updates to keep the platform secure and up-to-date with the latest features.'
     }
   ]
 };
 
 export const feature21 = {
-  heading: `Design Faster, Smarter with ${branding.brandName} Figma`,
+  heading: `Design faster, Smarter with ${branding.brandName} Figma`,
   caption: 'Unlock Figma’s advanced tools for streamlined, scalable, and responsive SaaS UI design.',
-  image: '/assets/images/graphics/ai/desktop1-light.svg',
+  image: '/assets/images/graphics/default/saasable-figma.png',
   primaryBtn: { children: 'Free Figma', href: 'https://www.figma.com/community/file/1425095061180549847', ...linkProps },
   secondaryBtn: {
     children: 'Preview Pro Figma',
@@ -124,48 +124,48 @@ export const feature21 = {
     {
       animationDelay: 0.1,
       icon: 'tabler-components',
-      title: 'Component Architecture'
+      title: 'Component architecture'
     },
     {
       animationDelay: 0.2,
       icon: 'tabler-moon',
-      title: 'Dark Mode'
+      title: 'Dark mode'
     },
     {
       animationDelay: 0.3,
-      icon: 'tabler-brightness-auto',
-      title: 'Auto Layout'
+      icon: 'tabler-rosette-discount-check',
+      title: 'Auto layout'
     },
     {
       animationDelay: 0.4,
-      icon: 'tabler-accessible',
-      title: 'WCAG Compliant'
+      icon: 'tabler-code',
+      title: 'WCAG compliant'
     },
     {
       animationDelay: 0.1,
-      icon: 'tabler-icons',
-      title: 'Custom Icons'
+      icon: { name: 'custom-locked', type: IconType.CUSTOM },
+      title: 'Custom icons'
     },
     {
       animationDelay: 0.2,
-      icon: 'tabler-file-stack',
-      title: 'Page Demos'
+      icon: 'tabler-git-branch',
+      title: 'Page demos'
     },
     {
       animationDelay: 0.3,
-      icon: 'tabler-brand-matrix',
-      title: 'Material 3 Guideline'
+      icon: { name: 'custom-material', type: IconType.CUSTOM },
+      title: 'Material 3 guideline'
     },
     {
       animationDelay: 0.4,
-      icon: 'tabler-click',
-      title: 'Quick Customization'
+      icon: 'tabler-bolt',
+      title: 'Quick customization'
     }
   ]
 };
 
 export const feature = {
-  heading: `What’s Inside of ${branding.brandName} Plus Version`,
+  heading: `What’s inside of ${branding.brandName} plus version`,
   features: [
     {
       image: '/assets/images/shared/react.svg',
@@ -193,7 +193,7 @@ export const feature = {
       content: 'Boost visibility with SEO-friendly features for better search rankings.'
     },
     {
-      title: 'Check Out Our Pricing Plan',
+      title: 'Check out our pricing plan',
       content: 'Choose the plan that aligns with your SaaS product requirements.',
       actionBtn: { children: 'Pricing Plan', href: BUY_NOW_URL, ...linkProps }
     }
@@ -201,31 +201,31 @@ export const feature = {
 };
 
 export const feature7 = {
-  heading: 'Real-Time Performance Insights',
+  heading: 'Real-time performance insights',
   caption: 'Gain a competitive edge with real-time performance monitoring.',
   testimonials: [
     {
-      image: '/assets/images/graphics/ai/graphics6-light.svg',
+      image: '/assets/images/crypto/graphics/graphics10-light.svg',
       features: [
         {
           icon: 'tabler-star',
-          title: 'Core Value',
+          title: 'Core value',
           content: 'Unlock growth potential through continuous monitoring, enabling proactive strategies in a competitive landscape.'
         }
       ]
     },
     {
-      image: '/assets/images/graphics/ai/graphics8-light.svg',
+      image: '/assets/images/crypto/graphics/graphics11-light.svg',
       features: [
         {
           icon: 'tabler-route',
-          title: 'Multi-Cloud Orchestration',
+          title: 'Multi-cloud orchestration',
           content: 'Enhances flexibility and resilience in a multi-cloud environment.'
         }
       ]
     },
     {
-      image: '/assets/images/graphics/ai/graphics3-light.svg',
+      image: '/assets/images/crypto/graphics/graphics12-light.svg',
       features: [
         {
           icon: 'tabler-history',
@@ -239,12 +239,12 @@ export const feature7 = {
 };
 
 export const feature23 = {
-  heading: 'Culture of Innovation',
+  heading: 'Culture of innovation',
   caption:
     'Join a team that embraces forward-thinking ideas, fosters innovation, and cultivates an environment where your creativity can flourish.',
   heading2: 'Growth',
   caption2: 'Our culture prioritizes continuous learning, encouraging personal and professional development. ',
-  image: '/assets/images/graphics/default/feature23-light.png',
+  image: '/assets/images/graphics/default/about-light.png',
   primaryBtn: { children: 'Join  Our Team', href: '#' },
 
   features: [
@@ -257,73 +257,6 @@ export const feature23 = {
       icon: 'tabler-star',
       title: 'Inclusivity',
       content: 'We embrace varied perspectives and backgrounds, creating an inclusive environment.'
-    }
-  ]
-};
-
-export const feature18 = {
-  heading: 'Powerful Admin Interface',
-  caption: 'Manage data, users, and workflows effortlessly with intuitive, customizable admin controls and features.',
-  topics: [
-    {
-      icon: 'tabler-sparkles',
-      title: 'Material UI Powered',
-      title2: 'Leverage Power of Material UI Components',
-      description: 'The power and flexibility of Material UI components in admin template',
-      image: '/assets/images/graphics/default/admin-dashboard.png',
-      list: [
-        { primary: 'Next.js JavaScript/TypeScript' },
-        { primary: 'Customizable Themes' },
-        { primary: 'Rich Form and Table Components' },
-        { primary: 'Responsive Grid System' }
-      ],
-      actionBtn: { children: 'View Dashboard', href: ADMIN_PATH, ...linkProps },
-      actionBtn2: { children: 'Docs', href: DOCS_URL, ...linkProps }
-    },
-    {
-      icon: 'tabler-palette',
-      title: 'Customizable Themes',
-      title2: 'Flexible Theming Options',
-      description: 'Tailor themes effortlessly with MUI 7 robust theming system.',
-      image: '/assets/images/graphics/default/admin-dashboard-2.png',
-      list: [
-        { primary: 'Easy options for Theming' },
-        { primary: 'Layout Options' },
-        { primary: 'Color Presets tailored to your Web Apps' },
-        { primary: 'Consistency in Design' }
-      ],
-      actionBtn: { children: 'View Dashboard', href: ADMIN_PATH, ...linkProps },
-      actionBtn2: { children: 'Docs', href: DOCS_URL, ...linkProps }
-    },
-    {
-      icon: 'tabler-rocket',
-      title: 'Faster Development',
-      title2: 'Rapid Development',
-      description: 'Launch projects quicker with pre-built layouts and components.',
-      image: '/assets/images/graphics/default/admin-dashboard-3.png',
-      list: [
-        { primary: 'Time Saving' },
-        { primary: 'Tested and Reliable' },
-        { primary: 'Customization Ready' },
-        { primary: 'Enhanced User Experience' }
-      ],
-      actionBtn: { children: 'View Dashboard', href: ADMIN_PATH, ...linkProps },
-      actionBtn2: { children: 'Docs', href: DOCS_URL, ...linkProps }
-    },
-    {
-      icon: 'tabler-scale',
-      title: 'Scalability',
-      title2: 'Build to Scale',
-      description: 'Easily scale your app with flexible, modular, and extensible templates.',
-      image: '/assets/images/graphics/default/admin-dashboard.png',
-      list: [
-        { primary: 'Modular Architecture' },
-        { primary: 'Performance Optimized' },
-        { primary: 'Extensible Codebase' },
-        { primary: 'Future Proof Design' }
-      ],
-      actionBtn: { children: 'View Dashboard', href: ADMIN_PATH, ...linkProps },
-      actionBtn2: { children: 'Docs', href: DOCS_URL, ...linkProps }
     }
   ]
 };

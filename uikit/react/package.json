@@ -1,6 +1,6 @@
 {
   "name": "saasable-ui-free",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "author": {
     "email": "phoenixcoded@gmail.com",
     "name": "phoenixcoded"
@@ -21,9 +21,9 @@
     "@mui/material": "7.3.6",
     "@mui/material-nextjs": "7.3.6",
     "axios": "1.13.2",
-    "framer-motion": "12.23.26",
+    "framer-motion": "12.42.0",
     "lodash-es": "4.17.22",
-    "motion": "12.23.26",
+    "motion": "12.42.0",
     "next": "16.1.1",
     "react": "19.2.3",
     "react-dom": "19.2.3",
@@ -32,17 +32,17 @@
     "slick-carousel": "1.8.1"
   },
   "devDependencies": {
-    "@eslint/compat": "1.3.1",
-    "@eslint/eslintrc": "3.3.1",
-    "@eslint/js": "9.39.2",
+    "@eslint/compat": "2.1.0",
+    "@eslint/eslintrc": "3.3.5",
+    "@eslint/js": "9.39.3",
     "@types/node": "24.2.0",
-    "eslint": "9.39.2",
-    "eslint-config-next": "16.1.1",
+    "eslint": "9.39.3",
+    "eslint-config-next": "16.2.6",
     "eslint-config-prettier": "10.1.8",
     "eslint-plugin-jsx-a11y": "6.10.2",
-    "eslint-plugin-prettier": "5.5.4",
+    "eslint-plugin-prettier": "5.5.5",
     "eslint-plugin-react-hooks": "5.2.0",
     "prettier": "3.7.4"
   },
-  "packageManager": "yarn@4.12.0"
+  "packageManager": "yarn@4.17.0"
 }

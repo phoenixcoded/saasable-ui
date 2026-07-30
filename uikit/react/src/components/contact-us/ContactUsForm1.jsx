@@ -23,7 +23,7 @@ import Typography from '@mui/material/Typography';
 import Box from '@mui/material/Box';
 
 // @third-party
-import { useForm, Controller } from 'react-hook-form';
+import { useForm, Controller, useWatch } from 'react-hook-form';
 
 // @project
 import ButtonAnimationWrapper from '@/components/ButtonAnimationWrapper';
@@ -72,10 +72,15 @@ export default function ContactUsForm1() {
     handleSubmit,
     reset,
     control,
-    watch,
     formState: { errors },
     setValue
   } = useForm({ defaultValues: { dialcode: '+91' } });
+
+  const dialcode = useWatch({
+    control,
+    name: 'dialcode',
+    defaultValue: '+91'
+  });
 
   // Handle form submission
   const onSubmit = (data) => {
@@ -159,7 +164,7 @@ export default function ContactUsForm1() {
                         type="button"
                         onClick={handleClick}
                       >
-                        {watch('dialcode')}
+                        {dialcode}
                       </Button>
                       <Popper
                         placement="bottom-start"
@@ -189,7 +194,7 @@ export default function ContactUsForm1() {
                                         <ListItemButton
                                           key={index}
                                           sx={{ borderRadius: 4, mb: 0.5 }}
-                                          selected={country.dialCode === watch('dialcode')}
+                                          selected={country.dialCode === dialcode}
                                           onClick={() => {
                                             setValue('dialcode', country.dialCode);
                                             setAnchorEl(null);

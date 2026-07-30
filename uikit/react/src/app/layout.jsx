@@ -9,6 +9,7 @@ import { AppRouterCacheProvider } from '@mui/material-nextjs/v15-appRouter';
 
 // @project
 import ProviderWrapper from './ProviderWrapper';
+import BuyNowUrlSync from '@/components/BuyNowUrlSync';
 import { mainMetadata } from '@/metadata';
 
 const gaId = process.env.NEXT_PUBLIC_ANALYTICS_ID || '';
@@ -29,7 +30,8 @@ export default function RootLayout({ children }) {
         <link rel="dns-prefetch" href="https://www.googletagmanager.com" />
         <script src="https://fomo.codedthemes.com/pixel/gkPddwTcjNYydfr7v3FcZuToUb9ZAevo" defer data-nscript="lazyOnload"></script>
       </head>
-      <body>
+      <body suppressHydrationWarning>
+        <BuyNowUrlSync />
         <AppRouterCacheProvider options={{ enableCssLayer: true }}>
           <ProviderWrapper>{children}</ProviderWrapper>
         </AppRouterCacheProvider>
