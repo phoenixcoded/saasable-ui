@@ -31,7 +31,7 @@ const particles = [
 
 /***************************  HERO - 20  ***************************/
 
-export default function Hero20({ headLine, captionLine, placeholder, suggestedChips, sxProps }) {
+export default function Hero20({ headLine, captionLine, placeholder, suggestedChips, previewMode = false, sxProps }) {
   const [inputValue, setInputValue] = useState('');
   const [showLoginModal, setShowLoginModal] = useState(false);
 
@@ -42,6 +42,7 @@ export default function Hero20({ headLine, captionLine, placeholder, suggestedCh
   };
 
   const handleSend = () => {
+    if (previewMode) return;
     if (!inputValue.trim()) return;
 
     if (!isLoggedIn()) {
@@ -213,8 +214,12 @@ export default function Hero20({ headLine, captionLine, placeholder, suggestedCh
                 rows={3}
                 placeholder={placeholder || 'Ask me anything...'}
                 value={inputValue}
-                onChange={(e) => setInputValue(e.target.value)}
+                onChange={(e) => {
+                  if (previewMode) return;
+                  setInputValue(e.target.value);
+                }}
                 onKeyDown={handleKeyDown}
+                readOnly={previewMode}
                 sx={{
                   fontSize: { xs: '0.95rem', sm: '1.05rem' },
                   color: 'text.primary',
@@ -229,7 +234,11 @@ export default function Hero20({ headLine, captionLine, placeholder, suggestedCh
               <Stack direction="row" sx={{ justifyContent: 'flex-end', alignItems: 'center' }}>
                 <Button
                   variant="contained"
-                  onClick={handleSend}
+                  onClick={() => {
+                    if (previewMode) return;
+                    handleSend();
+                  }}
+                  disableRipple={previewMode}
                   sx={{
                     minWidth: 40,
                     width: 40,
@@ -255,7 +264,10 @@ export default function Hero20({ headLine, captionLine, placeholder, suggestedCh
                   label={chipItem.label}
                   variant="outlined"
                   icon={chipItem.icon ? <SvgIcon name={chipItem.icon} size={14} /> : undefined}
-                  onClick={() => setInputValue(chipItem.prompt)}
+                  onClick={() => {
+                    if (previewMode) return;
+                    setInputValue(chipItem.prompt);
+                  }}
                   sx={{
                     borderRadius: 5,
                     px: 1,
@@ -279,7 +291,7 @@ export default function Hero20({ headLine, captionLine, placeholder, suggestedCh
         </Stack>
       </ContainerWrapper>
 
-      <AuthLoginModal open={showLoginModal} onClose={() => setShowLoginModal(false)} />
+      {!previewMode && <AuthLoginModal open={showLoginModal} onClose={() => setShowLoginModal(false)} />}
     </Box>
   );
 }
@@ -289,5 +301,6 @@ Hero20.propTypes = {
   captionLine: PropTypes.string,
   placeholder: PropTypes.string,
   suggestedChips: PropTypes.object,
+  previewMode: PropTypes.bool,
   sxProps: PropTypes.object
 };

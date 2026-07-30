@@ -46,3 +46,13 @@ export const hero = {
     { image: '/assets/images/shared/figma.svg', title: 'Figma' }
   ]
 };
+
+export const hero20 = {
+  headLine: {
+    normalText: 'What do you need to ',
+    highlightedText: 'Build?'
+  },
+  captionLine:
+    'Tell SaasAble AI what you want to build, make changes instantly, and get guidance whenever you need it, all in one conversation.',
+  placeholder: 'Ask me anything...'
+};
