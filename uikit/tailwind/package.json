@@ -9,8 +9,8 @@
     "url": "https://themeforest.net/user/phoenixcoded"
   },
   "scripts": {
-    "start": "gulp",
-    "build": "gulp build-prod",
+    "start": "node init && gulp",
+    "build": "node init && gulp build-prod",
     "format": "prettier --write ./src"
   },
   "overrides": {
